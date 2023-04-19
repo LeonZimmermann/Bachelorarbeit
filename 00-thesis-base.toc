@@ -1,0 +1,74 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Ziele der Arbeit}{1}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Vorgehensweise}{2}{section.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Verwandte Arbeiten}{2}{section.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}Abgrenzungen}{2}{section.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Auswahl von Use-Cases}{3}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Wahl des Abstraktionslevels}{3}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Semantik der Suche verstehen}{3}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Aktualität und Relevanz des Dokuments}{3}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{4}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Features}{4}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Qualitätskriterien}{5}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Precision, Recall und F-Maß}{5}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Befragungen}{6}{section.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Arten von Suchfunktionen}{7}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Keyword Search}{7}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Phrase Search}{7}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Boolean Search}{7}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Structured Search}{7}{section.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Lexical Search}{8}{section.4.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Semantic Search}{8}{section.4.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Vergleich der Suchfunktionen}{10}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Erläuterung des Ergebnisses}{11}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Implementierung}{12}{chapter.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Crawling}{12}{section.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Indizierung}{12}{section.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Suffix-Trees}{14}{section.7.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}N-Gramm}{14}{section.7.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.5}Information Extraction}{14}{section.7.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{16}{chapter.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Zusammenfassung}{16}{section.8.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Ausblick}{16}{section.8.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Anhang}{18}{chapter.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}TODO}{18}{section.9.1}%
+\defcounter {refsection}{0}\relax 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

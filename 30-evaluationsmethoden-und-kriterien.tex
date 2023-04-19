@@ -1,0 +1,39 @@
+\chapter{Evaluationsmethoden und -Kriterien}
+
+\section{Features}
+
+\subsection*{Relevanz}
+Eine Suchfunktion muss nicht nur Ergebnisse für eine Such-Query finden, sondern diese auch darstellen. Bei der Darstellung der Ergebnisse ist die Reihenfolge besonders wichtig. Manchmal hat der Nutzer keine genaue Vorstellung davon, was genau er sucht. Er möchte Informationen zu einem Thema finden, aber ohne dabei bestimmte Seiten oder Inhalte im Hinterkopf zu haben. Nichtsdestotrotz möchte der Nutzer mit minimalem Aufwand so viele wichtige Informationen, wie möglich erhalten. Die Sortierung von Ergebnissen der Suche soll genau das ermöglichen.
+Nun ist zu klären, wie die Bestimmung der Relevanz von Suchergebnissen überhaupt funktioniert. Es muss bestimmt werden, anhand welcher Kriterien die Suchfunktion die Relevanz bestimmt. Für diese Kriterien gibt es wiederum unterschiedliche Quellen. Eine Quelle für Kriterien der Relevanz ist das Nutzerverhalten. Seiten, die besonders häufig besucht werden und auf denen lange verweilt wird, oder welche sehr häufig bearbeitet werden, sind gute Kandidaten für eine hohe Relevanz. Seiten, welche bei Nutzern praktisch in Vergessenheit geraten sind, scheinen nicht so wichtig zu sein, sodass die Relevanz für die Suche niedrig ist.   
+
+\subsection*{Clustering}
+Thematisch ähnliche Dokumente tendieren dazu relevant für die gleiche Suche zu sein. Aus diesem Grund ist es oftmals sinnvoll ähnliche Dokumente zu clustern, also zu gruppieren, und sie dem Nutzer als ein solches Cluster darzustellen. Alternativ kann auch ein Suchergebnis dargestellt werden und ähnliche Suchergebnisse werden angezeigt als „Ähnliche Suchergebnisse“.
+
+\subsection*{Autovervollständigung}
+Autovervollständigung bedeutet, dass während der Eingabe von Suchbegriffen bereits Ergänzungen für die gesamte Eingabe vorgeschlagen werden. Das ist vor allem ein hilfreiches Feature in Fällen, wo der Nutzer nur eine grobe Ahnung davon hat, was er eigentlich sucht. Mithilfe von Vorschlägen durch die Suchmaschine selbst kann der Nutzer seine Eingabe spezifischer fassen als er es ohne Vorschläge schaffen würde, sodass die Suchergebnisse besser zu dem passen, was er eigentlich sucht.
+
+\subsection*{Best-Prefix-Highlighting}
+Das ähnlichste Ergebnis zur Eingabe des Nutzers soll gehighlightet werden.
+
+\subsection*{Synonyme}
+Synonyme bei Suche mitbeachten.
+
+\section{Qualitätskriterien}
+
+\subsection*{Interaktivität}
+Klassische Suchfunktionen sind so konzipiert, dass der Nutzer einen Suchbegriff eingibt, anschließend auf einen Submit-Button klickt und erst dann Suchergebnisse angezeigt bekommt. Der Nachteil dieser Vorgehensweise ist, dass der Nutzer erst spät Feedback darüber bekommt, ob er mit den eingegebenen Suchbegriffen auch Ergebnisse bekommt, die für ihn gerade sinnvoll sind. Das Qualitätskriterium Interaktivität gibt an, wie kurz die Zeit zwischen dem Eingeben von Suchbegriffen und der Anzeige von Ergebnissen ist. Eine Suchfunktion muss nicht unbedingt einen Submit-Button verwenden. Die Suche kann auch mit jedem ausgeschriebenen Keyword die Suche starten und Ergebnisse dafür anzeigen, oder auch nach jedem eingegebenen Buchstaben. Mit einer kürzeren Zeit zwischen Eingabe und Ergebnis, also einer höheren Interaktivität, weiß der Nutzer schneller, ob seine Eingaben sinnvoll sind, und bekommt damit schneller gute Suchergebnisse.
+
+\subsection*{Geschwindigkeit}
+Die Geschwindigkeit einer Eingabe ist die Zeit zwischen dem Beginn der Suche und der Anzeige der ersten Antwort. Die Geschwindigkeit hat nichts mit der Interaktivität zu tun. 
+
+\subsection*{Darstellung}
+Wie gut kann man anhand der Zusammenfassung der Ergebnisse den Inhalt bestimmen.
+
+\subsection*{Benutzerfreundlichkeit}
+Das System findet auch Ergebnisse für ähnliche Wörter. So sind bspw. Tippfehler kein Problem. Fuzzy-Search.
+
+\section{Precision, Recall und F-Maß}
+Zur Evaluation werden die Werte Precision und Recall gemessen. Der Precision-Wert ist das Verhältnis zwischen allen gefundenen Dokumenten und den gefundenen Dokumenten, die tatsächlich relevant sind. Der Recall-Wert gibt an, wie viele von den tatsächlich relevanten Dokumenten auch gefunden wurden. Es ist schwierig beide Werte zu optimieren, da der Precision-Wert versucht die Anzahl der gefundenen Dokumente einzugrenzen und der Recall-Wert versucht die Anzahl der gefundenen Dokumente zu erweitern. Das F-Maß fasst beide Werte zu einem neuen Wert zusammen.
+
+\section{Befragungen}
+TODO
