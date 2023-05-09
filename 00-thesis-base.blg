@@ -1,9 +1,0 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is '00-thesis-base.blg'
-[215] biber-MSWIN64:340> INFO - === 
-[294] Biber.pm:419> INFO - Reading '00-thesis-base.bcf'
-[411] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[427] bbl.pm:660> INFO - Writing '00-thesis-base.bbl' with encoding 'UTF-8'
-[427] bbl.pm:763> INFO - Output to 00-thesis-base.bbl
-[428] Biber.pm:131> WARN - The file '00-thesis-base.bcf' does not contain any citations!
-[428] Biber.pm:133> INFO - WARNINGS: 1

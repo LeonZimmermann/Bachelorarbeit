@@ -1,6 +1,17 @@
 \chapter{Einleitung}
 \label{chap:intro}
 
+Die Einleitung beschreibt die Struktur der Arbeit, sodass dem Leser gleich zu Beginn der rote Faden ersichtlich wird.
+Dazu wird im Kapitel Motivation zuerst erläutert, warum der Inhalt der Arbeit von Relevanz ist.
+Das Kapitel beschreibt das Problem, welches Softwareentwickler in der täglichen Arbeit mit Wissensdatenbanken haben.
+Das nächste Kapitel "Ziele der Arbeit" gibt eine Übersicht darüber, was diese Arbeit erreichen möchte.
+Das Kapitel erklärt, wie das Problem, welches in der Motivation beschrieben wurde, in dieser Arbeit systematisch gelöst wird.
+Dazu sollen vier Teilziele erreicht werden.
+Wie diese vier Teilziele erreicht werden wird in dem Kapitel "Vorgehensweise" erklärt.
+Das Kapitel beschreibt für jedes Teilziel kurz und knapp dessen Vorgehensweise.
+Im darauffolgenden Kapitel werden die Verwandten Arbeiten beleuchtet.
+Zuletzt wird die Arbeit in dem Kapitel "Abgrenzungen" inhaltlich abgegrenzt.
+
 \section{Motivation}
 Suchfunktionen sind in vielen Anwendungen vorhanden und können einen großen Einfluss auf die Erfahrung von Nutzern haben.
 Google ist ein Anbieter einer bekannten Suchfunktion.
@@ -34,7 +45,7 @@ Zur Erreichung des Hauptziels der Arbeit werden folgende Teilziele definiert:
    \item \textbf{Teilziel 3:}
    Es wird die Theorie zur Implementierung der Lösungsansätze erläutert.
    \item \textbf{Teilziel 4:}
-   Es werden Lösungsansätze anhand der evaluationsmethoden bewertet, mit einer bestehenden Suchfunktion verglichen und es wird ein Fazit gezogen
+   Es werden die Lösungsansätze anhand der Evaluationsmethoden bewertet, mit einer bestehenden Suchfunktion verglichen und es wird ein Fazit gezogen.
 \end{itemize}
 
 \section{Vorgehensweise}
@@ -56,9 +67,18 @@ TODO Was bedeutet Effektivität in diesem Kontext?
 \subsection*{Adressierung von Teilziel 3}
 Die theoretische Implementierung der Lösungsansätze wird als nächstes erläutert.
 Dazu werden auch die theoretischen Grundlagen für die Implementierung behandelt.
+Außerdem werden verschiedene Arten von Suchfunktionen vorgestellt.
+Zusätzlich werden Methoden vorgestellt, um die Suche, unabhängig von der gewählten Methode zu verbessern.
+Und es werden Methoden zur Aufbereitung der Informationen vorgestellt.
+Damit werden die gesuchten Ergebnisse auf eine Art und Weise dargestellt, welche dem Softwareentwickler gleich die gewünschten Informationen liefert.
 
 \subsection*{Adressierung von Teilziel 4}
-TODO
+Um ein Fazit zu ziehen muss bewertet werden, ob die Lösungsansätze ihren Zweck erfüllen.
+Dazu wurden zunächst die Evaluationsmethoden erörtert.
+Diese werden in diesem Schritt angewandt.
+Die Evaluationsmethoden liefern Metriken anhand dessen die Performance der Lösungsansätze bewertet wird.
+Diese Performance wird verglichen mit einer bestehenden Suche.
+Damit kann im Fazit diskutiert werden, ob die Lösungsansätze ihren Zweck erfüllt haben.
 
 \section{Verwandte Arbeiten}
 
@@ -88,7 +108,18 @@ Unähnliche Wörter haben eine hohe Distanz.
 Der Algorithmus, welcher die Ähnlichkeit der Wörter bestimmt, macht Gebrauch von der Distributional Hypthesis.
 Dieser besagt, dass Wörter, welche im gleichen Kontext verwendet werden, eine ähnliche Semantik besitzen.
 Hermit wird also die Ähnlichkeit der Wörter bestimmt.
-Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte.
+Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte.\\
+
+In dem Paper "Information Retrieval Models for Recovering Traceability Links between Code and Documentation" verwenden Antoniol et. al. einen ähnlichen Ansatz, wie Ye et. al.
+Auch hier werden Word Embeddings verwendet um Softwareentwicklungs-Artefakte gegen den Code zu matchen.
+Hier durchlaufen die Artefakte und der Code zwei verschiedene Pipelines.
+Die Wörter der Artefakte in natürlicher Sprache werden in lowercase umgewandelt.
+Anschließend werden Stoppwörter entfernt.
+Zuletzt werden Flexionen entfernt.
+Aus dem Code werden zunächst Identifier extrahiert.
+Identifier, welche mehrere Wörter unter Verwendung von CamelCase oder snake\_case beinhalten, werden in die einzelnen Wörter aufgeteilt.
+Anschließend werden die Identifier auf die gleiche Art und Weise normalisiert, wie die Wörter der Softwareentwicklungs-Artefakte.
+Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings.
 
 \section{Abgrenzungen}
 Diese Arbeit behandelt keine Large Language Models, wie GPT.
