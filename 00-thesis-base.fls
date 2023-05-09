@@ -1692,11 +1692,6 @@ INPUT 10-intro.tex
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT ./20-auswahl-von-use-cases.tex
 INPUT ./20-auswahl-von-use-cases.tex
 INPUT ./20-auswahl-von-use-cases.tex
@@ -1704,7 +1699,6 @@ INPUT 20-auswahl-von-use-cases.tex
 INPUT ./20-auswahl-von-use-cases.tex
 INPUT ./20-auswahl-von-use-cases.tex
 INPUT 20-auswahl-von-use-cases.tex
-INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT ./30-evaluationsmethoden-und-kriterien.tex
 INPUT ./30-evaluationsmethoden-und-kriterien.tex
 INPUT ./30-evaluationsmethoden-und-kriterien.tex

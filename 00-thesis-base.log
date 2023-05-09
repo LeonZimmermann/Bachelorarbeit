@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  8 MAY 2023 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  9 MAY 2023 12:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1393,68 +1393,89 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              deprecated \float@addtolist interface.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 5--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 \end{itemize}
-                   [1
+l.29    \item \textbf
+                     {Teilziel 1:} [1
 
 
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 54.
- (c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Overfull \hbox (44.72766pt too wide) in paragraph at lines 54--56
-\TS1/lmr/m/n/12 ˆ \T1/lmr/m/n/12 Ela-stic-Search: htt-ps://www.elastic.co/de/ \TS1/lmr/m/n/12 ˆ \T1/lmr/m/n/12 Apa-che Lu-ce-ne: htt-ps://lucene.apache.org/ 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
  []
 
-) (./20-auswahl-von-use-cases.tex [2{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-chapter 2.
-[3
+[2{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 68--80
 
-]) (./30-evaluationsmethoden-und-kriterien.tex [4]
-chapter 3.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+) (./20-auswahl-von-use-cases.tex [3] [4]
+chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--23
+
+ []
+
 [5
 
-] [6]) (./40-such-und-nlp-algorithmen.tex [7]
-chapter 4.
-[8
+]) (./30-evaluationsmethoden-und-kriterien.tex [6]
+chapter 3.
+[7
 
-] [9]) (./50-vergleich-der-suchfunktionen.tex [10]
+] [8]) (./40-such-und-nlp-algorithmen.tex [9]
+chapter 4.
+[10
+
+] [11]) (./50-vergleich-der-suchfunktionen.tex [12]
 chapter 5.
-) (./60-erlaeuterung-des-ergebnisses.tex [11
+) (./60-erlaeuterung-des-ergebnisses.tex [13
 
 ]
 chapter 6.
-) (./70-implementierung.tex [12
+) (./70-implementierung.tex [14
 
 ]
 chapter 7.
-[13
+[15
 
-] [14]
+] [16]
 Overfull \hbox (9.76198pt too wide) in paragraph at lines 25--27
 \T1/lmr/m/n/12 men-te kön-nen da-bei Buch-sta-ben, Wör-ter, Pho-ne-me, Mor-ph-e-me etc. sein. N-Gramme
  []
 
-[15]) (./80-zusammenfassung.tex [16]
+[17]) (./80-zusammenfassung.tex [18]
 chapter 8.
 )
 
 LaTeX Warning: Empty bibliography on input line 288.
 
-[17
+[19
 
-] [18
+] [20
 
 ]
 \c@chapterAppendix=\count502
  (./90-appendix.tex
 chapter A.
-) (./02-declaration.tex [19
+) (./02-declaration.tex [21
 
-]) [20
+]) [22
 
 ] (./00-thesis-base.aux)
 
@@ -1467,18 +1488,18 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32912 strings out of 476001
- 618789 string characters out of 5793198
- 1870068 words of memory out of 5000000
- 52725 multiletter control sequences out of 15000+600000
- 561873 words of font info for 69 fonts, out of 8000000 for 9000
+ 32882 strings out of 476001
+ 617964 string characters out of 5793198
+ 1871068 words of memory out of 5000000
+ 52697 multiletter control sequences out of 15000+600000
+ 561498 words of font info for 68 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,20n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on 00-thesis-base.pdf (27 pages, 405842 bytes).
+Output written on 00-thesis-base.pdf (29 pages, 409315 bytes).
 PDF statistics:
- 425 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 89 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 435 PDF objects out of 1000 (max. 8388607)
+ 370 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 318 words of extra memory for PDF output out of 10000 (max. 10000000)
 

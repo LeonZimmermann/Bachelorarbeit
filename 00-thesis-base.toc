@@ -3,38 +3,39 @@
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Ziele der Arbeit}{1}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Vorgehensweise}{2}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Verwandte Arbeiten}{2}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Abgrenzungen}{2}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Auswahl von Use-Cases}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Wahl des Abstraktionslevels}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Semantik der Suche verstehen}{3}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Aktualität und Relevanz des Dokuments}{3}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Information Extraction}{4}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Features}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Qualitätskriterien}{6}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Precision, Recall und F-Maß}{6}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Befragungen}{7}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Such- und NLP-Algorithmen}{8}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Suchalgorithmen}{8}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Keyword Search}{8}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Phrase Search}{8}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Boolean Search}{8}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Structured Search}{8}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Lexical Search}{9}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Semantic Search}{9}{subsection.4.1.6}%
-\contentsline {section}{\numberline {4.2}NLP-Algorithmen}{10}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Vergleich der Suchfunktionen}{11}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Erläuterung des Ergebnisses}{12}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Implementierung}{13}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Crawling}{13}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Indizierung}{13}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Suffix-Trees}{15}{section.7.3}%
-\contentsline {section}{\numberline {7.4}N-Gramm}{15}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Information Extraction}{15}{section.7.5}%
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{17}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Zusammenfassung}{17}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{17}{section.8.2}%
-\contentsline {chapter}{\numberline {A}Anhang}{19}{chapter.9}%
-\contentsline {section}{\numberline {A.1}TODO}{19}{section.9.1}%
+\contentsline {section}{\numberline {1.4}Verwandte Arbeiten}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Abgrenzungen}{4}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Auswahl von Use-Cases}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Wahl des Abstraktionslevels}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Semantik der Suche verstehen}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Aktualität und Relevanz des Dokuments}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Information Extraction}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Rollenspezifische Suchfilter}{6}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Features}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Qualitätskriterien}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Precision, Recall und F-Maß}{8}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Befragungen}{9}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Such- und NLP-Algorithmen}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Suchalgorithmen}{10}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Keyword Search}{10}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Phrase Search}{10}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Boolean Search}{10}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Structured Search}{10}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Lexical Search}{11}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Semantic Search}{11}{subsection.4.1.6}%
+\contentsline {section}{\numberline {4.2}NLP-Algorithmen}{12}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Vergleich der Suchfunktionen}{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Erläuterung des Ergebnisses}{14}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Implementierung}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Crawling}{15}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Indizierung}{15}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Suffix-Trees}{17}{section.7.3}%
+\contentsline {section}{\numberline {7.4}N-Gramm}{17}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Information Extraction}{17}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{19}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Zusammenfassung}{19}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{19}{section.8.2}%
+\contentsline {chapter}{\numberline {A}Anhang}{21}{chapter.9}%
+\contentsline {section}{\numberline {A.1}TODO}{21}{section.9.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

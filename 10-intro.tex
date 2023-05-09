@@ -1,61 +1,94 @@
-%
-%
-%
 \chapter{Einleitung}
 \label{chap:intro}
 
-%
-%
-%
 \section{Motivation}
-Suchfunktionen sind in vielen Anwendungen vorhanden und können einen großen Einfluss auf die Erfahrung von Nutzern haben. Google ist ein Anbieter einer bekannten Suchfunktion. Sie wird verwendet, um im World Wide Web die passende Website für eine Suchanfrage zu finden. Die Suchanfrage besteht dabei meistens aus lediglich ein bis drei Keywords. Es ist nicht einfach für diese Keywords die Websites zu identifizieren, welche für einen Nutzer am passendsten ist. Auch andere Arten von Anwendungen verwenden Suchfunktionen, darunter Wissensdatenbanken, wie beispielsweise Confluence. In Wissensdatenbanken werden Informationen auf Seiten gespeichert, welche über die Suchfunktion auffindbar sein sollen.
-Softwareentwickler haben bei der Arbeit mit Wissensdatenbanken, insbesondere bei der Arbeit mit Spezifikationen und Dokumentationen, oft das Problem, dass die gesuchten Inhalte nicht gefunden werden können. Das kann daran liegen, dass die gefundenen Ergebnisse zu spezifisch sind, z.B. wenn eine allgemeine Definition von Domänenobjekten gesucht wird, aber eine Spezifikation eines Use-Cases gefunden wird, in welchem das Domänenobjekt lediglich erwähnt wird. Außerdem haben manche Wissensdatenbanken Schwierigkeiten, die Semantik einer Suchanfrage zu verstehen. Wird also nach einem Suchbegriff, wie „deployment“ gesucht, dann werden keine Ergebnisse gefunden, welche Wörter, wie „rollout“ beinhalten, auch wenn es sich hierbei um den gleichen Prozess handelt. Softwareentwickler müssen also das genaue Wording in der Dokumentation kennen, um ein sinnvolles Ergebnis angezeigt zu bekommen, und es reicht nicht aus, ein Synonym oder verwandte Wörter oder Konzepte in die Suche einzugeben. Weiterhin werden oftmals Inhalte angezeigt, welche bereits als deprecated markiert sind, und für aktuelle Versionen der Software keine Relevanz mehr haben. 
+Suchfunktionen sind in vielen Anwendungen vorhanden und können einen großen Einfluss auf die Erfahrung von Nutzern haben.
+Google ist ein Anbieter einer bekannten Suchfunktion.
+Sie wird verwendet, um im World Wide Web die passende Website für eine Suchanfrage zu finden.
+Die Suchanfrage besteht dabei meistens aus lediglich ein bis drei Keywords.
+Es ist nicht einfach für diese Keywords die Websites zu identifizieren, welche für einen Nutzer am passendsten ist.\\
+
+Auch andere Arten von Anwendungen verwenden Suchfunktionen, darunter Wissensdatenbanken, wie beispielsweise Confluence.
+In Wissensdatenbanken werden Informationen auf Seiten gespeichert, welche über die Suchfunktion auffindbar sein sollen.
+Softwareentwickler haben bei der Arbeit mit Wissensdatenbanken, insbesondere bei der Arbeit mit Spezifikationen und Dokumentationen, oft das Problem, dass die gesuchten Inhalte nicht gefunden werden können.
+Das kann daran liegen, dass die gefundenen Ergebnisse zu spezifisch sind, z.B. wenn eine allgemeine Definition von Domänenobjekten gesucht wird, aber eine Spezifikation eines Use-Cases gefunden wird, in welchem das Domänenobjekt lediglich erwähnt wird.
+Außerdem haben manche Wissensdatenbanken Schwierigkeiten, die Semantik einer Suchanfrage zu verstehen.
+Wird also nach einem Suchbegriff, wie „deployment“ gesucht, dann werden keine Ergebnisse gefunden, welche Wörter, wie „rollout“ beinhalten, auch wenn es sich hierbei um den gleichen Prozess handelt.
+Softwareentwickler müssen also das genaue Wording in der Dokumentation kennen, um ein sinnvolles Ergebnis angezeigt zu bekommen, und es reicht nicht aus, ein thematisch ähnliches Wort in die Suche einzugeben.
+% Motivation Deprecated-Inhalte: Weiterhin werden oftmals Inhalte angezeigt, welche bereits als deprecated markiert sind, und für aktuelle Versionen der Software keine Relevanz mehr haben. 
 Ziel dieser Arbeit soll es sein, mithilfe von Wissen über Suchalgorithmen und Algorithmen aus dem Natural Language Processing, diese Probleme zu lösen, sodass Softwareentwickler in Zukunft besser die Inhalte finden, nach denen sie tatsächlich gesucht haben.
 
-%
-%
-%
 \section{Ziele der Arbeit}
-TODO
+In der Motivation sind bereits Probleme genannt worden, die ein Softwareentwickler bei der Verwendung von Suchfunktionen in Wissensdatenbanken hat.
+Manchmal ist das Abstraktionslevel der gefundenen Informationen nicht das, welches sich der Softwareentwickler gewünscht hat.
+Manchmal kennt der Softwareentwickler nicht das genaue Wording, um die gewünschten Informationen zu finden.
+Ziel der Arbeit ist es diese Probleme zu lösen.\\
 
 Zur Erreichung des Hauptziels der Arbeit werden folgende Teilziele definiert:
-
 \begin{itemize}
    \item \textbf{Teilziel 1:}
-   TODO  
+   Es werden Lösungsansätze zur Verbesserung von Suchfunktionen herausgearbeitet. 
    \item \textbf{Teilziel 2:}
-   TODO  
+   Es werden Methoden für die Bewertung der Lösungsansätze herausgearbeitet.
+   Damit wird die Frage beantwortet, wann eine Suchfunktion "gut" ist. 
    \item \textbf{Teilziel 3:}
-   TODO  
+   Es wird die Theorie zur Implementierung der Lösungsansätze erläutert.
    \item \textbf{Teilziel 4:}
-   TODO  
+   Es werden Lösungsansätze anhand der evaluationsmethoden bewertet, mit einer bestehenden Suchfunktion verglichen und es wird ein Fazit gezogen
 \end{itemize}
 
-
-%
-%
-%
 \section{Vorgehensweise}
-In der Problemstellung wurde behauptet, dass oftmals nicht die Inhalte gefunden werden, welche ein Softwareentwickler bei der Eingabe einer Suche erwarten würde. Diese Behauptung muss zunächst belegt werden. Dazu muss klar sein, welche Informationen ein Softwareentwickler sucht, wenn er die Suchfunktion einer Wissensdatenbank verwendet. Diese sollen in Form von Use-Cases beschrieben werden. Außerdem werden Methoden und Metriken zur Evaluation von Suchfunktionen erläutert. Und es werden verschiedene Implementierungen von Suchfunktionen aufgezählt und kurz beschrieben. Diese verschiedenen Suchfunktionen werden nun für die ausgewählten Use-Cases anhand der zuvor beschriebenen Metriken evaluiert. Um den Rahmen dieser Arbeit nicht zu sprengen, sollen lediglich zwei verschiedene Suchfunktionen miteinander verglichen werden. Zuletzt wird die Implementierung der Suchfunktion erläutert, welche besser abgeschnitten hat.
+Die Vorgehensweise ist im Folgenden entsprechend der Teilziele in vier Schritte eingeteilt.
+Jeder Schritt in der Vorgehensweise addressiert ein Teilzeil. 
 
 \subsection*{Adressierung von Teilziel 1}
-TODO
+Zunächst werden die Lösungsansätze herausgearbeitet indem die konkreten genannten Probleme weiter beleuchtet und unterteilt werden.
+Sie werden in mehreren Use-Cases formuliert.
 
 \subsection*{Adressierung von Teilziel 2}
-TODO
+Um die Lösungsansätze zu bewerten wird erörtert, wie die Performance einer Suchfunktion evaluiert werden kann.
+Die Lösungsansätze sollen auf ihre Effektivität geprüft werden.
+Die Effektivität zu bestimmen ist nur mit geeigneten Messmethoden möglich.
+Diese Effektivität soll mit einer bestehenden Suchfunktion verglichen werden.
+
+TODO Was bedeutet Effektivität in diesem Kontext?
 
 \subsection*{Adressierung von Teilziel 3}
-TODO
+Die theoretische Implementierung der Lösungsansätze wird als nächstes erläutert.
+Dazu werden auch die theoretischen Grundlagen für die Implementierung behandelt.
 
 \subsection*{Adressierung von Teilziel 4}
 TODO
 
 \section{Verwandte Arbeiten}
-•	ElasticSearch: https://www.elastic.co/de/
-•	Apache Lucene: https://lucene.apache.org/
 
-TODO
+Es gibt einige Arbeiten, welche die gleichen oder sehr ähnliche Probleme adressieren.\\
 
+% Quelle: Automatic Query Reformulations for Text Retrieval in Software Engineering
+So wird in "Automatic Query Reformulations for Text Retrieval in Software Engineering" von Haiduc et. al. ein System zur Verbesserung von Suchanfragen vorgeschlagen.
+Ausgangspunkt für das Paper ist das Problem der Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten.
+Traceability bedeutet, dass sich von einer Stelle im Code, auf die entsprechenden Stellen in anderen Artefakten zurückschließen lässt.
+Ein Anwendungsfall für eine solche Traceability-Funktionalität ist "Feature Location", also das finden der Spezifikation eines Features, wenn nur der Code vorhanden ist.
+Das System, welches von Haiduc et. al. vorgeschlagen wird, verwendet Query Reformulations, um die Traceability herzustellen.
+Query Reformulation bedeutet, dass das System den Softwareentwickler bei der Eingabe einer Suchanfrage zur Suche nach den passenden Artefakten unterstützt.
+Dazu gibt der Softwareentwickler zunächst eine Suchanfrage ein, und markiert diejenigen Ergebnisse, welche am relevantesten für ihn sind.
+Auf Grundlage der gewählten Ergebnisse und mithilfe eines Machine Learning Algorithmus werden nun Vorschläge für eine verbesserte Suchanfrage gemacht.
+Dabei gibt es verschiedene Strategien.
+Wenn der Softwareentwickler zu Beginn eine sehr lange Suchanfrage eingegeben hat, dann kann das System eine Reduktion der Suchanfrage vorschlagen.
+Hat der Softwareentwickler dagegen lediglich einen Suchbegriff angegeben, so kann das System eine Erweiterung der Suchbegriffe vorschlagen.
+Dazu greift das System auf Synonyme des eingegebenen Suchbegriffes zurück.\\
+
+TODO Gegebenenfalls Anwendungsfälle aus den Verwandten Arbeiten ableiten: Feature Location, Bug Location, Traceability Link Recovery, Refactoring, Reuse.\\
+
+In dem Paper "From Word Embeddings To Document Similarities for Improved Information Retrieval in Software Engineering" von Ye et. al. wird beschrieben, wie Word Embeddings dazu verwendet werden können, um Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten herzustellen.
+Word Embeddings sind eine Datenstruktur, welche einem Wort einen Vektor in einem n-dimensionalen Raum zuweist.
+Anhand dieses Vektors kann die Ähnlichkeit zwischen Wörter beschrieben werden.
+Ähnliche Wörter haben eine geringe Distanz im n-dimensionalen Raum.
+Unähnliche Wörter haben eine hohe Distanz.
+Der Algorithmus, welcher die Ähnlichkeit der Wörter bestimmt, macht Gebrauch von der Distributional Hypthesis.
+Dieser besagt, dass Wörter, welche im gleichen Kontext verwendet werden, eine ähnliche Semantik besitzen.
+Hermit wird also die Ähnlichkeit der Wörter bestimmt.
+Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte.
 
 \section{Abgrenzungen}
 Diese Arbeit behandelt keine Large Language Models, wie GPT.

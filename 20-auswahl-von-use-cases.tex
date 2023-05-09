@@ -6,19 +6,46 @@ Oft ist im Voraus nicht klar, was man genau sucht. Man gibt einen Suchbegriff ei
 TODO
 
 \section{Semantik der Suche verstehen}
-Oft sucht ein Software-Entwickler nach einem bestimmten Bereich in der Spezifikation, aber kennt nicht das genaue Wording, welches auf der Seite verwendet wird. Beispielsweise könnte ein Softwareentwickler sich in ein neues Projekt einarbeiten, und möchte nun verstehen, wie er die bestehende Anwendung überhaupt in einer Testumgebung starten kann. Dann gibt er in die Sucheingabe der Wissensdatenbank soetwas ein, wie "deployment". Wenn nun die Seite, welche das Deployment erklärt, aber nicht genau dieses Wort enthält, dann wird die gewünschte Seite durch die Suche nicht gefunden. Es sei denn, es handelt sich um eine Semantische Suche.
-Eine Semantische Suche versteht Zusammenhänge zwischen verschiedenen Wörtern. Wenn also auf der Seite das Wort rollout verwendet wird, anstelle von deployment, dann versteht eine Semantische Suche, dass diese beiden Begriffe sehr ähnlich zueinander sind, und zeigt auch Suchergebnisse von Seiten an, welche das Wort rollout verwenden, auch wenn nach dem Wort deployment gesucht wurde.
+Oft sucht ein Software-Entwickler nach einem bestimmten Bereich in der Spezifikation, aber kennt nicht das genaue Wording, welches auf der Seite verwendet wird.
+Beispielsweise könnte ein Softwareentwickler sich in ein neues Projekt einarbeiten, und möchte nun verstehen, wie er die bestehende Anwendung überhaupt in einer Testumgebung starten kann.
+Dann gibt er in die Sucheingabe der Wissensdatenbank soetwas ein, wie "deployment".
+Wenn nun die Seite, welche das Deployment erklärt, aber nicht genau dieses Wort enthält, dann wird die gewünschte Seite durch die Suche nicht gefunden.
+Es sei denn, es handelt sich um eine Semantische Suche.
+Eine Semantische Suche versteht Zusammenhänge zwischen verschiedenen Wörtern.
+Wenn also auf der Seite das Wort rollout verwendet wird, anstelle von deployment, dann versteht eine Semantische Suche, dass diese beiden Begriffe sehr ähnlich zueinander sind, und zeigt auch Suchergebnisse von Seiten an, welche das Wort rollout verwenden, auch wenn nach dem Wort deployment gesucht wurde.
 
 \section{Aktualität und Relevanz des Dokuments}
-Manchmal werden Blog-Einträge von unbekannten Benutzern angezeigt, welche sehr kurz sind. Die Überschrift ist zwar passend, aber der Inhalt des Textes nicht. Und der Text ist nur sehr kurz. Es scheint offensichtlich, dass für allgemeine Suchanfragen längere Texte als Ergebnis sinnvoller sind, da eine allgemeine Suchanfrage der Versuch ist, sich mit einem Thema vertraut zu machen. In diesem Fall sollten viele Informationen priorisiert werden, gegenüber kurzen Texten, welche die Lösung eines sehr spezifischen Problems erläutern.
+Manchmal werden Blog-Einträge von unbekannten Benutzern angezeigt, welche sehr kurz sind.
+Die Überschrift ist zwar passend, aber der Inhalt des Textes nicht.
+Und der Text ist nur sehr kurz.
+Es scheint offensichtlich, dass für allgemeine Suchanfragen längere Texte als Ergebnis sinnvoller sind, da eine allgemeine Suchanfrage der Versuch ist, sich mit einem Thema vertraut zu machen.
+In diesem Fall sollten viele Informationen priorisiert werden, gegenüber kurzen Texten, welche die Lösung eines sehr spezifischen Problems erläutern.\\
 
-Manchmal werden alte Seiten gefunden oder unfertige Seite. Es sollte erkannt werden, wenn eine Seite veraltet ist (ist markiert), oder wenn sie noch nicht fertig ist (durch Markierung oder Länge/Struktur des Textes)
+Manchmal werden alte Seiten gefunden oder unfertige Seite.
+Es sollte erkannt werden, wenn eine Seite veraltet ist (ist markiert), oder wenn sie noch nicht fertig ist (durch Markierung oder Länge/Struktur des Textes)
 
 TODO
 
 \section{Information Extraction}
 
-Eine Suchfunktion ist im allgemeinen ein Information Retrieval System. Es wird eine Eingabe gemacht, und relevante Dokumente werden identifiziert und dem Nutzer angezeigt. Neben dem Information Retrieval gibt es Information Extraction. Information Extraction entnimmt aus den gefundenen Dokumenten genau die Informationen, welche für den Nutzer relevant sind. Es werden also nicht nur Dokumente gefunden, sondern gleich aufbereitet. Das ist vor allem dann praktisch, wenn der Nutzer nach einer Information sucht, welche in einem sehr großen Dokument zu finden ist. In diesem Fall ist es zwar schön, dass das System das Dokument findet, trotzdem muss der Nutzer sich mit der Suche nach der gewünschten Information innerhalb vom Dokument quälen.
-Information Extraction löst genau dieses Problem. Die Inhalte des Dokuments, welche relevant sind, können bei der Darstellung des Suchergebnisses als Kurztext dargestellt werden, um dem Nutzer gleich die gewünschten Informationen zu liefern.
+Eine Suchfunktion ist im allgemeinen ein Information Retrieval System.
+Es wird eine Eingabe gemacht, und relevante Dokumente werden identifiziert und dem Nutzer angezeigt.
+Neben dem Information Retrieval gibt es Information Extraction.
+Information Extraction entnimmt aus den gefundenen Dokumenten genau die Informationen, welche für den Nutzer relevant sind.
+Es werden also nicht nur Dokumente gefunden, sondern gleich aufbereitet.
+Das ist vor allem dann praktisch, wenn der Nutzer nach einer Information sucht, welche in einem sehr großen Dokument zu finden ist.
+In diesem Fall ist es zwar schön, dass das System das Dokument findet, trotzdem muss der Nutzer sich mit der Suche nach der gewünschten Information innerhalb vom Dokument quälen.
+Information Extraction löst genau dieses Problem.
+Die Inhalte des Dokuments, welche relevant sind, können bei der Darstellung des Suchergebnisses als Kurztext dargestellt werden, um dem Nutzer gleich die gewünschten Informationen zu liefern.
 
 TODO Erläuterung von Named Entity Recognition, Entity Linking, Parser etc. für die Umsetzung solcher Use-Cases
+
+\section{Rollenspezifische Suchfilter}
+
+Eine Möglichkeit relevante Dokumente einfacher zu finden ist die Verwendung von Suchfiltern.
+Im Kontext einer Suche, welche auf Software-Entwickler zugeschnitten ist, ist es denkbar einen Suchfilter zu verwenden, welcher nach Software-Informationen filtern.
+Also die Spezifikation und Dokumentation der Software, sowie How-To-Guides, Best-Practices und Code Konventionen.
+Außerdem ist ein Filter für Informationen zur Infrastruktur denkbar. Also Informationen darüber, wie die Software deployt wird, und wohin sie deployt werden kann.
+Außerdem Informationen über häufige Probleme beim Deployment.
+Dann ist auch ein Filter für Projektmanagement-Informationen sinnvoll.
+Dieser kann verwendet werden, um Informationen zum nächsten Software-Release zu finden, über die Teamaufteilung und Verantwortlichkeiten.
