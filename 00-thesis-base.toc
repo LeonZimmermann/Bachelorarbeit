@@ -21,9 +21,10 @@
 \contentsline {subsection}{\numberline {4.1.1}Keyword Search}{11}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Phrase Search}{11}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Boolean Search}{11}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Structured Search}{11}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Lexical Search}{12}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Semantic Search}{12}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.4}Field Search}{11}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Structured Search}{11}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Lexical Search}{12}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Semantic Search}{12}{subsection.4.1.7}%
 \contentsline {section}{\numberline {4.2}NLP-Algorithmen}{13}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Vergleich der Suchfunktionen}{14}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Erläuterung des Ergebnisses}{15}{chapter.6}%
@@ -33,9 +34,9 @@
 \contentsline {section}{\numberline {7.3}Suffix-Trees}{18}{section.7.3}%
 \contentsline {section}{\numberline {7.4}N-Gramm}{18}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Information Extraction}{18}{section.7.5}%
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{20}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Zusammenfassung}{20}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{20}{section.8.2}%
-\contentsline {chapter}{\numberline {A}Anhang}{22}{chapter.9}%
-\contentsline {section}{\numberline {A.1}TODO}{22}{section.9.1}%
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{21}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Zusammenfassung}{21}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{21}{section.8.2}%
+\contentsline {chapter}{\numberline {A}Anhang}{23}{chapter.9}%
+\contentsline {section}{\numberline {A.1}TODO}{23}{section.9.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
