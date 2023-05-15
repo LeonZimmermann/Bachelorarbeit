@@ -6,9 +6,9 @@
 \contentsline {section}{\numberline {1.4}Verwandte Arbeiten}{3}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Abgrenzungen}{4}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Auswahl von Use-Cases}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Wahl des Abstraktionslevels}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Semantik der Suche verstehen}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Aktualität und Relevanz des Dokuments}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.1}Semantik der Suche verstehen}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Feature Extraction}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Bug Localization}{6}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Rollenspezifische Suchfilter}{6}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Information Extraction}{7}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{8}{chapter.3}%
@@ -37,6 +37,7 @@
 \contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{21}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Zusammenfassung}{21}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Ausblick}{21}{section.8.2}%
-\contentsline {chapter}{\numberline {A}Anhang}{23}{chapter.9}%
-\contentsline {section}{\numberline {A.1}TODO}{23}{section.9.1}%
+\contentsline {chapter}{\numberline {9}Literaturverzeichnis}{22}{chapter.9}%
+\contentsline {chapter}{\numberline {A}Anhang}{24}{chapter.10}%
+\contentsline {section}{\numberline {A.1}TODO}{24}{section.10.1}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1741,6 +1741,7 @@ INPUT 80-zusammenfassung.tex
 INPUT ./80-zusammenfassung.tex
 INPUT ./80-zusammenfassung.tex
 INPUT 80-zusammenfassung.tex
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT ./90-appendix.tex
 INPUT ./90-appendix.tex
 INPUT ./90-appendix.tex
@@ -1763,6 +1764,7 @@ OUTPUT 00-thesis-base.run.xml
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb

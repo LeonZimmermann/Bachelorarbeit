@@ -1,43 +1,30 @@
 \chapter{Auswahl von Use-Cases}
-
 In diesem Kapitel sollen Use-Cases ausgewählt werden, für welche später Lösungsansätze entwickelt werden.
 Die Use-Cases beschreiben die tatsächlichen Probleme, die Softwareentwickler bei der Verwendung von Suchfunktionen in Wissensdatenbanken haben.
-Zur Identifikation von Use-Cases wurden in Confluence testweise Sucheingaben gemacht.
+Zur Identifikation von Use-Cases wurden zwei herangehensweisen verwendet.
+Zum einen anhand der verwandten Arbeiten.
+In den Verwandten Arbeiten wurden bereits Arbeiten genannt, welche ähnliche Probleme lösen sollen.
+Diese Fokussieren sich vorallem auf die "Feature Location", "Bug Localization" und die Traceability zwischen Code und anderen Artefakten.
+Sie werden in den Kapiteln "Feature Location" und "Bug Localization" beschrieben.\\
+
+Zum anderen wurden in Confluence testweise Sucheingaben gemacht.
 Es wurde das Erwartete Ergebnis gegen das tatsächlich gefundene Ergebnis abgeglichen.
-Aus diesem Verfahren ließen sich die Use-Cases ableiten.
+Aus diesem Verfahren ließen sich Use-Cases ableiten.
 So ließ sich ableiten, dass manchmal nicht die gewünschten Ergebnisse gefunden werden, weil nicht das korrekte Wort in der Suche verwendet wurde.
 Stattdessen wurde ein Synonym oder thematisch sehr ähnliches Wort verwendet.
 Grund dafür ist, dass der Softwareentwickler nicht das genaue Wording des gewünschten Dokuments kennt, sondern lediglich das Thema des gesuchten Dokuments.
 Es wäre also hilfreich, wenn die Suche auch Dokumente finden würde, welche thematisch ähnlich zu der Sucheingabe sind.
 Dieser Use-Case wird in dem Kapitel "Semantik der Suche verstehen" erläutert.
-Außerdem sich ableiten, dass der Scope, in welchem der Softwareentwickler sucht variieren kann.
+Außerdem ließ sich ableiten, dass der Scope, in welchem der Softwareentwickler sucht variieren kann.
 Dieser Use-Case wird in dem Kapitel "Rollenspezifische Suchfilter" beschrieben.\\
 
-In den Verwandten Arbeiten wurden bereits Arbeiten genannt, welche ähnliche Probleme lösen sollen.
-Diese Fokussieren sich vorallem auf die "Feature Location", "Bug Localization" und die Traceability zwischen Code und anderen Artefakten.
-Bei der Entwicklung eines neuen Features greift der Softwareentwickler also auf die entsprechende Spezifikation zurück.
-Dazu muss ihm bekannt sein, wo die Spezifikation zu finden ist.
-Nun muss er bei der Entwicklung darauf achten, dass er Best-Practices und Konventionen einhält, sowie die Qualitätsanforderungen.
-Eine Qualitätsanforderungen könnte dabei eine vereinbarte Testabdeckung der Software sein.
-Der Softwareentwickler muss also bei der Entwicklung eines neuen Features auch diese Informationen einfach finden können.
-Und ihm muss klar sein, an welcher Stelle im Code er den neuen Code einbauen sollte.
-Das ist Feature Location.\\
-
-Wenn der Softwareentwickler gerade kein neues Feature implementiert, dann korrigiert er gerade möglicherweise einen Fehler in der Software.
-Um einen Fehler überhaupt zu identifizieren, muss aber zuerst wieder die Spezifikation herangezogen werden.
-Denn in der Spezifikation wird, wie bereits erwähnt, die gewünschte Funktionsweise der Software beschrieben.
-Damit wird auch definiert, was ein fehlerhaftes Verhalten ist, und was ein korrektes Verhalten ist.
-Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsprechende Spezifikation zu diesem Fehlerticket finden können.
-Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
-Das ist Bug Localization.
-
-\section{Wahl des Abstraktionslevels}
-Oft ist im Voraus nicht klar, was man genau sucht. Man gibt einen Suchbegriff ein und möchte "sinnvolle" Informationen zu diesem Suchbegriff bekommen. Sinnvoll könnte eine Definition des Begriffs sein, oder ein Überblick darüber, in welchen Bereichen und Kontexten dieser Begriff vorkommt.
-
-TODO
+Neben diesen Anwendungsfällen, welche die Suchfunktion im engeren Sinne betreffen, gibt es noch weitere Anwendungsfälle, um die Suchfunktion zu verbessern.
+Auch die Darstellung der Ergebnisse ist bei der Qualität von Suchfunktionen von Relevanz.
+Die Darstellung der Ergebnisse erfolgt anhand der Extraktion von Informationen aus den Suchergebnissen.
+Dieser Vorgang wird Information Extraction genannt.
+Der Use-Case wird in dem Kapitel "Information Extraction" beschrieben.
 
 \section{Semantik der Suche verstehen}
-\label{chap:semantik-der-suche-verstehen}
 Oft sucht ein Software-Entwickler nach einem bestimmten Bereich in der Spezifikation, aber kennt nicht das genaue Wording, welches auf der Seite verwendet wird.
 Beispielsweise könnte ein Softwareentwickler sich in ein neues Projekt einarbeiten, und möchte nun verstehen, wie er die bestehende Anwendung überhaupt in einer Testumgebung starten kann.
 Dann gibt er in die Sucheingabe der Wissensdatenbank soetwas ein, wie "deployment".
@@ -46,17 +33,23 @@ Es sei denn, es handelt sich um eine Semantische Suche.
 Eine Semantische Suche versteht Zusammenhänge zwischen verschiedenen Wörtern.
 Wenn also auf der Seite das Wort rollout verwendet wird, anstelle von deployment, dann versteht eine Semantische Suche, dass diese beiden Begriffe sehr ähnlich zueinander sind, und zeigt auch Suchergebnisse von Seiten an, welche das Wort rollout verwenden, auch wenn nach dem Wort deployment gesucht wurde.
 
-\section{Aktualität und Relevanz des Dokuments}
-Manchmal werden Blog-Einträge von unbekannten Benutzern angezeigt, welche sehr kurz sind.
-Die Überschrift ist zwar passend, aber der Inhalt des Textes nicht.
-Und der Text ist nur sehr kurz.
-Es scheint offensichtlich, dass für allgemeine Suchanfragen längere Texte als Ergebnis sinnvoller sind, da eine allgemeine Suchanfrage der Versuch ist, sich mit einem Thema vertraut zu machen.
-In diesem Fall sollten viele Informationen priorisiert werden, gegenüber kurzen Texten, welche die Lösung eines sehr spezifischen Problems erläutern.\\
+\section{Feature Extraction}
+Bei der Entwicklung eines neuen Features greift der Softwareentwickler also auf die entsprechende Spezifikation zurück.
+Dazu muss ihm bekannt sein, wo die Spezifikation zu finden ist.
+Nun muss er bei der Entwicklung darauf achten, dass er Best-Practices und Konventionen einhält, sowie die Qualitätsanforderungen.
+Eine Qualitätsanforderungen könnte dabei eine vereinbarte Testabdeckung der Software sein.
+Der Softwareentwickler muss also bei der Entwicklung eines neuen Features auch diese Informationen einfach finden können.
+Und ihm muss klar sein, an welcher Stelle im Code er den neuen Code einbauen sollte.
+Das ist Feature Location.
 
-Manchmal werden alte Seiten gefunden oder unfertige Seite.
-Es sollte erkannt werden, wenn eine Seite veraltet ist (ist markiert), oder wenn sie noch nicht fertig ist (durch Markierung oder Länge/Struktur des Textes)
-
-TODO
+\section{Bug Localization}
+Wenn der Softwareentwickler gerade kein neues Feature implementiert, dann korrigiert er gerade möglicherweise einen Fehler in der Software.
+Um einen Fehler überhaupt zu identifizieren, muss aber zuerst wieder die Spezifikation herangezogen werden.
+Denn in der Spezifikation wird, wie bereits erwähnt, die gewünschte Funktionsweise der Software beschrieben.
+Damit wird auch definiert, was ein fehlerhaftes Verhalten ist, und was ein korrektes Verhalten ist.
+Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsprechende Spezifikation zu diesem Fehlerticket finden können.
+Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
+Das ist Bug Localization.\\
 
 \section{Rollenspezifische Suchfilter}
 \label{chap:rollenspezifische-suchfilter}
