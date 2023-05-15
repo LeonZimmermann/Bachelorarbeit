@@ -22,7 +22,13 @@ Neben diesen Anwendungsfällen, welche die Suchfunktion im engeren Sinne betreff
 Auch die Darstellung der Ergebnisse ist bei der Qualität von Suchfunktionen von Relevanz.
 Die Darstellung der Ergebnisse erfolgt anhand der Extraktion von Informationen aus den Suchergebnissen.
 Dieser Vorgang wird Information Extraction genannt.
-Der Use-Case wird in dem Kapitel "Information Extraction" beschrieben.
+Der Use-Case wird in dem Kapitel "Information Extraction" beschrieben.\\
+
+Jedes der Folgenden Kapitel wird zunächst den jeweiligen Use-Cases näher erläutern.
+Nun muss festgelegt werden, wann ein Use-Case als erfüllt betrachtet wird.
+Dazu müssen Metriken verwendet werden, um den Erfüllungsgrad der Use-Cases zu quantifizieren.
+Hierzu werden die Kapitel jeweils eine Reihe von Anforderungen auflisten.
+Das nachfolgende Kapitel "Evaluationsmethoden und -Kriterien" wird die quantifizierung dieser Anforderungen erklären. 
 
 \section{Semantik der Suche verstehen}
 Oft sucht ein Software-Entwickler nach einem bestimmten Bereich in der Spezifikation, aber kennt nicht das genaue Wording, welches auf der Seite verwendet wird.
@@ -33,6 +39,8 @@ Es sei denn, es handelt sich um eine Semantische Suche.
 Eine Semantische Suche versteht Zusammenhänge zwischen verschiedenen Wörtern.
 Wenn also auf der Seite das Wort rollout verwendet wird, anstelle von deployment, dann versteht eine Semantische Suche, dass diese beiden Begriffe sehr ähnlich zueinander sind, und zeigt auch Suchergebnisse von Seiten an, welche das Wort rollout verwenden, auch wenn nach dem Wort deployment gesucht wurde.
 
+TODO Anforderungen als Stichpunkte zusammenfassen
+
 \section{Feature Extraction}
 Bei der Entwicklung eines neuen Features greift der Softwareentwickler also auf die entsprechende Spezifikation zurück.
 Dazu muss ihm bekannt sein, wo die Spezifikation zu finden ist.
@@ -42,6 +50,8 @@ Der Softwareentwickler muss also bei der Entwicklung eines neuen Features auch d
 Und ihm muss klar sein, an welcher Stelle im Code er den neuen Code einbauen sollte.
 Das ist Feature Location.
 
+TODO Anforderungen als Stichpunkte zusammenfassen
+
 \section{Bug Localization}
 Wenn der Softwareentwickler gerade kein neues Feature implementiert, dann korrigiert er gerade möglicherweise einen Fehler in der Software.
 Um einen Fehler überhaupt zu identifizieren, muss aber zuerst wieder die Spezifikation herangezogen werden.
@@ -50,6 +60,8 @@ Damit wird auch definiert, was ein fehlerhaftes Verhalten ist, und was ein korre
 Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsprechende Spezifikation zu diesem Fehlerticket finden können.
 Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
 Das ist Bug Localization.\\
+
+TODO Anforderungen als Stichpunkte zusammenfassen
 
 \section{Rollenspezifische Suchfilter}
 \label{chap:rollenspezifische-suchfilter}
@@ -61,8 +73,10 @@ Außerdem Informationen über häufige Probleme beim Deployment.
 Dann ist auch ein Filter für Projektmanagement-Informationen sinnvoll.
 Dieser kann verwendet werden, um Informationen zum nächsten Software-Release zu finden, über die Teamaufteilung und Verantwortlichkeiten.
 
+TODO Anforderungen als Stichpunkte zusammenfassen
+
 \section{Information Extraction}
-Eine Suchfunktion ist im allgemeinen ein Information Retrieval System.
+Eine Suchfunktion ist im Allgemeinen ein Information Retrieval System.
 Es wird eine Eingabe gemacht, und relevante Dokumente werden identifiziert und dem Nutzer angezeigt.
 Neben dem Information Retrieval gibt es Information Extraction.
 Information Extraction entnimmt aus den gefundenen Dokumenten genau die Informationen, welche für den Nutzer relevant sind.
@@ -70,6 +84,11 @@ Es werden also nicht nur Dokumente gefunden, sondern gleich aufbereitet.
 Das ist vor allem dann praktisch, wenn der Nutzer nach einer Information sucht, welche in einem sehr großen Dokument zu finden ist.
 In diesem Fall ist es zwar schön, dass das System das Dokument findet, trotzdem muss der Nutzer sich mit der Suche nach der gewünschten Information innerhalb vom Dokument quälen.
 Information Extraction löst genau dieses Problem.
-Die Inhalte des Dokuments, welche relevant sind, können bei der Darstellung des Suchergebnisses als Kurztext dargestellt werden, um dem Nutzer gleich die gewünschten Informationen zu liefern.
+Die Inhalte des Dokuments, welche relevant sind, können bei der Darstellung des Suchergebnisses als Kurztext dargestellt werden, um dem Nutzer gleich die gewünschten Informationen zu liefern.\\
 
-TODO Erläuterung von Named Entity Recognition, Entity Linking, Parser etc. für die Umsetzung solcher Use-Cases
+TODO Anforderungen als Stichpunkte zusammenfassen
+
+TODO Erläuterung von Named Entity Recognition, Entity Linking, Parser etc. für die Umsetzung solcher Use-Cases\\
+
+Im nachfolgenden Kapitel "Evaluationsmethoden und -Kriterien" wird aufgezeigt, wie die Anforderungen der Use-Cases quantifizierbar gemacht werden können.
+Das wird dabei helfen nachzuvollziehen, inwieweit die Anforderungen der Use-Cases erreicht wurden, welche genannt wurden.

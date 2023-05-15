@@ -116,8 +116,7 @@ TODO Image\\
 
 Teilbereiche von Informationsextraktion sind Named Entity Recognition, Named Entity Linking, Relation Extraction, Knowledge Base Reasoning.
 Informationsextraktion ist für viele Anwendungsfälle der erste Schritt in einer größeren Pipeline.
-Das könnte z.B.
-ein Chatbot sein oder ein Übersetzer.
+Das könnte z.B. ein Chatbot sein oder ein Übersetzer.
 Named Entity Recognition ist die Erkennung von Eigennamen.
 Named Entity Linking ist der Prozess, eine bestimmte Entität eine einzigartige Identität zu geben.
 Die Entität wird auf eine Target Knowledge Base gemappt, welche weitere Informationen über ebendiese Entität enthält.
@@ -134,3 +133,13 @@ Ein Algorithmus zum Topic Modeling ist Explicit Semantic Analysis (ESA).
 Language Modelling ist ein Task von NLP, welcher es ermöglicht Texte zu übersetzen, Spellchecking, Spracherkennungen und Handschrifterkennung zu implementieren.\\
 
 TODO Image
+
+\section{Feature Location}
+
+Um den Use-Case Feature Location zu implementieren kann ein gemeinsamer Index zwischen Code und Wissensdatenbanken verwendet werden.
+Diese werden mithilfe von Word Embeddings in einer Vektordatenbank gespeichert.
+Das hat den Vorteil, dass die Ähnlichkeit zwischen Dokumenten in der Wissensdatenbanken und Dateien, Klassen oder Methoden im Code bestimmt werden kann.
+Wenn sich der Softwareentwickler also an einer bestimmten Stelle im Code befindet, und zu dieser Stelle weitere Informationen braucht, dann sorgt der gemeinsame Index dafür, dass Dokumente mit großer Ähnlichkeit in der Wissensdatenbank gefunden werden.
+Der Softwareentwickler bekommt also die relevantesten Dokumente zu der Stelle Code, die er sich gerade ansieht. 
+
+// TODO Quellen, Implementierungen finden (gibt es sowas schon?)
