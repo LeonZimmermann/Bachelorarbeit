@@ -1,6 +1,51 @@
 \chapter{Evaluationsmethoden und -Kriterien}
 
+Um zu verifizieren, dass die Algorithmen, welche in dem Kapitel "Implementierung" ihre gewünschte Wirkung erzielen, müssen zuerst Methoden und Kriterien zur Messung herangezogen werden.
+Karl Popper gilt als Begründer des kritischen Rationalismus.
+Dieser war der Anfang von wissenschaftlich durchgeführten Experimenten.
+Zunächst wird eine Hypothese aufgestellt.
+Diese wird anschließend durch ein Experiment untersucht.
+Ein solches Experiment kann ebenfalls für die genannten Use-Cases erstellt werden.
+Dazu müssen die Anforderungen der Use-Cases in Hypothesen umformuliert werden.
+Die Hypothese sagt aus: Die vorgestellte Implementierung erfüllt die Anforderung des Use-Cases mehr als die Vergleichssuchfunktion.
+Die Theorie über Hypothesen wird im nächsten Kapitel näher erklärt.
 
+\section{Statistische Verfahren}
+
+\section{Precision, Recall und F-Maß}
+Zur Evaluation werden die Werte Precision und Recall gemessen.
+Der Precision-Wert ist das Verhältnis zwischen allen gefundenen Dokumenten und den gefundenen Dokumenten, die tatsächlich relevant sind.
+Der Recall-Wert gibt an, wie viele von den tatsächlich relevanten Dokumenten auch gefunden wurden.
+Es ist schwierig beide Werte zu optimieren, da der Precision-Wert versucht die Anzahl der gefundenen Dokumente einzugrenzen und der Recall-Wert versucht die Anzahl der gefundenen Dokumente zu erweitern.
+Das F-Maß fasst beide Werte zu einem neuen Wert zusammen.
+
+
+\section{ISO/IEC 9126}
+
+Die ISO/IEC 9126 legen Qualitätskriterien für die Entwicklung von Software fest.
+Es gibt sechs verschiedene Qualitätskriterien, welche sich wiederum in verschiedene Facetten einteilen lassen.
+Doch nicht alle der sechs Qualitätskriterien sind in dieser Arbeit von Relevanz.
+So werden Die Qualitätskriterien Wartbarkeit, Effizienz, Übertragbarkeit und Zuverlässigkeit nicht beachtet.
+Die Wartbarkeit bezieht sich auf die Fähigkeit von Software sich zu verändern.
+Diese Fähigkeit hat allerdings nichts mit der Qualität einer Suchfunktion zu tun, wie sie hier gemessen werden soll.
+Die Effizienz ist im Kontext von Suchfunktionen als gegeben anzunehmen.
+Der Author unterstellt hier, dass jede Suchfunktion, welche untersucht werden soll, auch effizient ist.
+Denn im Jahr 2023 ist anzunehmen, dass eine Suchfunktion auch schnell die Suchergebnisse darstellen kann.
+Die Übertragbarkeit beschreibt die Fähigkeit einer Software, auf verschiedenen Umgebungen lauffähig zu sein.
+Die Zuverlässigkeit beschreibt, ob die Software auch bei unterschiedlichen Rahmenbedingungen in der gewünschten Form funktioniert.
+Die beiden Kriterien liegen ebenfalls außerhalb des Scopes der Arbeit, weil auch sie sich nicht auf die Qualität der Suchfunktion als solches beziehen.\\
+
+Die zu betrachtenden Qualitätskriterien sind Benutzbarkeit und Funktionalität.
+Die beiden Qualitätskriterien werden in den nächsten Kapiteln im Detail erläutert.
+Das schließt die verschiedenen Facetten der Qualitätskriterien mit ein.
+
+\subsection{Benutzbarkeit}
+
+TODO
+
+\subsection{Funktionalität}
+
+TODO
 
 \section{Features}
 
@@ -57,13 +102,6 @@ Wie gut kann man anhand der Zusammenfassung der Ergebnisse den Inhalt bestimmen.
 Das System findet auch Ergebnisse für ähnliche Wörter.
 So sind bspw. Tippfehler kein Problem.
 Fuzzy-Search.
-
-\section{Precision, Recall und F-Maß}
-Zur Evaluation werden die Werte Precision und Recall gemessen.
-Der Precision-Wert ist das Verhältnis zwischen allen gefundenen Dokumenten und den gefundenen Dokumenten, die tatsächlich relevant sind.
-Der Recall-Wert gibt an, wie viele von den tatsächlich relevanten Dokumenten auch gefunden wurden.
-Es ist schwierig beide Werte zu optimieren, da der Precision-Wert versucht die Anzahl der gefundenen Dokumente einzugrenzen und der Recall-Wert versucht die Anzahl der gefundenen Dokumente zu erweitern.
-Das F-Maß fasst beide Werte zu einem neuen Wert zusammen.
 
 \section{Befragungen}
 TODO
