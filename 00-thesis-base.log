@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  16 MAY 2023 20:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  22 MAY 2023 13:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1393,44 +1393,34 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              deprecated \float@addtolist interface.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--21
-
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 
-      [1
+l.32    \item \textbf
+                     {ErklÃ¤rung des theretischen Hintergrunds:} [1
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 33--37
-
- []
-
-[2{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--100
+Underfull \hbox (badness 10000) in paragraph at lines 52--64
 
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 101--110
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 65--74
 
  []
 
-
-Overfull \hbox (49.72697pt too wide) in paragraph at lines 111--121
+) (./20-definition-von-anwendungsfaellen.tex
+Overfull \hbox (49.72697pt too wide) in paragraph at lines 75--1
 \T1/lmr/m/n/12 satz, wie Ye et. al. Auch hier wer-den Word Em-bed-dings ver-wen-det um Softwareentwicklungs-
  []
 
-) (./20-auswahl-von-use-cases.tex [4]
+[3]
 chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--9
@@ -1447,14 +1437,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--26
 
  []
 
-[5
+[4
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 56--63
 
  []
 
-[6]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 79--88
 
  []
@@ -1464,93 +1454,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-) (./30-evaluationsmethoden-und-kriterien.tex [7]
+) (./30-evaluationsmethoden-und-kriterien.tex [6]
 chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--11
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--37
 
  []
 
-[8
+[7
 
-] [9] [10]) (./40-such-und-nlp-algorithmen.tex [11]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 43--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
+
+ []
+
+) (./40-theoretischer-hintergrund.tex [8] [9]
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  []
 
-[12
+[10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
+Underfull \hbox (badness 10000) in paragraph at lines 47--52
 
  []
 
-[13]) (./50-vergleich-der-suchfunktionen.tex [14]
-chapter 5.
-) (./60-erlaeuterung-des-ergebnisses.tex [15
-
-]
-chapter 6.
-) (./70-implementierung.tex [16
-
-]
-chapter 7.
-[17
-
-] [18]
-Overfull \hbox (9.76198pt too wide) in paragraph at lines 66--71
+[11] [12] [13]
+Overfull \hbox (9.76198pt too wide) in paragraph at lines 151--156
 \T1/lmr/m/n/12 men-te kön-nen da-bei Buch-sta-ben, Wör-ter, Pho-ne-me, Mor-ph-e-me etc. sein. N-Gramme
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--71
+Underfull \hbox (badness 10000) in paragraph at lines 151--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
+Underfull \hbox (badness 10000) in paragraph at lines 157--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 179--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--114
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 202--219
 
  []
 
+) (./50-implementierung.tex [16]
+chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--134
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-[20]) (./80-zusammenfassung.tex [21]
-chapter 8.
-) [22
+) (./60-vergleich-der-suchfunktionen.tex [17
 
 ]
-chapter 9.
-[23
+chapter 6.
+) (./70-zusammenfassung.tex [18
 
-] [24
+]
+chapter 7.
+) [19
+
+]
+chapter 8.
+[20
+
+] [21
 
 ]
 \c@chapterAppendix=\count502
- (./90-appendix.tex
+ (./80-appendix.tex
 chapter A.
-) (./02-declaration.tex [25
+) (./02-declaration.tex [22
 
-]) [26
+]) [23
 
 ] (./00-thesis-base.aux)
 
@@ -1563,18 +1569,18 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33120 strings out of 476001
- 622728 string characters out of 5793198
+ 33079 strings out of 476001
+ 622117 string characters out of 5793198
  1871068 words of memory out of 5000000
- 52921 multiletter control sequences out of 15000+600000
+ 52906 multiletter control sequences out of 15000+600000
  565760 words of font info for 69 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on 00-thesis-base.pdf (33 pages, 439050 bytes).
+Output written on 00-thesis-base.pdf (30 pages, 438443 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 105 named destinations out of 1000 (max. 500000)
- 374 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 432 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 318 words of extra memory for PDF output out of 10000 (max. 10000000)
 

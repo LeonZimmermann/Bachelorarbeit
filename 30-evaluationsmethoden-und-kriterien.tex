@@ -1,16 +1,18 @@
 \chapter{Evaluationsmethoden und -Kriterien}
-
-Um zu verifizieren, dass die Algorithmen, welche in dem Kapitel "Implementierung" ihre gewünschte Wirkung erzielen, müssen zuerst Methoden und Kriterien zur Messung herangezogen werden.
+Um zu verifizieren, dass die Implementierung ihre gewünschte Wirkung erzielt, müssen zuerst Methoden und Kriterien zur Messung herangezogen werden.
 Karl Popper gilt als Begründer des kritischen Rationalismus.
 Dieser war der Anfang von wissenschaftlich durchgeführten Experimenten.
 Zunächst wird eine Hypothese aufgestellt.
 Diese wird anschließend durch ein Experiment untersucht.
-Ein solches Experiment kann ebenfalls für die genannten Use-Cases erstellt werden.
-Dazu müssen die Anforderungen der Use-Cases in Hypothesen umformuliert werden.
-Die Hypothese sagt aus: Die vorgestellte Implementierung erfüllt die Anforderung des Use-Cases mehr als die Vergleichssuchfunktion.
-Die Theorie über Hypothesen wird im nächsten Kapitel näher erklärt.
+Ein solches Experiment kann ebenfalls für die genannten Anwendungsfälle erstellt werden.
+Dazu soll die folgende Hypothese formuliert werden: Mit der vorgestellten Suchfunktion werden die, vom Softwareentwickler gesuchten Informationen, besser gefunden, als mit der bisherigen Suchfunktion.
+Diese Hypothese muss nun quantifizierbar und messbar gemacht werden.
+Die subjektive Wahrnehmung reicht nicht für eine wissenschaftliche Arbeit aus.\\
 
-\section{Statistische Verfahren}
+Nun ist die Formulierung der Hypothese für sich genommen zu unspezifisch.
+Es muss geklärt werden, wann eine Information \textit{besser} zu finden ist.
+Im Folgenden werden Precision, Recall und F-Maß, sowie Qualitätskriterien gemäß ISO/IEC 9126 herangezogen, um Suchfunktionen anhand dieser Eigenschaften vergleichbar zu machen.
+Im Anschluss werden diese Eigenschaften in einem Versuchsaufbau verwendet. 
 
 \section{Precision, Recall und F-Maß}
 Zur Evaluation werden die Werte Precision und Recall gemessen.
@@ -19,9 +21,7 @@ Der Recall-Wert gibt an, wie viele von den tatsächlich relevanten Dokumenten au
 Es ist schwierig beide Werte zu optimieren, da der Precision-Wert versucht die Anzahl der gefundenen Dokumente einzugrenzen und der Recall-Wert versucht die Anzahl der gefundenen Dokumente zu erweitern.
 Das F-Maß fasst beide Werte zu einem neuen Wert zusammen.
 
-
 \section{ISO/IEC 9126}
-
 Die ISO/IEC 9126 legen Qualitätskriterien für die Entwicklung von Software fest.
 Es gibt sechs verschiedene Qualitätskriterien, welche sich wiederum in verschiedene Facetten einteilen lassen.
 Doch nicht alle der sechs Qualitätskriterien sind in dieser Arbeit von Relevanz.
@@ -40,68 +40,35 @@ Die beiden Qualitätskriterien werden in den nächsten Kapiteln im Detail erläu
 Das schließt die verschiedenen Facetten der Qualitätskriterien mit ein.
 
 \subsection{Benutzbarkeit}
+Die Benutzbarkeit von Software teilt sich in die Facetten Attraktivität, Konformität, Erlernbarkeit, Verständlichkeit und Bedienbarkeit ein.
+Die Attraktivität soll hier nicht weiter betrachtet werden, weil die reine Optik einer Suchfunktion im Kontext dieser Arbeit keine Relevanz besitzt.
+Die Facetten Erlernbarkeit und Verständlichkeit ergeben sich durch die Konformität der Suche.
+Damit eine Suchfunktion konform ist, muss sie alle gängigen Arten von Suchen unterstützen.
+Also Keyword Search, Phrase Search, Boolean Search, Phrase Search.
+Die unterschiedlichen Arten von Suchen werden in dem Kapitel "Theoretischer Hintergrund" näher erläutert.\\
 
-TODO
+Die übrige Facette ist die Bedienbarkeit.
+Eine Autovervollständigung von Wörtern kann es dem Softwareentwickler vereinfachen, passende Sucheingaben zu machen.
+Sie verhindert zum einen, dass er Tippfehler macht.
+Zum anderen hilft sie dem Softwareentwickler auch bei der Wortwahl.
+Sie sorgt also für eine bessere Bedienbarkeit.\\
 
 \subsection{Funktionalität}
+Die Funktionalität von Software teilt sich in die Facetten Angemessenheit, Sicherheit, Interoperabilität, Konformität, Ordnungsmäßigkeit und Richtigkeit auf.
 
-TODO
+TODO Weiter ausführen
 
-\section{Features}
-
-\subsection*{Relevanz}
-Eine Suchfunktion muss nicht nur Ergebnisse für eine Such-Query finden, sondern diese auch darstellen.
-Bei der Darstellung der Ergebnisse ist die Reihenfolge besonders wichtig.
-Manchmal hat der Nutzer keine genaue Vorstellung davon, was genau er sucht.
-Er möchte Informationen zu einem Thema finden, aber ohne dabei bestimmte Seiten oder Inhalte im Hinterkopf zu haben.
-Nichtsdestotrotz möchte der Nutzer mit minimalem Aufwand so viele wichtige Informationen, wie möglich erhalten.
-Die Sortierung von Ergebnissen der Suche soll genau das ermöglichen.
-Nun ist zu klären, wie die Bestimmung der Relevanz von Suchergebnissen überhaupt funktioniert.
-Es muss bestimmt werden, anhand welcher Kriterien die Suchfunktion die Relevanz bestimmt.
-Für diese Kriterien gibt es wiederum unterschiedliche Quellen.
-Eine Quelle für Kriterien der Relevanz ist das Nutzerverhalten.
-Seiten, die besonders häufig besucht werden und auf denen lange verweilt wird, oder welche sehr häufig bearbeitet werden, sind gute Kandidaten für eine hohe Relevanz.
-Seiten, welche bei Nutzern praktisch in Vergessenheit geraten sind, scheinen nicht so wichtig zu sein, sodass die Relevanz für die Suche niedrig ist.
-  
-
-\subsection*{Clustering}
-Thematisch ähnliche Dokumente tendieren dazu relevant für die gleiche Suche zu sein.
-Aus diesem Grund ist es oftmals sinnvoll ähnliche Dokumente zu clustern, also zu gruppieren, und sie dem Nutzer als ein solches Cluster darzustellen.
-Alternativ kann auch ein Suchergebnis dargestellt werden und ähnliche Suchergebnisse werden angezeigt als „Ähnliche Suchergebnisse“.
-
-\subsection*{Autovervollständigung}
-Autovervollständigung bedeutet, dass während der Eingabe von Suchbegriffen bereits Ergänzungen für die gesamte Eingabe vorgeschlagen werden.
-Das ist vor allem ein hilfreiches Feature in Fällen, wo der Nutzer nur eine grobe Ahnung davon hat, was er eigentlich sucht.
-Mithilfe von Vorschlägen durch die Suchmaschine selbst kann der Nutzer seine Eingabe spezifischer fassen als er es ohne Vorschläge schaffen würde, sodass die Suchergebnisse besser zu dem passen, was er eigentlich sucht.
-
-\subsection*{Best-Prefix-Highlighting}
-Das ähnlichste Ergebnis zur Eingabe des Nutzers soll gehighlightet werden.
-
-\subsection*{Synonyme}
-Synonyme bei Suche mitbeachten.
-
-\section{Qualitätskriterien}
-
-\subsection*{Interaktivität}
-Klassische Suchfunktionen sind so konzipiert, dass der Nutzer einen Suchbegriff eingibt, anschließend auf einen Submit-Button klickt und erst dann Suchergebnisse angezeigt bekommt.
-Der Nachteil dieser Vorgehensweise ist, dass der Nutzer erst spät Feedback darüber bekommt, ob er mit den eingegebenen Suchbegriffen auch Ergebnisse bekommt, die für ihn gerade sinnvoll sind.
-Das Qualitätskriterium Interaktivität gibt an, wie kurz die Zeit zwischen dem Eingeben von Suchbegriffen und der Anzeige von Ergebnissen ist.
-Eine Suchfunktion muss nicht unbedingt einen Submit-Button verwenden.
-Die Suche kann auch mit jedem ausgeschriebenen Keyword die Suche starten und Ergebnisse dafür anzeigen, oder auch nach jedem eingegebenen Buchstaben.
-Mit einer kürzeren Zeit zwischen Eingabe und Ergebnis, also einer höheren Interaktivität, weiß der Nutzer schneller, ob seine Eingaben sinnvoll sind, und bekommt damit schneller gute Suchergebnisse.
-
-\subsection*{Geschwindigkeit}
-Die Geschwindigkeit einer Eingabe ist die Zeit zwischen dem Beginn der Suche und der Anzeige der ersten Antwort.
-Die Geschwindigkeit hat nichts mit der Interaktivität zu tun.
-
-
-\subsection*{Darstellung}
-Wie gut kann man anhand der Zusammenfassung der Ergebnisse den Inhalt bestimmen.
-
-\subsection*{Benutzerfreundlichkeit}
-Das System findet auch Ergebnisse für ähnliche Wörter.
-So sind bspw. Tippfehler kein Problem.
-Fuzzy-Search.
-
-\section{Befragungen}
-TODO
+\section{Versuchsaufbau}
+Für einen Versuchsaufbau werden Dokumente benötigt, welche durchsucht werden können.
+Außerdem müssen die Suchanfragen festgelegt werden, welche durchgeführt werden sollen.
+Für jede Suchanfrage muss das gewünschte Ergebnis angegeben werden.
+Ein Versuchsaufbau vergleicht Treatments miteinander.
+Zwischen den Treatments werden bestimmte Eigenschaften untersucht.
+Hier wird als Eigenschaft untersucht, an welcher Stelle sich das gewünschte Ergebnis befindet.
+Eine Information ist besser zu finden, wenn die Dokumente, welche die Information enthalten, weiter oben in den Ergebnissen angezeigt werden.
+Eine Information ist ebenfalls besser zu finden, wenn der Softwareentwickler weniger Versuche bei der Formulierung der Suchanfrage benötigt, um die Information zu finden.
+Außerdem ist eine Information besser zu finden, wenn ein größerer Anteil der gefundenen Ergebnisse von Relevanz sind.
+Also wenn die Precision hoch ist.
+Eine Information ist ebenfalls besser zu fidnen, wenn ein größerer Anteil aller relevanten Dokumente auch tatsächlich in den Ergebnissen aufgelistet sind.
+Also wenn der Recall hoch ist.
+Die Treatments sind in diesem Kontext die verschiedenen Suchfunktionen.

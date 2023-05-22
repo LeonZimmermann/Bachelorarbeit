@@ -1,7 +1,7 @@
-\chapter{Auswahl von Use-Cases}
-In diesem Kapitel sollen Use-Cases ausgewählt werden, für welche später Lösungsansätze entwickelt werden.
-Die Use-Cases beschreiben die tatsächlichen Probleme, die Softwareentwickler bei der Verwendung von Suchfunktionen in Wissensdatenbanken haben.
-Zur Identifikation von Use-Cases wurden zwei herangehensweisen verwendet.
+\chapter{Definition von Anwendungsfällen}
+In diesem Kapitel sollen Anwendungsfälle ausgewählt werden, für welche später Lösungsansätze entwickelt werden.
+Die Anwendungsfälle beschreiben die Probleme, die Softwareentwickler bei der Verwendung von Suchfunktionen in Wissensdatenbanken haben.
+Zur Identifikation von Anwendungsfälle wurden zwei herangehensweisen verwendet.
 Zum einen anhand der verwandten Arbeiten.
 In den Verwandten Arbeiten wurden bereits Arbeiten genannt, welche ähnliche Probleme lösen sollen.
 Diese Fokussieren sich vorallem auf die "Feature Location", "Bug Localization" und die Traceability zwischen Code und anderen Artefakten.
@@ -9,24 +9,24 @@ Sie werden in den Kapiteln "Feature Location" und "Bug Localization" beschrieben
 
 Zum anderen wurden in Confluence testweise Sucheingaben gemacht.
 Es wurde das Erwartete Ergebnis gegen das tatsächlich gefundene Ergebnis abgeglichen.
-Aus diesem Verfahren ließen sich Use-Cases ableiten.
+Aus diesem Verfahren ließen sich Anwendungsfälle ableiten.
 So ließ sich ableiten, dass manchmal nicht die gewünschten Ergebnisse gefunden werden, weil nicht das korrekte Wort in der Suche verwendet wurde.
 Stattdessen wurde ein Synonym oder thematisch sehr ähnliches Wort verwendet.
 Grund dafür ist, dass der Softwareentwickler nicht das genaue Wording des gewünschten Dokuments kennt, sondern lediglich das Thema des gesuchten Dokuments.
 Es wäre also hilfreich, wenn die Suche auch Dokumente finden würde, welche thematisch ähnlich zu der Sucheingabe sind.
-Dieser Use-Case wird in dem Kapitel "Semantik der Suche verstehen" erläutert.
+Dieser Anwendungsfall wird in dem Kapitel "Semantik der Suche verstehen" erläutert.
 Außerdem ließ sich ableiten, dass der Scope, in welchem der Softwareentwickler sucht variieren kann.
-Dieser Use-Case wird in dem Kapitel "Rollenspezifische Suchfilter" beschrieben.\\
+Dieser Anwendungsfall wird in dem Kapitel "Rollenspezifische Suchfilter" beschrieben.\\
 
 Neben diesen Anwendungsfällen, welche die Suchfunktion im engeren Sinne betreffen, gibt es noch weitere Anwendungsfälle, um die Suchfunktion zu verbessern.
 Auch die Darstellung der Ergebnisse ist bei der Qualität von Suchfunktionen von Relevanz.
 Die Darstellung der Ergebnisse erfolgt anhand der Extraktion von Informationen aus den Suchergebnissen.
 Dieser Vorgang wird Information Extraction genannt.
-Der Use-Case wird in dem Kapitel "Information Extraction" beschrieben.\\
+Der Anwendungsfall wird in dem Kapitel "Information Extraction" beschrieben.\\
 
-Jedes der Folgenden Kapitel wird zunächst den jeweiligen Use-Cases näher erläutern.
-Nun muss festgelegt werden, wann ein Use-Case als erfüllt betrachtet wird.
-Dazu müssen Metriken verwendet werden, um den Erfüllungsgrad der Use-Cases zu quantifizieren.
+Jedes der Folgenden Kapitel wird zunächst den jeweiligen Anwendungsfälle näher erläutern.
+Nun muss festgelegt werden, wann ein Anwendungsfall als erfüllt betrachtet wird.
+Dazu müssen Metriken verwendet werden, um den Erfüllungsgrad der Anwendungsfälle zu quantifizieren.
 Hierzu werden die Kapitel jeweils eine Reihe von Anforderungen auflisten.
 Das nachfolgende Kapitel "Evaluationsmethoden und -Kriterien" wird die quantifizierung dieser Anforderungen erklären. 
 
@@ -41,7 +41,7 @@ Wenn also auf der Seite das Wort rollout verwendet wird, anstelle von deployment
 
 TODO Anforderungen als Stichpunkte zusammenfassen
 
-\section{Feature Extraction}
+\section{Feature Location}
 Bei der Entwicklung eines neuen Features greift der Softwareentwickler also auf die entsprechende Spezifikation zurück.
 Dazu muss ihm bekannt sein, wo die Spezifikation zu finden ist.
 Nun muss er bei der Entwicklung darauf achten, dass er Best-Practices und Konventionen einhält, sowie die Qualitätsanforderungen.
@@ -88,7 +88,7 @@ Die Inhalte des Dokuments, welche relevant sind, können bei der Darstellung des
 
 TODO Anforderungen als Stichpunkte zusammenfassen
 
-TODO Erläuterung von Named Entity Recognition, Entity Linking, Parser etc. für die Umsetzung solcher Use-Cases\\
+TODO Erläuterung von Named Entity Recognition, Entity Linking, Parser etc. für die Umsetzung solcher Anwendungsfälle\\
 
-Im nachfolgenden Kapitel "Evaluationsmethoden und -Kriterien" wird aufgezeigt, wie die Anforderungen der Use-Cases quantifizierbar gemacht werden können.
-Das wird dabei helfen nachzuvollziehen, inwieweit die Anforderungen der Use-Cases erreicht wurden, welche genannt wurden.
+Im nachfolgenden Kapitel "Evaluationsmethoden und -Kriterien" wird aufgezeigt, wie die Anforderungen der Anwendungsfälle quantifizierbar gemacht werden können.
+Das wird dabei helfen nachzuvollziehen, inwieweit die Anforderungen der Anwendungsfälle erreicht wurden, welche genannt wurden.
