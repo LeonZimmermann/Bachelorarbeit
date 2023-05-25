@@ -66,7 +66,7 @@ Auf Grundlage der gewählten Ergebnisse und mithilfe eines Machine Learning Algo
 Dabei gibt es verschiedene Strategien.
 Wenn der Softwareentwickler zu Beginn eine sehr lange Suchanfrage eingegeben hat, dann kann das System eine Reduktion der Suchanfrage vorschlagen.
 Hat der Softwareentwickler dagegen lediglich einen Suchbegriff angegeben, so kann das System eine Erweiterung der Suchbegriffe vorschlagen.
-Dazu greift das System auf Synonyme des eingegebenen Suchbegriffes zurück.\\
+Dazu greift das System auf Synonyme des eingegebenen Suchbegriffes zurück.\cite{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}\\
 
 In dem Paper "From Word Embeddings To Document Similarities for Improved Information Retrieval in Software Engineering" von Ye et. al. wird beschrieben, wie Word Embeddings dazu verwendet werden können, um Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten herzustellen.
 Word Embeddings sind eine Datenstruktur, welche einem Wort einen Vektor in einem n-dimensionalen Raum zuweist.
@@ -76,7 +76,7 @@ Unähnliche Wörter haben eine hohe Distanz.
 Der Algorithmus, welcher die Ähnlichkeit der Wörter bestimmt, macht Gebrauch von der Distributional Hypthesis.
 Dieser besagt, dass Wörter, welche im gleichen Kontext verwendet werden, eine ähnliche Semantik besitzen.
 Hermit wird also die Ähnlichkeit der Wörter bestimmt.
-Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte.\\
+Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte.\cite{Ye_Shen_Ma_Bunescu_Liu_2016}\\
 
 In dem Paper "Information Retrieval Models for Recovering Traceability Links between Code and Documentation" verwenden Antoniol et. al. einen ähnlichen Ansatz, wie Ye et. al.
 Auch hier werden Word Embeddings verwendet um Softwareentwicklungs-Artefakte gegen den Code zu matchen.
@@ -87,7 +87,7 @@ Zuletzt werden Flexionen entfernt.
 Aus dem Code werden zunächst Identifier extrahiert.
 Identifier, welche mehrere Wörter unter Verwendung von CamelCase oder snake\_case beinhalten, werden in die einzelnen Wörter aufgeteilt.
 Anschließend werden die Identifier auf die gleiche Art und Weise normalisiert, wie die Wörter der Softwareentwicklungs-Artefakte.
-Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings.\\
+Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}\\
 
 In dem Paper "TaskNav: Task-based Navigation of Software Documentation" von Treude et. al. geht es um die Entwicklung einer Oberfläche, welche die Suche von \textit{Tasks} ermöglicht.
 Dabei ist unter Task eine Operation im Code zu verstehen.
@@ -95,4 +95,4 @@ Das Paper beschreibt einen Task als Verben, welche mit einem direkten Objekt ode
 Die Autoren nennen die Phrasen \textit{get iterator} und \textit{get iterator for collection} als Beispiele.
 Die Software analysiert nun die gesamte Dokumentation und extrahiert Tasks.
 Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach ihnen suchen kann. 
-So wie die vorherigen Paper soll auch dieses Paper eine Brücke zwischen Dokumentation und Code schaffen.
+So wie die vorherigen Paper soll auch dieses Paper eine Brücke zwischen Dokumentation und Code schaffen.\cite{Treude_Sicard_Klocke_Robillard_2015}

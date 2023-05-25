@@ -7,40 +7,11 @@ In den Verwandten Arbeiten wurden Arbeiten genannt, welche ähnliche Probleme l�
 Diese Fokussieren sich vorallem auf die "Feature Location", "Bug Localization" und die Traceability zwischen Code und anderen Artefakten.
 Mit anderen Worten: Die Suchfunktion soll eine Brücke zwischen Code und Dokumentation herstellen.\\
 
-Zum anderen wurden in Confluence testweise Sucheingaben gemacht.
-Es wurde das Erwartete Ergebnis gegen das tatsächlich gefundene Ergebnis abgeglichen.
-Aus diesem Verfahren ließen sich Anwendungsfälle ableiten.
-So ließ sich ableiten, dass manchmal nicht die gewünschten Ergebnisse gefunden werden, weil nicht das korrekte Wort in der Suche verwendet wurde.
-Stattdessen wurde ein Synonym oder thematisch sehr ähnliches Wort verwendet.
-Grund dafür ist, dass der Softwareentwickler nicht das genaue Wording des gewünschten Dokuments kennt, sondern lediglich das Thema des gesuchten Dokuments.
-Es wäre also hilfreich, wenn die Suche auch Dokumente finden würde, welche thematisch ähnlich zu der Sucheingabe sind.
-Dieser Anwendungsfall wird in dem Kapitel "Semantik der Suche verstehen" erläutert.
-Außerdem ließ sich ableiten, dass der Scope, in welchem der Softwareentwickler sucht variieren kann.
-Dieser Anwendungsfall wird in dem Kapitel "Rollenspezifische Suchfilter" beschrieben.\\
-
-Neben diesen Anwendungsfällen, welche die Suchfunktion im engeren Sinne betreffen, gibt es noch weitere Anwendungsfälle, um die Suchfunktion zu verbessern.
-Auch die Darstellung der Ergebnisse ist bei der Qualität von Suchfunktionen von Relevanz.
-Die Darstellung der Ergebnisse erfolgt anhand der Extraktion von Informationen aus den Suchergebnissen.
-Dieser Vorgang wird Information Extraction genannt.
-Der Anwendungsfall wird in dem Kapitel "Information Extraction" beschrieben.\\
-
 Jedes der Folgenden Kapitel wird zunächst den jeweiligen Anwendungsfälle näher erläutern.
 Nun muss festgelegt werden, wann ein Anwendungsfall als erfüllt betrachtet wird.
 Dazu müssen Metriken verwendet werden, um den Erfüllungsgrad der Anwendungsfälle zu quantifizieren.
-Hierzu werden die Kapitel jeweils eine Reihe von Anforderungen auflisten.
+Hierzu werden Sucheingaben aufgelistet, welche im Kontext des Anwendungsfalls vorkommen könnten.
 Das nachfolgende Kapitel "Evaluationsmethoden und -Kriterien" wird die quantifizierung dieser Anforderungen erklären. 
-
-% Ggf. Teil der Implementierung
-\section{Semantik der Suche verstehen}
-Oft sucht ein Software-Entwickler nach einem bestimmten Bereich in der Spezifikation, aber kennt nicht das genaue Wording, welches auf der Seite verwendet wird.
-Beispielsweise könnte ein Softwareentwickler sich in ein neues Projekt einarbeiten, und möchte nun verstehen, wie er die bestehende Anwendung überhaupt in einer Testumgebung starten kann.
-Dann gibt er in die Sucheingabe der Wissensdatenbank soetwas ein, wie "deployment".
-Wenn nun die Seite, welche das Deployment erklärt, aber nicht genau dieses Wort enthält, dann wird die gewünschte Seite durch die Suche nicht gefunden.
-Es sei denn, es handelt sich um eine Semantische Suche.
-Eine Semantische Suche versteht Zusammenhänge zwischen verschiedenen Wörtern.
-Wenn also auf der Seite das Wort rollout verwendet wird, anstelle von deployment, dann versteht eine Semantische Suche, dass diese beiden Begriffe sehr ähnlich zueinander sind, und zeigt auch Suchergebnisse von Seiten an, welche das Wort rollout verwenden, auch wenn nach dem Wort deployment gesucht wurde.
-
-TODO Anforderungen als Stichpunkte zusammenfassen
 
 \section{Feature Location}
 Bei der Entwicklung eines neuen Features greift der Softwareentwickler also auf die entsprechende Spezifikation zurück.
@@ -51,7 +22,7 @@ Der Softwareentwickler muss also bei der Entwicklung eines neuen Features auch d
 Und ihm muss klar sein, an welcher Stelle im Code er den neuen Code einbauen sollte.
 Das ist Feature Location.
 
-TODO Anforderungen als Stichpunkte zusammenfassen
+TODO Beispielhafte Sucheingaben auflisten und dafür argumentieren
 
 \section{Bug Localization}
 Wenn der Softwareentwickler gerade kein neues Feature implementiert, dann korrigiert er gerade möglicherweise einen Fehler in der Software.
@@ -62,36 +33,25 @@ Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsp
 Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
 Das ist Bug Localization.\\
 
-TODO Anforderungen als Stichpunkte zusammenfassen
+TODO Beispielhafte Sucheingaben auflisten und dafür argumentieren
 
-% Ggf. Teil der Implementierung
-\section{Rollenspezifische Suchfilter}
-\label{chap:rollenspezifische-suchfilter}
-Eine Möglichkeit relevante Dokumente einfacher zu finden ist die Verwendung von Suchfiltern.
-Im Kontext einer Suche, welche auf Software-Entwickler zugeschnitten ist, ist es denkbar einen Suchfilter zu verwenden, welcher nach Software-Informationen filtern.
-Also die Spezifikation und Dokumentation der Software, sowie How-To-Guides, Best-Practices und Code Konventionen.
-Außerdem ist ein Filter für Informationen zur Infrastruktur denkbar. Also Informationen darüber, wie die Software deployt wird, und wohin sie deployt werden kann.
-Außerdem Informationen über häufige Probleme beim Deployment.
-Dann ist auch ein Filter für Projektmanagement-Informationen sinnvoll.
-Dieser kann verwendet werden, um Informationen zum nächsten Software-Release zu finden, über die Teamaufteilung und Verantwortlichkeiten.
+\section{Informationen über das Projekt finden}
+TODO
 
-TODO Anforderungen als Stichpunkte zusammenfassen
+\section{Implementierung nach Spezifikation}
+TODO
 
-% Ggf. Teil der Implementierung
-\section{Information Extraction}
-Eine Suchfunktion ist im Allgemeinen ein Information Retrieval System.
-Es wird eine Eingabe gemacht, und relevante Dokumente werden identifiziert und dem Nutzer angezeigt.
-Neben dem Information Retrieval gibt es Information Extraction.
-Information Extraction entnimmt aus den gefundenen Dokumenten genau die Informationen, welche für den Nutzer relevant sind.
-Es werden also nicht nur Dokumente gefunden, sondern gleich aufbereitet.
-Das ist vor allem dann praktisch, wenn der Nutzer nach einer Information sucht, welche in einem sehr großen Dokument zu finden ist.
-In diesem Fall ist es zwar schön, dass das System das Dokument findet, trotzdem muss der Nutzer sich mit der Suche nach der gewünschten Information innerhalb vom Dokument quälen.
-Information Extraction löst genau dieses Problem.
-Die Inhalte des Dokuments, welche relevant sind, können bei der Darstellung des Suchergebnisses als Kurztext dargestellt werden, um dem Nutzer gleich die gewünschten Informationen zu liefern.\\
+\section{Abgleich mit Spezifikation}
+TODO
 
-TODO Anforderungen als Stichpunkte zusammenfassen
+\section{Onboarding im Projekt}
+TODO Best-Practices, Code-Styles, Guidelines, Prozesse, Quality Gates, Deployment, Glossar, Projektmanagement, Testing etc.
 
-TODO Erläuterung von Named Entity Recognition, Entity Linking, Parser etc. für die Umsetzung solcher Anwendungsfälle\\
+\section{Deployment}
+TODO
+
+\section{Dokumentation zum besseren Verständnis heranziehen}
+TODO Glossar, API-Dokumentation etc.
 
 Im nachfolgenden Kapitel "Evaluationsmethoden und -Kriterien" wird aufgezeigt, wie die Anforderungen der Anwendungsfälle quantifizierbar gemacht werden können.
 Das wird dabei helfen nachzuvollziehen, inwieweit die Anforderungen der Anwendungsfälle erreicht wurden, welche genannt wurden.

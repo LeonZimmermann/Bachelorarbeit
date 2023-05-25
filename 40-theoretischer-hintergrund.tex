@@ -190,7 +190,44 @@ Es gibt drei gemeinsame Trigramme.
 Das Ergebnis ist (2*3)/(6+6) also 50\%.
 An diesem Beispiel lässt sich zeigen, dass sich das Ergebnis des Ähnlichkeitsmaß verändert, wenn ein anderes N-Gramm verwendet wird.
 
+\section{Semantik der Suche verstehen}
+Oft sucht ein Software-Entwickler nach einem bestimmten Bereich in der Spezifikation, aber kennt nicht das genaue Wording, welches auf der Seite verwendet wird.
+Beispielsweise könnte ein Softwareentwickler sich in ein neues Projekt einarbeiten, und möchte nun verstehen, wie er die bestehende Anwendung überhaupt in einer Testumgebung starten kann.
+Dann gibt er in die Sucheingabe der Wissensdatenbank soetwas ein, wie "deployment".
+Wenn nun die Seite, welche das Deployment erklärt, aber nicht genau dieses Wort enthält, dann wird die gewünschte Seite durch die Suche nicht gefunden.
+Es sei denn, es handelt sich um eine Semantische Suche.
+Eine Semantische Suche versteht Zusammenhänge zwischen verschiedenen Wörtern.
+Wenn also auf der Seite das Wort rollout verwendet wird, anstelle von deployment, dann versteht eine Semantische Suche, dass diese beiden Begriffe sehr ähnlich zueinander sind, und zeigt auch Suchergebnisse von Seiten an, welche das Wort rollout verwenden, auch wenn nach dem Wort deployment gesucht wurde.
+
+TODO Anforderungen als Stichpunkte zusammenfassen
+
+% Ggf. Teil der Implementierung
+\section{Rollenspezifische Suchfilter}
+Eine Möglichkeit relevante Dokumente einfacher zu finden ist die Verwendung von Suchfiltern.
+Im Kontext einer Suche, welche auf Software-Entwickler zugeschnitten ist, ist es denkbar einen Suchfilter zu verwenden, welcher nach Software-Informationen filtern.
+Also die Spezifikation und Dokumentation der Software, sowie How-To-Guides, Best-Practices und Code Konventionen.
+Außerdem ist ein Filter für Informationen zur Infrastruktur denkbar. Also Informationen darüber, wie die Software deployt wird, und wohin sie deployt werden kann.
+Außerdem Informationen über häufige Probleme beim Deployment.
+Dann ist auch ein Filter für Projektmanagement-Informationen sinnvoll.
+Dieser kann verwendet werden, um Informationen zum nächsten Software-Release zu finden, über die Teamaufteilung und Verantwortlichkeiten.
+TODO Anforderungen als Stichpunkte zusammenfassen
+
+% Ggf. Teil der Implementierung
 \section{Information Extraction}
+Eine Suchfunktion ist im Allgemeinen ein Information Retrieval System.
+Es wird eine Eingabe gemacht, und relevante Dokumente werden identifiziert und dem Nutzer angezeigt.
+Neben dem Information Retrieval gibt es Information Extraction.
+Information Extraction entnimmt aus den gefundenen Dokumenten genau die Informationen, welche für den Nutzer relevant sind.
+Es werden also nicht nur Dokumente gefunden, sondern gleich aufbereitet.
+Das ist vor allem dann praktisch, wenn der Nutzer nach einer Information sucht, welche in einem sehr großen Dokument zu finden ist.
+In diesem Fall ist es zwar schön, dass das System das Dokument findet, trotzdem muss der Nutzer sich mit der Suche nach der gewünschten Information innerhalb vom Dokument quälen.
+Information Extraction löst genau dieses Problem.
+Die Inhalte des Dokuments, welche relevant sind, können bei der Darstellung des Suchergebnisses als Kurztext dargestellt werden, um dem Nutzer gleich die gewünschten Informationen zu liefern.\\
+
+TODO Anforderungen als Stichpunkte zusammenfassen
+
+TODO Erläuterung von Named Entity Recognition, Entity Linking, Parser etc. für die Umsetzung solcher Anwendungsfälle\\
+
 Information Extraction ist der Prozess des Extrahierens von Informationen aus Dokumenten.
 Dazu müssen zunächst die Dokumente gefunden werden, welche die passenden Informationen enthalten.
 Dieser Schritt wird Information Retrieval genannt.

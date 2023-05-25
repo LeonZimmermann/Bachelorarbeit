@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  25 MAY 2023 22:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  25 MAY 2023 22:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1433,33 +1433,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--9
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--26
+Underfull \hbox (badness 10000) in paragraph at lines 28--35
 
  []
 
 [5
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 57--64
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 82--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
-
- []
-
-) (./30-evaluationsmethoden-und-kriterien.tex [7]
+]) (./30-evaluationsmethoden-und-kriterien.tex [6]
 chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--11
@@ -1496,7 +1476,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--47
 
  []
 
-[8
+[7
 
 {c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 53--59
@@ -1508,21 +1488,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--65
 
  []
 
-[9]) (./40-theoretischer-hintergrund.tex [10]
+[8]) (./40-theoretischer-hintergrund.tex [9]
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 32--36
 
  []
 
-[11
+[10
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 62--67
 
  []
 
-[12] [13] [14] [15]
+[11] [12] [13] [14]
 Overfull \hbox (9.76198pt too wide) in paragraph at lines 166--171
 \T1/lmr/m/n/12 men-te kön-nen da-bei Buch-sta-ben, Wör-ter, Pho-ne-me, Mor-ph-e-me etc. sein. N-Gramme
  []
@@ -1542,18 +1522,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 217--226
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--214
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 231--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--234
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--271
 
  []
 
@@ -1599,18 +1589,18 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33100 strings out of 476001
- 622426 string characters out of 5793198
- 1871068 words of memory out of 5000000
- 52916 multiletter control sequences out of 15000+600000
+ 33125 strings out of 476001
+ 623485 string characters out of 5793198
+ 1872068 words of memory out of 5000000
+ 52932 multiletter control sequences out of 15000+600000
  565760 words of font info for 69 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on 00-thesis-base.pdf (32 pages, 478695 bytes).
+Output written on 00-thesis-base.pdf (32 pages, 481952 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 420 compressed objects within 5 object streams
- 91 named destinations out of 1000 (max. 500000)
- 366 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 532 PDF objects out of 1000 (max. 8388607)
+ 454 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 406 words of extra memory for PDF output out of 10000 (max. 10000000)
 

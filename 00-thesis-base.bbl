@@ -19,6 +19,90 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Antoniol_Canfora_Casazza_DeLucia_2000}{article}{}
+      \name{author}{4}{}{%
+        {{hash=0b55808e9cb6e3baf39d45fee45b2e57}{%
+           family={Antoniol},
+           familyi={A\bibinitperiod}}}%
+        {{hash=5caef8b98cdb23c86e2375e66b7f4a81}{%
+           family={Canfora},
+           familyi={C\bibinitperiod}}}%
+        {{hash=f0b70955032a6843ea08f5d8c2ac30ae}{%
+           family={Casazza},
+           familyi={C\bibinitperiod}}}%
+        {{hash=1f2954ea2172d12bfafd845fd1c50ed3}{%
+           family={Lucia},
+           familyi={L\bibinitperiod},
+           given={De},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a9dbafdae62131287520bc1c2fc6744}
+      \strng{fullhash}{309139ad2c3d4e65be1854a52a100ff6}
+      \strng{bibnamehash}{309139ad2c3d4e65be1854a52a100ff6}
+      \strng{authorbibnamehash}{309139ad2c3d4e65be1854a52a100ff6}
+      \strng{authornamehash}{7a9dbafdae62131287520bc1c2fc6744}
+      \strng{authorfullhash}{309139ad2c3d4e65be1854a52a100ff6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings International Conference on Software Maintenance ICSM-94}
+      \field{title}{Information retrieval models for recovering traceability links between code and Documentation}
+      \field{year}{2000}
+      \verb{doi}
+      \verb 10.1109/icsm.2000.883003
+      \endverb
+    \endentry
+    \entry{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}{article}{}
+      \name{author}{6}{}{%
+        {{hash=bf2b8c2f3ce5fd87221ecdc94305c848}{%
+           family={Haiduc},
+           familyi={H\bibinitperiod},
+           given={Sonia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0d2cf4bc3dbc5d09d9d74296b8f60d57}{%
+           family={Bavota},
+           familyi={B\bibinitperiod},
+           given={Gabriele},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c6902cc3f7576dd0b2286173527ff62a}{%
+           family={Marcus},
+           familyi={M\bibinitperiod},
+           given={Andrian},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ebbd5f36c9d746916bb6b816286162d1}{%
+           family={Oliveto},
+           familyi={O\bibinitperiod},
+           given={Rocco},
+           giveni={R\bibinitperiod}}}%
+        {{hash=fc20672efd512f34f360f67a9124e537}{%
+           family={De\bibnamedelima Lucia},
+           familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=38d461d8783f751f969201332e830507}{%
+           family={Menzies},
+           familyi={M\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{525c819f9c243e714ab42e50aa9453cc}
+      \strng{fullhash}{61808d09e8f117c3e20c562ee89cae86}
+      \strng{bibnamehash}{61808d09e8f117c3e20c562ee89cae86}
+      \strng{authorbibnamehash}{61808d09e8f117c3e20c562ee89cae86}
+      \strng{authornamehash}{525c819f9c243e714ab42e50aa9453cc}
+      \strng{authorfullhash}{61808d09e8f117c3e20c562ee89cae86}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2013 35th International Conference on Software Engineering (ICSE)}
+      \field{title}{Automatic query reformulations for text retrieval in software engineering}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1109/icse.2013.6606630
+      \endverb
+    \endentry
     \entry{Marcus_Maletic_2003}{article}{}
       \name{author}{2}{}{%
         {{hash=3c2cb02fdfaef1071bb5a227133333fc}{%
@@ -67,8 +151,94 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{journaltitle}{Philosophische Fakultät der Heinrich-Heine-Universität Düsseldorf}
       \field{title}{On Search Engine Evaluation Metrics}
       \field{year}{2012}
+    \endentry
+    \entry{Treude_Sicard_Klocke_Robillard_2015}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fc21c10b2d386c8460fa30c762643c06}{%
+           family={Treude},
+           familyi={T\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=bf24db55747cf56e3a610b4ccdab10ba}{%
+           family={Sicard},
+           familyi={S\bibinitperiod},
+           given={Mathieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3bcd1601c76c84acb73e5cda528b7126}{%
+           family={Klocke},
+           familyi={K\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7c7ac4620d52912ba2273d684330f7ce}{%
+           family={Robillard},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4154740636d7a0b1128b78a31c3750d}
+      \strng{fullhash}{172bea28c7be7e28535f6d63770cfa25}
+      \strng{bibnamehash}{172bea28c7be7e28535f6d63770cfa25}
+      \strng{authorbibnamehash}{172bea28c7be7e28535f6d63770cfa25}
+      \strng{authornamehash}{d4154740636d7a0b1128b78a31c3750d}
+      \strng{authorfullhash}{172bea28c7be7e28535f6d63770cfa25}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2015 IEEE/ACM 37th IEEE International Conference on Software Engineering}
+      \field{title}{TaskNav: Task-based navigation of software documentation}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1109/icse.2015.214
+      \endverb
+    \endentry
+    \entry{Ye_Shen_Ma_Bunescu_Liu_2016}{article}{}
+      \name{author}{5}{}{%
+        {{hash=5e058b60e07be2686cd99a299ae4ab0a}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=39d088a3bf8c7a92bacab6c0e8495a84}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5d38fb894354b4d9907d6b0143642902}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=1d1dc32564386318171152761fdb0a82}{%
+           family={Bunescu},
+           familyi={B\bibinitperiod},
+           given={Razvan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9d9ac6815e27331ba6620def723e357f}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Chang},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{450d7c946c4d33c798e22c78787004f1}
+      \strng{fullhash}{c22f0993e545c430d8f134013c679355}
+      \strng{bibnamehash}{c22f0993e545c430d8f134013c679355}
+      \strng{authorbibnamehash}{c22f0993e545c430d8f134013c679355}
+      \strng{authornamehash}{450d7c946c4d33c798e22c78787004f1}
+      \strng{authorfullhash}{c22f0993e545c430d8f134013c679355}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 38th International Conference on Software Engineering}
+      \field{title}{From word embeddings to document similarities for improved information retrieval in software engineering}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1145/2884781.2884862
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

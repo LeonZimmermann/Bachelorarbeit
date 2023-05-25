@@ -3,33 +3,38 @@
 \contentsline {section}{\numberline {1.1}Vorgehensweise}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Verwandte Arbeiten}{2}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Definition von Anwendungsfällen}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Semantik der Suche verstehen}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Feature Location}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Bug Localization}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Rollenspezifische Suchfilter}{7}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Information Extraction}{7}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Precision, Recall und F-Maß}{8}{section.3.1}%
-\contentsline {section}{\numberline {3.2}ISO/IEC 9126}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Benutzbarkeit}{9}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Funktionalität}{10}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Versuchsaufbau}{10}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Theoretischer Hintergrund}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Suchalgorithmen}{11}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Keyword Search}{11}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Phrase Search}{11}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Boolean Search}{11}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Field Search}{12}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Structured Search}{12}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Lexical Search}{12}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}Semantic Search}{12}{subsection.4.1.7}%
-\contentsline {section}{\numberline {4.2}NLP-Algorithmen}{14}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Crawling}{14}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Indizierung}{14}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Suffix-Trees}{16}{section.4.5}%
-\contentsline {section}{\numberline {4.6}N-Gramm}{16}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Information Extraction}{16}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Feature Location}{18}{section.4.8}%
+\contentsline {section}{\numberline {2.1}Feature Location}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Bug Localization}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Informationen über das Projekt finden}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Implementierung nach Spezifikation}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Abgleich mit Spezifikation}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Onboarding im Projekt}{6}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Deployment}{6}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Dokumentation zum besseren Verständnis heranziehen}{6}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Precision, Recall und F-Maß}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}ISO/IEC 9126}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Benutzbarkeit}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Funktionalität}{9}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Versuchsaufbau}{9}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Theoretischer Hintergrund}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Suchalgorithmen}{10}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Keyword Search}{10}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Phrase Search}{10}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Boolean Search}{10}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Field Search}{11}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Structured Search}{11}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Lexical Search}{11}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Semantic Search}{11}{subsection.4.1.7}%
+\contentsline {section}{\numberline {4.2}NLP-Algorithmen}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Crawling}{13}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Indizierung}{13}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Suffix-Trees}{15}{section.4.5}%
+\contentsline {section}{\numberline {4.6}N-Gramm}{15}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Semantik der Suche verstehen}{15}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Rollenspezifische Suchfilter}{16}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Information Extraction}{16}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Feature Location}{18}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Implementierung}{19}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Aufsetzen der Vektordatenbank Weaviate}{19}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Befüllen der Vektordatenbank Weaviate}{19}{section.5.2}%
