@@ -31,7 +31,13 @@
 \contentsline {section}{\numberline {4.7}Information Extraction}{16}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Feature Location}{18}{section.4.8}%
 \contentsline {chapter}{\numberline {5}Implementierung}{19}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Aufsetzen der Vektordatenbank Weaviate}{19}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Befüllen der Vektordatenbank Weaviate}{19}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ausführung der Suchfunktion der Vektordatenbank Weaviate}{19}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{20}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Diskussion des Studienaufbaus}{20}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Durchführung der Studie}{20}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Diskussion der Ergebnisse}{20}{section.6.3}%
 \contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{21}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Zusammenfassung}{21}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Ausblick}{21}{section.7.2}%
