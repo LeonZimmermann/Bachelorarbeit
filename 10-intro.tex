@@ -14,22 +14,28 @@ Large Language Models, wie GPT, sollen dabei nicht beachtet werden, weil sie nic
 
 \section{Vorgehensweise}
 
-Die Gründe, warum die gewünschte Information nicht gefunden werden konnte, sind vielzählig.
-Das kann daran liegen, dass die gefundenen Ergebnisse zu spezifisch sind, z.B. wenn eine allgemeine Definition von Domänenobjekten gesucht wird, aber eine Spezifikation eines Anwendungsfalls gefunden wird, in welchem das Domänenobjekt lediglich erwähnt wird.
+Die Gründe, warum eine gewünschte Information schwierig zu finden ist, sind vielzählig.
 Manchmal kennt der Softwareentwickler nicht das genaue Wording, um die gewünschten Informationen zu finden.
 Manchmal ist das Abstraktionslevel der gefundenen Informationen nicht das, welches sich der Softwareentwickler gewünscht hat.
-Zur Lösung dieses Problems werden folgende Teilziele definiert:
+Beispielsweise, wenn eine allgemeine Definition von Domänenobjekten gesucht wird, aber eine Spezifikation eines Anwendungsfalls gefunden wird, in welchem das Domänenobjekt lediglich erwähnt wird.
+Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdatenbanken, wie Confluence, zu verbessern:
 \begin{itemize}
    \item \textbf{Definition von Anwendungsfällen:}
-         Es werden zunächst Anwendungsfälle definiert.
-         Damit wird das Problem der Performance von Suchen heruntergebrochen in Teilprobleme.
-         Das soll später dabei helfen mehrere Suchfunktionen miteinander vergleichen zu können.
-         Außerdem bietet dies bereits Aufschluss über die möglichen Verbesserungen, welche gemacht werden können.
+         Es werden zuerst Anwendungsfälle definiert.
+         Damit wird das Problem der Qualität einer Suchfunktion heruntergebrochen in Teilprobleme.
+         Die Anwendungsfälle beschreiben die konkreten Situationen, in welchen ein Softwareentwickler eine Suche nutzen könnte.
+         Das hilft später dabei mehrere Suchfunktionen miteinander vergleichen zu können.
+         Denn anhand der Anwendungsfälle können realistische Suchanfragen definiert werden.
+         Diese Suchanfragen können gegen an zwei verschiedene Suchfunktionen übergeben werden.
+         Anschließend können die gefundenen Ergebnisse verglichen werden.
+         Die genaue Vorgehensweise für diesen Vergleich wird in den Teilschritten "Herausarbeitung von Evaluationsmethoden und -Kriterien" und "Durchführung der Studie" erklärt.
+         Außerdem bietet die Aufteilung in Anwendungsfälle bereits Aufschluss über die möglichen Verbesserungen, welche gemacht werden können.
+         Hierauf wird in den Teilschritten "Erklärung des theoretischen Hintergrunds" und "Implementierung" weiter eingegangen.
    \item \textbf{Herausarbeitung von Evaluationsmethoden und -Kriterien:}
          Es werden Methoden für die Bewertung herausgearbeitet.
          Damit wird die Frage beantwortet, wann eine Suchfunktion \textit{gut} ist.
-         Die hier erläutertern Informationen sind notwendig für die Durchführung einer Studie.
-   \item \textbf{Erklärung des theretischen Hintergrunds:}
+         Das hier erläuterterte Wissen wird für die Durchführung der Studie benötigt.
+   \item \textbf{Erklärung des theoretischen Hintergrunds:}
          Es wird die Theorie für die Implementierung einer Suchfunktion erläutert.
          Die Theorie erklärt, welche Suchfunktionen es gibt.
          Außerdem erklärt sie Verfahren zur Indizierung von Dokumenten.
@@ -81,4 +87,12 @@ Zuletzt werden Flexionen entfernt.
 Aus dem Code werden zunächst Identifier extrahiert.
 Identifier, welche mehrere Wörter unter Verwendung von CamelCase oder snake\_case beinhalten, werden in die einzelnen Wörter aufgeteilt.
 Anschließend werden die Identifier auf die gleiche Art und Weise normalisiert, wie die Wörter der Softwareentwicklungs-Artefakte.
-Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings.
+Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings.\\
+
+In dem Paper "TaskNav: Task-based Navigation of Software Documentation" von Treude et. al. geht es um die Entwicklung einer Oberfläche, welche die Suche von \textit{Tasks} ermöglicht.
+Dabei ist unter Task eine Operation im Code zu verstehen.
+Das Paper beschreibt einen Task als Verben, welche mit einem direkten Objekt oder einer Präposition in Verbindung stehen.
+Die Autoren nennen die Phrasen \textit{get iterator} und \textit{get iterator for collection} als Beispiele.
+Die Software analysiert nun die gesamte Dokumentation und extrahiert Tasks.
+Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach ihnen suchen kann. 
+So wie die vorherigen Paper soll auch dieses Paper eine Brücke zwischen Dokumentation und Code schaffen.

@@ -49,6 +49,27 @@
       \verb 10.1109/icse.2003.1201194
       \endverb
     \endentry
+    \entry{Sirotkin_2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a694bd426ef3fc72cae828d26b4327d1}{%
+           family={Sirotkin},
+           familyi={S\bibinitperiod},
+           given={Pavel},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a694bd426ef3fc72cae828d26b4327d1}
+      \strng{fullhash}{a694bd426ef3fc72cae828d26b4327d1}
+      \strng{bibnamehash}{a694bd426ef3fc72cae828d26b4327d1}
+      \strng{authorbibnamehash}{a694bd426ef3fc72cae828d26b4327d1}
+      \strng{authornamehash}{a694bd426ef3fc72cae828d26b4327d1}
+      \strng{authorfullhash}{a694bd426ef3fc72cae828d26b4327d1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On Search Engine Evaluation Metrics}
+      \field{year}{2012}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

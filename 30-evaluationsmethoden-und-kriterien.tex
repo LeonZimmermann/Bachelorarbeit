@@ -17,9 +17,19 @@ Im Anschluss werden diese Eigenschaften in einem Versuchsaufbau verwendet.
 \section{Precision, Recall und F-Maß}
 Zur Evaluation werden die Werte Precision und Recall gemessen.
 Der Precision-Wert ist das Verhältnis zwischen allen gefundenen Dokumenten und den gefundenen Dokumenten, die tatsächlich relevant sind.
+Der Wert lässt sich im Kontext der Suche nach Dokumenten wie folgt definieren\cite{Sirotkin_2012}:\\
+
+\(Precision=P=\frac{gefundene relevante Dokumente}{gesamte Anzahl gefundener Dokumente} \)\\
+
 Der Recall-Wert gibt an, wie viele von den tatsächlich relevanten Dokumenten auch gefunden wurden.
+Er lässt sich in diesem Kontext wie folgt definieren\cite{Sirotkin_2012}:\\
+
+\(Recall=R=\frac{gefundene relevante Dokumente}{gesamte Anzahl relevanter Dokumente}\)\\
+
 Es ist schwierig beide Werte zu optimieren, da der Precision-Wert versucht die Anzahl der gefundenen Dokumente einzugrenzen und der Recall-Wert versucht die Anzahl der gefundenen Dokumente zu erweitern.
-Das F-Maß fasst beide Werte zu einem neuen Wert zusammen.
+Das F1-Maß fasst beide Werte zu einem neuen Wert zusammen\cite{Sirotkin_2012}:\\
+
+\(F_1=2\frac{PR}{P+R}\)
 
 \section{ISO/IEC 9126}
 Die ISO/IEC 9126 legen Qualitätskriterien für die Entwicklung von Software fest.

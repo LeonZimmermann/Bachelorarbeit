@@ -2,16 +2,31 @@
 
 \section{Suchalgorithmen}
 
+In dem Kapitel "Evaluationsmethoden und -Kriterien" wurde bereits beschrieben, dass eine Suche das Qualitätskriterium der Konformität erfüllen sollte.
+Das bedeutet, dass eine Suchfunktion die gängigen Arten von Suchanfragen unterstützen muss.
+Dieses Kapitel soll die Arten von Suchanfragen vorstellen.
+Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Implementierung erfüllen zu können.
+
 \subsection{Keyword Search}
-TODO
+Eine Keyword Search durchsucht Dokumente nach der Sucheingabe des Nutzers.
+Die Eingabe wird dabei nicht als ganzes betrachtet, sondern jedes Wort einzeln.
+Für jedes Keyword werden Dokumente als Ergebnis angezeigt, wenn dieses in dem Dokument vorhanden ist.
+Wenn ein Dokument mehrere der Keywords beinhaltet, wird dessen Relevanz höher eingeschätzt als für Dokumente, welche weniger Keywords enthalten.
+Dokumente mit höherer Relevanz werden weiter oben in der Ergebnisliste angezeigt.
 
 \subsection{Phrase Search}
 Eine Phrase Search ist die Suche nach Textausschnitten in Dokumenten.
-Es werden also nicht mehrere Keywords einzeln betrachtet, sondern die Eingabe in das Suchfeld als Ganzen.
-Anschließend wird in Dokumenten nach genau diesem Textausschnitt gesucht.
+Hier werden nicht mehrere Keywords einzeln betrachtet, sondern die gesamte Eingabe in das Suchfeld als eine Einheit.
+Es reicht also nicht mehr aus, dass ein Dokument eines der Wörter enthält.
+Es muss die gesamte Sucheingabe als ein String enthalten sein.
 
 \subsection{Boolean Search}
-TODO
+Die Boolean Search bietet die Möglichkeit einen boolschen Ausdruck als Sucheingabe zu machen.
+Ein Beispiel dafür ist die Sucheingabe \textit{Dokumentation AND Angular}.
+Die Sucheingabe bedeutet, dass die Suchmaschine nur Dokumente als Ergebnis darstellen soll, welche beide Keywords Dokumentation und Angular enthalten.
+Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten: \textit{"Dokumentation von Software" AND Angular}.
+In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
+Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.
 
 \subsection{Field Search}
 Eine Field Search sucht Dokumente anhand von Attributen.
