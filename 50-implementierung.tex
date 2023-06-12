@@ -1,16 +1,74 @@
 \chapter{Implementierung}
 
-In diesem Kapitel soll die Implementierung einer Vektordatenbank erklärt werden.
+In diesem Kapitel soll die Implementierung einer alternativen Suchfunktion zu der Suchfunktion von Confluence dargestellt werden.
 Diese Implementierung wird anschließend mithilfe des erläuterten Versuchsaufbaus mit der bestehenden Suche von Confluence verglichen.
+Die Implementierung verwendet eine Vektordatenbank, welche von Haus aus eine semantische Suche ermöglicht.
+Das Filtern nach bestimmten Properties ermöglicht die Vektordatenbank ebenfalls.
+Es soll die Vektordatenbank Weaviate verwendet werden.
 Der Vergleich soll zeigen, ob eine semantische Suchfunktion mit Filtern \textit{besser} ist als die Confluence-Suche.
 Die Confluence-Suche soll hier als Benchmark für die Performance der implementierten Suche dienen.
 Grund dafür ist die Verwendung von Confluence in vielen Softwareprojekten (TODO Quelle).\\
 
+Um die bestehende Confluence-Suche mit einer neuen Implementierung zu vergleichen, erscheint die Entwicklung eines Confluence Plugins als logische Herangehensweise.
+Die Implementierung eines Plugins für Confluence kann über zwei Arten erfolgen.
+Es können Plugins für die Confluence Cloud entwickelt werden, einer kostenfreien Version von Confluence.
+Und es können Plugins für die Self-Hosted Variante geschrieben werden.
+Über Forge, einem Entwicklungsframework von Atlassian, kann ein Plugin für Confluence Cloud entwickelt werden.
+Die Entwicklung eines Plugins für die Self-Hosted Variante erfolgt über die Implementierung einer Spring Boot Anwendung.
+Diese Anwendung wird anschließend als Jar-Datei bereitgestellt.
+Ein plugin-descriptor beschreibt, wie die Jar in dem Self-Hosted Confluence Space einzubinden ist.\\
+
+Nun ist für einen Vergleich der Suchfunktionen nicht nur die Implementierung einer neuen Suchfunktion nötig.
+Es werden auch Daten benötigt, welche die Suchfunktion abfragen kann.
+Dazu wurde dem Autor ein Self-Hosted Confluence Space bereitgestellt, um die Suchfunktionen auf Basis der bestehenden Daten zu testen.
+Für die Confluence Cloud stehen dem Autor solche Daten nicht zur Verfügung.
+Aus organisatorischen Gründen ist die Installation eines Plugins auf dem Self-Hosted Confluence Space nicht möglich.
+Aus diesem Grund werden die Daten lediglich aus dem Confluence Space exportiert, und anschließend einmalig in der Weaviate Datenbank indiziert.
+Die genaue Vorgehensweise wird im Folgenden weiter erläutert.
+
 \section{Aufsetzen der Vektordatenbank Weaviate}
+Für das Aufsetzen von Weaviate werden zwei Komponenten benötigt.
+Zum einen die Vektordatenbank selbst.
+Zum anderen ein Transformer, welcher Text entgegennimmt, und diese in Vektoren umwandelt, sodass diese in der Datenbank gespeichert werden können.
+Um die beiden Komponenten aufzusetzen hat der Autor Docker verwendet.
+Das entsprechende docker-compose-yml File ist im Anhang zu finden.
+Hier werden die beiden Komponenten definiert.
+Unter \textit{t2v-transformers} wird der Transformer konfiguriert.
+Es wird das Image eines bereits vortrainierten Transformers verwendet.
+Unter \textit{weaviate} wird die Datenbank konfiguriert.
+Hier wird mithilfe von den Environment-Variablen \textit{$DEFAULT\_VECTORIZER\_MODULE$}, \textit{$ENABLE\_MODULES$} und \textit{$TRANSFORMERS\_INFERENCE\_API$} konfiguriert, welcher Transformer verwendet werden soll.
+So wird konfiguriert, dass der Transformer der anderen Komponente verwendet werden soll.\\
+
+Mithilfe der Dependecy \textit{io.weaviate:client:4.0.1} verwendet der Autor die Client API von Weaviate.
+So wird nun eine Verbindung zu der Vektordatenbank aufgebaut.
+Diese beinhaltet zu diesem Zeitpunkt noch keine Daten.
+Bevor die Daten in die Datenbank eingespielt werden, muss das Schema der Daten angegeben werden.
+Der entsprechende Code ist ebenfalls im Anhang zu finden.
+Er definiert eine Klasse \textit{Document}.
+Diese Klasse beinhaltet die Properties \textit{documentUrl}, \textit{h1}, \textit{h2} und \textit{p}.
+Es werden in dieser Klasse also die URL des Dokuments, sowie die Inhalte aller h1-, h2 und p-Tags gespeichert.
+Außerdem wird als Vectorizer \textit{text2vec-transformers} konfiguriert.\\
+
+\section{Einspielen der Daten in Weaviate}
+Um nun die Daten aus Confluence in Weaviate einzuspielen, müssen zuerst die Daten aus Confluence exportiert werden.
+Beim Export von Confluence Seiten werden HTML-Dateien generiert.
+Diese müssen preprocessed werden, um dem zuvor definierten Schema zu entsprechen.
+Es werden zuerst mithilfe von regulären Ausdrücken alle Inhalte von h1-, h2- und p-Tags herausgefiltert.
+Anschließend werden Punctuations und Stopwords entfernt und die Inhalte druchlaufen einen Tokenizer und einen Stemmer.
+Duplikate von Wörtern werden verworfen.
+Nachdem die Inhalte dieses Preprocessing durchlaufen haben, werden sie in die Datenbank eingespielt.
+
+\section{Verwendung der Suchfunktion von Weaviate}
+Weaviate verwendet eine API, welche GraphQL queries entgegennimmt.
+Um eine Suche durchzuführen muss ein GET-Request durchgeführt werden.
+Nun muss angegeben werden, welche Klasse aus der Datenbank abgefragt werden soll.
+In diesem Fall \textit{Document}.
+
+\subsection{Verwendung der Semantische Suche}
+Um die semantische Suche zu verwenden, muss die NearText Funktion verwendet werden.
+
+\subsection{Verwendung von Filtern}
 TODO
 
-\section{Befüllen der Vektordatenbank Weaviate}
-TODO
-
-\section{Ausführung der Suchfunktion der Vektordatenbank Weaviate}
+\subsection{Darstellung der Ergebnisse}
 TODO

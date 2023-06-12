@@ -1723,6 +1723,8 @@ INPUT 50-implementierung.tex
 INPUT ./50-implementierung.tex
 INPUT ./50-implementierung.tex
 INPUT 50-implementierung.tex
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT ./60-vergleich-der-suchfunktionen.tex
 INPUT ./60-vergleich-der-suchfunktionen.tex
 INPUT ./60-vergleich-der-suchfunktionen.tex
@@ -1744,6 +1746,11 @@ INPUT 80-appendix.tex
 INPUT ./80-appendix.tex
 INPUT ./80-appendix.tex
 INPUT 80-appendix.tex
+INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT ./02-declaration.tex
 INPUT ./02-declaration.tex
 INPUT ./02-declaration.tex
@@ -1768,3 +1775,4 @@ INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
