@@ -27,14 +27,23 @@ services:
 \end{verbatim}
 
 \section{Initialisieren des Schemas in Weaviate}
-TODO Änderungen: Es müssen noch die Properties definiert werden
 \begin{verbatim}
-    client.schema()
-        .classCreator()
-        .withClass(
-            WeaviateClass.builder()
-                .className(ConfluenceDataService.DOCUMENT_CLASS)
-                .vectorizer(VECTORIZER)
-                .build()
-        ).run()
+  client.schema()
+    .classCreator()
+    .withClass(
+      WeaviateClass.builder()
+        .className(ConfluenceDataService.DOCUMENT_CLASS)
+        .properties(
+          buildProperties(
+            mapOf(
+              ConfluenceDataService.DOCUMENT_URL to WEAVIATE_TEXT_DATATYPE,
+              ConfluenceDataService.H1_TAG to WEAVIATE_TEXT_DATATYPE,
+              ConfluenceDataService.H2_TAG to WEAVIATE_TEXT_DATATYPE,
+              ConfluenceDataService.PARAGRAPH_TAG to WEAVIATE_TEXT_DATATYPE
+            )
+          )
+        )
+        .vectorizer(VECTORIZER)
+        .build()
+  ).run()
 \end{verbatim}

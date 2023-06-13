@@ -32,8 +32,6 @@ Der Softwareentwickler muss also bei der Entwicklung eines neuen Features auch d
 Und ihm muss klar sein, an welcher Stelle im Code er den neuen Code einbauen sollte.
 Das ist Feature Location.
 
-TODO Beispielhafte Sucheingaben auflisten und dafür argumentieren
-
 \section{Bug Localization}
 Wenn der Softwareentwickler gerade kein neues Feature implementiert, dann korrigiert er gerade möglicherweise einen Fehler in der Software.
 Um einen Fehler überhaupt zu identifizieren, muss aber zuerst wieder die Spezifikation herangezogen werden.
@@ -41,18 +39,45 @@ Denn in der Spezifikation wird, wie bereits erwähnt, die gewünschte Funktionsw
 Damit wird auch definiert, was ein fehlerhaftes Verhalten ist, und was ein korrektes Verhalten ist.
 Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsprechende Spezifikation zu diesem Fehlerticket finden können.
 Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
-Das ist Bug Localization.\\
-
-TODO Beispielhafte Sucheingaben auflisten und dafür argumentieren
+Das ist Bug Localization.
 
 \section{Informationen über das Projektmanagement finden}
-TODO Budget, Teams, Releaseplanung, Rahmenbedingungen
+Softwareentwickler sollten darüber Bescheid wissen, was in dem Projekt, in dem sie arbeiten, vor sich geht.
+Sie sollten über organisatorische Dinge Bescheid wissen, wie die Teamaufteilung und die Zuständigkeiten in den einzelnen Teams und in dem gesamten Projekt.
+Das ist wichtig für eine gute Kommunikation und entsprechenden Wissensaustausch zwischen Kollegen.
+Außerdem sollten Softwareentwickler darüber Bescheid wissen, wann das nächste Release der Software ansteht.
+Diesen Termin müssen sie bei der Planung ihrer Arbeit berücksichtigen, damit sie auch rechtzeitig alle relevanten Features implementiert haben und alle kritischen Fehler behoben haben.
+Neben der Einhaltung von Terminen ist die Planung wichtig für die Motivation der Softwareentwickler.
+Denn Motivation entsteht durch die Wahrnehmung, sich einem Ziel zu nähern (Quelle: Flow - mihaly csikszentmihaly).
+Aus diesem Grund müssen die Softwareentwickler auch die Vision der Software verstehen und auch die übergreifende Vision des Unternehmens.
+Sie müssen verstehen, warum die Arbeit, welche sie erledigen so wichtig ist.
+Und sie müssen verstehen, für wen sie diese Arbeit tun.
+Auch diese Faktoren sind wichtig für eine hohe Motivation bei der Arbeit.
+Daher ist es so wichtig diese Informationen einfach zugänglich zu machen, also einfach auffindbar zu machen.
 
 \section{Implementierung nach Spezifikation}
-TODO
+Bei der Implementierung von neuen Anforderungen ist es wichtig, dass sich der Softwareentwickler an die Spezifikation hält.
+Nur so bekommt der Kunde die Software, die er sich gewünscht hat.
+Dazu sollte der Softwareentwickler es schaffen alle relevanten Dokumente zu finden, die zu der Spezifikation dazugehören.
+Zuerst sollte er die Spezifikation selbst finden können.
+Er sollte die Dokumentation der damit einhergehendenden Prozesse finden, und auch die Domänenobjekte, welche bei der Implementierung relevant sein werden.
+Er sollte Diagramme finden können, welche zu dem Anwendungsfall gehören, und auch die weiteren Dokumente, welche den Kontext der Anforderung erläutern.
+Außerdem wäre es hilfreich für den Softwareentwickler auch gleich die relevanten Stellen im Code angezeigt zu bekommen.
 
 \section{Abgleich mit Spezifikation}
-TODO
+Der Abgleich mit einer Spezifikation ist notwendig, um Testfälle zu schreiben, und zu prüfen, ob das Verhalten der Anwendung korrekt ist.
+Natürlich gibt es Arten von Fehlern, welche erkennbar sind, ohne dafür die Spezifikation heranzuziehen.
+Wenn in einem Online-Shop der Preis für ein Produkt in Amerika bei 5\$ liegt, aber in Deutschland der Preis bei 1.000€ liegt, dann braucht es nicht die Spezifikation, um festzustellen, dass es bei der Umrechnung von Dollar zu Euro einen Fehler gegeben hat.
+Aber nicht alle Fehler sind so offensichtlich.
+Die Spezifikation zum Abgleich mit dem Verhalten der Software heranzuziehen ist besonders in Randbedingungen hilfreich.
+Angenommen ein Online-Shop bietet einen kostenlosen Versand ab einem Mindestbestellwert an.
+Sobald der Preis den Wert von 25\$ übersteigt ist der Versand gratis.
+Der Versand kostet im Normalfall 5\$.
+Nun muss definiert werden, ob der Versand in dem Mindestbestelltwert miteinbezogen wird oder nicht.
+Wird er miteinbezogen, dann sorgt das dafür, dass ein Produkt, welches 20\$ kostet einen kostenlosen Versand hat, weil der Mindestbestellwert zuzüglich dem Versandpreis 25\$ beträgt.
+Ob dieses Verhalten gewünscht ist oder nicht, muss in der Spezifikation festgehalten werden.\\
+
+Wenn nun ein Bugticket dieser Art bei einem Softwareentwickler landet, dann muss er, wie auch bei der Implementierung, alle relevanten Dokumente heranziehen.
 
 \section{Deployment}
 TODO

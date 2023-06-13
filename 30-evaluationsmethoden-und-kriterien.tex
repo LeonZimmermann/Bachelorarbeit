@@ -1,27 +1,31 @@
 \chapter{Evaluationsmethoden und -Kriterien}
 Um zu verifizieren, dass die Implementierung ihre gewünschte Wirkung erzielt, müssen zuerst Methoden und Kriterien zur Messung herangezogen werden.
 Karl Popper gilt als Begründer des kritischen Rationalismus.
-Dieser war der Anfang von wissenschaftlich durchgeführten Experimenten.
-Zunächst wird eine Hypothese aufgestellt.
-Diese wird anschließend durch ein Experiment untersucht.
-Ein solches Experiment kann ebenfalls für die genannten Anwendungsfälle erstellt werden.
-Dazu soll die folgende Hypothese formuliert werden: Mit der vorgestellten Suchfunktion werden die, vom Softwareentwickler gesuchten Informationen, besser gefunden, als mit der bisherigen Suchfunktion.
+Es war der Anfang von wissenschaftlich durchgeführten Experimenten.
+Bei einem Experiment wird zunächst eine Hypothese aufgestellt.
+Diese wird anschließend durch das Experiment untersucht.
+Ein solches Experiment soll später für die genannten Anwendungsfälle erstellt werden.
+Dazu sollen für die Anwendungsfälle Sucheingaben erstellt werden.
+Für jede Sucheingabe wird definiert, welche Dokumente als Ergebnis erwartet werden.
+Die Hypothese: Mit der implementierten Suchfunktion werden die erwarteten Dokumente \textit{besser} gefunden als mit der bisherigen Suchfunktion.
 Diese Hypothese muss nun quantifizierbar und messbar gemacht werden.
 Die subjektive Wahrnehmung reicht nicht für eine wissenschaftliche Arbeit aus.\\
 
-Nun ist die Formulierung der Hypothese für sich genommen zu unspezifisch.
+Die Formulierung der Hypothese ist für sich genommen zu unspezifisch.
 Es muss geklärt werden, wann eine Information \textit{besser} zu finden ist.
 Im Folgenden werden Precision, Recall und F-Maß, sowie Qualitätskriterien gemäß ISO/IEC 9126 herangezogen, um Suchfunktionen anhand dieser Eigenschaften vergleichbar zu machen.
+Anhand dessen wird hergeleitet, was in diesem Kontext \textit{besser} bedeutet.
 Im Anschluss werden diese Eigenschaften in einem Versuchsaufbau verwendet. 
 
 \section{Precision, Recall und F-Maß}
-Zur Evaluation werden die Werte Precision und Recall gemessen.
-Der Precision-Wert ist das Verhältnis zwischen allen gefundenen Dokumenten und den gefundenen Dokumenten, die tatsächlich relevant sind.
+Zur Evaluation der Suchfunktionen werden später die statistischen Messwerte Precision und Recall verwendet.
+Die Messwerte beschreiben, inwieweit eine Hypothese zutrifft.
+Wenn also die Hypothese ist, dass ein bestimmtes Dokument gefunden wird, dann ist der Precision-Wert das Verhältnis zwischen allen gefundenen Dokumenten und den gefundenen Dokumenten, die tatsächlich relevant sind.
 Der Wert lässt sich im Kontext der Suche nach Dokumenten wie folgt definieren\cite{Sirotkin_2012}:\\
 
 \(Precision=P=\frac{gefundene relevante Dokumente}{gesamte Anzahl gefundener Dokumente} \)\\
 
-Der Recall-Wert gibt an, wie viele von den tatsächlich relevanten Dokumenten auch gefunden wurden.
+Der Recall-Wert gibt wiederum an, wie viele von den tatsächlich relevanten Dokumenten auch gefunden wurden.
 Er lässt sich in diesem Kontext wie folgt definieren\cite{Sirotkin_2012}:\\
 
 \(Recall=R=\frac{gefundene relevante Dokumente}{gesamte Anzahl relevanter Dokumente}\)\\
@@ -29,7 +33,13 @@ Er lässt sich in diesem Kontext wie folgt definieren\cite{Sirotkin_2012}:\\
 Es ist schwierig beide Werte zu optimieren, da der Precision-Wert versucht die Anzahl der gefundenen Dokumente einzugrenzen und der Recall-Wert versucht die Anzahl der gefundenen Dokumente zu erweitern.
 Das F1-Maß fasst beide Werte zu einem neuen Wert zusammen\cite{Sirotkin_2012}:\\
 
-\(F_1=2\frac{PR}{P+R}\)
+\(F_1=2\frac{PR}{P+R}\)\\
+
+Neben der Verwendung des F1-Maß ist es wichtig sich Gedanken darüber zu machen, welcher der beiden Messwerte wichtiger ist.
+In diesem Fall ist es sinnvoll eher die Precision zu optimieren.
+Denn, wenn ein Dokument gesucht wird, aber überhaupt nicht gefunden werden kann, dann erfüllt die Suchfunktion nicht ihren Zweck.
+Wenn die Suchfunktion irrelevante Dokumente darstellt, kann sie trotzdem ihren Zweck erfüllen, solange die relevantesten Dokumente zuerst in der Liste der Ergebnisse dargestellt wird.
+Dieser Faktor gilt auch bei der Implementierung zu berücksichtigen.
 
 \section{ISO/IEC 9126}
 Die ISO/IEC 9126 legen Qualitätskriterien für die Entwicklung von Software fest.
@@ -69,16 +79,18 @@ Die Funktionalität von Software teilt sich in die Facetten Angemessenheit, Sich
 TODO Weiter ausführen
 
 \section{Versuchsaufbau}
-Für einen Versuchsaufbau werden Dokumente benötigt, welche durchsucht werden können.
-Außerdem müssen die Suchanfragen festgelegt werden, welche durchgeführt werden sollen.
-Für jede Suchanfrage muss das gewünschte Ergebnis angegeben werden.
-Ein Versuchsaufbau vergleicht Treatments miteinander.
-Zwischen den Treatments werden bestimmte Eigenschaften untersucht.
-Hier wird als Eigenschaft untersucht, an welcher Stelle sich das gewünschte Ergebnis befindet.
-Eine Information ist besser zu finden, wenn die Dokumente, welche die Information enthalten, weiter oben in den Ergebnissen angezeigt werden.
-Eine Information ist ebenfalls besser zu finden, wenn der Softwareentwickler weniger Versuche bei der Formulierung der Suchanfrage benötigt, um die Information zu finden.
-Außerdem ist eine Information besser zu finden, wenn ein größerer Anteil der gefundenen Ergebnisse von Relevanz sind.
-Also wenn die Precision hoch ist.
-Eine Information ist ebenfalls besser zu fidnen, wenn ein größerer Anteil aller relevanten Dokumente auch tatsächlich in den Ergebnissen aufgelistet sind.
-Also wenn der Recall hoch ist.
-Die Treatments sind in diesem Kontext die verschiedenen Suchfunktionen.
+Für den Versuchsaufbau werden Dokumente benötigt, welche durchsucht werden können.
+Dazu sollen Daten aus einem echten Projekt verwendet werden.
+Da die Informationen zu dem Projekt nicht veröffentlicht werden dürfen, müssen die Sucheingaben und Ergebnisse so eingeschränkt werden, dass keine projektspezifischen Informationen preisgegeben werden.
+Die Daten sind bereits in einem Confluence Space vorhanden, dessen Suche als Benchmark für die neu implementierte Suchfunktion verwendet wird.
+Die Implementierung der neuen Suchfunktion und die Befüllung dessen Datenbank mit den gleichen Daten, wie die Confluence Suche, wird in dem Kapitel \textit{Implementierung} näher erklärt.\\
+
+Wie zuvor erwähnt, müssen nun Sucheingaben erstellt werden, welche in beiden Suchen eingegeben werden können.
+Zum Vergleich der beiden Suchfunktionen werden für jede Sucheingabe die obersten fünf Ergebnisse betrachtet.
+Für jedes Dokument in diesen Ergebnissen, welches laut Experimentaufbau als Ergebnis erwartet wird, erhält die Suchfunktionen einen Hit.
+Die Hits werden für beide Suchfunktionen zusammengezählt und verglichen.
+Anschließend wird eine einfaktorielle Varianzanalyse mithilfe von SPSS durchgeführt.
+Die Analyse wird zeigen, ob die neu implementierte Suchfunktion signifikant mehr Hits generiert als die bestehende Confluence Suche.
+
+\section{Einfaktorielle Varianzanalyse}
+TODO
