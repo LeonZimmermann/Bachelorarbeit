@@ -55,8 +55,28 @@ Beim Export von Confluence Seiten werden HTML-Dateien generiert.
 Diese müssen preprocessed werden, um dem zuvor definierten Schema zu entsprechen.
 Es werden zuerst mithilfe von regulären Ausdrücken alle Inhalte von h1-, h2- und p-Tags herausgefiltert.
 Anschließend werden Punctuations und Stopwords entfernt und die Inhalte druchlaufen einen Tokenizer und einen Stemmer.
-Duplikate von Wörtern werden verworfen.
-Nachdem die Inhalte dieses Preprocessing durchlaufen haben, werden sie in die Datenbank eingespielt.
+Punctuations sind Zeichen, wie die folgenden: \textit{.,;:}.
+Stopwords sind Wörter, welche für einen Leser notwendig sind, aber für die Verarbeitung durch einen Algorithmus als unwichtig erachtet werden.
+Beispiele für Stopwords sind \textit{aber, denn, der}.
+Ein Tokenizer trennt einen Text in einzelne Wörter auf.
+Aus einem Text, wie \textit{das deployment erfolgt durch ein bash-skript} wird also ein Array, welches folgendermaßen aussieht:\\
+
+\(["das", "deployment", "erfolgt", "durch", "ein", "bash", "skript"]\).\\
+
+Ein Stemmer bestimmt den Wortstamm für die einzelnen Wörter auf Basis von Grammatikregeln.
+Konkret verwendet die Software den Porter-Stemmer-Algorithmus.
+Aus dem Wort \textit{deployment} wird dadurch beispielsweise \textit{deploy}.
+Duplikate von Wörtern werden anschließend verworfen.
+Nachdem die Inhalte dieses Preprocessing durchlaufen haben, werden sie in die Datenbank eingespielt.\\
+
+Im Kapitel \textit{Vektorindizes} wurde bereits von Performancegründen gesprochen, aus denen das Preprocessing durchgeführt wird.
+Da nun die einzelnen Schritte des Preprocessings erklärt wurde, kann auch erklärt werden, warum das Preprocessing die Performance beim indizieren erhöht.
+Zuallererst werden viele Wörter gänzlich verworfen, weil sie Stopwords sind.
+Durch den Stemmer werden anschließend ähnliche Wörter zusammengruppiert.
+Die Wörter \textit{Heizung} und \textit{heizen} stammen beide vom gleichen Wortstamm \textit{heiz}.
+Das bedeutet, dass aus zwei verschiedenen Wörtern, welche beide indiziert werden müssen, ein einziges Wort gemacht wird.
+Denn am Ende werden Duplikate, wie bereits erwähnt, verworfen.
+Die Anzahl der Wörter, welche indiziert werden müssen, wird dadurch reduziert, und damit auch die Last auf dem Transformer, welche die Vektoren für die Wörter berechnen muss.
 
 \section{Verwendung der Suchfunktion von Weaviate}
 Weaviate verwendet eine API, welche GraphQL queries entgegennimmt.

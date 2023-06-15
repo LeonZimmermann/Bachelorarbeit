@@ -103,36 +103,6 @@
       \verb 10.1109/icse.2013.6606630
       \endverb
     \endentry
-    \entry{Marcus_Maletic_2003}{article}{}
-      \name{author}{2}{}{%
-        {{hash=3c2cb02fdfaef1071bb5a227133333fc}{%
-           family={Marcus},
-           familyi={M\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=1e3f23056e6aba0301447cdab8ed5a24}{%
-           family={Maletic},
-           familyi={M\bibinitperiod},
-           given={J.I.},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{ce3a842340768dee12cec5df12cf254e}
-      \strng{fullhash}{ce3a842340768dee12cec5df12cf254e}
-      \strng{bibnamehash}{ce3a842340768dee12cec5df12cf254e}
-      \strng{authorbibnamehash}{ce3a842340768dee12cec5df12cf254e}
-      \strng{authornamehash}{ce3a842340768dee12cec5df12cf254e}
-      \strng{authorfullhash}{ce3a842340768dee12cec5df12cf254e}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{25th International Conference on Software Engineering, 2003. Proceedings.}
-      \field{title}{Recovering documentation-to-source-code traceability links using latent semantic indexing}
-      \field{year}{2003}
-      \verb{doi}
-      \verb 10.1109/icse.2003.1201194
-      \endverb
-    \endentry
     \entry{Sirotkin_2012}{book}{}
       \name{author}{1}{}{%
         {{hash=a694bd426ef3fc72cae828d26b4327d1}{%
