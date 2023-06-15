@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {4.1.4}Field Search}{14}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}Structured Search}{14}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}Lexical Search}{14}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}Semantic Search}{14}{subsection.4.1.7}%
+\contentsline {subsection}{\numberline {4.1.7}Semantic Search}{15}{subsection.4.1.7}%
 \contentsline {section}{\numberline {4.2}NLP-Algorithmen}{16}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Crawling}{16}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Indizierung}{16}{section.4.4}%
