@@ -1656,6 +1656,7 @@ INPUT ./08-abstract.tex
 INPUT ./08-abstract.tex
 INPUT 08-abstract.tex
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
@@ -1692,7 +1693,6 @@ INPUT 10-intro.tex
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT ./20-definition-von-anwendungsfaellen.tex
 INPUT ./20-definition-von-anwendungsfaellen.tex
 INPUT ./20-definition-von-anwendungsfaellen.tex
