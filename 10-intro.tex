@@ -5,15 +5,20 @@ Diese Person kann er im Projekt finden, oder über Websites, wie StackOverflow.
 Darüber hinaus wird in vielen Projekten eine Wissensdatenbank angelegt, welche Informationen enthält, welche spezifisch für das Projekt sind.
 Eine solche Wissensdatenbank ist Confluence.
 Sie bietet eine Suchfunktion, welche es dem Softwareentwickler erleichtern soll, die gewünschten Informationen zu finden.
-Diese Information ist oftmals die Spezifikationen oder Dokumentationen eines Teiles der Software, mit welcher der Softwareentwickler gerade arbeitet.
+Beispiele für Informationen sind die Spezifikationen oder Dokumentationen eines Teiles der Software, mit welcher der Softwareentwickler gerade arbeitet.
 Oder aber auch Best-Practices, Guides, oder Informationen darüber, wie die Software gestartet oder ausgeliefert wird.
 Auch Informationen über den Projektplan sind für einen Softwareentwickler von Bedeutung.
 Aber nicht immer finden Softwareentwickler die gewünschten Informationen mithilfe der Suchfunktion.
-Ziel dieser Arbeit soll es sein, mithilfe von Wissen über Suchalgorithmen und Algorithmen aus dem Natural Language Processing zu zeigen, wie sich bestehende Suchfunktionen verbessern lassen.
-Large Language Models, wie GPT, sollen dabei nicht beachtet werden, weil sie nicht in den Umfang der Arbeit passen.
+Ziel dieser Arbeit soll es sein, mithilfe von Wissen über Suchalgorithmen und Algorithmen aus dem Natural Language Processing zu zeigen, wie sich bestehende Suchfunktionen verbessern lassen.\\
+
+Software, wie chatGPT\footnote{https://openai.com/blog/chatgpt} zeigt, dass Large Language Models eine valide Möglichkeit zur Information Extraction sind.
+Es ist denkbar, dass Suchfunktionen für Softwareentwickler durch Large Language Models verbessert werden können.
+Auch die Verwendung von vorgefertigten semantischen Netzen, welche in Knowledge Bases, wie DBPedia\footnote{https://www.dbpedia.org/} zu finden sind, sind als Lösung für dieses Problem denkbar.\cite{1644735}
+Sowohl die Verwendung von semantischen Netzen als auch die Verwendung von Vektordatenbanken kann als semantische Suche verstanden werden.
+Später soll noch einmal auf den genauen Unterschied zwischen den beiden Methoden eingegangen werden.
+In dieser Arbeit soll es lediglich um die Verwendung von Vektordatenbanken gehen.
 
 \section{Vorgehensweise}
-
 Die Gründe, warum eine gewünschte Information schwierig zu finden ist, sind vielzählig.
 Manchmal kennt der Softwareentwickler nicht das genaue Wording, um die gewünschten Informationen zu finden.
 Manchmal ist das Abstraktionslevel der gefundenen Informationen nicht das, welches sich der Softwareentwickler gewünscht hat.
@@ -26,23 +31,23 @@ Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdate
          Die Anwendungsfälle beschreiben die konkreten Situationen, in welchen ein Softwareentwickler eine Suche nutzen könnte.
          Das hilft später dabei mehrere Suchfunktionen miteinander vergleichen zu können.
          Denn anhand der Anwendungsfälle können realistische Suchanfragen definiert werden.
-         Diese Suchanfragen können gegen an zwei verschiedene Suchfunktionen übergeben werden.
+         Diese Suchanfragen können an zwei verschiedene Suchfunktionen übergeben werden.
          Anschließend können die gefundenen Ergebnisse verglichen werden.
-         Die genaue Vorgehensweise für diesen Vergleich wird in den Teilschritten "Herausarbeitung von Evaluationsmethoden und -Kriterien" und "Durchführung der Studie" erklärt.
+         Die genaue Vorgehensweise für diesen Vergleich wird in \myRef{Kapitel}{chap:evaluationsmethoden} und \myRef{Kapitel}{chap:vergleich-der-suchfunktionen} erklärt.
          Außerdem bietet die Aufteilung in Anwendungsfälle bereits Aufschluss über die möglichen Verbesserungen, welche gemacht werden können.
          Hierauf wird in den Teilschritten "Erklärung des theoretischen Hintergrunds" und "Implementierung" weiter eingegangen.
    \item \textbf{Herausarbeitung von Evaluationsmethoden und -Kriterien:}
          Es werden Methoden für die Bewertung herausgearbeitet.
          Damit wird die Frage beantwortet, wann eine Suchfunktion \textit{gut} ist.
-         Das hier erläuterterte Wissen wird für die Durchführung der Studie benötigt.
+         Das hier erläuterte Wissen wird für die Durchführung der Studie benötigt.
    \item \textbf{Erklärung des theoretischen Hintergrunds:}
          Es wird die Theorie für die Implementierung einer Suchfunktion erläutert.
-         Die Theorie erklärt, welche Suchfunktionen es gibt.
-         Außerdem erklärt sie Verfahren zur Indizierung von Dokumenten.
+         Hier wird erklärt, welche Suchfunktionen es gibt.
+         Außerdem werden Verfahren zur Indizierung von Dokumenten erklärt.
          Darüber hinaus werden NLP-Techniken erläutert, mit welchen Informationen aus gefundenen Dokumenten extrahiert werden können.
    \item \textbf{Implementierung:}
          Es wird eine neue Suchfunktion anhand der Informationen des theoretischen Hintergrunds implementiert.
-         Es wird die Weaviate Vektordatenbank verwendet, um Dokumente zu indizieren.
+         Es wird die Weaviate\footnote{https://weaviate.io/} Vektordatenbank verwendet, um Dokumente zu indizieren.
    \item \textbf{Durchführung einer Studie:}
          Um festzustellen, ob die Implementierung eine Verbesserung darstellt, muss eine Studie durchgeführt werden.
          Aufgrund des Scopes der Arbeit wird nur eine rudimentäre Studie durchgeführt.

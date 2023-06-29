@@ -1,7 +1,7 @@
 \babel@toc {ngerman}{}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Vorgehensweise}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Verwandte Arbeiten}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Verwandte Arbeiten}{3}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Definition von Anwendungsfällen}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Onboarding im Projekt}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Feature Location}{5}{section.2.2}%
@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {4.1.7}Semantic Search}{14}{subsection.4.1.7}%
 \contentsline {section}{\numberline {4.2}NLP-Algorithmen}{15}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Crawling}{15}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Indizierung}{15}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Indizierung}{16}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Volltext-Indizierung}{16}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Vektorindizes}{17}{subsection.4.4.2}%
 \contentsline {chapter}{\numberline {5}Implementierung}{18}{chapter.5}%
@@ -42,12 +42,12 @@
 \contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{21}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Diskussion des Studienaufbaus}{21}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Durchführung der Studie}{21}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diskussion der Ergebnisse}{21}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{22}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{22}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{22}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{23}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Anhang}{25}{chapter.9}%
-\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{25}{section.9.1}%
-\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{25}{section.9.2}%
+\contentsline {section}{\numberline {6.3}Diskussion der Ergebnisse}{22}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{23}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{23}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{24}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Anhang}{26}{chapter.9}%
+\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{26}{section.9.1}%
+\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{26}{section.9.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

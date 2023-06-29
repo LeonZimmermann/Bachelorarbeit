@@ -2,7 +2,7 @@
 TODO: Ergänzen
 
 \section{Suchalgorithmen}
-In dem Kapitel "Evaluationsmethoden und -Kriterien" wurde bereits beschrieben, dass eine Suche das Qualitätskriterium der Konformität erfüllen sollte.
+In dem Kapitel \textit{Evaluationsmethoden und -Kriterien} wurde bereits beschrieben, dass eine Suche das Qualitätskriterium der Konformität erfüllen sollte.
 Das bedeutet, dass eine Suchfunktion die gängigen Arten von Suchanfragen unterstützen muss.
 Dieses Kapitel soll die Arten von Suchanfragen vorstellen.
 Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Implementierung erfüllen zu können.
@@ -31,7 +31,7 @@ Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{
 \subsection{Field Search}
 Eine Field Search sucht Dokumente anhand von Attributen.
 Der Nutzer kann diese Attribute auswählen.
-Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: "erstelldatum: 01.01.2005".
+Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.
 Es können beliebig viele Attribute verwendet werden, um die Suche einzugrenzen.\\
 
 Neben der Verwendung der Attribute für die Suche selbst, können die Attribute komplementär zu einer anderen Art von Suche verwendet werden.
@@ -60,13 +60,19 @@ TODO: Ergänzen
 
 \subsection{Semantic Search}
 Eine Semantische Suche arbeitet nicht anhand von Keywords, sondern anhand von Bedeutungen von Wörtern.
-Sie versteht, dass einige Wörter sehr ähnlich sind, so wie "rollout" und "deployment", und dass diese Wörter oft im gleichen Kontext verwendet werden.
+Sie ist technisch so umgesetzt, dass durch sie die semantische Ähnlichkeit von Wörtern abgebildet wird.
+So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} \textit{deployment"} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.
 Um zu verstehen, welche Wörter kontextuell zusammengehören, werden die Wörter in einem n-dimensionalen Raum positioniert.
 Wörter, die sich sehr ähnlich sind, also im gleichen Kontext verwendet werden, haben in diesem n-dimensionalen Raum eine geringe Distanz.
-Wörter, die sich eher unähnlich sind, wie "rollout" und "API", haben eine größere Distanz.\\
+Wörter, die sich eher unähnlich sind, wie \textit{"rollout" und "API"}, haben eine größere Distanz.
+Der Vorteil einer semantischen Suche ist, dass der genaue Begriff, welcher gesucht wird nicht bekannt ist.
+Wenn sich der Nutzer also über ein Thema informieren möchte, mit welchem er nicht gut vertraut ist, dann kann die semantische Suche hilfreich sein.
+Denn der Nutzer kann nun einen Begriff eingeben, der zu dem Thema passt, und den er kennt.
+Er findet anschließend Dokumente, welche vielleicht nicht genau diesen Begriff beinhalten, aber welche thematisch dennoch ähnlich sind.
+Genau dieser Vorteil soll bei der Implementierung später genutzt werden.\\
 
 Um eine semantische Suche zu implementieren, werden die Technologien von Transformern und Vektordatenbanken verwendet.
-Ein Transformer bekommt als Input eine große Menge an Text und mappt die einzelnen Wörter auf einen Vektor einer beliebigen Länge.
+Ein Transformer erhält als Input eine große Menge an Text und mappt die einzelnen Wörter auf einen Vektor einer beliebigen Länge.
 Der Vektor, der am Ende herauskommt, beschreibt die Position des Wortes in dem n-dimensionalen Raum.
 Der Vektor beschreibt gewissermaßen, wie stark ein Wort in eine abstrakte Kategorie einzuordnen ist.
 Jeder Wert im Vektor entspricht einer Kategorie.
