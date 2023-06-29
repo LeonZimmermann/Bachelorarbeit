@@ -7,47 +7,47 @@
 \contentsline {section}{\numberline {2.2}Feature Location}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Bug Localization}{6}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Informationen über das Projektmanagement finden}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Implementierung nach Spezifikation}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Implementierung nach Spezifikation}{6}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Abgleich mit Spezifikation}{7}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Deployment}{7}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Dokumentation zum besseren Verständnis heranziehen}{8}{section.2.8}%
-\contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Precision, Recall und F-Maß}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}ISO/IEC 9126}{10}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Benutzbarkeit}{10}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Funktionalität}{11}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Versuchsaufbau}{11}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Einfaktorielle Varianzanalyse}{11}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Theoretischer Hintergrund}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Suchalgorithmen}{13}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Keyword Search}{13}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Phrase Search}{13}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Boolean Search}{13}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Field Search}{14}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Structured Search}{14}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Lexical Search}{14}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}Semantic Search}{15}{subsection.4.1.7}%
-\contentsline {section}{\numberline {4.2}NLP-Algorithmen}{16}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Crawling}{16}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Indizierung}{16}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Volltext-Indizierung}{17}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Vektorindizes}{18}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}Implementierung}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Aufsetzen der Vektordatenbank Weaviate}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Einspielen der Daten in Weaviate}{20}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Verwendung der Suchfunktion von Weaviate}{21}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Verwendung der Semantische Suche}{21}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Verwendung von Filtern}{21}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Darstellung der Ergebnisse}{21}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{22}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Diskussion des Studienaufbaus}{22}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Durchführung der Studie}{22}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diskussion der Ergebnisse}{22}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{23}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{23}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{23}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{24}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Anhang}{26}{chapter.9}%
-\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{26}{section.9.1}%
-\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{26}{section.9.2}%
+\contentsline {section}{\numberline {2.8}Dokumentation zum besseren Verständnis heranziehen}{7}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Precision, Recall und F-Maß}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}ISO/IEC 9126}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Benutzbarkeit}{9}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Funktionalität}{10}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Versuchsaufbau}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Einfaktorielle Varianzanalyse}{10}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Theoretischer Hintergrund}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Suchalgorithmen}{12}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Keyword Search}{12}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Phrase Search}{12}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Boolean Search}{12}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Field Search}{13}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Structured Search}{13}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Lexical Search}{13}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Semantic Search}{14}{subsection.4.1.7}%
+\contentsline {section}{\numberline {4.2}NLP-Algorithmen}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Crawling}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Indizierung}{15}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Volltext-Indizierung}{16}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Vektorindizes}{17}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Implementierung}{18}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Aufsetzen der Vektordatenbank Weaviate}{18}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Einspielen der Daten in Weaviate}{19}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Verwendung der Suchfunktion von Weaviate}{20}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Verwendung der Semantische Suche}{20}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Verwendung von Filtern}{20}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Darstellung der Ergebnisse}{20}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Diskussion des Studienaufbaus}{21}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Durchführung der Studie}{21}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Diskussion der Ergebnisse}{21}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{22}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{22}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{22}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{23}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Anhang}{25}{chapter.9}%
+\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{25}{section.9.1}%
+\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{25}{section.9.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
