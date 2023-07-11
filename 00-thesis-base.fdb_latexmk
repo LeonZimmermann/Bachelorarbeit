@@ -1,20 +1,20 @@
 # Fdb version 4
-["biber 00-thesis-base"] 1688049271 "00-thesis-base.bcf" "00-thesis-base.bbl" "00-thesis-base" 1688049831 0
+["biber 00-thesis-base"] 1688049271 "00-thesis-base.bcf" "00-thesis-base.bbl" "00-thesis-base" 1689066618 0
   "./referenzen.bib" 1688049130 2491 35054a33804e7da16d425a71cf431140 ""
-  "00-thesis-base.bcf" 1688049830 108345 b82700d98c4c84550a83231b96392b17 "pdflatex"
+  "00-thesis-base.bcf" 1689066616 108345 b82700d98c4c84550a83231b96392b17 "pdflatex"
   (generated)
   "00-thesis-base.bbl"
   "00-thesis-base.blg"
   (rewritten before read)
-["pdflatex"] 1688049824 "c:/Users/lezimmermann/OneDrive - Universitaet Duisburg-Essen/Bachelorarbeit/Dokumente/00-thesis-base.tex" "00-thesis-base.pdf" "00-thesis-base" 1688049831 0
-  "00-thesis-base.aux" 1688049830 26142 d8c562d428a1b4f0c20ef707c5669429 "pdflatex"
+["pdflatex"] 1689066610 "c:/Users/lezimmermann/OneDrive - Universitaet Duisburg-Essen/Bachelorarbeit/Dokumente/00-thesis-base.tex" "00-thesis-base.pdf" "00-thesis-base" 1689066618 0
+  "00-thesis-base.aux" 1689066616 26455 f64d63491a7fbf2b32e44c719f7c08f5 "pdflatex"
   "00-thesis-base.bbl" 1688049283 10727 bfb062aed71e444606e670985b7ca29b "biber 00-thesis-base"
-  "00-thesis-base.lof" 1688049830 275 66516b7ab6445f3c9075a6f45ad561dd "pdflatex"
-  "00-thesis-base.lot" 1688049830 275 66516b7ab6445f3c9075a6f45ad561dd "pdflatex"
-  "00-thesis-base.out" 1688049828 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "00-thesis-base.run.xml" 1688049830 2407 04e5ccd4d8dc0a09aa280686abbb520c "pdflatex"
+  "00-thesis-base.lof" 1689066616 275 66516b7ab6445f3c9075a6f45ad561dd "pdflatex"
+  "00-thesis-base.lot" 1689066616 275 66516b7ab6445f3c9075a6f45ad561dd "pdflatex"
+  "00-thesis-base.out" 1689066615 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "00-thesis-base.run.xml" 1689066616 2407 04e5ccd4d8dc0a09aa280686abbb520c "pdflatex"
   "00-thesis-base.tex" 1687779504 16360 3ce8a492d55a04fbdb3bcb0d42e52734 ""
-  "00-thesis-base.toc" 1688049830 4404 fcb4952a414628997de55a4780aa7cde "pdflatex"
+  "00-thesis-base.toc" 1689066616 4431 3ad950ad4bda3b1f93538e9352ac36d9 "pdflatex"
   "00-thesis-config.tex" 1430730748 2396 12e7629872bb020f686749e43d0c7d68 ""
   "01-frontpage.tex" 1681905432 1232 0a8234c7664af85b04a2742c139bd7dc ""
   "02-declaration.tex" 1430729874 547 42709ab4636b3a5440091ec8717ab5b5 ""
@@ -22,10 +22,10 @@
   "08-abstract.tex" 1687779617 3296 77fabc97b05dfbddcf84108ce1d363d7 ""
   "10-intro.tex" 1688049818 10225 2bbf65bfc27d18376d7e8223e0ba9347 ""
   "20-definition-von-anwendungsfaellen.tex" 1687524811 7270 19c939eae0155e239b007361f591db38 ""
-  "30-evaluationsmethoden-und-kriterien.tex" 1688049589 8384 3c9ac09bf30f8b6fc2a2704b7bfbb297 ""
+  "30-evaluationsmethoden-und-kriterien.tex" 1689066609 8425 2b38b7b3893285e24c8922845b9fa69e ""
   "40-theoretischer-hintergrund.tex" 1688047579 15834 a82930a694e4cbd29ebd0de53694c9d5 ""
   "50-implementierung.tex" 1686855705 7016 feb40ab572179a3a928cb123c4b41732 ""
-  "60-vergleich-der-suchfunktionen.tex" 1688049631 2021 48173d08d5b4993a8a1164800ebcd059 ""
+  "60-vergleich-der-suchfunktionen.tex" 1689064192 4122 3d43dc60243c560f6a1408121c45c927 ""
   "70-zusammenfassung.tex" 1686855687 136 11449723b986d2a458bc5b77fe3eee5f ""
   "80-appendix.tex" 1686643557 1465 9562f98e7606e6d0afc9cdb6098348c7 ""
   "c:/Users/lezimmermann/OneDrive - Universitaet Duisburg-Essen/Bachelorarbeit/Dokumente/00-thesis-base.tex" 1687779504 16360 3ce8a492d55a04fbdb3bcb0d42e52734 ""
