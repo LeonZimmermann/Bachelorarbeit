@@ -11,29 +11,29 @@
 \contentsline {section}{\numberline {2.6}Abgleich mit Spezifikation}{7}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Deployment}{7}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Dokumentation zum besseren Verständnis heranziehen}{7}{section.2.8}%
-\contentsline {chapter}{\numberline {3}Evaluationsmethoden und -Kriterien}{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Precision, Recall und F-Maß}{8}{section.3.1}%
-\contentsline {section}{\numberline {3.2}ISO/IEC 9126}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Benutzbarkeit}{9}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Funktionalität}{10}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Versuchsaufbau}{10}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Einfaktorielle Varianzanalyse}{10}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Theoretischer Hintergrund}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Crawling}{12}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Indizierung}{12}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Volltext-Indizierung}{13}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Vektor-Indizierung}{14}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Suchalgorithmen}{14}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Die gängigen Suchalgorithmen}{14}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Die strukturierte Suche}{15}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Die Semantische Suche}{16}{subsection.4.3.3}%
-\contentsline {chapter}{\numberline {5}Implementierung}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Aufsetzen der Vektordatenbank Weaviate}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Einspielen der Daten in Weaviate}{20}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Verwendung der Suchfunktion von Weaviate}{21}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Verwendung der Semantische Suche}{21}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Verwendung von Filtern}{21}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Darstellung der Ergebnisse}{21}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {3}Theoretischer Hintergrund}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Crawling}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Indizierung}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Volltext-Indizierung}{9}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Vektor-Indizierung}{10}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Suchalgorithmen}{10}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Die gängigen Suchalgorithmen}{10}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Die strukturierte Suche}{11}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Die Semantische Suche}{12}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Implementierung}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Aufsetzen der Vektordatenbank Weaviate}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Einspielen der Daten in Weaviate}{16}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Verwendung der Suchfunktion von Weaviate}{17}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Verwendung der Semantische Suche}{17}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Verwendung von Filtern}{17}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Darstellung der Ergebnisse}{17}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Evaluationsmethoden und -Kriterien}{18}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Precision, Recall und F-Maß}{18}{section.5.1}%
+\contentsline {section}{\numberline {5.2}ISO/IEC 9126}{19}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Benutzbarkeit}{19}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Funktionalität}{20}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Versuchsaufbau}{20}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Einfaktorielle Varianzanalyse}{20}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{22}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fiktionales Szenario: Onboarding eines Mitarbeiters}{22}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Auswertung der Ergebnisse}{23}{section.6.2}%

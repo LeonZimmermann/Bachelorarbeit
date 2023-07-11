@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  11 JUL 2023 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  11 JUL 2023 12:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1470,8 +1470,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--75
 
  []
 
-) (./30-evaluationsmethoden-und-kriterien.tex [7]
+) (./30-theoretischer-hintergrund.tex [7]
 chapter 3.
+[8
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 35--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--67
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 84--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--95
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 96--100
+
+ []
+
+
+Overfull \hbox (0.91904pt too wide) in paragraph at lines 101--107
+[]\T1/lmr/m/n/12 Die Boo-lean Search bie-tet die Mög-lich-keit einen bool-schen Aus-druck als Suchein-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--107
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 136--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--153
+
+ []
+
+
+Overfull \hbox (6.08557pt too wide) in paragraph at lines 154--163
+\T1/lmr/m/n/12 ter kon-tex-tu-ell zu-sam-men-ge-hö-ren, wer-den hier die Wör-ter in ei-nem n-dimensionalen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--163
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 164--177
+
+ []
+
+) (./40-implementierung.tex [13] [14]
+chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--19
+
+ []
+
+
+Overfull \hbox (3.84096pt too wide) in paragraph at lines 29--40
+\T1/lmr/m/n/12 hil-fe von den Environment-Variablen $\OML/lmm/m/it/12 DEFAULT[]VECTORIZER[]MODULE$\T1/lmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (1.60483pt too wide) in paragraph at lines 29--40
+\OML/lmm/m/it/12 ENABLE[]MODULES$ \T1/lmr/m/n/12 und $\OML/lmm/m/it/12 TRANSFORMERS[]INFERENCE[]API$ \T1/lmr/m/n/12 kon-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--40
+
+ []
+
+[15
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 41--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+Overfull \hbox (17.03403pt too wide) in paragraph at lines 65--70
+\T1/lmr/m/n/12 Gram-ma-ti-kre-geln. Kon-kret ver-wen-det die Soft-wa-re den Porter-Stemmer-Algorithmus.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+
+ []
+
+[16{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]) (./50-evaluationsmethoden-und-kriterien.tex [17]
+chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
@@ -1502,9 +1625,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
-[8
+[18
 
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
@@ -1519,7 +1642,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--70
 
  []
 
-[9]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 71--76
 
  []
@@ -1531,129 +1654,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--88
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 97--100
-
- []
-
-[10]) (./40-theoretischer-hintergrund.tex [11]
-chapter 4.
-[12
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 35--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--58
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--67
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 84--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--95
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 96--100
-
- []
-
-
-Overfull \hbox (0.91904pt too wide) in paragraph at lines 101--107
-[]\T1/lmr/m/n/12 Die Boo-lean Search bie-tet die Mög-lich-keit einen bool-schen Aus-druck als Suchein-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--107
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 136--140
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--153
-
- []
-
-
-Overfull \hbox (6.08557pt too wide) in paragraph at lines 154--163
-\T1/lmr/m/n/12 ter kon-tex-tu-ell zu-sam-men-ge-hö-ren, wer-den hier die Wör-ter in ei-nem n-dimensionalen
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--163
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 164--177
-
- []
-
-) (./50-implementierung.tex [17] [18]
-chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--19
-
- []
-
-
-Overfull \hbox (3.84096pt too wide) in paragraph at lines 29--40
-\T1/lmr/m/n/12 hil-fe von den Environment-Variablen $\OML/lmm/m/it/12 DEFAULT[]VECTORIZER[]MODULE$\T1/lmr/m/n/12 ,
- []
-
-
-Overfull \hbox (1.60483pt too wide) in paragraph at lines 29--40
-\OML/lmm/m/it/12 ENABLE[]MODULES$ \T1/lmr/m/n/12 und $\OML/lmm/m/it/12 TRANSFORMERS[]INFERENCE[]API$ \T1/lmr/m/n/12 kon-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--40
-
- []
-
-[19
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 41--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
-
- []
-
-
-Overfull \hbox (17.03403pt too wide) in paragraph at lines 65--70
-\T1/lmr/m/n/12 Gram-ma-ti-kre-geln. Kon-kret ver-wen-det die Soft-wa-re den Porter-Stemmer-Algorithmus.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--70
 
  []
 
@@ -1761,7 +1761,7 @@ Here is how much of TeX's memory you used:
  1143 hyphenation exceptions out of 8191
  108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on 00-thesis-base.pdf (36 pages, 571342 bytes).
+Output written on 00-thesis-base.pdf (36 pages, 571312 bytes).
 PDF statistics:
  557 PDF objects out of 1000 (max. 8388607)
  468 compressed objects within 5 object streams
