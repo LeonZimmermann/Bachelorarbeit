@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  11 JUL 2023 11:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  11 JUL 2023 12:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1539,41 +1539,71 @@ chapter 4.
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+Underfull \hbox (badness 10000) in paragraph at lines 35--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--73
+Underfull \hbox (badness 10000) in paragraph at lines 48--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--67
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 74--87
-
- []
-
-[14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 138--150
+Underfull \hbox (badness 10000) in paragraph at lines 84--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--160
+Underfull \hbox (badness 10000) in paragraph at lines 90--95
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 96--100
+
+ []
+
+
+Overfull \hbox (0.91904pt too wide) in paragraph at lines 101--107
+[]\T1/lmr/m/n/12 Die Boo-lean Search bie-tet die Mög-lich-keit einen bool-schen Aus-druck als Suchein-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--107
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 136--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--153
+
+ []
+
+
+Overfull \hbox (6.08557pt too wide) in paragraph at lines 154--163
+\T1/lmr/m/n/12 ter kon-tex-tu-ell zu-sam-men-ge-hö-ren, wer-den hier die Wör-ter in ei-nem n-dimensionalen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--163
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 164--177
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--178
-
- []
-
-) (./50-implementierung.tex [17]
+) (./50-implementierung.tex [17] [18]
 chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--10
@@ -1600,7 +1630,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--40
 
  []
 
-[18
+[19
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 41--50
@@ -1627,7 +1657,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--70
 
  []
 
-[19]) (./60-vergleich-der-suchfunktionen.tex [20]
+[20]) (./60-vergleich-der-suchfunktionen.tex [21]
 chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--17
@@ -1649,7 +1679,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--42
 
  []
 
-[21
+[22
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 43--47
@@ -1666,15 +1696,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--56
 
  []
 
-) (./70-zusammenfassung.tex [22]
+) (./70-zusammenfassung.tex [23]
 chapter 7.
-) [23
+) [24
 
 ]
 chapter 8.
-[24
+[25
 
-] [25
+] [26
 
 ]
 \c@chapterAppendix=\count502
@@ -1708,9 +1738,9 @@ Overfull \hbox (47.71475pt too wide) in paragraph at lines 42--42
 []              \T1/lmtt/m/n/12 ConfluenceDataService.PARAGRAPH_TAG to WEAVIATE_TEXT_DATATYPE[] 
  []
 
-[26
+[27
 
-]) (./02-declaration.tex [27]) [28
+]) (./02-declaration.tex [28]) [29
 
 ] (./00-thesis-base.aux)
 
@@ -1723,18 +1753,18 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33221 strings out of 476001
- 624790 string characters out of 5793198
+ 33216 strings out of 476001
+ 624847 string characters out of 5793198
  1872068 words of memory out of 5000000
- 53004 multiletter control sequences out of 15000+600000
+ 53003 multiletter control sequences out of 15000+600000
  595732 words of font info for 91 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on 00-thesis-base.pdf (35 pages, 569407 bytes).
+Output written on 00-thesis-base.pdf (36 pages, 571342 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 489 compressed objects within 5 object streams
- 107 named destinations out of 1000 (max. 500000)
- 414 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 557 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 374 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -53,6 +53,30 @@
       \verb 10.1109/icsm.2000.883003
       \endverb
     \endentry
+    \entry{Dengel_2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=39509991baf1f5b54ef9eede853edd37}{%
+           family={Dengel},
+           familyi={D\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Spektrum, Akad. Verl}%
+      }
+      \strng{namehash}{39509991baf1f5b54ef9eede853edd37}
+      \strng{fullhash}{39509991baf1f5b54ef9eede853edd37}
+      \strng{bibnamehash}{39509991baf1f5b54ef9eede853edd37}
+      \strng{authorbibnamehash}{39509991baf1f5b54ef9eede853edd37}
+      \strng{authornamehash}{39509991baf1f5b54ef9eede853edd37}
+      \strng{authorfullhash}{39509991baf1f5b54ef9eede853edd37}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Semantische Technologien Grundlagen - Konzepte - Anwendungen}
+      \field{year}{2012}
+    \endentry
     \entry{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}{article}{}
       \name{author}{6}{}{%
         {{hash=bf2b8c2f3ce5fd87221ecdc94305c848}{%

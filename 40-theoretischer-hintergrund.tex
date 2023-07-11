@@ -1,117 +1,14 @@
 \chapter{Theoretischer Hintergrund}
-TODO: Ergänzen
-
-\section{Suchalgorithmen}
-In dem Kapitel \textit{Evaluationsmethoden und -Kriterien} wurde bereits beschrieben, dass eine Suche das Qualitätskriterium der Konformität erfüllen sollte.
-Das bedeutet, dass eine Suchfunktion die gängigen Arten von Suchanfragen unterstützen muss.
-Dieses Kapitel soll die Arten von Suchanfragen vorstellen.
-Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Implementierung erfüllen zu können.
-
-\subsection{Keyword Search}
-Eine Keyword Search durchsucht Dokumente nach der Sucheingabe des Nutzers.
-Die Eingabe wird dabei nicht als ganzes betrachtet, sondern jedes Wort einzeln.
-Für jedes Keyword werden Dokumente als Ergebnis angezeigt, wenn dieses in dem Dokument vorhanden ist.
-Wenn ein Dokument mehrere der Keywords beinhaltet, wird dessen Relevanz höher eingeschätzt als für Dokumente, welche weniger Keywords enthalten.
-Dokumente mit höherer Relevanz werden weiter oben in der Ergebnisliste angezeigt.
-
-\subsection{Phrase Search}
-Eine Phrase Search ist die Suche nach Textausschnitten in Dokumenten.
-Hier werden nicht mehrere Keywords einzeln betrachtet, sondern die gesamte Eingabe in das Suchfeld als eine Einheit.
-Es reicht also nicht mehr aus, dass ein Dokument eines der Wörter enthält.
-Es muss die gesamte Sucheingabe als ein String enthalten sein.
-
-\subsection{Boolean Search}
-Die Boolean Search bietet die Möglichkeit einen boolschen Ausdruck als Sucheingabe zu machen.
-Ein Beispiel dafür ist die Sucheingabe \textit{Dokumentation AND Angular}.
-Die Sucheingabe bedeutet, dass die Suchmaschine nur Dokumente als Ergebnis darstellen soll, welche beide Keywords Dokumentation und Angular enthalten.
-Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten: \textit{"Dokumentation von Software" AND Angular}.
-In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
-Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.
-
-\subsection{Field Search}
-Eine Field Search sucht Dokumente anhand von Attributen.
-Der Nutzer kann diese Attribute auswählen.
-Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.
-Es können beliebig viele Attribute verwendet werden, um die Suche einzugrenzen.\\
-
-Neben der Verwendung der Attribute für die Suche selbst, können die Attribute komplementär zu einer anderen Art von Suche verwendet werden.
-So kann eine Suchfunktion Buttons bereitstellen, über welche Filter festgelegt werden.
-Nun kann eine Keyword Search durchgeführt werden, aber die gefundenen Dokumente werden mithilfe der Filter weiter eingeschränkt.
-
-\subsection{Structured Search}
-Eine klassische Suchfunktion verwendet Keywords, um relevante Dokumente für eine Sucheingabe zu ermitteln.
-Der Vorteil dieser Art von Suche ist, dass die technische Struktur, in der die Daten vorliegen und gespeichert sind, nicht bekannt sein müssen.
-Der Nachteil ist auf der anderen Seite, dass die Suchergebnisse unpräzise sein können.
-Wenn beispielsweise der Suchbegriff Kamera eingegeben wird, dann werden Kameras als Ergebnisse zurückgegeben.
-Soll die Kamera nun bestimmte Eigenschaften besitzen, dann müssen diese Eigenschaften ebenfalls als Keywords angegeben werden.
-Nun wird aber nicht die Suche auf Ergebnisse eingegrenzt, bei denen eine Kamera diese bestimmten Eigenschaften besitzt.
-Stattdessen werden Suchergebnisse angezeigt, bei denen einige dieser Keywords vorkommen.
-Demgegenüber stehen Datenbankabfragen, beispielsweise mithilfe von SQL.
-Bei einer Datenbankabfrage können Objekte abgefragt werden, dessen Eigenschaften ganz bestimmte Werte haben.
-Die Ergebnisse, die eine solche Abfrage zurückgibt, sind dabei vollkommen genau.
-Es werden keine Objekte zurückgegeben, welche diese Kriterien nicht erfüllen.
-Voraussetzung für eine solche Suchabfrage ist allerdings, dass die Struktur der Datenbank a priori bekannt ist.
-Dem Nutzer muss der Name der Datenbank, der relevanten Tabellen, sowie der relevanten Properties bekannt sein, damit er das passende SQL für die Datenbankabfrage schreiben kann.
-Strukturierte Suchen sollen die Vorteile beider Vorgehensweisen kombinieren.
-Die Struktur der Daten soll a priori nicht bekannt sein müssen, aber trotzdem sollen die Suchergebnisse vollkommen präzise sein.
-
-\subsection{Lexical Search}
-TODO: Ergänzen
-
-\subsection{Semantic Search}
-Eine Semantische Suche arbeitet nicht anhand von Keywords, sondern anhand von Bedeutungen von Wörtern.
-Sie ist technisch so umgesetzt, dass durch sie die semantische Ähnlichkeit von Wörtern abgebildet wird.
-So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} \textit{deployment"} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.
-Um zu verstehen, welche Wörter kontextuell zusammengehören, werden die Wörter in einem n-dimensionalen Raum positioniert.
-Wörter, die sich sehr ähnlich sind, also im gleichen Kontext verwendet werden, haben in diesem n-dimensionalen Raum eine geringe Distanz.
-Wörter, die sich eher unähnlich sind, wie \textit{"rollout" und "API"}, haben eine größere Distanz.
-Der Vorteil einer semantischen Suche ist, dass der genaue Begriff, welcher gesucht wird nicht bekannt ist.
-Wenn sich der Nutzer also über ein Thema informieren möchte, mit welchem er nicht gut vertraut ist, dann kann die semantische Suche hilfreich sein.
-Denn der Nutzer kann nun einen Begriff eingeben, der zu dem Thema passt, und den er kennt.
-Er findet anschließend Dokumente, welche vielleicht nicht genau diesen Begriff beinhalten, aber welche thematisch dennoch ähnlich sind.
-Genau dieser Vorteil soll bei der Implementierung später genutzt werden.\\
-
-Um eine semantische Suche zu implementieren, werden die Technologien von Transformern und Vektordatenbanken verwendet.
-Ein Transformer erhält als Input eine große Menge an Text und mappt die einzelnen Wörter auf einen Vektor einer beliebigen Länge.
-Der Vektor, der am Ende herauskommt, beschreibt die Position des Wortes in dem n-dimensionalen Raum.
-Der Vektor beschreibt gewissermaßen, wie stark ein Wort in eine abstrakte Kategorie einzuordnen ist.
-Jeder Wert im Vektor entspricht einer Kategorie.
-Mithilfe der Vektoren können verschiedene Wörter hinsichtlich ihrer Ähnlichkeit analysiert werden.
-Ähnliche Wörter habe eine große räumliche Nähe, während zwei Wörter, die in vollkommen unterschiedlichen Kontexten verwende werden eine sehr große Distanz im Raum besitzen.
-Nehmen wir für ein Beispiel einen dreidimensionalen Raum an.
-Die X-Achse ist beschriftet mit dem Wort „Tier“, die Y-Achse ist beschriftet mit dem Wort „Computer“ und die Z-Achse ist beschriftet mit dem Wort „Mensch“.
-Nun geben wir einem Transformer das Wort „Katze“, und der Transformer berechnet einen dreidimensionalen Vektor, welcher das Wort „Katze“ im Raum positioniert.
-Weil eine Katze ein Tier ist, ist der X-Wert des Vektors eins.
-Der Wert eins bedeutet, dass das Wort vollständig zu dieser Kategorie gehört.
-Da eine Katze überhaupt nichts mit einem Computer zu tun hat, ist der Y-Wert des Vektors 0.\\
-
-Nun ist eine Katze zwar kein Mensch, aber eine Katze ist ein Haustier von Menschen.
-Es ist denkbar, dass die Wörter Katze und Mensch oft im gleichen Kontext verwendet werden, sodass der Wert bei 0,3 liegen könnte.
-Damit der Transformer einen Vektor berechnen kann, braucht er eine Menge Daten.
-Diese Daten erhält er aus vielen Texten.
-Werden zwei Wörter oft im gleichen Text genannt oder kommen zwei Wörter in vielen Texten sehr nahe beieinander vor, dann geht der Transformer davon aus, dass die beiden Wörter ähnlich sind, und berechnet ähnliche Vektoren.
-Zuvor müssen die Texte allerdings bereitgestellt werden.
-Dazu kann beispielsweise das Internet gecrawlt werden.
-Die Ergebnisse des Transformers werden in einer Vektordatenbank gespeichert.
-Eine Vektordatenbank ist eine Datenbank, welche Vector Embeddings, also ein Objekt als Key und dessen Vektor als Value speichert.
-Bei dem Objekt kann es sich um Wörter handeln, dann wird auch von Word Embeddings gesprochen.
-Es können aber auch Daten andere Daten, wie Bilder, Videos oder Audio gespeichert werden.
-Der Zweck von Vektordatenbanken ist es, Daten nicht einfach linear zu speichern, sondern in einem Raum.
-Die Distanz zwischen zwei Einträgen in diesem Raum beschreibt dessen Ähnlichkeit.
-Genau diese Informationen machen sich semantische Suchen zu Nutze.
-
-\section{NLP-Algorithmen}
-TODO: Ergänzen
-
-\section*{Suchmaschinen-Architektur}
-
-
-Die Architektur von Suchmaschinen besteht aus drei Komponenten.
+Die Architektur von Suchfunktionen besteht aus drei Komponenten.
 Aus dem Crawling, der Indexierung und der Suchfunktion selbst.
 Das Crawling ist zuständig für das Finden von Websites.
 Die Indizierung ist zuständig für das optimale Speichern der Informationen der Websites, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
 Im Folgenden wird der Begriff Dokument verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
 Unter Dokumenten können hierbei auch eine Website verstanden, welche durch einen Webcrawler durchsucht werden.
+Es wird zunächst die Funktionsweise des Crawlings erläutert.
+Danach werden zwei Möglichkeiten der Indizierung beschrieben.
+Zuerst die Volltext-Indizierung, dann die Vektor-Indizierung.
+Zuletzt werden die verschiedenen Arten von Suchalgorithmen erläutert.
 
 \section{Crawling}
 Bei der Implementierung eines Systems für eine Suchfunktion benötigt das System zunächst einen Datensatz von Dokumenten, welche überhaupt grundsätzlich über die Suchfunktion gefunden werden können.
@@ -156,18 +53,10 @@ Die Dokumentfrequenz gibt an, in wie vielen Dokumente ein Wort vorkommt.
 Das Verhältnis gibt damit an, wie charakteristisch das Wort für ein bestimmtes Dokument ist.
 Wenn das Wort charakteristisch für ein Dokument ist, dann kommt es in diesem Dokument häufig vor, aber in anderen Dokumenten nur selten.
 Wenn das Wort nicht charakteristisch für das Dokument ist, dann kommt es in anderen Dokumenten genauso häufig oder häufiger vor als in diesem Dokument.
-Die Metrik wird auch als tf-idf-Wert bezeichnet.\\
+Die Metrik wird auch als tf-idf-Wert bezeichnet.
+TODO: Rechnung besser verstehen\\
 
-TODO Rechnung besser verstehen\\
-
-Wir können uns nun einen m-dimensionalen Raum vorstellen, in dem jedes Dokument eine Dimension darstellt.
-Jedes Dokument liegt räumlich auf der Achse der eigenen Dimension.
-Wenn der Nutzer nun 
-Die Matrix lässt sich konzeptionell so verstehen, dass sie aus n Merkmalsvektoren besteht.
-Verwenden wir die eben beschriebene Metrik, dann gibt jeder Merkmalsvektor eine Gewichtung an, wie charakteristisch ein Wort für die verschiedenen m Dokumente ist.
-Nun kann der Nutzer Keywords in die Suche eingeben.
-
-\subsection{Vektorindizes}
+\subsection{Vektor-Indizierung}
 Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
 Dazu werden Dokumente zunächst, wie auch bei der Volltext-Indizierung gecrawlt.
 Anschließend durchlaufen die Inhalte der Dokumente ein Preprocessing.
@@ -185,3 +74,118 @@ Dort werden nun sowohl die rohen Daten als auch die Vektoren gespeichert, welche
 Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear gespeichert sind.
 Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
 Das funktioniert auf die gleiche Weise, wie bereits in dem Kapitel \textit{Semantic Search} beschrieben.
+
+\section{Suchalgorithmen}
+Im Folgenden werden zuerst gängige Suchalgorithmen erklärt, welche in nahezu jeder Suchfunktion zu finden sind.
+Danach wird im speziellen auf die strukturierte Suche und die semantische Suche eingegangen.
+Die semantische Suche wird später bei der Implementierung einer Suchfunktion verwendet werden.
+
+\subsection{Die gängigen Suchalgorithmen}
+In dem Kapitel \textit{Evaluationsmethoden und -Kriterien} wurde bereits beschrieben, dass eine Suche das Qualitätskriterium der Konformität erfüllen sollte.
+Das bedeutet, dass eine Suchfunktion die gängigen Arten von Suchanfragen unterstützen muss.
+Dieses Kapitel soll die Arten von Suchanfragen vorstellen.
+Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Implementierung erfüllen zu können.
+Es gibt die gängigen Suchalgorithmen Keyword Search, Phrase Search, Boolean Search, Field Search.\\
+
+Eine Keyword Search durchsucht Dokumente nach der Sucheingabe des Nutzers.
+Die Eingabe wird dabei nicht als ganzes betrachtet, sondern jedes Wort einzeln.
+Für jedes Keyword werden Dokumente als Ergebnis angezeigt, wenn dieses in dem Dokument vorhanden ist.
+Wenn ein Dokument mehrere der Keywords beinhaltet, wird dessen Relevanz höher eingeschätzt als für Dokumente, welche weniger Keywords enthalten.
+Dokumente mit höherer Relevanz werden weiter oben in der Ergebnisliste angezeigt.\\
+
+Eine Phrase Search ist die Suche nach Textausschnitten in Dokumenten.
+Hier werden nicht mehrere Keywords einzeln betrachtet, sondern die gesamte Eingabe in das Suchfeld als eine Einheit.
+Es reicht also nicht mehr aus, dass ein Dokument eines der Wörter enthält.
+Es muss die gesamte Sucheingabe als ein String enthalten sein.\\
+
+Die Boolean Search bietet die Möglichkeit einen boolschen Ausdruck als Sucheingabe zu machen.
+Ein Beispiel dafür ist die Sucheingabe \textit{Dokumentation AND Angular}.
+Die Sucheingabe bedeutet, dass die Suchfunktion nur Dokumente als Ergebnis darstellen soll, welche beide Keywords Dokumentation und Angular enthalten.
+Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten: \textit{"Dokumentation von Software" AND Angular}.
+In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
+Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.\\
+
+Eine Field Search sucht Dokumente anhand von Attributen.
+Der Nutzer kann diese Attribute auswählen.
+Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.
+Es können beliebig viele Attribute verwendet werden, um die Suche einzugrenzen.
+Neben der Verwendung der Attribute für die Suche selbst, können die Attribute komplementär zu einer anderen Art von Suche verwendet werden.
+So kann eine Suchfunktion Buttons bereitstellen, über welche Filter festgelegt werden.
+Nun kann eine Keyword Search durchgeführt werden, aber die gefundenen Dokumente werden mithilfe der Filter weiter eingeschränkt.
+Neben diesen gängigen Suchalgorithmen gibt es weitere Suchalgorithmen, wie die strukturierte Suche und die semantische Suche.
+
+\subsection{Die strukturierte Suche}
+Eine klassische Suchfunktion verwendet Keywords, um relevante Dokumente für eine Sucheingabe zu ermitteln.
+Der Vorteil dieser Art von Suche ist, dass die technische Struktur, in der die Daten vorliegen und gespeichert sind, nicht bekannt sein müssen.
+Der Nachteil ist auf der anderen Seite, dass die Suchergebnisse unpräzise sein können.
+Wenn beispielsweise der Suchbegriff Kamera eingegeben wird, dann werden Kameras als Ergebnisse zurückgegeben.
+Soll die Kamera nun bestimmte Eigenschaften besitzen, dann müssen diese Eigenschaften ebenfalls als Keywords angegeben werden.
+Nun wird aber nicht die Suche auf Ergebnisse eingegrenzt, bei denen eine Kamera diese bestimmten Eigenschaften besitzt.
+Stattdessen werden Suchergebnisse angezeigt, bei denen einige dieser Keywords vorkommen.
+Demgegenüber stehen Datenbankabfragen, beispielsweise mithilfe von SQL.
+Bei einer Datenbankabfrage können Objekte abgefragt werden, dessen Eigenschaften ganz bestimmte Werte haben.
+Die Ergebnisse, die eine solche Abfrage zurückgibt, sind dabei vollkommen genau.
+Es werden keine Objekte zurückgegeben, welche diese Kriterien nicht erfüllen.
+Voraussetzung für eine solche Suchabfrage ist allerdings, dass die Struktur der Datenbank a priori bekannt ist.
+Dem Nutzer muss der Name der Datenbank, der relevanten Tabellen, sowie der relevanten Properties bekannt sein, damit er das passende SQL für die Datenbankabfrage schreiben kann.
+Strukturierte Suchen sollen die Vorteile beider Vorgehensweisen kombinieren.
+Die Struktur der Daten soll a priori nicht bekannt sein müssen, aber trotzdem sollen die Suchergebnisse vollkommen präzise sein.
+TODO: Wie wird das ermöglicht?
+
+\subsection{Die Semantische Suche}
+Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen.\cite{Dengel_2012}
+Eine semantische Suche hat den Zweck, die Ähnlichkeit und Beziehungen zwischen Wörtern zu verstehen.
+Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.  
+So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} \textit{deployment} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.\\
+
+Die technische Umsetzung einer semantischen Suche kann auf verschiedene Arten erfolgen.
+Zum einen besteht die Möglichkeit ein explizites semantisches Netz heranzuziehen, und so die Zusammenhänge von Wörtern abzubilden.
+Ein semantisches Netz ist eine Menge aus Aussagen in der Form \textit{Subjekt Prädikat Objekt}.
+Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt.
+TODO: Erläuterende Grafik + Beispiel.
+Das hat den Vorteil, dass ein solches explizites semantisches Netz von Menschen erstellt wurde, und damit eine hohe Qualität der Daten einhergeht.
+Denn an der Erstellung von semantischen Netzen sind mehrere Menschen beteiligt, welche zuerst einen Konsens über die Eigenschaften und Zusammenhänge von Wörtern schaffen müssen.
+Der Nachteil dieser Methode ist der große Arbeitsaufwand, welcher mit der Erstellung eines solchen semantischen Netzes einhergeht.
+Ein weiterer Nachteil ist die mögliche Unvollständigkeit, welche ein solches semantisches Netz besitzen könnte.
+Eine Wissensdatenbank, welche für ein Projekt erstellt wurde, kann Definitionen von Begriffen beinhalten, welche in allgemeinen semantischen Netzen nicht vorhanden sind.
+Bei der Umsetzung einer semantischen Suche mithilfe eines semantischen Netzes müsste also zuerst ein allgemeines semantisches Netz herangezogen werden, beispielsweise von DBPedia.
+Anschließend müsste dieses semantische Netz um die neuen Definitionen, welche nur im Kontext des Projektes gelten, erweitert werden.\\
+
+Eine weitere Möglichkeit zur Umsetzung einer semantischen Suche ist die Verwendung von Transfomers und Vektordatenbanken.
+Um zu verstehen, welche Wörter kontextuell zusammengehören, werden hier die Wörter in einem n-dimensionalen Raum positioniert.
+Wörter, die sich sehr ähnlich sind, also im gleichen Kontext verwendet werden, haben in diesem n-dimensionalen Raum eine geringe Distanz zueinander.
+Wörter, die sich eher unähnlich sind, wie \textit{"rollout" und "API"}, haben eine größere Distanz.
+Der Vorteil einer semantischen Suche ist, dass der genaue Begriff, welcher gesucht wird nicht bekannt ist.
+Wenn sich der Nutzer also über ein Thema informieren möchte, mit welchem er nicht gut vertraut ist, dann kann die semantische Suche hilfreich sein.
+Denn der Nutzer kann nun einen Begriff eingeben, der zu dem Thema passt, und den er kennt.
+Er findet anschließend Dokumente, welche vielleicht nicht genau diesen Begriff beinhalten, aber welche thematisch dennoch ähnlich sind.
+Genau dieser Vorteil soll bei der Implementierung später genutzt werden.\\
+
+Um eine semantische Suche zu implementieren, werden die Technologien von Transformern und Vektordatenbanken verwendet.
+Ein Transformer erhält als Input eine große Menge an Text und mappt die einzelnen Wörter auf einen Vektor einer beliebigen Länge.
+Der Vektor, der am Ende herauskommt, beschreibt die Position des Wortes in dem n-dimensionalen Raum.
+Der Vektor beschreibt gewissermaßen, wie stark ein Wort in eine abstrakte Kategorie einzuordnen ist.
+Jeder Wert im Vektor entspricht einer Kategorie.
+Mithilfe der Vektoren können verschiedene Wörter hinsichtlich ihrer Ähnlichkeit analysiert werden.
+Ähnliche Wörter habe eine große räumliche Nähe, während zwei Wörter, die in vollkommen unterschiedlichen Kontexten verwende werden eine sehr große Distanz im Raum besitzen.
+Nehmen wir für ein Beispiel einen dreidimensionalen Raum an.
+Die X-Achse ist beschriftet mit dem Wort „Tier“, die Y-Achse ist beschriftet mit dem Wort „Computer“ und die Z-Achse ist beschriftet mit dem Wort „Mensch“.
+Nun geben wir einem Transformer das Wort „Katze“, und der Transformer berechnet einen dreidimensionalen Vektor, welcher das Wort „Katze“ im Raum positioniert.
+Weil eine Katze ein Tier ist, ist der X-Wert des Vektors eins.
+Der Wert eins bedeutet, dass das Wort vollständig zu dieser Kategorie gehört.
+Da eine Katze überhaupt nichts mit einem Computer zu tun hat, ist der Y-Wert des Vektors 0.\\
+
+Nun ist eine Katze kein Mensch, aber eine Katze ist ein Haustier von Menschen.
+Es ist denkbar, dass die Wörter Katze und Mensch oft im gleichen Kontext verwendet werden, sodass der Wert bei 0,3 liegen könnte.
+Damit der Transformer einen Vektor berechnen kann, braucht er eine Menge Daten.
+Diese Daten erhält er aus vielen Texten.
+Werden zwei Wörter oft im gleichen Text genannt oder kommen zwei Wörter in vielen Texten sehr nahe beieinander vor, dann geht der Transformer davon aus, dass die beiden Wörter ähnlich sind, und berechnet ähnliche Vektoren.
+Zuvor müssen die Texte allerdings bereitgestellt werden.
+Dazu kann beispielsweise das Internet gecrawlt werden.
+Die Ergebnisse des Transformers werden in einer Vektordatenbank gespeichert.
+Eine Vektordatenbank ist eine Datenbank, welche Vector Embeddings, also ein Objekt als Key und dessen Vektor als Value speichert.
+Bei dem Objekt kann es sich um Wörter handeln, dann wird auch von Word Embeddings gesprochen.
+Es können aber auch Daten andere Daten, wie Bilder, Videos oder Audio gespeichert werden.
+Der Zweck von Vektordatenbanken ist es, Daten nicht einfach linear zu speichern, sondern in einem Raum.
+Die Distanz zwischen zwei Einträgen in diesem Raum beschreibt dessen Ähnlichkeit.
+Genau diese Informationen nutzen semantische Suchen.
