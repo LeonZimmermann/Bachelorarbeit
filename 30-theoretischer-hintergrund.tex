@@ -1,20 +1,22 @@
 \chapter{Theoretischer Hintergrund}
-Die Architektur von Suchfunktionen besteht aus drei Komponenten.
-Aus dem Crawling, der Indexierung und der Suchfunktion selbst.
-Das Crawling ist zuständig für das Finden von Websites.
-Die Indizierung ist zuständig für das optimale Speichern der Informationen der Websites, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
-Im Folgenden wird der Begriff Dokument verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
-Unter Dokumenten können hierbei auch eine Website verstanden, welche durch einen Webcrawler durchsucht werden.
-Es wird zunächst die Funktionsweise des Crawlings erläutert.
+Eine einfache Implementierung einer Suchfunktion kann aus drei Komponenten bestehen.
+Aus dem Crawling, dem Index und dem Suchalgorithmus.
+Das Crawling ist zuständig für das Finden von Dokumenten.
+Der Index speichert Informationen der Dokumente, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
+Der Begriff Dokument wird hier verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
+Unter Dokumenten können auch eine Website verstanden, welche durch einen Webcrawler durchsucht werden.
+Es wird im Folgenden zunächst die Funktionsweise des Crawlings erläutert.
 Danach werden zwei Möglichkeiten der Indizierung beschrieben.
 Zuerst die Volltext-Indizierung, dann die Vektor-Indizierung.
 Zuletzt werden die verschiedenen Arten von Suchalgorithmen erläutert.
 
 \section{Crawling}
-Bei der Implementierung eines Systems für eine Suchfunktion benötigt das System zunächst einen Datensatz von Dokumenten, welche überhaupt grundsätzlich über die Suchfunktion gefunden werden können.
+Bei der Implementierung eines Systems für eine Suchfunktion benötigt das System zunächst einen Datensatz von Dokumenten, welche über die Suchfunktion gefunden werden können.
 Dieser wird mithilfe eines Crawlers aufgebaut.
-Ein Crawler ist ein Algorithmus, welcher ein Dokument als Startpunkt bekommt, und anhand dessen neue Dokumente findet.
-Der Algorithmus analysiert dazu das Dokument auf Links, welchen der Algorithmus anschließend folgt.
+Ein Crawler ist ein Algorithmus, welcher Techniken aus dem Natural Language Processing nutzt, um Informationen aus einem Dokument zu extrahieren.\cite{Khder_2021}
+Implementierungen können reguläre Ausdrücke verwenden, um die Informationen zu extrahieren, oder auch fortgeschrittenere Verfahren, wie Abstract Syntrax Trees.
+Im Falle von Websites kann der Crawler Hyperlinks zu weiteren Websites extrahieren.
+Damit kann der Algorithmus sukzessive den Datensatz von Dokumenten befüllen.
 Die neuen Dokumente werden durch den Index verarbeitet und wiederum auf neue Links analysiert.
 Dieses Verfahren kann beliebig lange und beliebig rekursiv durchlaufen werden, um den Index zu erweitern.
 Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumenten übergeben werden, welche dem Index hinzugefügt werden sollen.
@@ -141,8 +143,8 @@ So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollo
 Die technische Umsetzung einer semantischen Suche kann auf verschiedene Arten erfolgen.
 Zum einen besteht die Möglichkeit ein explizites semantisches Netz heranzuziehen, und so die Zusammenhänge von Wörtern abzubilden.
 Ein semantisches Netz ist eine Menge aus Aussagen in der Form \textit{Subjekt Prädikat Objekt}.
-Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt.
-TODO: Erläuterende Grafik + Beispiel.
+Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt.\cite{Lehmann}
+TODO: Erläuterende Grafik + Beispiel.\\
 Das hat den Vorteil, dass ein solches explizites semantisches Netz von Menschen erstellt wurde, und damit eine hohe Qualität der Daten einhergeht.
 Denn an der Erstellung von semantischen Netzen sind mehrere Menschen beteiligt, welche zuerst einen Konsens über die Eigenschaften und Zusammenhänge von Wörtern schaffen müssen.
 Der Nachteil dieser Methode ist der große Arbeitsaufwand, welcher mit der Erstellung eines solchen semantischen Netzes einhergeht.
@@ -151,7 +153,7 @@ Eine Wissensdatenbank, welche für ein Projekt erstellt wurde, kann Definitionen
 Bei der Umsetzung einer semantischen Suche mithilfe eines semantischen Netzes müsste also zuerst ein allgemeines semantisches Netz herangezogen werden, beispielsweise von DBPedia.
 Anschließend müsste dieses semantische Netz um die neuen Definitionen, welche nur im Kontext des Projektes gelten, erweitert werden.\\
 
-Eine weitere Möglichkeit zur Umsetzung einer semantischen Suche ist die Verwendung von Transfomers und Vektordatenbanken.
+Eine weitere Möglichkeit zur Umsetzung einer semantischen Suche ist die Verwendung von Transformers und Vektordatenbanken.
 Um zu verstehen, welche Wörter kontextuell zusammengehören, werden hier die Wörter in einem n-dimensionalen Raum positioniert.
 Wörter, die sich sehr ähnlich sind, also im gleichen Kontext verwendet werden, haben in diesem n-dimensionalen Raum eine geringe Distanz zueinander.
 Wörter, die sich eher unähnlich sind, wie \textit{"rollout" und "API"}, haben eine größere Distanz.
