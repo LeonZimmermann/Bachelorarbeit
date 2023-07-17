@@ -5,51 +5,32 @@ Zur Identifikation von Anwendungsfällen wurde zunächst Literatur herangezogen.
 Die Literatur ist bereits unter den verwandten Arbeiten aufgeführt.
 In den Verwandten Arbeiten wurden Arbeiten genannt, welche ähnliche Probleme lösen sollen.
 Diese Fokussieren sich vorallem auf die \textit{Feature Location}, \textit{Bug Localization} und die Traceability zwischen Code und anderen Artefakten.
-Mit anderen Worten: Die Suchfunktion soll eine Brücke zwischen Code und Dokumentation herstellen.\\
+Mit anderen Worten: Die Suchfunktion soll eine Brücke zwischen Code und Dokumentation herstellen.
+Neben den beiden Anwendungsfällen Feature Location und Bug Localization aus der Literatur, konnten noch weitere Anwendungsfälle ermittelt werden.
+So ist das Onboarding im Projekt ein Anwendungsfäll für die Verwendung der Suchfunktion einer Wissensdatenbank.
+Die weiteren Anwendungsfälle sind \textit{Informationen über das Projektmanagement finden}, \textit{Implementierung nach Spezifikation} und \textit{Abgleich mit Spezifikation}.\\
+Die Folgenden Kapitel beschreiben die genannte Anwendungsfälle und erläutern, warum sie als Anwendungsfälle ausgesucht wurden.
+Bei dem Vergleich zwischen Suchfunktionen werden die Anwendungsfälle herangezogen werden, um ein fiktionales Szenario zu erstellen.
+Das fiktionale Szenario bietet die Grundlage für den Vergleich zwischen Suchfunktionen.
+Denn durch dieses werden die Sucheingaben und die erwarteten Ergebnisse definiert, welche die Suchfunktionen liefern sollen.
 
 \section{Onboarding im Projekt}
 Wenn ein neuer Softwareentwickler in einem Softwareprojekt startet, dann muss er sich zunächst einmal mit dem Projekt vertraut machen.
 Das bedeutet, dass er verstehen muss, was das Projekt eigentlich ist.
 Er muss verstehen, was das eigentliche Problem des Kunden ist.
-Außerdem muss er verstehen wie die Software dieses Problem löst.
-Dazu muss der Softwareentwickler sehr allgemeine Informationen über das Projekt finden können.
-Er könnte Dinge suchen, wie einen Projektüberblick oder ein Glossar.\\
+Außerdem muss er verstehen wie die Software dieses Problem löst.\\
 
+Die Leitung eines Projektes wünscht sich eine möglichst schnelle Einarbeitung von neuen Mitarbeitern.
+Dazu können bereits etablierte Mitarbeiter herangezogen werden, welche den neuen Mitarbeiter bei der Einarbeitung unterstützen.
+Der Nachteil besteht darin, dass hierdurch Kapazitäten gebunden werden, welche für die aktive Entwicklung der Software benötigt werden.
+Daher kann das Zurückgreifen auf eine Wissensdatenbank durch den neuen Mitarbeiter sinnvoll sein.
+Wenn der neue Mitarbeiter sich nun beim Lesen von Dokumenten in der Wissensdatenbank Fragen stellt, dann ist es hilfreich, wenn die Suchfunktion der Wissensdatenbank die Antworten auf diese Fragen liefern kann.\\
+
+Dazu muss der Softwareentwickler sehr allgemeine Informationen über das Projekt finden können.
+Er könnte Dinge suchen, wie einen Projektüberblick oder ein Glossar.
 Neben diesen allgemeinen Informationen muss sich der neue Softwareentwickler mit dem Code vertraut machen.
 Er muss verstehen, welche Technologien verwendet werden, welche Best-Practices, Code-Styles, Guidelines, Prozesse und Quality Gates eingehalten werden müssen.
 Und er muss verstehen, wie die Software lokal oder in einer Testumgebung ausgeführt werden kann.\\
-
-\section{Feature Location}
-Bei der Entwicklung eines neuen Features greift der Softwareentwickler also auf die entsprechende Spezifikation zurück.
-Dazu muss ihm bekannt sein, wo die Spezifikation zu finden ist.
-Nun muss er bei der Entwicklung darauf achten, dass er Best-Practices und Konventionen einhält, sowie die Qualitätsanforderungen.
-Eine Qualitätsanforderungen könnte dabei eine vereinbarte Testabdeckung der Software sein.
-Der Softwareentwickler muss also bei der Entwicklung eines neuen Features auch diese Informationen einfach finden können.
-Und ihm muss klar sein, an welcher Stelle im Code er den neuen Code einbauen sollte.
-Das ist Feature Location.
-
-\section{Bug Localization}
-Wenn der Softwareentwickler gerade kein neues Feature implementiert, dann korrigiert er gerade möglicherweise einen Fehler in der Software.
-Um einen Fehler überhaupt zu identifizieren, muss aber zuerst wieder die Spezifikation herangezogen werden.
-Denn in der Spezifikation wird, wie bereits erwähnt, die gewünschte Funktionsweise der Software beschrieben.
-Damit wird auch definiert, was ein fehlerhaftes Verhalten ist, und was ein korrektes Verhalten ist.
-Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsprechende Spezifikation zu diesem Fehlerticket finden können.
-Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
-Das ist Bug Localization.
-
-\section{Informationen über das Projektmanagement finden}
-Softwareentwickler sollten darüber Bescheid wissen, was in dem Projekt, in dem sie arbeiten, vor sich geht.
-Sie sollten über organisatorische Dinge Bescheid wissen, wie die Teamaufteilung und die Zuständigkeiten in den einzelnen Teams und in dem gesamten Projekt.
-Das ist wichtig für eine gute Kommunikation und entsprechenden Wissensaustausch zwischen Kollegen.
-Außerdem sollten Softwareentwickler darüber Bescheid wissen, wann das nächste Release der Software ansteht.
-Diesen Termin müssen sie bei der Planung ihrer Arbeit berücksichtigen, damit sie auch rechtzeitig alle relevanten Features implementiert haben und alle kritischen Fehler behoben haben.
-Neben der Einhaltung von Terminen ist die Planung wichtig für die Motivation der Softwareentwickler.
-Denn Motivation entsteht durch die Wahrnehmung, sich einem Ziel zu nähern (Quelle: Flow - mihaly csikszentmihaly).
-Aus diesem Grund müssen die Softwareentwickler auch die Vision der Software verstehen und auch die übergreifende Vision des Unternehmens.
-Sie müssen verstehen, warum die Arbeit, welche sie erledigen so wichtig ist.
-Und sie müssen verstehen, für wen sie diese Arbeit tun.
-Auch diese Faktoren sind wichtig für eine hohe Motivation bei der Arbeit.
-Daher ist es so wichtig diese Informationen einfach zugänglich zu machen, also einfach auffindbar zu machen.
 
 \section{Implementierung nach Spezifikation}
 Bei der Implementierung von neuen Anforderungen ist es wichtig, dass sich der Softwareentwickler an die Spezifikation hält.
@@ -58,7 +39,27 @@ Dazu sollte der Softwareentwickler es schaffen alle relevanten Dokumente zu find
 Zuerst sollte er die Spezifikation selbst finden können.
 Er sollte die Dokumentation der damit einhergehendenden Prozesse finden, und auch die Domänenobjekte, welche bei der Implementierung relevant sein werden.
 Er sollte Diagramme finden können, welche zu dem Anwendungsfall gehören, und auch die weiteren Dokumente, welche den Kontext der Anforderung erläutern.
-Außerdem wäre es hilfreich für den Softwareentwickler auch gleich die relevanten Stellen im Code angezeigt zu bekommen.
+Außerdem wäre es hilfreich für den Softwareentwickler auch gleich die relevanten Stellen im Code angezeigt zu bekommen.\\
+
+Feature Location ist das Vorgehen, den Einstiegspunkt im Code zu finden, welcher für ein Feature verantwortlich ist.
+Wenn eine Software das Feature besitzt Mails zu verschicken, dann könnte der Einstiegspunkt für dieses Feature eine Schnittstelle sein, welche den Inhalt und Empfänger der Email entgegennimmt.
+Der Inhalt wird anschließend in ein Mail-Template eingefügt, und die Mail wird verschickt.\\
+
+Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
+Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
+Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden.\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}
+Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herzustellen.
+Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
+Dazu werden LSI und Vector Space Models verwendet.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}
+
+\section{Bug Localization}
+Neben der Implementierung neuer Features ist es Aufgabe eines Softwareentwicklers bestehende Fehler in der Software zu korrigieren.
+Um einen Fehler zu korrigieren, ist es sinnvoll die Spezifikation heranzuziehen, um herauszufinden, wie sich die Software ordnungsgemäß verhalten sollte.
+TODO: Neu schreiben
+
+Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsprechende Spezifikation zu diesem Fehlerticket finden können.
+Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
+Das ist Bug Localization.
 
 \section{Abgleich mit Spezifikation}
 Der Abgleich mit einer Spezifikation ist notwendig, um Testfälle zu schreiben, und zu prüfen, ob das Verhalten der Anwendung korrekt ist.
@@ -75,11 +76,19 @@ Ob dieses Verhalten gewünscht ist oder nicht, muss in der Spezifikation festgeh
 
 Wenn nun ein Bugticket dieser Art bei einem Softwareentwickler landet, dann muss er, wie auch bei der Implementierung, alle relevanten Dokumente heranziehen.
 
-\section{Deployment}
-TODO: Ergänzen
-
-\section{Dokumentation zum besseren Verständnis heranziehen}
-TODO: Glossar, API-Dokumentation etc.
+\section{Informationen über das Projektmanagement finden}
+Softwareentwickler sollten darüber Bescheid wissen, was in dem Projekt, in dem sie arbeiten, vor sich geht.
+Sie sollten über organisatorische Dinge Bescheid wissen, wie die Teamaufteilung und die Zuständigkeiten in den einzelnen Teams und in dem gesamten Projekt.
+Das ist wichtig für eine gute Kommunikation und entsprechenden Wissensaustausch zwischen Kollegen.
+Außerdem sollten Softwareentwickler darüber Bescheid wissen, wann das nächste Release der Software ansteht.
+Diesen Termin müssen sie bei der Planung ihrer Arbeit berücksichtigen, damit sie auch rechtzeitig alle relevanten Features implementiert haben und alle kritischen Fehler behoben haben.
+Neben der Einhaltung von Terminen ist die Planung wichtig für die Motivation der Softwareentwickler.
+Denn Motivation entsteht durch die Wahrnehmung, sich einem Ziel zu nähern (Quelle: Flow - mihaly csikszentmihaly).
+Aus diesem Grund müssen die Softwareentwickler auch die Vision der Software verstehen und auch die übergreifende Vision des Unternehmens.
+Sie müssen verstehen, warum die Arbeit, welche sie erledigen so wichtig ist.
+Und sie müssen verstehen, für wen sie diese Arbeit tun.
+Auch diese Faktoren sind wichtig für eine hohe Motivation bei der Arbeit.
+Daher ist es so wichtig diese Informationen einfach zugänglich zu machen, also einfach auffindbar zu machen.
 
 Im Kapitel "Evaluationsmethoden und -Kriterien" wird aufgezeigt, wie die Anforderungen der Anwendungsfälle quantifizierbar gemacht werden können.
 Das wird dabei helfen nachzuvollziehen, inwieweit die Anforderungen der Anwendungsfälle erreicht wurden, welche genannt wurden.
