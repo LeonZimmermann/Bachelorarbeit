@@ -33,13 +33,14 @@
 \contentsline {section}{\numberline {5.4}Einfaktorielle Varianzanalyse}{21}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{23}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fiktionales Szenario: Onboarding eines Mitarbeiters}{23}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Auswertung der Ergebnisse}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diskussion des Studienaufbaus}{24}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{25}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{25}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{25}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{26}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Anhang}{28}{chapter.9}%
-\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{28}{section.9.1}%
-\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{28}{section.9.2}%
+\contentsline {section}{\numberline {6.2}Aufbau der Studie}{24}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Auswertung der Ergebnisse}{25}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Diskussion des Studienaufbaus}{25}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{26}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{26}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{26}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{27}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Anhang}{29}{chapter.9}%
+\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{29}{section.9.1}%
+\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{29}{section.9.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
