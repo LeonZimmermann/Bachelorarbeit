@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {2.3}Bug Localization}{7}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Abgleich mit Spezifikation}{7}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Informationen über das Projektmanagement finden}{7}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Theoretischer Hintergrund}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Konzeption der Suchfunktion}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Crawling}{9}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Indizierung}{9}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Volltext-Indizierung}{10}{subsection.3.2.1}%
@@ -17,8 +17,9 @@
 \contentsline {subsection}{\numberline {3.3.1}Die gängigen Suchalgorithmen}{11}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Die strukturierte Suche}{12}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Die Semantische Suche}{13}{subsection.3.3.3}%
-\contentsline {chapter}{\numberline {4}Implementierung}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Aufsetzen der Vektordatenbank Weaviate}{16}{section.4.1}%
+\contentsline {section}{\numberline {3.4}Wahl der Suchfunktion}{15}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Implementierung der neuen Suchfunktion}{16}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Aufsetzen der Vektordatenbank Weaviate}{17}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Einspielen der Daten in Weaviate}{17}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Verwendung der Suchfunktion von Weaviate}{18}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Verwendung der Semantische Suche}{18}{subsection.4.3.1}%
@@ -34,13 +35,14 @@
 \contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{23}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fiktionales Szenario: Onboarding eines Mitarbeiters}{23}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Aufbau der Studie}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Auswertung der Ergebnisse}{25}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Diskussion des Studienaufbaus}{25}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{26}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{26}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{26}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{27}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Anhang}{29}{chapter.9}%
-\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{29}{section.9.1}%
-\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{29}{section.9.2}%
+\contentsline {section}{\numberline {6.3}Durchführung der Studie}{25}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Auswertung der Ergebnisse}{26}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Diskussion des Studienaufbaus}{26}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{27}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{27}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{27}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{28}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Anhang}{30}{chapter.9}%
+\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{30}{section.9.1}%
+\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{30}{section.9.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

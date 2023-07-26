@@ -1,4 +1,4 @@
-\chapter{Theoretischer Hintergrund}
+\chapter{Konzeption der Suchfunktion}
 Eine einfache Implementierung einer Suchfunktion kann aus drei Komponenten bestehen.
 Aus dem Crawling, dem Index und dem Suchalgorithmus.
 Das Crawling ist zuständig für das Finden von Dokumenten.
@@ -191,3 +191,19 @@ Es können aber auch Daten andere Daten, wie Bilder, Videos oder Audio gespeiche
 Der Zweck von Vektordatenbanken ist es, Daten nicht einfach linear zu speichern, sondern in einem Raum.
 Die Distanz zwischen zwei Einträgen in diesem Raum beschreibt dessen Ähnlichkeit.
 Genau diese Informationen nutzen semantische Suchen.
+
+\section{Wahl der Suchfunktion}
+Aufgrund der Möglichkeit die Semantik einer Sucheingabe zu verstehen soll eine semantische Suche verwendet werden, um die neue Suchfunktion zu implementieren.
+Wenn der Nutzer nicht genau weiß, wie eine Seite heißt, nach welcher er sucht, kann er sie bei einer semantischen Suche umschreiben, und trotzdem ein sinnvolles Ergebnis bekommen.
+Aufgrund dessen sei angenommen, dass eine semantische Suche einer einfachen Keyword Search überlegen ist.\\
+
+Bei der Implementierung sollen dabei keine semantischen Netze verwendet werden, sondern ein Vector Space Model.
+TODO: Weiter ausführen
+
+Des weiteren kann die semantische Suche mit weiteren Daten angereichert werden und damit verbessert werden.
+Indem die Codebase, welche zu der Wissensdatenbank in Verbindung steht, ebenfalls indiziert wird, kann eine Traceability zwischen Code und Wissensdatenbank hergestellt werden.
+Damit können Feature Location und Bug Localization umgesetzt werden.
+Mit einer Architektur, welche ein Vector Space Model verwendet, kann also nicht nur eine überlegene Suche innerhalb der Wissensdatenbank implementiert werden, sondern die Suche kann um die Codebase erweitert werden, und damit können weitere Funktionen, wie Feature Location und Bug Localization ermöglicht werden.
+Damit kann die Suchfunktion nicht nur zum Durchsuchen der Wissensdatenbank verwendet werden, sondern auch zum Durchsuchen der Codebase.
+Und wenn in der Suchfunktion nach einem Feature gesucht wird, dann kann neben der Spezifikation in der Wissensdatenbank auch gleich der Einstiegspunkt im Code gefunden werden.
+Damit verbessert sich wiederum die Wartbarkeit der Software, da das Ändern von Features oder korrigieren von Bugs erleichtert wird.
