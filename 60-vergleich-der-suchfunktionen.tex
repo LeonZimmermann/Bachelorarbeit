@@ -52,6 +52,7 @@ Weiterhin möchte er genauer verstehen, wie die Entwicklung in dem Projekt ablä
 Er beschließt herauszufinden, \textbf{für welche Teile die unterschiedlichen Teams und Mitarbeiter zuständig sind}.
 
 TODO: 10 weitere Fragestellungen
+TODO: Die Fragestellungen sind zu ungenau formuliert. Wann ist der Teilnehmer mit der Aufgabe fertig? Das muss objektiv festgelegt sein, und darf nicht subjektiv sein
 
 \section{Aufbau der Studie}
 Im Rahmen der Bachelorarbeit soll eine Studie durchgeführt werden, welche die neue Suchfunktion mit der bestehenden Confluence-Suche vergleicht.
@@ -62,7 +63,9 @@ Die Teilnehmer nehmen freiwillig an der Studie teil und entstammen aus genau ein
 Der Name des Projektes soll nicht benannt werden.
 Für die Studie werden lediglich Softwareentwickler ausgewählt.
 Bei der Einteilung der Softwareentwickler soll darauf geachtet werden, dass die Zeit, welche die Teilnehmer im Projekt verbracht haben, je Gruppe ähnlich ist.
-Die Teilnahme an der Studie ist anonym.\\
+Die Teilnahme an der Studie ist anonym.
+Weiterhin können die Teilnehmer frei entscheiden, wann sie die Studie durchführen möchten.
+Den Arbeitsplatz können sie ebenfalls frei wählen.\\
 
 Die Teilnehmer der Studie werden in zwei Gruppen eingeteilt.
 Jeder Teilnehmer bekommt die Aufgabe eine spezifische Information herauszufinden.
@@ -71,15 +74,18 @@ Es wird angenommen, dass immer eine korrekte Information gefunden wird.
 Im Vorfeld wird geprüft, ob die Wissensdatenbank gründsätzlich eine Antwort auf die Fragestellung liefern kann. 
 Zusätzlich wird die Anzahl der gemachten Sucheingaben dokumentiert.
 Es werden insgesamt folgende Daten gesammelt und ausgewertet:
--	TeilnehmerId (unabhängige Variable - UV)
--	FragenId (UV)
--	Suchfunktion (UV)
--	Benötigte Zeit (abhängige Variable - AV)
--	Anzahl von Sucheingaben (AV)\\
+\begin{itemize}
+    \item TeilnehmerId (unabhängige Variable - UV)
+    \item FragenId (UV)
+    \item Suchfunktion (UV)
+    \item Benötigte Zeit (abhängige Variable - AV)
+    \item Anzahl von Sucheingaben (AV)
+\end{itemize}
 
-Das Problem bei einer AB-Studie könnte sein, dass die Teilnehmer unterschiedliche Kenntnisse über die Wissensdatenbank haben, sodass einige Teilnehmer besser darin sind Informationen zu finden als andere.
+Bei einer AB-Studie könnten die Teilnehmer unterschiedliche Kenntnisse über die Wissensdatenbank haben, sodass einige Teilnehmer besser darin sind Informationen zu finden als andere.
 Befinden sich in einer Gruppe eher Teilnehmer, welche bessere Kenntnisse über die Wissensdatenbank haben, und in der anderen Gruppe Teilnehmer, welche eher schlechtere Kenntnisse haben, dann werden die Ergebnisse der Studie verfälscht.
-Mithilfe einer AB/BA-Studie könnte dieses Problem gelöst werden.
+Mithilfe einer AB/BA-Crossover-Studie könnte dieses Problem gelöst werden.
+Denn hier werden beide Suchfunktionen von jeder Person verwendet.
 Dabei muss darauf geachtet werden, dass die Teilnehmer bei der Verwendung der zweiten Suchfunktion nicht die gleichen Informationen finden müssen, wie bei der ersten Suchfunktion.
 Denn nachdem sie die Informationen mit der ersten Suchfunktion gefunden haben, wissen sie bereits, wo sich die Information befindet.
 Es muss also zwei verschiedene Datensets geben.
@@ -99,14 +105,28 @@ Damit werden auch die Suchergebnisse aktualisiert.\\
 
 Die Suchergebnisse werden in einem Dropdown unterhalb der Sucheingabe dargestellt.
 Die Darstellung soll jener von Confluence ähnlich aussehen.
-Nachdem ein Suchergebnis aus dem Dropdown angeklickt wurde, wird die Seite unterhalb der Sucheingabe dargestellt.
+Nachdem ein Suchergebnis aus dem Dropdown angeklickt wurde, wird die Seite unterhalb der Sucheingabe dargestellt.\\
 
+Die Seiteninhalte wurden zuvor aus Confluence exportiert.
+Dabei können lediglich die HTML-Dokumente exportiert werden, was zur Folge hat, dass keine Grafiken angezeigt werden können.
+Außerdem können Links nicht verfolgt werden, weil diese relative URLs auf Confluence verwenden.
+Die Struktur der Dokumente kann in der Benutzeroberfläche der neuen Suchfunktion nicht wie bei Confluence abgebildet werden.
+Das hat zur Folge, dass das Dokument, auf welches ein Link verweist nicht gefunden werden kann.\\
 
+Die Unterschiede zwischen den Benutzeroberflächen sind bei der Diskussion des Studienaufbaus relevant.
+Denn nach der Durchführung der Studie muss erörtert werden, inwieweit diese Unterschiede einen Einfluss auf das Ergebnis genommen haben.
+Um die unterschiede möglichst klein zu halten werden die Studienteilnehmer angewiesen nur die Suchfunktion selbst zu verwenden, um Informationen in der Wissensdatenbank zu suchen.
+Das bedeutet, dass die Studienteilnehmer in der Confluence-Oberfläche weder Links verfolgen dürfen, noch den File-Tree.\\
+
+Um die Zeit zu messen, welche ein Teilnehmer zum Beantworten einer Frage benötigte, wird eine Stoppuhr verwendet.
 \section{Auswertung der Ergebnisse}
 TODO: Ergänzen
 
-
 \section{Diskussion des Studienaufbaus}
-TODO: Ergänzen
 
+Das Ergebnis der Studie kann durch einige Faktoren verfälscht werden.
+Zum einen sind die Oberflächen der Suchfunktionen nicht identisch.
 TODO: Durch Unterschiede zwischen den beiden Oberflächen könnte das Ergebnis verfälscht werden. 
+
+Weitere 
+

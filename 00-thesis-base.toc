@@ -18,31 +18,31 @@
 \contentsline {subsection}{\numberline {3.3.2}Die strukturierte Suche}{12}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Die Semantische Suche}{13}{subsection.3.3.3}%
 \contentsline {section}{\numberline {3.4}Wahl der Suchfunktion}{15}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Implementierung der neuen Suchfunktion}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Aufsetzen der Vektordatenbank Weaviate}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Einspielen der Daten in Weaviate}{17}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Verwendung der Suchfunktion von Weaviate}{18}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Verwendung der Semantische Suche}{18}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Verwendung von Filtern}{18}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Darstellung der Ergebnisse}{18}{subsection.4.3.3}%
-\contentsline {chapter}{\numberline {5}Evaluationsmethoden und -Kriterien}{19}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Precision, Recall und F-Maß}{19}{section.5.1}%
-\contentsline {section}{\numberline {5.2}ISO/IEC 9126}{20}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Benutzbarkeit}{20}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Funktionalität}{21}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Versuchsaufbau}{21}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Einfaktorielle Varianzanalyse}{21}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{23}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Fiktionales Szenario: Onboarding eines Mitarbeiters}{23}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Aufbau der Studie}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Durchführung der Studie}{25}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Auswertung der Ergebnisse}{26}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Diskussion des Studienaufbaus}{26}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{27}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{27}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{27}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{28}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Anhang}{30}{chapter.9}%
-\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{30}{section.9.1}%
-\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{30}{section.9.2}%
+\contentsline {chapter}{\numberline {4}Implementierung der neuen Suchfunktion}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Aufsetzen der Vektordatenbank Weaviate}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Einspielen der Daten in Weaviate}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Verwendung der Suchfunktion von Weaviate}{19}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Verwendung der Semantische Suche}{19}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Verwendung von Filtern}{19}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Darstellung der Ergebnisse}{19}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Evaluationsmethoden und -Kriterien}{20}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Precision, Recall und F-Maß}{20}{section.5.1}%
+\contentsline {section}{\numberline {5.2}ISO/IEC 9126}{21}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Benutzbarkeit}{21}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Funktionalität}{22}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Versuchsaufbau}{22}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Einfaktorielle Varianzanalyse}{22}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{24}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Fiktionales Szenario: Onboarding eines Mitarbeiters}{24}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Aufbau der Studie}{25}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Durchführung der Studie}{26}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Auswertung der Ergebnisse}{27}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Diskussion des Studienaufbaus}{27}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{28}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{28}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{28}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{29}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Anhang}{31}{chapter.9}%
+\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{31}{section.9.1}%
+\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{31}{section.9.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
