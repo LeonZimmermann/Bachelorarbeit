@@ -1,7 +1,7 @@
 \chapter{Konzeption der Suchfunktion}
 Eine einfache Implementierung einer Suchfunktion kann aus drei Komponenten bestehen.
 Aus dem Crawling, dem Index und dem Suchalgorithmus.
-Das Crawling ist zuständig für das Finden von Dokumenten.
+Das Crawling ist zuständig für das Finden von Dokumenten\cite{Castillo_2005}.
 Der Index speichert Informationen der Dokumente, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
 Der Begriff Dokument wird hier verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
 Unter Dokumenten können auch eine Website verstanden, welche durch einen Webcrawler durchsucht werden.
@@ -12,7 +12,7 @@ Dann werden die verschiedenen Arten von Suchalgorithmen erläutert.
 Und zuletzt wird auf Grundlage der dargestellten Informationen eine Konzeption zur Implementierung einer neuen Suchfunktion hergeleitet.
 
 \section{Crawling}
-Bei der Implementierung eines Systems für eine Suchfunktion benötigt das System zunächst einen Datensatz von Dokumenten, welche über die Suchfunktion gefunden werden können.
+Für die Implementierung einer Suchfunktion wird zunächst ein Datensatz von Dokumenten benötigt, welche über die Suchfunktion gefunden werden können.
 Dieser wird mithilfe eines Crawlers aufgebaut.
 Ein Crawler ist ein Algorithmus, welcher Techniken aus dem Natural Language Processing nutzt, um Informationen aus einem Dokument zu extrahieren.\cite{Khder_2021}
 Implementierungen können reguläre Ausdrücke verwenden, um die Informationen zu extrahieren, oder auch fortgeschrittenere Verfahren, wie Abstract Syntrax Trees.
@@ -23,22 +23,43 @@ Dieses Verfahren kann beliebig lange und beliebig rekursiv durchlaufen werden, u
 Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumenten übergeben werden, welche dem Index hinzugefügt werden sollen.
 
 \section{Indizierung}
-Bei der Indexierung werden Wörter und Tokens mit Dokumenten assoziiert.
-Dazu werden Wörter aus gecrawlten Dokumenten extrahiert und in die Datenbank geschrieben.
-Den Dokumenten werden IDs zugeordnet und diese IDs werden den Wörtern zugeordnet.
-Dem Index werden nun weitere Informationen hinzugefügt, wie die Wortfrequenz.
-Die Wortfrequenz gibt an, wie oft ein Wort in einem Dokument vorkommt.
-Es wird auch gespeichert, an welchen Stelle des Dokuments das Wort vorkommt, und auch in wie vielen Dokumenten ein Wort vorkommt.
-Diese Art der Indizierung wird auch als invertierter Index bezeichnet, weil den Wörtern bzw.
-Tokens die Dokumente zugeordnet werden, und nicht umgekehrt.
-Wenn der Nutzer nun ein Keyword in die Suche eingibt, dann sind diese Keywords oft bereits im Index vorhanden, sodass die Dokumente, welche diese Keywords beinhalten einfach dem Index entnommen werden können.
-Aufgabe der Suche ist es anschließend die Ergebnisse aufzubereiten.
+Die Indizierung von Dokumenten kann sowohl mit einer Volltext-Indizierung oder auch einer Vektor-Indizierung umgesetzt werden.
+Das Ziel der Indizierung ist für jeden Algorithmus der gleiche: Für eine gegebene Sucheingabe sollen die relevantesten Dokumente gefunden werden.
+Die Algorithmen unterscheiden sich darin, wie sie diese Relevanz berechnen.
+Diese Berechnungen der Relevanz werden in den folgenden Kapiteln erklärt.
+
+TODO: Boolean Models (volltext-indizierung) vs VSM (Vector-Indizierung) erklären
+
+\section{Invertierter Index}
+
+\section{BM25}
+
+\section{LSE}
+TODO: Was sind Latent Semantic Embeddings
+
+Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
+Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
+Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden.\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}
+Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
+Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
+Dazu werden LSI und Vector Space Models verwendet.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}
 
 \subsection{Volltext-Indizierung}
-Bei der Indizierung der Wörter besteht die Problematik, dass gleiche Wörter in unterschiedlichen Formen existieren können.
+
+TODO: Indizierung teilt sich auf in das Similarity Measure (Bindeglied zwischen Index und Suche) und der Art, wie die Informationen gespeichert werden. Die beiden Themen sollten getrennt erläutert werden.
+TODO: Es gibt invertierte Indizes, Volltext-Indizes, Vector-Indizes. Zum generieren des Vectors kann tf-idf verwendet werden, oder aber auch ein word2vec und sentence transformer.
+
+Die Volltext-Indizierung kann mithilfe eines invertierten Indexes implementiert werden.
+Die Dokumente werden in einer Datenbank abgelegt.
+Anschließend wird der Index aufgebaut, indem alle Wörter extrahiert werden, welche in den Dokmenten vorkommen.
+Nun werden diese Wörter in eine Liste geschrieben, und jedem Wort wird zugeordnet, in welchem Dokument sich dieses Wort wiederfinden lässt.
+Diese Liste wird invertierter Index genannt, weil nicht die Wörter den Dokumenten zugeordnet sind, sondern die Dokumente den Wörtern.
+Es wird ebenfalls gespeichert, an welchen Stelle des Dokuments das Wort vorkommt, und auch in wie vielen Dokumenten ein Wort vorkommt.\\
+
+Bei der Indizierung der Wörter besteht nun die Problematik, dass gleiche Wörter in unterschiedlichen Formen existieren können.
 So stammen \textit{Heizung} und \textit{heizen} beide von dem gleichen Wortstamm \textit{heiz} ab.
 Um bei der Indizierung Speicherplatz zu sparen, können Wörter auf diesen Wortstamm reduziert werden, damit sie als ein einziges Wort betrachtet werden können.
-Die Bildung des Wortstamms wird auch als Stemming bezeichnet.
+Die Bildung des Wortstamms wird als Stemming bezeichnet.
 Beim Stemming kann es jedoch zu Overstemming und Understemming kommen.
 Overstemming bedeutet, dass zwei Wörter, die eigentlich nichts miteinander zu tun haben, also nicht semantisch gleich sind, den gleichen Wortstamm besitzen und als ein Wort betrachtet werden.
 Ein Beispiel hierfür sind die Wörter \textit{Wand} und \textit{wandere}, wie in \textit{ich wandere}.
@@ -48,16 +69,31 @@ Ein Beispiel hierfür sind die Wörter \textit{absorbieren} und \textit{Absorpti
 Es gibt Techniken zur Vermeidung solcher Probleme, wie der Einsatz vollständiger morphologischer Analysekomponenten.
 Hierauf soll aber nicht weiter eingegangen werden.\\
 
+TODO: Wie wird die Relevanz berechnet
+
 Zur Implementierung eines Volltext-Index werden Dokumente und Wörter in einer m x n Matrix angeordnet, wobei m die Anzahl der Dokumente ist und n die Anzahl der Wörter.
 Die Werte in dieser Matrix werden anhand einer ausgewählten Metrik bestimmt.
-Eine oft verwendete Metrik ist das Verhältnis der Wortfrequenz mit der invertierten Dokumentfrequenz.
-Die Wortfrequenz gibt dabei an, wie häufig das in dem Dokument vorkommt.
-Die Dokumentfrequenz gibt an, in wie vielen Dokumente ein Wort vorkommt.
-Das Verhältnis gibt damit an, wie charakteristisch das Wort für ein bestimmtes Dokument ist.
+Eine oft verwendete Metrik ist tf-idf.
+
+\(tf-idf(t,D)=tf(t,D)*idf(t)\)
+
+\(tf(t,D)=\frac {\#(t,D)}{\max _{t'\in D}\#(t',D)}\)
+
+\(idf(t)=\log {\frac {N}{\sum_{D:t\in D}1}}\)
+
+TODO: Quelle
+
+Der tf-Teil steht für \textit{term frequency} und wird berechnet, indem für das jeweilige Dokument bestimmt wird, wie häufig das Wort in dem Dokument vorkommt.
+Damit die Metrik nicht abhängig von der Länge des Dokumentes ist, wird dieser Wert durch die insgesamte Anzahl der Vorkommnisse des Wortes dividiert.
+Damit ist diese Metrik relativ zur insgesamten Anzahl der Vorkommnisse des Wortes, und nicht absolut.
+Der idf-Teil steht für \textit{inverse document frequency}.
+Er wird berechnet indem die insgesamte Anzahl der Dokumente durch die Anzahl der Dokumente dividiert wird, welche das Wort enthalten.
+Das Ergebnis des dividierens wird an die Logarithmus-Funktion übergeben, sodass am Ende der idf-Wert berechnet wurde.
+Die beiden Werte werden miteinander multipliziert.
+Das Ergebnis ist die tf-idf-Metrik.
+
 Wenn das Wort charakteristisch für ein Dokument ist, dann kommt es in diesem Dokument häufig vor, aber in anderen Dokumenten nur selten.
-Wenn das Wort nicht charakteristisch für das Dokument ist, dann kommt es in anderen Dokumenten genauso häufig oder häufiger vor als in diesem Dokument.
-Die Metrik wird auch als tf-idf-Wert bezeichnet.
-TODO: Rechnung besser verstehen\\
+Wenn das Wort nicht charakteristisch für das Dokument ist, dann kommt es in anderen Dokumenten genauso häufig oder häufiger vor als in diesem Dokument.\\
 
 \subsection{Vektor-Indizierung}
 Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
@@ -77,6 +113,8 @@ Dort werden nun sowohl die rohen Daten als auch die Vektoren gespeichert, welche
 Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear gespeichert sind.
 Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
 Das funktioniert auf die gleiche Weise, wie bereits in dem Kapitel \textit{Semantic Search} beschrieben.
+
+TODO: Wie wird die Relevanz berechnet
 
 \section{Suchalgorithmen}
 Im Folgenden werden zuerst gängige Suchalgorithmen erklärt, welche in nahezu jeder Suchfunktion zu finden sind.
@@ -135,7 +173,7 @@ Strukturierte Suchen sollen die Vorteile beider Vorgehensweisen kombinieren.
 Die Struktur der Daten soll a priori nicht bekannt sein müssen, aber trotzdem sollen die Suchergebnisse vollkommen präzise sein.
 TODO: Wie wird das ermöglicht?
 
-\subsection{Die Semantische Suche}
+\subsection{Die semantische Suche}
 Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen.\cite{Dengel_2012}
 Eine semantische Suche hat den Zweck, die Ähnlichkeit und Beziehungen zwischen Wörtern zu verstehen.
 Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.  
@@ -194,9 +232,27 @@ Die Distanz zwischen zwei Einträgen in diesem Raum beschreibt dessen Ähnlichke
 Genau diese Informationen nutzen semantische Suchen.
 
 \section{Wahl der Suchfunktion}
-Aufgrund der Möglichkeit die Semantik einer Sucheingabe zu verstehen soll eine semantische Suche verwendet werden, um die neue Suchfunktion zu implementieren.
-Wenn der Nutzer nicht genau weiß, wie eine Seite heißt nach der er sucht, dann kann er sie bei einer semantischen Suche umschreiben und trotzdem ein sinnvolles Ergebnis bekommen.
-Aufgrund dessen sei angenommen, dass eine semantische Suche einer einfachen Keyword Search überlegen ist.\\
+Die vergangenen Kapitel haben verschiedene Indizierungs- und Suchalgorithmen dargestellt.
+Jeder dieser Algorithmen hat Vor- und Nachteile.
+Diese werden in diesem Kapitel betrachtet, um die Entscheidung für die verwendeten Technologien der neuen Suchfunktion nachvollziehbar zu machen.
+
+In einem Paper von Karpukhin et. al. liefert eine Suche auf Grundlage von LSE bessere Ergebnisse als eine Suche auf Grundlage von BM25.\cite{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}
+Das Paper nennt die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber Systemen auf Grundlage von TF-IDF und BM25.
+Die Confluence Suche verwendet laut Dokumentation Apache Lucene.\footnote{\url{https://confluence.atlassian.com/doc/ranking-of-search-results-1188406620.html}}
+Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert.\footnote{\url{https://lucene.apache.org/core/2_9_4/scoring.html}}
+Im Information Retrieval sind Boolean Models jene Scoring Algorithmen, welche auf boolscher Algebra basieren.
+Ein invertierter Index ist ein Beispiel für ein Boolean Model.
+Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit BM25 berechnet werden.
+Da das Paper gezeigt hat, dass eine Suche auf Grundlage von LSE bessere Ergebnisse als eine Suche auf Grundlage von BM25 liefern kann, wird eine semantische Suche auf Basis von LSE verwendet, um die neue Suchfunktion zu entwickeln.
+
+
+Die semantische Suche ist bei dem Einspielen der Daten in die Datenbank langsamer, weil zunächst die Vektoren für die Daten generiert werden müssen.
+Die Zeit für die Abfrage von Daten aus einem Vector Space Model wächst mit wachsender Anzahl von Datenpunkten nicht so schnell an, wie bei einem Volltext-Index.
+Bei einem Volltext-Index müssen die übergebenen Keywords mit jedem Datensatz abgeglichen werden.
+Bei einem Vector Space Model sind zwar mit steigender Zahl von Datensätzen mehr Punkte im Raum vorhanden, aber es müssen nicht für jeden Punkt Strings verglichen werden.
+Der Algorithmus, welcher für die Ermittlung der passendsten Datenpunkte im Vector Space Model verwendet wird, lautet Approximate Nearest Neighbor (ANN).
+Dieser basiert auf linearer Algebra.
+TODO: Erklären, warum ANN schneller sein soll
 
 TODO: Warum keine strukturierte Suche?
 TODO: Was gäbe es noch für Ansätze?
@@ -205,9 +261,7 @@ Bei der Implementierung sollen dabei keine semantischen Netze verwendet werden, 
 TODO: Warum?
 
 Neben den direkten Vorteilen einer semantischen Suche gegenüber Suchfunktionen, wie eine Keyword Search, gibt es weitere indirekte Vorteile eine semantischen Suche auf Grundlage von Vector Space Models.
-So kann die semantische Suche mit weiteren Daten angereichert werden und damit verbessert werden.
-Dies ist zwar auch bei der Verwendung eines Volltext-Indizes möglich, nicht aber auf die gleiche Weise, wie bei Vector Space Models.
-Denn Vector Space Models sind Multimodal.
+Vector Space Models sind Multimodal.
 Es können also in einem Vector Space Model nicht nur Informationen über ein Medium, wie Fließtext, gespeichert werden, sondern neben Fließtext können gleichzeitig auch andere Medien, wie Code, Bilder, Audiodateien etc. gespeichert werden.
 Und anders als bei einer gewöhnlichen Datenbank, in welcher mehrere verschiedene Medien gespeichert werden können, beispielsweise eine relationale Datenbank, können Vector Space Models diese verschiedenen Medien miteinander semantisch verknüpfen.\\
 
@@ -216,7 +270,13 @@ Damit können Feature Location und Bug Localization umgesetzt werden.
 So kann die Suchfunktion nicht nur zum Durchsuchen der Wissensdatenbank verwendet werden, sondern auch zum Durchsuchen der Codebase.
 Und wenn in der Suchfunktion nach einem Feature gesucht wird, dann kann neben der Spezifikation in der Wissensdatenbank auch gleich der Einstiegspunkt im Code gefunden werden.
 Damit verbessert sich wiederum die Wartbarkeit der Software, da das Ändern von Features oder korrigieren von Bugs erleichtert wird.\\
-
-TODO: Möglichkeit zur Verwendung von LLMs: Question Answering Modelle oder Chatbots.
-
 TODO: Quellen
+
+\section{Retrieval Augmented Generation}
+Neben einer Suchfunktion können System entwickelt werden, welche eine Question-Answering Funktionalität bieten.
+Eine Question-Answering Funktionalität nimmt eine Frage des Nutzers entgegen, und liefert eine Antwort.
+Solche Systeme basieren auf Retrieval Augmented Generation.
+Das bedeutet, dass auf Grundlage der Frage des Nutzers zuerst eine Suche durchgeführt wird.
+Diese Suche liefert relevante Dokumente zum Beantworten der Frage.
+Nun werden die, für die Frage relevantesten, Stellen der Dokumente mithilfe eines Large Language Models extrahiert und umformuliert.
+Das Ergebnis ist eine Antwort auf die Frage des Nutzers. 

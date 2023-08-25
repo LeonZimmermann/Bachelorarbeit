@@ -45,23 +45,6 @@ Feature Location ist das Vorgehen, den Einstiegspunkt im Code zu finden, welcher
 Wenn eine Software das Feature besitzt Mails zu verschicken, dann könnte der Einstiegspunkt für dieses Feature eine Schnittstelle sein, welche den Inhalt und Empfänger der Email entgegennimmt.
 Der Inhalt wird anschließend in ein Mail-Template eingefügt, und die Mail wird verschickt.\\
 
-Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
-Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
-Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden.\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}
-Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
-Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
-Dazu werden LSI und Vector Space Models verwendet.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}
-
-\section{Bug Localization}
-Neben der Implementierung neuer Features ist es Aufgabe eines Softwareentwicklers bestehende Fehler in der Software zu korrigieren.
-Um einen Fehler zu korrigieren, ist es sinnvoll die Spezifikation heranzuziehen, um herauszufinden, wie sich die Software ordnungsgemäß verhalten sollte.
-TODO: Neu schreiben
-
-Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsprechende Spezifikation zu diesem Fehlerticket finden können.
-Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
-Das ist Bug Localization.
-
-\section{Abgleich mit Spezifikation}
 Der Abgleich mit einer Spezifikation ist notwendig, um Testfälle zu schreiben, und zu prüfen, ob das Verhalten der Anwendung korrekt ist.
 Natürlich gibt es Arten von Fehlern, welche erkennbar sind, ohne dafür die Spezifikation heranzuziehen.
 Wenn in einem Online-Shop der Preis für ein Produkt in Amerika bei 5\$ liegt, aber in Deutschland der Preis bei 1.000€ liegt, dann braucht es nicht die Spezifikation, um festzustellen, dass es bei der Umrechnung von Dollar zu Euro einen Fehler gegeben hat.
@@ -75,6 +58,15 @@ Wird er miteinbezogen, dann sorgt das dafür, dass ein Produkt, welches 20\$ kos
 Ob dieses Verhalten gewünscht ist oder nicht, muss in der Spezifikation festgehalten werden.\\
 
 Wenn nun ein Bugticket dieser Art bei einem Softwareentwickler landet, dann muss er, wie auch bei der Implementierung, alle relevanten Dokumente heranziehen.
+
+\section{Bug Localization}
+Neben der Implementierung neuer Features ist es Aufgabe eines Softwareentwicklers bestehende Fehler in der Software zu korrigieren.
+Um einen Fehler zu korrigieren, ist es sinnvoll die Spezifikation heranzuziehen, um herauszufinden, wie sich die Software ordnungsgemäß verhalten sollte.
+TODO: Neu schreiben
+
+Wenn der Softwareentwickler nun ein Fehlerticket erhält, dann muss er die entsprechende Spezifikation zu diesem Fehlerticket finden können.
+Und idealerweise wird ihm durch die Suche sogar gleich die betroffene Stelle im Code angezeigt.
+Das ist Bug Localization.
 
 \section{Informationen über das Projektmanagement finden}
 Softwareentwickler sollten darüber Bescheid wissen, was in dem Projekt, in dem sie arbeiten, vor sich geht.

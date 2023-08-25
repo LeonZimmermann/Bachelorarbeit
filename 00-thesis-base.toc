@@ -6,25 +6,28 @@
 \contentsline {section}{\numberline {2.1}Onboarding im Projekt}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Implementierung nach Spezifikation}{6}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Bug Localization}{7}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Abgleich mit Spezifikation}{7}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Informationen über das Projektmanagement finden}{7}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Konzeption der Suchfunktion}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Crawling}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Indizierung}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Volltext-Indizierung}{10}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Vektor-Indizierung}{11}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Suchalgorithmen}{11}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Die gängigen Suchalgorithmen}{11}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Die strukturierte Suche}{12}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Die Semantische Suche}{13}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Wahl der Suchfunktion}{15}{section.3.4}%
+\contentsline {section}{\numberline {2.4}Informationen über das Projektmanagement finden}{7}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Konzeption der Suchfunktion}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Crawling}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Indizierung}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Invertierter Index}{9}{section.3.3}%
+\contentsline {section}{\numberline {3.4}BM25}{9}{section.3.4}%
+\contentsline {section}{\numberline {3.5}LSE}{9}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Volltext-Indizierung}{9}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Vektor-Indizierung}{10}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Suchalgorithmen}{11}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Die gängigen Suchalgorithmen}{11}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Die strukturierte Suche}{12}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Die semantische Suche}{13}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}Wahl der Suchfunktion}{15}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Retrieval Augmented Generation}{16}{section.3.8}%
 \contentsline {chapter}{\numberline {4}Implementierung der neuen Suchfunktion}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Aufsetzen der Vektordatenbank Weaviate}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Aufsetzen der Vektordatenbank Weaviate}{17}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Einspielen der Daten in Weaviate}{18}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Verwendung der Suchfunktion von Weaviate}{19}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Verwendung der Suchfunktion von Weaviate}{18}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Verwendung der Semantische Suche}{19}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Verwendung von Filtern}{19}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Darstellung der Ergebnisse}{19}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}Die Benutzeroberfläche}{19}{subsection.4.3.3}%
 \contentsline {chapter}{\numberline {5}Evaluationsmethoden und -Kriterien}{20}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Precision, Recall und F-Maß}{20}{section.5.1}%
 \contentsline {section}{\numberline {5.2}ISO/IEC 9126}{21}{section.5.2}%
@@ -35,14 +38,14 @@
 \contentsline {chapter}{\numberline {6}Vergleich der Suchfunktionen}{24}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Fiktionales Szenario: Onboarding eines Mitarbeiters}{24}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Aufbau der Studie}{25}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Durchführung der Studie}{26}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Auswertung der Ergebnisse}{27}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Diskussion des Studienaufbaus}{27}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{28}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{28}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{28}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{29}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Anhang}{31}{chapter.9}%
-\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{31}{section.9.1}%
-\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{31}{section.9.2}%
+\contentsline {section}{\numberline {6.3}Durchführung der Studie}{27}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Auswertung der Ergebnisse}{28}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Diskussion des Studienaufbaus}{28}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{29}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{29}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{29}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Literaturverzeichnis}{30}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Anhang}{32}{chapter.9}%
+\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{32}{section.9.1}%
+\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{32}{section.9.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

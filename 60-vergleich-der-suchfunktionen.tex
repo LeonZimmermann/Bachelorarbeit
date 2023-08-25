@@ -4,12 +4,12 @@
 Zum Vergleich der beiden Suchfunktionen wird im Folgenden ein fiktionales Szenario dargestellt.
 Das Szenario beschreibt den Ablauf des Onboardings eines neuen Mitarbeiters.
 Dabei werden die expliziten Fragen beschrieben, welche sich der Mitarbeiter stellt, um sich einzuarbeiten.
-Es wird angenommen, dass der Mitarbeiter sich mithilfe der Wissensdatenbank einarbeitet und die Suchfunktion verwendet der Wissensdatenbank verwendet.
+Es wird angenommen, dass der Mitarbeiter sich mithilfe der Wissensdatenbank einarbeitet und die Suchfunktion der Wissensdatenbank verwendet.
 Die Fragen, welche sich der Mitarbeiter des fiktionalen Szenarios stellt, werden anschließend bei der Durchführung einer Studie verwendet.
 Die Studie verwendet die Fragen, um die Performance zwischen Suchfunktionen zu vergleichen.
 Der genaue Aufbau der Studie ist im Folgenden näher beschrieben.
 Nachdem der Aufbau der Studie erklärt wurde, werden die Daten der Studie ausgewertet und dargestellt.
-Das Ergebnis wird diskuttiert.
+Das Ergebnis wird diskutiert.
 Zuletzt wird auf die Validität der Daten eingegangen und es wird der Versuchsaufbau diskutiert.
 
 \section{Fiktionales Szenario: Onboarding eines Mitarbeiters}
@@ -56,6 +56,22 @@ TODO: Die Fragestellungen sind zu ungenau formuliert. Wann ist der Teilnehmer mi
 
 \section{Aufbau der Studie}
 Im Rahmen der Bachelorarbeit soll eine Studie durchgeführt werden, welche die neue Suchfunktion mit der bestehenden Confluence-Suche vergleicht.
+Da der Zeitrahmen begrenzt ist, in welchem die neue Suchfunktion entwickelt wird, wird nicht die tatsächliche Suchfunktion von Confluence entwickelt.
+Es wurde bereits erwähnt, dass die Suche von Confluence auf Apache Lucene basiert, und dass dieses ein VSM auf Basis von BM25 verwendet.
+Daher wird die neu entwickelte Suchfunktion in mehreren Konfigurationen verglichen.
+So wird die neue Suchfunktion so konfiguriert, dass diese eine reine BM25 Suche durchführt.
+Diese Konfiguration soll als Benchmark dienen und die tatsächliche Confluence-Suche repräsentieren.
+Eine weitere Konfiguration verwendet eine Mischung aus einer BM25 Suche, und einer semantischen Suche auf Grundlage von LSE.
+Die beiden Suchalgorithmen werden zu gleichen Teilen verwendet.
+Zuletzt verwendet eine andere Konfiguration lediglich die semantische Suche auf Grundlage von LSE.\\
+
+Die Eigenschaft, welche untersucht werden soll ist, ob eine semantische Suche auf Grundlage von LSE für den gegebenen Datensatz, und im Kontext einer Wissensdatenbank in der Softwareentwicklung, ebenfalls bessere Suchergebnisse liefert, als eine Suche auf Basis von BM25.
+Durch die Verwendung einer einheitlichen Implementierung wird sichergestellt, dass lediglich die Effektstärken der Suchalgorithmen untersucht werden.
+Es wird damit verhindert, dass die Confluence-Suche besser abschneidet, weil sie ausgereifter ist.
+Es wird ebenfalls sichergestellt, dass die Datensätze der Suchfunktionen identisch sind.
+
+
+
 Bei der Darstellung der Ergebnisse der Studie dürfen keine Geschäftsgeheimnisse preisgegeben werden.
 Die Ergebnisse der Studie dürfen also nur Zahlen enthalten, und nicht tatsächlich gefundene Informationen in der Wissensdatenbank.\\
 
