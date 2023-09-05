@@ -53,6 +53,35 @@
       \verb 10.1109/icsm.2000.883003
       \endverb
     \endentry
+    \entry{Bar-Ilan_2002}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c577d1f9e02bf2d5f09da73d64800c22}{%
+           family={Bar-Ilan},
+           familyi={B\bibinithyphendelim I\bibinitperiod},
+           given={Judit},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c577d1f9e02bf2d5f09da73d64800c22}
+      \strng{fullhash}{c577d1f9e02bf2d5f09da73d64800c22}
+      \strng{bibnamehash}{c577d1f9e02bf2d5f09da73d64800c22}
+      \strng{authorbibnamehash}{c577d1f9e02bf2d5f09da73d64800c22}
+      \strng{authornamehash}{c577d1f9e02bf2d5f09da73d64800c22}
+      \strng{authorfullhash}{c577d1f9e02bf2d5f09da73d64800c22}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Society for Information Science and Technology}
+      \field{number}{4}
+      \field{title}{Methods for measuring search engine performance over time}
+      \field{volume}{53}
+      \field{year}{2002}
+      \field{pages}{308\bibrangedash 319}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1002/asi.10047
+      \endverb
+    \endentry
     \entry{Castillo_2005}{article}{}
       \name{author}{1}{}{%
         {{hash=9945b3859caed4e19a23f700fa1b79db}{%
@@ -80,6 +109,80 @@
       \range{pages}{2}
       \verb{doi}
       \verb 10.1145/1067268.1067287
+      \endverb
+    \endentry
+    \entry{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4a4bf6812fb70876def723d95a0b49d8}{%
+           family={Choudhary},
+           familyi={C\bibinitperiod},
+           given={Sneha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=03c660f0c2186ae843c12884349a1bdb}{%
+           family={Guttikonda},
+           familyi={G\bibinitperiod},
+           given={Haritha},
+           giveni={H\bibinitperiod}}}%
+        {{hash=9d5472b7aa9feeee18d5b856dcaccbc7}{%
+           family={Chowdhury},
+           familyi={C\bibinitperiod},
+           given={Dibyendu\bibnamedelima Roy},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=3577599204cea9232440ded8ca97fa65}{%
+           family={Learmonth},
+           familyi={L\bibinitperiod},
+           given={Gerard\bibnamedelima P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{7058e074a8a364824cf55c1aeb497192}
+      \strng{fullhash}{7350c7c64bcef92fae17b00d71e517ab}
+      \strng{bibnamehash}{7350c7c64bcef92fae17b00d71e517ab}
+      \strng{authorbibnamehash}{7350c7c64bcef92fae17b00d71e517ab}
+      \strng{authornamehash}{7058e074a8a364824cf55c1aeb497192}
+      \strng{authorfullhash}{7350c7c64bcef92fae17b00d71e517ab}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2020 Systems and Information Engineering Design Symposium (SIEDS)}
+      \field{title}{Document retrieval using deep learning}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1109/sieds49339.2020.9106632
+      \endverb
+    \endentry
+    \entry{Clarke_Willett_1997}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d0a743f4f158f4e690395eafaf16ac19}{%
+           family={Clarke},
+           familyi={C\bibinitperiod},
+           given={Sarah\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9b0f0719d807c51ad2ffbc51858faebe}{%
+           family={Willett},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{446c3b0c98439b77d1e91345dce73d57}
+      \strng{fullhash}{446c3b0c98439b77d1e91345dce73d57}
+      \strng{bibnamehash}{446c3b0c98439b77d1e91345dce73d57}
+      \strng{authorbibnamehash}{446c3b0c98439b77d1e91345dce73d57}
+      \strng{authornamehash}{446c3b0c98439b77d1e91345dce73d57}
+      \strng{authorfullhash}{446c3b0c98439b77d1e91345dce73d57}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Aslib Proceedings}
+      \field{number}{7}
+      \field{title}{Estimating the recall performance of web search engines}
+      \field{volume}{49}
+      \field{year}{1997}
+      \field{pages}{184\bibrangedash 189}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1108/eb051463
       \endverb
     \endentry
     \entry{Dengel_2012}{book}{}
@@ -498,6 +601,61 @@
       \field{year}{2016}
       \verb{doi}
       \verb 10.1145/2884781.2884862
+      \endverb
+    \endentry
+    \entry{Zhang_Chen_Xu_Cao_Chen_Cohn_Fang_2023}{article}{}
+      \name{author}{7}{}{%
+        {{hash=ddff1c6ccb542f71c04756739d1db1c5}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Qin},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=efc43d8e4d4d5b8cf17143bd719db310}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Shangsi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=65c638c24b5b099a0f8ed86a115e4dc5}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Dongkuan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4aaaa4b48611454ea8c5d65c2b8b1f66}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Qingqing},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=5e41c5baeca4c6c9d7fc2b5a7d279daa}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiaojun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=fcbee11f57094a6fbbfcbf494f023974}{%
+           family={Cohn},
+           familyi={C\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=01158ab9cbb99b9511fd827a53e23169}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Meng},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7c158dc22a8aa500b05ae7d97c6f4a2f}
+      \strng{fullhash}{f628cdf50f494d8fcfe3916165183c8b}
+      \strng{bibnamehash}{f628cdf50f494d8fcfe3916165183c8b}
+      \strng{authorbibnamehash}{f628cdf50f494d8fcfe3916165183c8b}
+      \strng{authornamehash}{7c158dc22a8aa500b05ae7d97c6f4a2f}
+      \strng{authorfullhash}{f628cdf50f494d8fcfe3916165183c8b}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}
+      \field{title}{A survey for Efficient Open Domain Question Answering}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.18653/v1/2023.acl-long.808
       \endverb
     \endentry
   \enddatalist

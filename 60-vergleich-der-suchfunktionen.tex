@@ -51,98 +51,67 @@ Er \textbf{möchte herausfinden, wer alles zu Team Blau gehört}.\\
 Weiterhin möchte er genauer verstehen, wie die Entwicklung in dem Projekt abläuft.
 Er beschließt herauszufinden, \textbf{für welche Teile die unterschiedlichen Teams und Mitarbeiter zuständig sind}.
 
-TODO: 10 weitere Fragestellungen
-TODO: Die Fragestellungen sind zu ungenau formuliert. Wann ist der Teilnehmer mit der Aufgabe fertig? Das muss objektiv festgelegt sein, und darf nicht subjektiv sein
-
 \section{Aufbau der Studie}
-Im Rahmen der Bachelorarbeit soll eine Studie durchgeführt werden, welche die neue Suchfunktion mit der bestehenden Confluence-Suche vergleicht.
+Im Rahmen der Bachelorarbeit wird eine Studie durchgeführt, welche die neue Suchfunktion mit der bestehenden Confluence-Suche vergleicht.
 Da der Zeitrahmen begrenzt ist, in welchem die neue Suchfunktion entwickelt wird, wird nicht die tatsächliche Suchfunktion von Confluence entwickelt.
 Es wurde bereits erwähnt, dass die Suche von Confluence auf Apache Lucene basiert, und dass dieses ein VSM auf Basis von BM25 verwendet.
 Daher wird die neu entwickelte Suchfunktion in mehreren Konfigurationen verglichen.
 So wird die neue Suchfunktion so konfiguriert, dass diese eine reine BM25 Suche durchführt.
 Diese Konfiguration soll als Benchmark dienen und die tatsächliche Confluence-Suche repräsentieren.
-Eine weitere Konfiguration verwendet eine Mischung aus einer BM25 Suche, und einer semantischen Suche auf Grundlage von LSE.
+Eine weitere Konfiguration verwendet eine Mischung aus einer BM25 Suche, und einer semantischen Suche.
 Die beiden Suchalgorithmen werden zu gleichen Teilen verwendet.
 Zuletzt verwendet eine andere Konfiguration lediglich die semantische Suche auf Grundlage von LSE.\\
 
-Die Eigenschaft, welche untersucht werden soll ist, ob eine semantische Suche auf Grundlage von LSE für den gegebenen Datensatz, und im Kontext einer Wissensdatenbank in der Softwareentwicklung, ebenfalls bessere Suchergebnisse liefert, als eine Suche auf Basis von BM25.
+Die Eigenschaft, welche untersucht werden soll ist, ob eine semantische Suche für den gegebenen Datensatz, und im Kontext einer Wissensdatenbank in der Softwareentwicklung, ebenfalls bessere Suchergebnisse liefert, als eine Suche auf Basis von BM25.
 Durch die Verwendung einer einheitlichen Implementierung wird sichergestellt, dass lediglich die Effektstärken der Suchalgorithmen untersucht werden.
 Es wird damit verhindert, dass die Confluence-Suche besser abschneidet, weil sie ausgereifter ist.
-Es wird ebenfalls sichergestellt, dass die Datensätze der Suchfunktionen identisch sind.
+Es wird ebenfalls sichergestellt, dass die Datensätze der Suchfunktionen identisch sind.\\
 
+Für die Studie wurde ein Datensatz generiert, welcher Dokumente beinhaltet, welche durch die Suchfunktion gefunden werden sollen.
+Für jedes Dokument sind eine oder mehrere Sucheingaben definiert, mit dessen Eingabe das Dokument gefunden werden soll.
+Darüber hinaus ist für jedes Dokument festgehalten, zu welchem Anwendungsfall sich dieses zuordnen lässt.\\
 
+Die Suchfunktion gibt für jeden Algorithmus fünf Dokumente als Antwort auf eine Sucheingabe zurück.
+Diese fünf Dokumente nach dessen Score sortiert.
+Das bedeutet, dass das erste Dokument der Liste jenes ist, welches von dem Algorithmus als das passendste erachtet wird.
+Die fünf Dokumente werden darauf untersucht, ob sich das gewünschte Dokument unter den Dokumente befindet.
+Das Ergebnis ist ein Precision-Score für den Suchalgorithmus.
+Um eine detailliertere Analyse zu ermöglichen wird nicht nur die Precision in Bezug auf die ersten fünf Dokumente gemessen.
+Es wird die Precision für das erste Dokument, die ersten drei Dokumente und alle fünf Dokumente gemessen.
+Anschließend werden die Precision-Scores der Algorithmen miteinander verglichen.\\
 
-Bei der Darstellung der Ergebnisse der Studie dürfen keine Geschäftsgeheimnisse preisgegeben werden.
-Die Ergebnisse der Studie dürfen also nur Zahlen enthalten, und nicht tatsächlich gefundene Informationen in der Wissensdatenbank.\\
+Die Studie wird vollkommen automatisch durchgeführt.
+Dadurch können Ergebnisse der Studie nicht durch Teilnehmer verfälscht werden.
+Es bedeutet auch, dass die Studie eine hohe Reliabilität hat und mit jeder Durchführung das gleiche Ergebnis liefert.
+Sie ist Reproduzierbar.
+Der Nachteil dieser Herangehensweise ist, dass die subjektive Wahrnehmung des Nutzers, in Bezug auf die Precision der Suchfunktion, nicht beachtet werden kann.
+So ist es denkbar, dass eine Sucheingabe nicht das gewünschte Dokument beinhaltet, aber andere Dokumente, welche ein Nutzer als sinnvoll erachten würde.
+Die Ergebnisse der Studie sind damit abhängig von der Vorauswahl der Dokumente, welche gefunden werden sollen, und der Sucheingaben, welche a priori als sinnvoll bestimmt wurden.
+Es ist möglich, dass eine Suchfunktion für eine Sucheingabe durchaus ein sinnvolles Ergebnis liefert, aber nicht das Ergebnis, welches durch den Aufbau der Studie erwartet wird.
 
-Die Teilnehmer nehmen freiwillig an der Studie teil und entstammen aus genau einem Projekt der adesso SE.
-Der Name des Projektes soll nicht benannt werden.
-Für die Studie werden lediglich Softwareentwickler ausgewählt.
-Bei der Einteilung der Softwareentwickler soll darauf geachtet werden, dass die Zeit, welche die Teilnehmer im Projekt verbracht haben, je Gruppe ähnlich ist.
-Die Teilnahme an der Studie ist anonym.
-Weiterhin können die Teilnehmer frei entscheiden, wann sie die Studie durchführen möchten.
-Den Arbeitsplatz können sie ebenfalls frei wählen.\\
-
-Die Teilnehmer der Studie werden in zwei Gruppen eingeteilt.
-Jeder Teilnehmer bekommt die Aufgabe eine spezifische Information herauszufinden.
-Dabei wird die Zeit gemessen, wie lange der Teilnehmer gebraucht hat, um die Information zu finden.
-Es wird angenommen, dass immer eine korrekte Information gefunden wird.
-Im Vorfeld wird geprüft, ob die Wissensdatenbank gründsätzlich eine Antwort auf die Fragestellung liefern kann. 
-Zusätzlich wird die Anzahl der gemachten Sucheingaben dokumentiert.
-Es werden insgesamt folgende Daten gesammelt und ausgewertet:
-\begin{itemize}
-    \item TeilnehmerId (unabhängige Variable - UV)
-    \item FragenId (UV)
-    \item Suchfunktion (UV)
-    \item Benötigte Zeit (abhängige Variable - AV)
-    \item Anzahl von Sucheingaben (AV)
-\end{itemize}
-
-Bei einer AB-Studie könnten die Teilnehmer unterschiedliche Kenntnisse über die Wissensdatenbank haben, sodass einige Teilnehmer besser darin sind Informationen zu finden als andere.
-Befinden sich in einer Gruppe eher Teilnehmer, welche bessere Kenntnisse über die Wissensdatenbank haben, und in der anderen Gruppe Teilnehmer, welche eher schlechtere Kenntnisse haben, dann werden die Ergebnisse der Studie verfälscht.
-Mithilfe einer AB/BA-Crossover-Studie könnte dieses Problem gelöst werden.
-Denn hier werden beide Suchfunktionen von jeder Person verwendet.
-Dabei muss darauf geachtet werden, dass die Teilnehmer bei der Verwendung der zweiten Suchfunktion nicht die gleichen Informationen finden müssen, wie bei der ersten Suchfunktion.
-Denn nachdem sie die Informationen mit der ersten Suchfunktion gefunden haben, wissen sie bereits, wo sich die Information befindet.
-Es muss also zwei verschiedene Datensets geben.
-Um Ungleichheiten zwischen den Datensets zu vermeiden, soll das Ursprungsdatenset randomisiert in zwei gleich große Subdatensets aufgeteilt werden.
-Die erste Gruppe bekommt das erste Datenset für die Confluence-Suche und das zweite Datenset für die neue Suchfunktion.
-Die zweite Gruppe bekommt das erste Datenset für die neue Suchfunktion und das zweite Datenset für die Confluence-Suche.\\
-
-Weiterhin kann es bei den Teilnehmern zu Lerneffekten kommen, sodass die Verwendung der jeweils zweiten Suchfunktion besser funktioniert als die Verwendung der jeweils ersten Suchfunktion.
-Der Lerneffekt der Teilnehmer soll gemessen werden und bei der Auswertung beachtet werden.
-
-\section{Durchführung der Studie}
-Für die Durchführung der Studie wurde eine Benutzeroberfläche entwickelt, welche die neue Suchfunktion verwendet.
-Die Benutzeroberfläche beinhaltet ein Suchfeld, welches für die Sucheingaben verwendet wird.
-Bei Eingabe in das Suchfeld wird die semantische Suche durchgeführt, wenn mindestens drei Zeichen eingegeben wurden.
-Solange das Suchfeld weiterhin mindestens drei Zeichen beinhaltet, wird die Suche mit jeder Änderung der Eingabe erneut durchgeführt.
-Damit werden auch die Suchergebnisse aktualisiert.\\
-
-Die Suchergebnisse werden in einem Dropdown unterhalb der Sucheingabe dargestellt.
-Die Darstellung soll jener von Confluence ähnlich aussehen.
-Nachdem ein Suchergebnis aus dem Dropdown angeklickt wurde, wird die Seite unterhalb der Sucheingabe dargestellt.\\
-
-Die Seiteninhalte wurden zuvor aus Confluence exportiert.
-Dabei können lediglich die HTML-Dokumente exportiert werden, was zur Folge hat, dass keine Grafiken angezeigt werden können.
-Außerdem können Links nicht verfolgt werden, weil diese relative URLs auf Confluence verwenden.
-Die Struktur der Dokumente kann in der Benutzeroberfläche der neuen Suchfunktion nicht wie bei Confluence abgebildet werden.
-Das hat zur Folge, dass das Dokument, auf welches ein Link verweist nicht gefunden werden kann.\\
-
-Die Unterschiede zwischen den Benutzeroberflächen sind bei der Diskussion des Studienaufbaus relevant.
-Denn nach der Durchführung der Studie muss erörtert werden, inwieweit diese Unterschiede einen Einfluss auf das Ergebnis genommen haben.
-Um die unterschiede möglichst klein zu halten werden die Studienteilnehmer angewiesen nur die Suchfunktion selbst zu verwenden, um Informationen in der Wissensdatenbank zu suchen.
-Das bedeutet, dass die Studienteilnehmer in der Confluence-Oberfläche weder Links verfolgen dürfen, noch den File-Tree.\\
-
-Um die Zeit zu messen, welche ein Teilnehmer zum Beantworten einer Frage benötigte, wird eine Stoppuhr verwendet.
 \section{Auswertung der Ergebnisse}
 TODO: Ergänzen
 
 \section{Diskussion des Studienaufbaus}
 
-Das Ergebnis der Studie kann durch einige Faktoren verfälscht werden.
-Zum einen sind die Oberflächen der Suchfunktionen nicht identisch.
-TODO: Durch Unterschiede zwischen den beiden Oberflächen könnte das Ergebnis verfälscht werden. 
+Wie bereits beschrieben gibt der Recall an, wie viele der relevanten Dokumente gefunden wurden.
+Die Precision gibt lediglich an, wie viele der Dokumente, welche gefunden wurden, relevant sind.
+Eine optimale Suchfunktion würde per Definition alle Dokumente finden, welche relevant sind, und keine unrelevanten Dokumente.
+Umgekehrt ist eine schlechte Suchfunktion eine Suchfunktion, welche keine relevanten Dokumente findet, sondern nur unrelevante.
+Dabei spielt es für den Nutzer aber keine Rolle, ob unrelevante Dokumente gefunden wurden.
+Die Tatsache, dass die relevanten Dokumente nicht gefunden wurden, machen die Suchfunktion für den Nutzer nicht benutzbar. 
+Die Studie untersucht die Precision der Suchalgorithmen.
+Auf Grundlage der obigen Argumentation zeigt sich, dass der Recall-Score wichtiger ist als der Precision-Score.
+Denn ist der Recall gering, dann ist die Suchfunktion nicht benutzbar.
+Eine Suchfunktion mit einem hohen Recall, aber eine niedrigen Precision könnte dagegen viele relevanten Dokumente finden, aber auch viele irrelevante Dokumente.
+Solange die relevanten Dokumente in der Liste weiter oben dargestellt werden, ist diese Zusammensetzung aus Precision und Recall gut.\\
 
-Weitere 
+Die Studie hat die Precision für das erste, die ersten drei und alle fünf Dokumente gemessen.
+Die Studie hat allerdings keinen Recall gemessen, obwohl es sinnvoll ist den Recall als den wichtigeren Score einer Suchfunktion zu erachten.
+Grund dafür ist die Tatsache, dass um den Recall messen zu können, alle relevanten Dokumente für eine Sucheingabe bekannt sein müssen.
+Um für eine Studie a priori Sucheingaben zu bestimmen, und alle Dokumente, welche für diese Sucheingabe relevant sind, müsste der gesamte Datensatz bekannt sein.
+Da der Datensatz mehrere hundert Dokumente beinhaltet ist dies nicht möglich.
+Und auch wenn der gesamte Datensatz bekannt wäre, dann müsste trotzdem eine Entscheidung darüber getroffen werden, welche Dokumente relevant sind und welche nicht.
+Das wäre wiederum eine subjektive Entscheidung, sodass die Validität des Ergebnisses anzweifelbar wäre.
 
+TODO: Question Answering (Frage: was sind die dateiformate für den auftragseingang?/was für dateien gebe ich in den auftragseingang?, Antwort: excel - dateien oder csv - dateien)

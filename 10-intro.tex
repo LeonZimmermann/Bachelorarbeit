@@ -58,7 +58,10 @@ Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdate
 \end{itemize}
 
 \section{Verwandte Arbeiten}
-Es gibt einige Arbeiten, welche die gleichen oder sehr ähnliche Probleme adressieren.\\
+Es gibt einige Arbeiten, welche die gleichen oder sehr ähnliche Probleme adressieren.
+Zum einen sind dies Arbeiten, welche verschiedene Arten von Suchfunktionen untersuchen.
+Andere Arbeiten untersuchen, wie sich die Qualität einer Suchfunktion messen lässt.
+Nochmals andere Arbeiten untersuchen Downstream Tasks von Suchfunktionen, also Algorithmen, welche das Ergebnis einer Suche verarbeiten, um die gleiche oder eine andere Anforderung an ein System umzusetzen.\\
 
 So wird in \textit{Automatic Query Reformulations for Text Retrieval in Software Engineering} von Haiduc et. al. ein System zur Verbesserung von Suchanfragen vorgeschlagen.
 Ausgangspunkt für das Paper ist das Problem der Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten.
@@ -101,3 +104,30 @@ Die Autoren nennen die Phrasen \textit{get iterator} und \textit{get iterator fo
 Die Software analysiert nun die gesamte Dokumentation und extrahiert Tasks.
 Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach ihnen suchen kann. 
 So wie die vorherigen Paper soll auch dieses Paper eine Brücke zwischen Dokumentation und Code schaffen.\cite{Treude_Sicard_Klocke_Robillard_2015}
+
+Das Paper \textit{Estimating the recall performance of Web search engines} von Clarke und Willet misst die Qualität von Suchfunktionen des World Wide Webs anhand dessen Recalls.
+Um dies zu ermöglichen wird ein Datensatz generiert, welche Sucheingaben beinhaltet, sowie alle relevanten Dokumente für eine Sucheingabe.\cite{Clarke_Willett_1997}
+Die gleichen Metriken werden auch in \textit{Methods for measuring search engine performance over time} von Bar-Ilan verwendet.\cite{Bar-Ilan_2002}
+Hier wird ebenfalls auf die Problematik der Messung von Recall eingegangen.
+Es wird erläutert, dass zur Messung des Recalls a-priori bestimmt werden muss, welche Dokumente als relevant für eine gegebene Sucheingabe erachtet werden sollten.
+In dem Paper wird eine Referenz genannt, welche behauptet, dass die Bestimmung der Relevanz lediglich dem Nutzer mit dem Bedürfnis nach der Information überlassen ist.
+Es wird eine weitere Referenz genannt, welche behauptet, dass die Bestimmung der Relevanz durch ein Experten-Panel durchgeführt werden sollte.
+\textit{On Search Engine Evaluation Metrics} von Sirotkin betrachtet verschiedene Ansätze zur Messung der Performance von Suchfunktionen.
+Neben den bereits genannten Metriken von Precision und Recall werden andere Metriken, wie Mean Reciprocal Rank und Maximal Marginal Relevance.
+
+Suchfunktionen sind Document Retrieval Systeme.
+Sie liefern Dokumente, welche zu der Sucheingabe des Nutzers passen.
+Document Retrieval Systeme sind eine Unterkategorie von Information Retrieval Systemen.
+Information Retrieval Systeme liefern auf Anfrage Informationen an den Nutzer.
+Im Fall einer Suchfunktion werden Dokumente geliefert, welche diese Information beinhalten.
+Mithilfe der Dokumente ist der Ort, an dem sich die, vom Nutzer gewünschte, Information befindet eingegrenzt.
+Nichtsdestotrotz muss der Nutzer aus dieser Eingrenzung die gewünschte Information manuell extrahieren.
+Ganz im Gegensatz zu Question Answering Systemen.
+\textit{A survey for Efficient Open Domain Question Answering} von Zhang et. al. untersucht verschiedene Herangehensweisen zur Implementierung von Open-Domain Question Answering Systemen.\cite{Zhang_Chen_Xu_Cao_Chen_Cohn_Fang_2023}
+Darüber hinaus schließst das Paper auf essenzielle Techniken für Open-Domain Question Answering.
+Open-Domain Question Answering Systeme beantworten allgemeine Fragen eines Nutzers, z.B. basierend auf Informationen von Wikipedia.
+Closed-Domain Question Answering Systeme beantworten dagegen Fragen im Kontext einer spezifischen Domäne, z.B. basierend auf unternehmensinternen Informationen.
+
+TODO: Informationen lassen sich auch anreichern: NER etc. (NLP Techniken)
+
+TODO: Informationen lassen sich aufbereiten: RAG

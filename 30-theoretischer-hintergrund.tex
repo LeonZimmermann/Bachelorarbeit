@@ -24,32 +24,18 @@ Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumen
 
 \section{Indizierung}
 Die Indizierung von Dokumenten kann sowohl mit einer Volltext-Indizierung oder auch einer Vektor-Indizierung umgesetzt werden.
+Ein Volltextindex bestimmt den Score anhand von Ausschnitten aus dem Volltext.
+Wenn diese bestimmte Kriterien erfüllen, dann wird das Dokument bei der Suche gefunden, andernfalls nicht.
+Ein Vektorindex berechnet Vektoren anhand des Ursprungstextes.
+Ein Vektorindex wird auch als Vector Space Model (VSM) bezeichnet.
+Die Berechnung der Vektoren kann mithilfe von tf-idf, BM25, word2vec, Latent Semantic Embeddings oder auch mit Transformers erfolgen.
+
 Das Ziel der Indizierung ist für jeden Algorithmus der gleiche: Für eine gegebene Sucheingabe sollen die relevantesten Dokumente gefunden werden.
 Die Algorithmen unterscheiden sich darin, wie sie diese Relevanz berechnen.
-Diese Berechnungen der Relevanz werden in den folgenden Kapiteln erklärt.
-
-TODO: Boolean Models (volltext-indizierung) vs VSM (Vector-Indizierung) erklären
-
-\section{Invertierter Index}
-
-\section{BM25}
-
-\section{LSE}
-TODO: Was sind Latent Semantic Embeddings
-
-Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
-Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
-Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden.\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}
-Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
-Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
-Dazu werden LSI und Vector Space Models verwendet.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}
+Sie werden im Folgenden näher erläutert.
 
 \subsection{Volltext-Indizierung}
-
-TODO: Indizierung teilt sich auf in das Similarity Measure (Bindeglied zwischen Index und Suche) und der Art, wie die Informationen gespeichert werden. Die beiden Themen sollten getrennt erläutert werden.
-TODO: Es gibt invertierte Indizes, Volltext-Indizes, Vector-Indizes. Zum generieren des Vectors kann tf-idf verwendet werden, oder aber auch ein word2vec und sentence transformer.
-
-Die Volltext-Indizierung kann mithilfe eines invertierten Indexes implementiert werden.
+Eine Möglichkeit zur Umsetzung einer Volltext-Indizierung ist der invertierte Index.
 Die Dokumente werden in einer Datenbank abgelegt.
 Anschließend wird der Index aufgebaut, indem alle Wörter extrahiert werden, welche in den Dokmenten vorkommen.
 Nun werden diese Wörter in eine Liste geschrieben, und jedem Wort wird zugeordnet, in welchem Dokument sich dieses Wort wiederfinden lässt.
@@ -69,8 +55,29 @@ Ein Beispiel hierfür sind die Wörter \textit{absorbieren} und \textit{Absorpti
 Es gibt Techniken zur Vermeidung solcher Probleme, wie der Einsatz vollständiger morphologischer Analysekomponenten.
 Hierauf soll aber nicht weiter eingegangen werden.\\
 
-TODO: Wie wird die Relevanz berechnet
+\subsection{Vektor-Indizierung}
+Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
+Dazu werden Dokumente zunächst, wie auch bei der Volltext-Indizierung gecrawlt.
+Anschließend durchlaufen die Inhalte der Dokumente ein Preprocessing.
+Dieses kann je nach Implementierung variieren.
+Das Kapitel \textit{Einspielen der Daten in Weaviate} beschreibt, wie in der hier aufgeführten Implementierung das Preprocessing durchgeführt wird.
+Das Preprocessing hat den Zweck die Daten an das Schema der Datenbank anzupassen und die Qualität der Daten zu erhöhen.
+Außerdem sorgt es für eine kürzere Indizierungszeit.\\
 
+Nach dem Preprocessing werden durch einen Transformer für die Inhalte der Dokumente Vektoren berechnet.
+Ein Transformer wird mithilfe von Trainingsdaten darauf trainiert, Vektoren für Wörter zu generieren.
+Das trainierte Modell wird nach dem Preprocessing durchlaufen.
+Zuletzt werden die Daten in einer Vektordatenbank gespeichert.
+Eine Vektordatenbank speichert Daten, wie eine dokumentenbasierte Datenbank.
+Dort werden nun sowohl die rohen Daten als auch die Vektoren gespeichert, welche von dem Transformer berechnet wurden.
+Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear gespeichert sind.
+Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
+Das funktioniert auf die gleiche Weise, wie bereits in dem Kapitel \textit{Semantic Search} beschrieben.
+
+\subsection{Scoring Algorithmen}
+TODO: Bag of words
+
+TODO: Überarbeiten
 Zur Implementierung eines Volltext-Index werden Dokumente und Wörter in einer m x n Matrix angeordnet, wobei m die Anzahl der Dokumente ist und n die Anzahl der Wörter.
 Die Werte in dieser Matrix werden anhand einer ausgewählten Metrik bestimmt.
 Eine oft verwendete Metrik ist tf-idf.
@@ -95,26 +102,25 @@ Das Ergebnis ist die tf-idf-Metrik.
 Wenn das Wort charakteristisch für ein Dokument ist, dann kommt es in diesem Dokument häufig vor, aber in anderen Dokumenten nur selten.
 Wenn das Wort nicht charakteristisch für das Dokument ist, dann kommt es in anderen Dokumenten genauso häufig oder häufiger vor als in diesem Dokument.\\
 
-\subsection{Vektor-Indizierung}
-Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
-Dazu werden Dokumente zunächst, wie auch bei der Volltext-Indizierung gecrawlt.
-Anschließend durchlaufen die Inhalte der Dokumente ein Preprocessing.
-Dieses kann je nach Implementierung variieren.
-Das Kapitel \textit{Einspielen der Daten in Weaviate} beschreibt, wie in der hier aufgeführten Implementierung das Preprocessing durchgeführt wird.
-Das Preprocessing hat den Zweck die Daten an das Schema der Datenbank anzupassen und die Qualität der Daten zu erhöhen.
-Außerdem sorgt es für eine kürzere Indizierungszeit.\\
+Der BM25 Algorithmus ist eine Erweiterung der tf-idf Metrik.
+TODO: BM25
 
-Nach dem Preprocessing werden durch einen Transformer für die Inhalte der Dokumente Vektoren berechnet.
-Ein Transformer wird mithilfe von Trainingsdaten darauf trainiert, Vektoren für Wörter zu generieren.
-Das trainierte Modell wird nach dem Preprocessing durchlaufen.
-Zuletzt werden die Daten in einer Vektordatenbank gespeichert.
-Eine Vektordatenbank speichert Daten, wie eine dokumentenbasierte Datenbank.
-Dort werden nun sowohl die rohen Daten als auch die Vektoren gespeichert, welche von dem Transformer berechnet wurden.
-Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear gespeichert sind.
-Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
-Das funktioniert auf die gleiche Weise, wie bereits in dem Kapitel \textit{Semantic Search} beschrieben.
 
-TODO: Wie wird die Relevanz berechnet
+\section{word2vec}
+TODO: word2vec erläutern
+
+\section{LSE}
+TODO: Was sind Latent Semantic Embeddings
+
+Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
+Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
+Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden.\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}
+Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
+Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
+Dazu werden LSI und Vector Space Models verwendet.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}
+
+\section{Transformers}
+TODO: transformers erläutern
 
 \section{Suchalgorithmen}
 Im Folgenden werden zuerst gängige Suchalgorithmen erklärt, welche in nahezu jeder Suchfunktion zu finden sind.
@@ -234,17 +240,25 @@ Genau diese Informationen nutzen semantische Suchen.
 \section{Wahl der Suchfunktion}
 Die vergangenen Kapitel haben verschiedene Indizierungs- und Suchalgorithmen dargestellt.
 Jeder dieser Algorithmen hat Vor- und Nachteile.
-Diese werden in diesem Kapitel betrachtet, um die Entscheidung für die verwendeten Technologien der neuen Suchfunktion nachvollziehbar zu machen.
+Diese werden in diesem Kapitel betrachtet, um die Entscheidung für die verwendeten Technologien der neuen Suchfunktion nachvollziehbar zu machen.\\
 
-In einem Paper von Karpukhin et. al. liefert eine Suche auf Grundlage von LSE bessere Ergebnisse als eine Suche auf Grundlage von BM25.\cite{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}
-Das Paper nennt die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber Systemen auf Grundlage von TF-IDF und BM25.
 Die Confluence Suche verwendet laut Dokumentation Apache Lucene.\footnote{\url{https://confluence.atlassian.com/doc/ranking-of-search-results-1188406620.html}}
 Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert.\footnote{\url{https://lucene.apache.org/core/2_9_4/scoring.html}}
 Im Information Retrieval sind Boolean Models jene Scoring Algorithmen, welche auf boolscher Algebra basieren.
-Ein invertierter Index ist ein Beispiel für ein Boolean Model.
-Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit BM25 berechnet werden.
-Da das Paper gezeigt hat, dass eine Suche auf Grundlage von LSE bessere Ergebnisse als eine Suche auf Grundlage von BM25 liefern kann, wird eine semantische Suche auf Basis von LSE verwendet, um die neue Suchfunktion zu entwickeln.
+Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit tf-idf berechnet werden.
 
+In einem Paper von Choudhary et. al. wird ein Document Retrieval System entwickelt.\cite{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}
+Das Document Retrieval System verwendet Bert zur Generierung von Embeddings.
+Der Scoring Algorithmus des Systems kombiniert Bert und tf-idf, um den Score zu berechnen.
+Laut dem Paper bietet eine Kombination aus tf-idf und Bert zur Implementierung eines Document Retrieval Systems signifikante Performance Verbesserungen gegenüber einem Document Retrieval System, welches lediglich tf-idf verwendet.
+Die Performance Verbesserung wird in dem Paper an dem MS Marco Datensatz gemessen.\footnote{\url{https://microsoft.github.io/msmarco/}}\\
+
+In einem Paper von Karpukhin et. al. wird Open-Domain Question Answering untersucht.\cite{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}
+Dazu wird ein Dense Passage Retriever entwickelt.
+Ein Dense Passage Retriever bestimmt den Textabschnitt eines gegebenen Textes, welcher mit größter Wahrscheinlichkeit eine Antwort auf eine gestellte Frage beinhaltet.
+Der Input für einen Dense Passage Retriever sind Dokumente, welche zuvor mithilfe eines Scoring Algorithmus aus einem Index extrahiert wurden.
+Das Paper zeigt, dass das entwickelte Passage Retrieval System besser darin ist relevante Textabschnitte zu finden als der BM25 Algorithmus. 
+Das Paper nennt die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber BM25 und auch TF-IDF.
 
 Die semantische Suche ist bei dem Einspielen der Daten in die Datenbank langsamer, weil zunächst die Vektoren für die Daten generiert werden müssen.
 Die Zeit für die Abfrage von Daten aus einem Vector Space Model wächst mit wachsender Anzahl von Datenpunkten nicht so schnell an, wie bei einem Volltext-Index.
