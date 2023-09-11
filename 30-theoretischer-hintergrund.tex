@@ -80,13 +80,13 @@ TODO: Bag of words
 TODO: Überarbeiten
 Zur Implementierung eines Volltext-Index werden Dokumente und Wörter in einer m x n Matrix angeordnet, wobei m die Anzahl der Dokumente ist und n die Anzahl der Wörter.
 Die Werte in dieser Matrix werden anhand einer ausgewählten Metrik bestimmt.
-Eine oft verwendete Metrik ist tf-idf.
+Eine oft verwendete Metrik ist tf-idf.\\
 
 \(tf-idf(t,D)=tf(t,D)*idf(t)\)
 
 \(tf(t,D)=\frac {\#(t,D)}{\max _{t'\in D}\#(t',D)}\)
 
-\(idf(t)=\log {\frac {N}{\sum_{D:t\in D}1}}\)
+\(idf(t)=\log {\frac {N}{\sum_{D:t\in D}1}}\)\\
 
 TODO: Quelle
 
@@ -105,22 +105,57 @@ Wenn das Wort nicht charakteristisch für das Dokument ist, dann kommt es in and
 Der BM25 Algorithmus ist eine Erweiterung der tf-idf Metrik.
 TODO: BM25
 
+\section{Cosine Similarity}
+TODO: 
+
+\section{Word Embeddings}
+Word Embeddings sind eine Vektorrepräsentation von Wörtern.
+Zweck von Word Embeddings ist es, semantische Ähnlichkeiten zwischen Wörtern zu verstehen.
+Eine einfache Implementierung von Word Embeddings könnte sein, jedem Wort eine zufällige Zahl zuzuordnen.
+Wenn die Zahlen zufällig sind, werden damit allerdings keine semantischen Ähnlichkeiten kodiert.
+Um herauszufinden, welche Wörter eine semantische Ähnlichkeit besitzen.
 
 \section{word2vec}
-TODO: word2vec erläutern
+Word2vec ist ein zwei-Layer neuronales Netzwerk, welches die Semantik von Wörtern lernt.
+Für jedes Wort, für welches eine Vektorrepräsentation bestimmt werden soll, benötigt das neuronale Netzwerk einen Input.
+Das erste Layer des neuronalen Netzwerkes besteht aus Aktivierungsfunktionen.
+Jede Node des Layers summiert die Inputs.
+Die Weights der Aktivierungsfunktionen sind am Ende die Vektorrepräsentationen der Wörter.
+Die Anzahl der Nodes im Aktivierungslayer bestimmt die Anzahl der Dimensionen im Vektor.
+Das nächste Layer summiert wiederum die Werte aus dem Aktivierungslayer und wendet eine SoftMax Funktion an.
+Der Output des neuronalen Netzwerkes besteht, so wie der Input, aus so vielen Nodes, wie es Wörter gibt, welche mit dem Netzwerk repräsentiert werden sollen.
+Der Output gibt an, mit welcher Wahrscheinlichkeit jedes der Wörter das Folgewort des gegebenen Inputs ist.\\ 
 
-\section{LSE}
-TODO: Was sind Latent Semantic Embeddings
+Das neuronale Netzwerk wird mithilfe von Backpropagation trainiert.
+Dazu wird Training Data benötigt.
+Dieses enthält Sätze, auf welche das neuronale Netzwerk trainiert werden soll.
+Aufgabe des neuronalen Netzwerkes ist es, auf Basis eines gegebenen Wortes das nächste Wort im Satz zu bestimmen.
+Für ein einfaches Beispiel könnte das Trainingsdatenset aus zwei Einträgen \textit{NLP ist interessant} und \textit{NLP ist komplizit} bestehen.
+Da das Trainingsdatenset insgesamt aus vier verschiedenen Wörtern besteht, hat das neuronale Netzwerk genau vier Inputs.
+Wenn nun das Folgewort für das Wort \textit{NLP} trainiert werden soll, dann bekommt das neuronale Netzwerk als Input die Werte \textit{1, 0, 0, 0}.
+Die Eins bedeutet, dass das Wort NLP aktiviert ist.
+Die Nullen bedeuten, dass die anderen Wörter nicht aktiviert sind.
+Nun muss das neuronale Netzwerk für diesen Input den Output-Wert berechnen.
+Für die Backpropagation wird die Cross-Entropy Loss Function verwendet.
+Das Ergebnis ist, dass das trainierte neuronale Netzwerk für das Wört \textit{NLP} lernt, dass das nächste Wort mit der Wahrscheinlichkeit eins das Wort \textit{ist} ist.
+Die gelernten Weights bilden einen Vektor, welcher in einer Vektordatenbank gespeichert werden kann.
+Das Ergebnis ist eine Vektordatenbank, welche Informationen darüber enthält, welche Wörter semantisch ähnlich sind, und welche nicht.
 
-Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
-Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
-Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden.\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}
-Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
-Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
-Dazu werden LSI und Vector Space Models verwendet.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}
+\section{Sentence Embeddings}
+TODO: Sentence Transformer, wie Bert
 
-\section{Transformers}
-TODO: transformers erläutern
+\section{seq2seq}
+Ein seq2seq-Modell soll eine Sequenz auf eine andere Sequenz anhand von erlernten Regeln mappen.
+Dazu wird die Input-Sequenz zunächst in eine modell-interne Sequenz encodiert, der Context Vector, und anschließend in die Output-Sequenz dekodiert.
+Wenn eine Wortsequenz in eine andere Wortsequenz umgewandelt werden soll, dann müssen die Input-Wörter zunächst durch ein Word Embedding Layer verarbeitet werden, welches die Wörter in Word Embeddings konvertiert.
+Auf das Word Embedding Layer folgen eine beliebige Anzahl von LSTM-Layers.
+Die Anzahl der Nodes der LSTM-Layer entspricht der Anzahl der Nodes im Word Embedding Layer.
+Zusätzlich kann jede Node in jedem LSTM-Layer mehrere LSTM Netzwerke besitzen.
+Die Weights und Biases der LSTM Netzwerke bilden den Output und damit den Context Vector.
+Die bisher beschriebene Architektur wird als Encoder bezeichnet.
+Die LSTM Netzwerke des Encoders werden im Decoder gespiegelt.
+Die Outputs des oberen LSTM Layers des Decoders werden in ein Fully Connected Layer gegeben und durchlaufen eine Softmax Funktion.
+Der Output des Decoders sind die Wahrscheinlichkeiten, mit welchen die möglichen Wörter der Ziel-Sequenz dem Input entsprechen. 
 
 \section{Suchalgorithmen}
 Im Folgenden werden zuerst gängige Suchalgorithmen erklärt, welche in nahezu jeder Suchfunktion zu finden sind.
@@ -160,24 +195,6 @@ Neben der Verwendung der Attribute für die Suche selbst, können die Attribute 
 So kann eine Suchfunktion Buttons bereitstellen, über welche Filter festgelegt werden.
 Nun kann eine Keyword Search durchgeführt werden, aber die gefundenen Dokumente werden mithilfe der Filter weiter eingeschränkt.
 Neben diesen gängigen Suchalgorithmen gibt es weitere Suchalgorithmen, wie die strukturierte Suche und die semantische Suche.
-
-\subsection{Die strukturierte Suche}
-Eine klassische Suchfunktion verwendet Keywords, um relevante Dokumente für eine Sucheingabe zu ermitteln.
-Der Vorteil dieser Art von Suche ist, dass die technische Struktur, in der die Daten vorliegen und gespeichert sind, nicht bekannt sein müssen.
-Der Nachteil ist auf der anderen Seite, dass die Suchergebnisse unpräzise sein können.
-Wenn beispielsweise der Suchbegriff Kamera eingegeben wird, dann werden Kameras als Ergebnisse zurückgegeben.
-Soll die Kamera nun bestimmte Eigenschaften besitzen, dann müssen diese Eigenschaften ebenfalls als Keywords angegeben werden.
-Nun wird aber nicht die Suche auf Ergebnisse eingegrenzt, bei denen eine Kamera diese bestimmten Eigenschaften besitzt.
-Stattdessen werden Suchergebnisse angezeigt, bei denen einige dieser Keywords vorkommen.
-Demgegenüber stehen Datenbankabfragen, beispielsweise mithilfe von SQL.
-Bei einer Datenbankabfrage können Objekte abgefragt werden, dessen Eigenschaften ganz bestimmte Werte haben.
-Die Ergebnisse, die eine solche Abfrage zurückgibt, sind dabei vollkommen genau.
-Es werden keine Objekte zurückgegeben, welche diese Kriterien nicht erfüllen.
-Voraussetzung für eine solche Suchabfrage ist allerdings, dass die Struktur der Datenbank a priori bekannt ist.
-Dem Nutzer muss der Name der Datenbank, der relevanten Tabellen, sowie der relevanten Properties bekannt sein, damit er das passende SQL für die Datenbankabfrage schreiben kann.
-Strukturierte Suchen sollen die Vorteile beider Vorgehensweisen kombinieren.
-Die Struktur der Daten soll a priori nicht bekannt sein müssen, aber trotzdem sollen die Suchergebnisse vollkommen präzise sein.
-TODO: Wie wird das ermöglicht?
 
 \subsection{Die semantische Suche}
 Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen.\cite{Dengel_2012}
@@ -268,7 +285,6 @@ Der Algorithmus, welcher für die Ermittlung der passendsten Datenpunkte im Vect
 Dieser basiert auf linearer Algebra.
 TODO: Erklären, warum ANN schneller sein soll
 
-TODO: Warum keine strukturierte Suche?
 TODO: Was gäbe es noch für Ansätze?
 
 Bei der Implementierung sollen dabei keine semantischen Netze verwendet werden, sondern ein Vector Space Model.
@@ -279,6 +295,13 @@ Vector Space Models sind Multimodal.
 Es können also in einem Vector Space Model nicht nur Informationen über ein Medium, wie Fließtext, gespeichert werden, sondern neben Fließtext können gleichzeitig auch andere Medien, wie Code, Bilder, Audiodateien etc. gespeichert werden.
 Und anders als bei einer gewöhnlichen Datenbank, in welcher mehrere verschiedene Medien gespeichert werden können, beispielsweise eine relationale Datenbank, können Vector Space Models diese verschiedenen Medien miteinander semantisch verknüpfen.\\
 
+Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
+Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
+Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden.\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}
+Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
+Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
+Dazu werden LSI und Vector Space Models verwendet.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}
+
 Indem die Codebase, welche zu der Wissensdatenbank in Verbindung steht, ebenfalls indiziert wird, kann eine Traceability zwischen Code und Wissensdatenbank hergestellt werden.
 Damit können Feature Location und Bug Localization umgesetzt werden.
 So kann die Suchfunktion nicht nur zum Durchsuchen der Wissensdatenbank verwendet werden, sondern auch zum Durchsuchen der Codebase.
@@ -286,7 +309,9 @@ Und wenn in der Suchfunktion nach einem Feature gesucht wird, dann kann neben de
 Damit verbessert sich wiederum die Wartbarkeit der Software, da das Ändern von Features oder korrigieren von Bugs erleichtert wird.\\
 TODO: Quellen
 
-\section{Retrieval Augmented Generation}
+\section{Weitere Ansätze}
+
+\subsection{Retrieval Augmented Generation}
 Neben einer Suchfunktion können System entwickelt werden, welche eine Question-Answering Funktionalität bieten.
 Eine Question-Answering Funktionalität nimmt eine Frage des Nutzers entgegen, und liefert eine Antwort.
 Solche Systeme basieren auf Retrieval Augmented Generation.
@@ -294,3 +319,9 @@ Das bedeutet, dass auf Grundlage der Frage des Nutzers zuerst eine Suche durchge
 Diese Suche liefert relevante Dokumente zum Beantworten der Frage.
 Nun werden die, für die Frage relevantesten, Stellen der Dokumente mithilfe eines Large Language Models extrahiert und umformuliert.
 Das Ergebnis ist eine Antwort auf die Frage des Nutzers. 
+
+\subsection{Document Classification und Filter verwenden}
+TODO:
+
+\subsection{Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}
+TODO:
