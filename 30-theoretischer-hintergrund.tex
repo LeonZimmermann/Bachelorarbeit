@@ -4,7 +4,7 @@ Aus dem Crawling, dem Index und dem Suchalgorithmus.
 Das Crawling ist zuständig für das Finden von Dokumenten\cite{Castillo_2005}.
 Der Index speichert Informationen der Dokumente, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
 Der Begriff Dokument wird hier verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
-Unter Dokumenten können auch eine Website verstanden, welche durch einen Webcrawler durchsucht werden.
+Unter Dokumenten können auch eine Website verstanden werden, welche durch einen Webcrawler durchsucht werden.
 Es wird im Folgenden zunächst die Funktionsweise des Crawlings erläutert.
 Danach werden zwei Möglichkeiten der Indizierung beschrieben.
 Zuerst die Volltext-Indizierung, dann die Vektor-Indizierung.
@@ -20,6 +20,7 @@ Im Falle von Websites kann der Crawler Hyperlinks zu weiteren Websites extrahier
 Damit kann der Algorithmus sukzessive den Datensatz von Dokumenten befüllen.
 Die neuen Dokumente werden durch den Index verarbeitet und wiederum auf neue Links analysiert.
 Dieses Verfahren kann beliebig lange und beliebig rekursiv durchlaufen werden, um den Index zu erweitern.
+Idealerweise, ohne Seiten dabei mehrfach zu durchlaufen.
 Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumenten übergeben werden, welche dem Index hinzugefügt werden sollen.
 
 \section{Indizierung}
@@ -157,6 +158,29 @@ Die LSTM Netzwerke des Encoders werden im Decoder gespiegelt.
 Die Outputs des oberen LSTM Layers des Decoders werden in ein Fully Connected Layer gegeben und durchlaufen eine Softmax Funktion.
 Der Output des Decoders sind die Wahrscheinlichkeiten, mit welchen die möglichen Wörter der Ziel-Sequenz dem Input entsprechen. 
 
+Der Context Vector kann in einer Vektordatenbank gespeichert werden, so wie Word Embeddings in einer Vektordatenbank gespeichert werden können.
+Das hat zur Folge, dass die Ähnlichkeit von Sätzen genauso wie die Ähnlichkeit von Wörtern ermittelt werden kann.
+
+\section{Hierarchical Navigable Small Worlds (HNSW)}
+HNSW ist ein Nearest Neighbor Suchalgorithmus.
+Der Algorithmus findet die ähnlichsten Nachbar-Vektoren zu einem gegebenen Input-Vektor.
+Um den Algorithmus umzusetzen werden Skip Lists und Navigable Small Worlds verwendet.
+Skip Lists sind klassische Linked Lists, welche aus mehreren Schichten besteht.
+Die unterste Schicht entspricht der originalen Linked List und beinhaltet alle Daten.
+Jedes höhere Layer beinhaltet nur ein Subset der Nodes des darunterliegenden Layers.
+Wenn nun eine Suche in der Skip List durchgeführt wird, dann wird das oberste Layer zuerst durchsucht.
+Das oberste Layer wird sequenziell durchlaufen.
+Es wird bei dem ersten Element des obersten Layers begonnen.
+Solange das aktuelle Element kleiner ist als das gesuchte Element, wird das nächste Element untersucht.
+Wenn das Element n dem gesuchten Element entspricht, dann wurde das gesuchte Element gefunden und wird zurückgegeben.
+Wenn das nächste Element n+1 größer ist als das gesuchte Element, dann wird das aktuelle Element n in dem aktuellen Layer gefunden.
+Da dieses Element noch nicht dem gesuchten Element entspricht, wird nun im tieferen Layer weitergesucht, in welchem mehr Elemente vorhanden sind.
+Denn das gesuchte Element liegt zwischen dem gefundenen Element n und dem untersuchten Element n+1.
+Der gleiche Algorithmus wird rekursiv für jedes Layer durchgeführt, bis das unterste Layer erreicht wurde.
+Wurde am Ende des untersten Layers kein Element gefunden, dann konnte das Element in der Skip List nicht gefunden werden.\cite{10.5555/93711}
+
+TODO: Navigable Small Worlds\cite{Malkov_Yashunin_2020}\\ 
+
 \section{Suchalgorithmen}
 Im Folgenden werden zuerst gängige Suchalgorithmen erklärt, welche in nahezu jeder Suchfunktion zu finden sind.
 Danach wird im speziellen auf die strukturierte Suche und die semantische Suche eingegangen.
@@ -170,7 +194,7 @@ Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Imple
 Es gibt die gängigen Suchalgorithmen Keyword Search, Phrase Search, Boolean Search, Field Search.\\
 
 Eine Keyword Search durchsucht Dokumente nach der Sucheingabe des Nutzers.
-Die Eingabe wird dabei nicht als ganzes betrachtet, sondern jedes Wort einzeln.
+Die Eingabe wird dabei nicht als Ganzes betrachtet, sondern jedes Wort einzeln.
 Für jedes Keyword werden Dokumente als Ergebnis angezeigt, wenn dieses in dem Dokument vorhanden ist.
 Wenn ein Dokument mehrere der Keywords beinhaltet, wird dessen Relevanz höher eingeschätzt als für Dokumente, welche weniger Keywords enthalten.
 Dokumente mit höherer Relevanz werden weiter oben in der Ergebnisliste angezeigt.\\
@@ -200,13 +224,15 @@ Neben diesen gängigen Suchalgorithmen gibt es weitere Suchalgorithmen, wie die 
 Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen.\cite{Dengel_2012}
 Eine semantische Suche hat den Zweck, die Ähnlichkeit und Beziehungen zwischen Wörtern zu verstehen.
 Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.  
-So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} \textit{deployment} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.\\
+So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} und \textit{deployment} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.\\
 
 Die technische Umsetzung einer semantischen Suche kann auf verschiedene Arten erfolgen.
 Zum einen besteht die Möglichkeit ein explizites semantisches Netz heranzuziehen, und so die Zusammenhänge von Wörtern abzubilden.
 Ein semantisches Netz ist eine Menge aus Aussagen in der Form \textit{Subjekt Prädikat Objekt}.
-Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt.\cite{Lehmann}
+Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt.\cite{Lehmann}\\
+
 TODO: Erläuterende Grafik + Beispiel.\\
+
 Das hat den Vorteil, dass ein solches explizites semantisches Netz von Menschen erstellt wurde, und damit eine hohe Qualität der Daten einhergeht.
 Denn an der Erstellung von semantischen Netzen sind mehrere Menschen beteiligt, welche zuerst einen Konsens über die Eigenschaften und Zusammenhänge von Wörtern schaffen müssen.
 Der Nachteil dieser Methode ist der große Arbeitsaufwand, welcher mit der Erstellung eines solchen semantischen Netzes einhergeht.
@@ -320,8 +346,12 @@ Diese Suche liefert relevante Dokumente zum Beantworten der Frage.
 Nun werden die, für die Frage relevantesten, Stellen der Dokumente mithilfe eines Large Language Models extrahiert und umformuliert.
 Das Ergebnis ist eine Antwort auf die Frage des Nutzers. 
 
+TODO: Generative Search
+
 \subsection{Document Classification und Filter verwenden}
 TODO:
 
 \subsection{Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}
 TODO:
+
+\subsection{Inhaltsverzeichnisbezogen durchsuchen}

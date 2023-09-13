@@ -1718,7 +1718,6 @@ INPUT 20-definition-von-anwendungsfaellen.tex
 INPUT ./20-definition-von-anwendungsfaellen.tex
 INPUT ./20-definition-von-anwendungsfaellen.tex
 INPUT 20-definition-von-anwendungsfaellen.tex
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/eurosym/feymr10.tfm
 INPUT ./30-theoretischer-hintergrund.tex
 INPUT ./30-theoretischer-hintergrund.tex
 INPUT ./30-theoretischer-hintergrund.tex
@@ -1784,7 +1783,6 @@ INPUT ./00-thesis-base.out
 INPUT ./00-thesis-base.out
 INPUT 00-thesis-base.run.xml
 OUTPUT 00-thesis-base.run.xml
-INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb

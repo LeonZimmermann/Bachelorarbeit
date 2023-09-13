@@ -61,12 +61,12 @@ Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdate
 Es gibt einige Arbeiten, welche die gleichen oder sehr ähnliche Probleme adressieren.
 Zum einen sind dies Arbeiten, welche verschiedene Arten von Suchfunktionen untersuchen.
 Andere Arbeiten untersuchen, wie sich die Qualität einer Suchfunktion messen lässt.
-Nochmals andere Arbeiten untersuchen Downstream Tasks von Suchfunktionen, also Algorithmen, welche das Ergebnis einer Suche verarbeiten, um die gleiche oder eine andere Anforderung an ein System umzusetzen.\\
+Nochmals andere Arbeiten untersuchen \textit{Downstream-Tasks} von Suchfunktionen, also Algorithmen, welche das Ergebnis einer Suche verarbeiten, um die gleiche oder eine andere Anforderung an ein System umzusetzen.\\
 
 So wird in \textit{Automatic Query Reformulations for Text Retrieval in Software Engineering} von Haiduc et. al. ein System zur Verbesserung von Suchanfragen vorgeschlagen.
 Ausgangspunkt für das Paper ist das Problem der Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten.
 Traceability bedeutet, dass sich von einer Stelle im Code, auf die entsprechenden Stellen in anderen Artefakten zurückschließen lässt.
-Ein Anwendungsfall für eine solche Traceability-Funktionalität ist "Feature Location", also das finden der Spezifikation eines Features, wenn nur der Code vorhanden ist.
+Ein Anwendungsfall für eine solche Traceability-Funktionalität ist \textit{Feature Location}, also das Finden der Spezifikation eines Features, wenn nur der Code vorhanden ist.
 Das System, welches von Haiduc et. al. vorgeschlagen wird, verwendet Query Reformulations, um die Traceability herzustellen.
 Query Reformulation bedeutet, dass das System den Softwareentwickler bei der Eingabe einer Suchanfrage zur Suche nach den passenden Artefakten unterstützt.
 Dazu gibt der Softwareentwickler zunächst eine Suchanfrage ein, und markiert diejenigen Ergebnisse, welche am relevantesten für ihn sind.
@@ -78,7 +78,7 @@ Dazu greift das System auf Synonyme des eingegebenen Suchbegriffes zurück.\cite
 
 In dem Paper \textit{From Word Embeddings To Document Similarities for Improved Information Retrieval in Software Engineering} von Ye et. al. wird beschrieben, wie Word Embeddings dazu verwendet werden können, um Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten herzustellen.
 Word Embeddings sind eine Datenstruktur, welche einem Wort einen Vektor in einem n-dimensionalen Raum zuweist.
-Anhand dieses Vektors kann die Ähnlichkeit zwischen Wörter beschrieben werden.
+Anhand dieses Vektors kann die Ähnlichkeit zwischen Wörtern beschrieben werden.
 Ähnliche Wörter haben eine geringe Distanz im n-dimensionalen Raum.
 Unähnliche Wörter haben eine hohe Distanz.
 Der Algorithmus, welcher die Ähnlichkeit der Wörter bestimmt, macht Gebrauch von der Distributional Hypthesis.
@@ -106,9 +106,9 @@ Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach 
 So wie die vorherigen Paper soll auch dieses Paper eine Brücke zwischen Dokumentation und Code schaffen.\cite{Treude_Sicard_Klocke_Robillard_2015}
 
 Das Paper \textit{Estimating the recall performance of Web search engines} von Clarke und Willet misst die Qualität von Suchfunktionen des World Wide Webs anhand dessen Recalls.
-Um dies zu ermöglichen wird ein Datensatz generiert, welche Sucheingaben beinhaltet, sowie alle relevanten Dokumente für eine Sucheingabe.\cite{Clarke_Willett_1997}
+Um dies zu ermöglichen wird ein Datensatz generiert, welcher Sucheingaben beinhaltet, sowie alle relevanten Dokumente für eine Sucheingabe.\cite{Clarke_Willett_1997}
 Die gleichen Metriken werden auch in \textit{Methods for measuring search engine performance over time} von Bar-Ilan verwendet.\cite{Bar-Ilan_2002}
-Hier wird ebenfalls auf die Problematik der Messung von Recall eingegangen.
+Hier wird ebenfalls auf die Problematik der Messung des Recalls eingegangen.
 Es wird erläutert, dass zur Messung des Recalls a-priori bestimmt werden muss, welche Dokumente als relevant für eine gegebene Sucheingabe erachtet werden sollten.
 In dem Paper wird eine Referenz genannt, welche behauptet, dass die Bestimmung der Relevanz lediglich dem Nutzer mit dem Bedürfnis nach der Information überlassen ist.
 Es wird eine weitere Referenz genannt, welche behauptet, dass die Bestimmung der Relevanz durch ein Experten-Panel durchgeführt werden sollte.
@@ -124,7 +124,7 @@ Mithilfe der Dokumente ist der Ort, an dem sich die, vom Nutzer gewünschte, Inf
 Nichtsdestotrotz muss der Nutzer aus dieser Eingrenzung die gewünschte Information manuell extrahieren.
 Ganz im Gegensatz zu Question Answering Systemen.
 \textit{A survey for Efficient Open Domain Question Answering} von Zhang et. al. untersucht verschiedene Herangehensweisen zur Implementierung von Open-Domain Question Answering Systemen.\cite{Zhang_Chen_Xu_Cao_Chen_Cohn_Fang_2023}
-Darüber hinaus schließst das Paper auf essenzielle Techniken für Open-Domain Question Answering.
+Darüber hinaus schließt das Paper auf essenzielle Techniken für Open-Domain Question Answering.
 Open-Domain Question Answering Systeme beantworten allgemeine Fragen eines Nutzers, z.B. basierend auf Informationen von Wikipedia.
 Closed-Domain Question Answering Systeme beantworten dagegen Fragen im Kontext einer spezifischen Domäne, z.B. basierend auf unternehmensinternen Informationen.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  11 SEP 2023 11:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  13 SEP 2023 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1454,6 +1454,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--117
 [4]) (./20-definition-von-anwendungsfaellen.tex [5]
 chapter 2.
 
+Underfull \hbox (badness 10000) in paragraph at lines 2--12
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 18--22
 
  []
@@ -1466,144 +1471,148 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--28
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 29--34
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--47
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 67--72
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--59
-
- []
-
-[7]) (./30-theoretischer-hintergrund.tex [8]
+[8]) (./30-theoretischer-hintergrund.tex [9]
 chapter 3.
-[9
+[10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 38--44
+Underfull \hbox (badness 10000) in paragraph at lines 39--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--57
+Underfull \hbox (badness 10000) in paragraph at lines 46--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--66
+Underfull \hbox (badness 10000) in paragraph at lines 60--67
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 80--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
-
- []
-
-[11{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 119--128
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 166--171
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 172--177
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--182
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+[12{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 120--129
+
+ []
+
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
-Overfull \hbox (0.91904pt too wide) in paragraph at lines 183--189
-[]\T1/lmr/m/n/12 Die Boo-lean Search bie-tet die Mög-lich-keit einen bool-schen Aus-druck als Suchein-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--189
+Underfull \hbox (badness 10000) in paragraph at lines 190--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--204
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 205--217
+Underfull \hbox (badness 10000) in paragraph at lines 196--201
 
  []
 
 
-Overfull \hbox (28.2755pt too wide) in paragraph at lines 218--227
-\T1/lmr/m/n/12 Wör-ter kon-tex-tu-ell zu-sam-men-ge-hö-ren, wer-den hier die Wör-ter in ei-nem n-dimensionalen
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--227
+Underfull \hbox (badness 10000) in paragraph at lines 202--206
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 228--241
+Overfull \hbox (0.91904pt too wide) in paragraph at lines 207--213
+[]\T1/lmr/m/n/12 Die Boo-lean Search bie-tet die Mög-lich-keit einen bool-schen Aus-druck als Suchein-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--261
+Underfull \hbox (badness 10000) in paragraph at lines 224--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 [16]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 262.
- (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
-  [][][][][]$\T1/lmtt/m/n/10 https : / / confluence . atlassian . com / doc / ranking-[]of-[]search-[]results-[]1188406620 .
+Underfull \hbox (badness 10000) in paragraph at lines 236--243
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--272
+Overfull \hbox (28.2755pt too wide) in paragraph at lines 244--253
+\T1/lmr/m/n/12 Wör-ter kon-tex-tu-ell zu-sam-men-ge-hö-ren, wer-den hier die Wör-ter in ei-nem n-dimensionalen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--267
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 293--297
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
 
  []
 
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 288.
+(c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+  [][][][][]$\T1/lmtt/m/n/10 https : / / confluence . atlassian . com / doc / ranking-[]of-[]search-[]results-[]1188406620 .
+ []
 
-Overfull \hbox (0.53613pt too wide) in paragraph at lines 315--322
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--298
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 319--323
+
+ []
+
+[19]
+Overfull \hbox (0.53613pt too wide) in paragraph at lines 341--348
 \T1/lmr/m/n/12 Neben ei-ner Such-funk-ti-on kön-nen Sys-tem ent-wi-ckelt wer-den, wel-che ei-ne Question-
  []
 
-[18]) (./40-implementierung.tex [19]
+) (./40-implementierung.tex [20]
 chapter 4.
 
 Overfull \hbox (1.60483pt too wide) in paragraph at lines 10--21
@@ -1625,7 +1634,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--45
 
  []
 
-[20
+[21
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
@@ -1642,7 +1651,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--53
 
  []
 
-[21]) (./50-evaluationsmethoden-und-kriterien.tex [22]
+[22]) (./50-evaluationsmethoden-und-kriterien.tex [23]
 chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--14
@@ -1674,7 +1683,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
-[23
+[24
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
@@ -1691,7 +1700,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--74
 
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 80--86
 
  []
@@ -1706,7 +1715,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--102
 
  []
 
-[25]) (./60-vergleich-der-suchfunktionen.tex [26]
+[26]) (./60-vergleich-der-suchfunktionen.tex [27]
 chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--25
@@ -1723,7 +1732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
-[27
+[28
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 35--43
@@ -1735,7 +1744,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--69
 
  []
 
-[28]) (./70-zusammenfassung.tex [29]
+[29]) (./70-zusammenfassung.tex [30]
 chapter 7.
 
 Overfull \hbox (0.33978pt too wide) in paragraph at lines 12--16
@@ -1747,13 +1756,13 @@ Overfull \hbox (5.08006pt too wide) in paragraph at lines 12--16
 \T1/lmr/m/n/12 Trans-for-mer \T1/lmr/m/it/12 sentence-transformers-msmarco-distilroberta-base-v2 \T1/lmr/m/n/12 ver-wen-det. Mög-
  []
 
-) [30
+) [31
 
 ]
 chapter 8.
-[31
+[32
 
-] [32] [33
+] [33] [34
 
 ]
 \c@chapterAppendix=\count502
@@ -1784,9 +1793,9 @@ Overfull \hbox (47.71475pt too wide) in paragraph at lines 42--42
 []              \T1/lmtt/m/n/12 ConfluenceDataService.PARAGRAPH_TAG to WEAVIATE_TEXT_DATATYPE[] 
  []
 
-[34
+[35
 
-]) (./02-declaration.tex [35]) [36
+]) (./02-declaration.tex [36]) [37
 
 ] (./00-thesis-base.aux)
 
@@ -1799,18 +1808,18 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33285 strings out of 476001
- 627138 string characters out of 5793198
+ 33298 strings out of 476001
+ 627537 string characters out of 5793198
  1872068 words of memory out of 5000000
- 53042 multiletter control sequences out of 15000+600000
- 596051 words of font info for 92 fonts, out of 8000000 for 9000
+ 53051 multiletter control sequences out of 15000+600000
+ 595934 words of font info for 91 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on 00-thesis-base.pdf (43 pages, 652108 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on 00-thesis-base.pdf (44 pages, 648571 bytes).
 PDF statistics:
- 693 PDF objects out of 1000 (max. 8388607)
- 586 compressed objects within 6 object streams
- 131 named destinations out of 1000 (max. 500000)
- 438 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 708 PDF objects out of 1000 (max. 8388607)
+ 601 compressed objects within 7 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 454 words of extra memory for PDF output out of 10000 (max. 10000000)
 

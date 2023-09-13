@@ -464,6 +464,68 @@
       \verb 10.1109/TKDE.2006.130
       \endverb
     \endentry
+    \entry{Malkov_Yashunin_2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1761d9a54a91e198bbbb1ab8c90b87cf}{%
+           family={Malkov},
+           familyi={M\bibinitperiod},
+           given={Yu\bibnamedelima A.},
+           giveni={Y\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0ab161f0ecfa8c1f0510bd561839d6ac}{%
+           family={Yashunin},
+           familyi={Y\bibinitperiod},
+           given={D.\bibnamedelimi A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{fullhash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{bibnamehash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{authorbibnamehash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{authornamehash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{authorfullhash}{41f677ba5b31db2db6a749a416e76e0e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{number}{4}
+      \field{title}{Efficient and robust approximate nearest neighbor search using hierarchical navigable small world graphs}
+      \field{volume}{42}
+      \field{year}{2020}
+      \field{pages}{824\bibrangedash 836}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/tpami.2018.2889473
+      \endverb
+    \endentry
+    \entry{10.5555/93711}{report}{}
+      \name{author}{1}{}{%
+        {{hash=d2e8bd4544451d3ad099f420ff11a3ed}{%
+           family={Pugh},
+           familyi={P\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {University of Maryland at College Park}%
+      }
+      \strng{namehash}{d2e8bd4544451d3ad099f420ff11a3ed}
+      \strng{fullhash}{d2e8bd4544451d3ad099f420ff11a3ed}
+      \strng{bibnamehash}{d2e8bd4544451d3ad099f420ff11a3ed}
+      \strng{authorbibnamehash}{d2e8bd4544451d3ad099f420ff11a3ed}
+      \strng{authornamehash}{d2e8bd4544451d3ad099f420ff11a3ed}
+      \strng{authorfullhash}{d2e8bd4544451d3ad099f420ff11a3ed}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Skip List Cookbook}
+      \field{type}{techreport}
+      \field{year}{1990}
+    \endentry
     \entry{Sarica_Luo_2021}{article}{}
       \name{author}{2}{}{%
         {{hash=f499fab5c4a337e9bfb750d4cb449da3}{%
