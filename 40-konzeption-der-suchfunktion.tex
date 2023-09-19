@@ -1,15 +1,5 @@
 \chapter{Konzeption der Suchfunktion}
-Eine einfache Implementierung einer Suchfunktion kann aus drei Komponenten bestehen.
-Aus dem Crawling, dem Index und dem Suchalgorithmus.
-Das Crawling ist zuständig für das Finden von Dokumenten\cite{Castillo_2005}.
-Der Index speichert Informationen der Dokumente, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
-Der Begriff Dokument wird hier verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
-Unter Dokumenten können auch eine Website verstanden werden, welche durch einen Webcrawler durchsucht werden.
-Es wird im Folgenden zunächst die Funktionsweise des Crawlings erläutert.
-Danach werden zwei Möglichkeiten der Indizierung beschrieben.
-Zuerst die Volltext-Indizierung, dann die Vektor-Indizierung.
-Dann werden die verschiedenen Arten von Suchalgorithmen erläutert.
-Und zuletzt wird auf Grundlage der dargestellten Informationen eine Konzeption zur Implementierung einer neuen Suchfunktion hergeleitet.
+TODO: Ergänzen
 
 \subsection{Vektor-Indizierung}
 Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
@@ -29,11 +19,6 @@ Dort werden nun sowohl die rohen Daten als auch die Vektoren gespeichert, welche
 Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear gespeichert sind.
 Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
 Das funktioniert auf die gleiche Weise, wie bereits in dem Kapitel \textit{Semantic Search} beschrieben.
-
-\subsection{Scoring Algorithmen}
-
-\section{Cosine Similarity}
-TODO: 
 
 \section{Sentence Embeddings}
 TODO: Sentence Transformer, wie Bert
@@ -87,6 +72,11 @@ Der Output des Decoders sind die Wahrscheinlichkeiten, mit welchen die mögliche
 
 Der Context Vector kann in einer Vektordatenbank gespeichert werden, so wie Word Embeddings in einer Vektordatenbank gespeichert werden können.
 Das hat zur Folge, dass die Ähnlichkeit von Sätzen genauso wie die Ähnlichkeit von Wörtern ermittelt werden kann.
+
+\subsection{Scoring Algorithmen}
+
+\section{Cosine Similarity}
+TODO: 
 
 \section{Hierarchical Navigable Small Worlds (HNSW)}
 HNSW ist ein Nearest Neighbor Suchalgorithmus.
@@ -248,3 +238,4 @@ TODO:
 TODO:
 
 \subsection{Inhaltsverzeichnisbezogen durchsuchen}
+TODO:

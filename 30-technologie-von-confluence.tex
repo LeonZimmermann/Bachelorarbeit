@@ -1,20 +1,33 @@
 \chapter{Die Technologie von Confluence}
-TODO: Ergänzen
+Die Confluence Suche verwendet laut Dokumentation Apache Lucene.\footnote{\url{https://confluence.atlassian.com/doc/ranking-of-search-results-1188406620.html}}
+Apache Lucene ist eine Bibliothek, welche Indizierungs- und Suchfeatures umfasst.
+Dabei verwendet Apache einen Volltext-Index und bietet Vector Space Models und BM25 an, um nach passenden Dokumenten zu suchen.
+Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert.\footnote{\url{https://lucene.apache.org/core/2_9_4/scoring.html}}
+Im Information Retrieval sind Boolean Models jene Scoring Algorithmen, welche auf boolscher Algebra basieren.
+Boolean Models werden benötigt, um eine Boolean Search zu realisieren.
+Auf die Boolean Search wird im späteren Verlauf des Kapitels eingegangen.
+Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit tf-idf berechnet werden.\\
+
+Dieses Kapitel hat den Zweck die Funktionsweise der Suchfunktion von Confluence zu erläutern.
+Dies ist notwendig, um später die Ergebnisse des Vergleichs der Suchfunktion von Confluence mit der neuen Suchfunktion zu verstehen.
+Um die Suchfunktion von Confluence zu verstehen, ist es zunächst notwendig einen Überblick über die wichtigsten Komponenten einer Suchfunktion zu bekommen.
+Daher stellt dieses Kapitel zuerst die einzelnen Komponenten einer Suchfunktion dar.
+Als nächstes werden die spezifischen Technologien erläutert, welche Apache Lucene verwendet.
+Das bedeutet, dass zuerst erklärt wird, was ein Volltext-Index ist.
+Anschließend werden die Scoring Algorithmen TF-IDF und BM25 erläutert.
+Zuletzt wird zusammenfassend erklärt, welche Suchmethoden mit den Technologien von Apache Lucene ermöglicht und in Confluence verwendet werden.
 
 \section{Die Architektur einer Suchfunktion}
+Dieses Kapitel gibt einen Überblick über die wichtigstes Komponenten einer Suchfunktion.
 Eine einfache Implementierung einer Suchfunktion kann aus drei Komponenten bestehen.
-Aus dem Crawling, dem Index und dem Suchalgorithmus.
+Aus dem Crawling, dem Index und dem Scoring-Algorithmus.
 Das Crawling ist zuständig für das Finden von Dokumenten\cite{Castillo_2005}.
 Der Index speichert Informationen der Dokumente, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
 Der Begriff Dokument wird hier verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
 Unter Dokumenten können auch eine Website verstanden werden, welche durch einen Webcrawler durchsucht werden.
-Es wird im Folgenden zunächst die Funktionsweise des Crawlings erläutert.
-Danach werden zwei Möglichkeiten der Indizierung beschrieben.
-Zuerst die Volltext-Indizierung, dann die Vektor-Indizierung.
-Dann werden die verschiedenen Arten von Suchalgorithmen erläutert.
-Und zuletzt wird auf Grundlage der dargestellten Informationen eine Konzeption zur Implementierung einer neuen Suchfunktion hergeleitet.
+Für die Implementierung der Suche wird ein Scoring-Algorithmus benötigt.
+Der Scoring-Algorithmus bestimmt, welche Dokumente am besten auf eine Sucheingabe passen.\\
 
-\subsection{Crawling}
 Für die Implementierung einer Suchfunktion wird zunächst ein Datensatz von Dokumenten benötigt, welche über die Suchfunktion gefunden werden können.
 Dieser wird mithilfe eines Crawlers aufgebaut.
 Ein Crawler ist ein Algorithmus, welcher Techniken aus dem Natural Language Processing nutzt, um Informationen aus einem Dokument zu extrahieren.\cite{Khder_2021}
@@ -24,9 +37,9 @@ Damit kann der Algorithmus sukzessive den Datensatz von Dokumenten befüllen.
 Die neuen Dokumente werden durch den Index verarbeitet und wiederum auf neue Links analysiert.
 Dieses Verfahren kann beliebig lange und beliebig rekursiv durchlaufen werden, um den Index zu erweitern.
 Idealerweise, ohne Seiten dabei mehrfach zu durchlaufen.
-Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumenten übergeben werden, welche dem Index hinzugefügt werden sollen.
+Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumenten übergeben werden, welche dem Index hinzugefügt werden sollen.\\
 
-\subsection{Indizierung}
+TODO: Überarbeiten
 Die Indizierung von Dokumenten kann sowohl mit einer Volltext-Indizierung oder auch einer Vektor-Indizierung umgesetzt werden.
 Ein Volltextindex bestimmt den Score anhand von Ausschnitten aus dem Volltext.
 Wenn diese bestimmte Kriterien erfüllen, dann wird das Dokument bei der Suche gefunden, andernfalls nicht.
@@ -34,21 +47,20 @@ Ein Vektorindex berechnet Vektoren anhand des Ursprungstextes.
 Ein Vektorindex wird auch als Vector Space Model (VSM) bezeichnet.
 Die Berechnung der Vektoren kann mithilfe von tf-idf, BM25, word2vec, Latent Semantic Embeddings oder auch mit Transformers erfolgen.
 
-Das Ziel der Indizierung ist für jeden Algorithmus der gleiche: Für eine gegebene Sucheingabe sollen die relevantesten Dokumente gefunden werden.
-Die Algorithmen unterscheiden sich darin, wie sie diese Relevanz berechnen.
-Sie werden im Folgenden näher erläutert.
-
-\subsection{Suchalgorithmen}
-TODO: Ergänzen
+TODO: Scoring-Algorithmen
 
 \section{Volltext-Indizierung}
 \label{chap:volltext-indizierung}
+Nachdem ein Überblick über die Komponenten einer Suchfunktion gegeben wurde, werden nun die Technologien erläutert, welche Apache Lucene bereitstellt.
+Apache Lucene verwendet einen Volltext-Index.
 Eine Möglichkeit zur Umsetzung einer Volltext-Indizierung ist der invertierte Index.
-Die Dokumente werden in einer Datenbank abgelegt.
-Anschließend wird der Index aufgebaut, indem alle Wörter extrahiert werden, welche in den Dokmenten vorkommen.
+Zur Generierung des invertierten Indexes müssen die zu indizierten Dokumente zunächst in einer Datenbank abgelegt werden.
+Ein invertierter Index wird generiert, indem alle Wörter extrahiert werden, welche in den Dokumenten vorkommen.
 Nun werden diese Wörter in eine Liste geschrieben, und jedem Wort wird zugeordnet, in welchem Dokument sich dieses Wort wiederfinden lässt.
 Diese Liste wird invertierter Index genannt, weil nicht die Wörter den Dokumenten zugeordnet sind, sondern die Dokumente den Wörtern.
 Es wird ebenfalls gespeichert, an welchen Stelle des Dokuments das Wort vorkommt, und auch in wie vielen Dokumenten ein Wort vorkommt.\\
+
+TODO: Boolean Model / Vector Model / Probablistic Model
 
 Bei der Indizierung der Wörter besteht nun die Problematik, dass gleiche Wörter in unterschiedlichen Formen existieren können.
 So stammen \textit{Heizung} und \textit{heizen} beide von dem gleichen Wortstamm \textit{heiz} ab.
@@ -63,43 +75,9 @@ Ein Beispiel hierfür sind die Wörter \textit{absorbieren} und \textit{Absorpti
 Es gibt Techniken zur Vermeidung solcher Probleme, wie der Einsatz vollständiger morphologischer Analysekomponenten.
 Hierauf soll aber nicht weiter eingegangen werden.\\
 
-\section{Die gängigen Suchalgorithmen}
-In dem Kapitel \textit{Evaluationsmethoden und -Kriterien} wurde bereits beschrieben, dass eine Suche das Qualitätskriterium der Konformität erfüllen sollte.
-Das bedeutet, dass eine Suchfunktion die gängigen Arten von Suchanfragen unterstützen muss.
-Dieses Kapitel soll die Arten von Suchanfragen vorstellen.
-Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Implementierung erfüllen zu können.
-Es gibt die gängigen Suchalgorithmen Keyword Search, Phrase Search, Boolean Search, Field Search.\\
-
-Eine Keyword Search durchsucht Dokumente nach der Sucheingabe des Nutzers.
-Die Eingabe wird dabei nicht als Ganzes betrachtet, sondern jedes Wort einzeln.
-Für jedes Keyword werden Dokumente als Ergebnis angezeigt, wenn dieses in dem Dokument vorhanden ist.
-Wenn ein Dokument mehrere der Keywords beinhaltet, wird dessen Relevanz höher eingeschätzt als für Dokumente, welche weniger Keywords enthalten.
-Dokumente mit höherer Relevanz werden weiter oben in der Ergebnisliste angezeigt.\\
-
-Eine Phrase Search ist die Suche nach Textausschnitten in Dokumenten.
-Hier werden nicht mehrere Keywords einzeln betrachtet, sondern die gesamte Eingabe in das Suchfeld als eine Einheit.
-Es reicht also nicht mehr aus, dass ein Dokument eines der Wörter enthält.
-Es muss die gesamte Sucheingabe als ein String enthalten sein.\\
-
-Die Boolean Search bietet die Möglichkeit einen boolschen Ausdruck als Sucheingabe zu machen.
-Ein Beispiel dafür ist die Sucheingabe \textit{Dokumentation AND Angular}.
-Die Sucheingabe bedeutet, dass die Suchfunktion nur Dokumente als Ergebnis darstellen soll, welche beide Keywords Dokumentation und Angular enthalten.
-Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten: \textit{"Dokumentation von Software" AND Angular}.
-In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
-Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.\\
-
-Eine Field Search sucht Dokumente anhand von Attributen.
-Der Nutzer kann diese Attribute auswählen.
-Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.
-Es können beliebig viele Attribute verwendet werden, um die Suche einzugrenzen.
-Neben der Verwendung der Attribute für die Suche selbst, können die Attribute komplementär zu einer anderen Art von Suche verwendet werden.
-So kann eine Suchfunktion Buttons bereitstellen, über welche Filter festgelegt werden.
-Nun kann eine Keyword Search durchgeführt werden, aber die gefundenen Dokumente werden mithilfe der Filter weiter eingeschränkt.
-Neben diesen gängigen Suchalgorithmen gibt es weitere Suchalgorithmen, wie die strukturierte Suche und die semantische Suche.
-
 \section{TF-IDF}
+Da nun die Dokumente indiziert sind, kann ein Scoring-Algorithmus bestimmen, welche Dokumente die passendsten für eine gegebene Sucheingabe sind.
 Apache Lucene verwendet für das Scoring von Dokumenten die TF-IDF Metrik.
-Die TF-IDF Metrik kann für Bag-of-Words Modelle verwendet werden.
 TF-IDF untersucht, wie häufig Terme in einem Dokument vorkommen und wie charakteristisch diese Terme für dieses Dokument sind.
 Kommt ein gesuchter Term häufig in einem Dokument vor, dann erhöht dies den Score für dieses Dokument.
 Kommt dieser Term selten in anderen Dokumente vor, dann erhöht dies den Score ebenfalls.
@@ -123,6 +101,39 @@ Das Ergebnis des dividierens wird an die Logarithmus-Funktion übergeben, sodass
 Die beiden Werte werden miteinander multipliziert.
 Das Ergebnis ist die tf-idf-Metrik.\\
 
-Aufbauend auf der TF-IDF Metrik wurde die BM25 Metrik entwickelt.
-
+Aufbauend auf der TF-IDF Metrik wurde die BM25 Metrik entwickelt, welche Apache Lucene ebenfalls bereitstellt.
 TODO: BM25
+
+
+\section{Die Suchmethoden von Confluence}
+Dieses Kapitel stellt die Arten von Suchanfragen vor, welche durch Apache Lucene ermöglicht werden.
+Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Implementierung erfüllen zu können.
+Es gibt die gängigen Suchalgorithmen Keyword Search, Phrase Search, Boolean Search, Field Search.\\
+
+Eine Keyword Search durchsucht Dokumente nach der Sucheingabe des Nutzers.
+Die Eingabe wird dabei nicht als Ganzes betrachtet, sondern jedes Wort einzeln.
+Für jedes Keyword werden Dokumente als Ergebnis angezeigt, wenn dieses in dem Dokument vorhanden ist.
+Wenn ein Dokument mehrere der Keywords beinhaltet, wird dessen Relevanz höher eingeschätzt als für Dokumente, welche weniger Keywords enthalten.
+Dokumente mit höherer Relevanz werden weiter oben in der Ergebnisliste angezeigt.\\
+
+Eine Phrase Search ist die Suche nach Textausschnitten in Dokumenten.
+Hier werden nicht mehrere Keywords einzeln betrachtet, sondern die gesamte Eingabe in das Suchfeld als eine Einheit.
+Es reicht also nicht mehr aus, dass ein Dokument eines der Wörter enthält.
+Es muss die gesamte Sucheingabe als ein String enthalten sein.\\
+
+Die Boolean Search bietet die Möglichkeit einen boolschen Ausdruck als Sucheingabe zu machen.
+Ein Beispiel dafür ist die Sucheingabe \textit{Dokumentation AND Angular}.
+Die Sucheingabe bedeutet, dass die Suchfunktion nur Dokumente als Ergebnis darstellen soll, welche beide Keywords Dokumentation und Angular enthalten.
+Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten: \textit{"Dokumentation von Software" AND Angular}.
+In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
+Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.\\
+
+TODO: Möglich durch Apache Lucene?
+Eine Field Search sucht Dokumente anhand von Attributen.
+Der Nutzer kann diese Attribute auswählen.
+Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.
+Es können beliebig viele Attribute verwendet werden, um die Suche einzugrenzen.
+Neben der Verwendung der Attribute für die Suche selbst, können die Attribute komplementär zu einer anderen Art von Suche verwendet werden.
+So kann eine Suchfunktion Buttons bereitstellen, über welche Filter festgelegt werden.
+Nun kann eine Keyword Search durchgeführt werden, aber die gefundenen Dokumente werden mithilfe der Filter weiter eingeschränkt.
+Neben diesen gängigen Suchalgorithmen gibt es weitere Suchalgorithmen, wie die strukturierte Suche und die semantische Suche.
