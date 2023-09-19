@@ -526,6 +526,36 @@
       \field{type}{techreport}
       \field{year}{1990}
     \endentry
+    \entry{Reimers_Gurevych_2019}{article}{}
+      \name{author}{2}{}{%
+        {{hash=da9947b27b0d1c4c912e2b391426d443}{%
+           family={Reimers},
+           familyi={R\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ea70b44be1920f6e8c379706bc7d047a}{%
+           family={Gurevych},
+           familyi={G\bibinitperiod},
+           given={Iryna},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{2466af6376c9c5e3658dcc6692351f3e}
+      \strng{fullhash}{2466af6376c9c5e3658dcc6692351f3e}
+      \strng{bibnamehash}{2466af6376c9c5e3658dcc6692351f3e}
+      \strng{authorbibnamehash}{2466af6376c9c5e3658dcc6692351f3e}
+      \strng{authornamehash}{2466af6376c9c5e3658dcc6692351f3e}
+      \strng{authorfullhash}{2466af6376c9c5e3658dcc6692351f3e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)}
+      \field{title}{Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.18653/v1/d19-1410
+      \endverb
+    \endentry
     \entry{Sarica_Luo_2021}{article}{}
       \name{author}{2}{}{%
         {{hash=f499fab5c4a337e9bfb750d4cb449da3}{%
@@ -618,6 +648,83 @@
       \field{year}{2015}
       \verb{doi}
       \verb 10.1109/icse.2015.214
+      \endverb
+    \endentry
+    \entry{Wang_Reimers_Gurevych_2021}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a0d4c60d10c4c2f1106d1e371e6eef87}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Kexin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=da9947b27b0d1c4c912e2b391426d443}{%
+           family={Reimers},
+           familyi={R\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ea70b44be1920f6e8c379706bc7d047a}{%
+           family={Gurevych},
+           familyi={G\bibinitperiod},
+           given={Iryna},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{89c02dd7e09af3a3118f1ad6bde16b78}
+      \strng{fullhash}{4248c74863ddb11523fd6a4ac4496f41}
+      \strng{bibnamehash}{4248c74863ddb11523fd6a4ac4496f41}
+      \strng{authorbibnamehash}{4248c74863ddb11523fd6a4ac4496f41}
+      \strng{authornamehash}{89c02dd7e09af3a3118f1ad6bde16b78}
+      \strng{authorfullhash}{4248c74863ddb11523fd6a4ac4496f41}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Findings of the Association for Computational Linguistics: EMNLP 2021}
+      \field{title}{TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.18653/v1/2021.findings-emnlp.59
+      \endverb
+    \endentry
+    \entry{Wang_Thakur_Reimers_Gurevych_2022}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a0d4c60d10c4c2f1106d1e371e6eef87}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Kexin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ba53a70550b85cb71c2a7baabdccac95}{%
+           family={Thakur},
+           familyi={T\bibinitperiod},
+           given={Nandan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=da9947b27b0d1c4c912e2b391426d443}{%
+           family={Reimers},
+           familyi={R\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ea70b44be1920f6e8c379706bc7d047a}{%
+           family={Gurevych},
+           familyi={G\bibinitperiod},
+           given={Iryna},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{89c02dd7e09af3a3118f1ad6bde16b78}
+      \strng{fullhash}{ccb2ed9f50e03e22370933ea7235afe6}
+      \strng{bibnamehash}{ccb2ed9f50e03e22370933ea7235afe6}
+      \strng{authorbibnamehash}{ccb2ed9f50e03e22370933ea7235afe6}
+      \strng{authornamehash}{89c02dd7e09af3a3118f1ad6bde16b78}
+      \strng{authorfullhash}{ccb2ed9f50e03e22370933ea7235afe6}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}
+      \field{title}{GPL: Generative Pseudo Labeling for Unsupervised Domain Adaptation of Dense Retrieval}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.18653/v1/2022.naacl-main.168
       \endverb
     \endentry
     \entry{Ye_Shen_Ma_Bunescu_Liu_2016}{article}{}

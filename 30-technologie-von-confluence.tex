@@ -1,0 +1,128 @@
+\chapter{Die Technologie von Confluence}
+TODO: Ergänzen
+
+\section{Die Architektur einer Suchfunktion}
+Eine einfache Implementierung einer Suchfunktion kann aus drei Komponenten bestehen.
+Aus dem Crawling, dem Index und dem Suchalgorithmus.
+Das Crawling ist zuständig für das Finden von Dokumenten\cite{Castillo_2005}.
+Der Index speichert Informationen der Dokumente, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
+Der Begriff Dokument wird hier verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
+Unter Dokumenten können auch eine Website verstanden werden, welche durch einen Webcrawler durchsucht werden.
+Es wird im Folgenden zunächst die Funktionsweise des Crawlings erläutert.
+Danach werden zwei Möglichkeiten der Indizierung beschrieben.
+Zuerst die Volltext-Indizierung, dann die Vektor-Indizierung.
+Dann werden die verschiedenen Arten von Suchalgorithmen erläutert.
+Und zuletzt wird auf Grundlage der dargestellten Informationen eine Konzeption zur Implementierung einer neuen Suchfunktion hergeleitet.
+
+\subsection{Crawling}
+Für die Implementierung einer Suchfunktion wird zunächst ein Datensatz von Dokumenten benötigt, welche über die Suchfunktion gefunden werden können.
+Dieser wird mithilfe eines Crawlers aufgebaut.
+Ein Crawler ist ein Algorithmus, welcher Techniken aus dem Natural Language Processing nutzt, um Informationen aus einem Dokument zu extrahieren.\cite{Khder_2021}
+Implementierungen können reguläre Ausdrücke verwenden, um die Informationen zu extrahieren, oder auch fortgeschrittenere Verfahren, wie Abstract Syntrax Trees.
+Im Falle von Websites kann der Crawler Hyperlinks zu weiteren Websites extrahieren.
+Damit kann der Algorithmus sukzessive den Datensatz von Dokumenten befüllen.
+Die neuen Dokumente werden durch den Index verarbeitet und wiederum auf neue Links analysiert.
+Dieses Verfahren kann beliebig lange und beliebig rekursiv durchlaufen werden, um den Index zu erweitern.
+Idealerweise, ohne Seiten dabei mehrfach zu durchlaufen.
+Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumenten übergeben werden, welche dem Index hinzugefügt werden sollen.
+
+\subsection{Indizierung}
+Die Indizierung von Dokumenten kann sowohl mit einer Volltext-Indizierung oder auch einer Vektor-Indizierung umgesetzt werden.
+Ein Volltextindex bestimmt den Score anhand von Ausschnitten aus dem Volltext.
+Wenn diese bestimmte Kriterien erfüllen, dann wird das Dokument bei der Suche gefunden, andernfalls nicht.
+Ein Vektorindex berechnet Vektoren anhand des Ursprungstextes.
+Ein Vektorindex wird auch als Vector Space Model (VSM) bezeichnet.
+Die Berechnung der Vektoren kann mithilfe von tf-idf, BM25, word2vec, Latent Semantic Embeddings oder auch mit Transformers erfolgen.
+
+Das Ziel der Indizierung ist für jeden Algorithmus der gleiche: Für eine gegebene Sucheingabe sollen die relevantesten Dokumente gefunden werden.
+Die Algorithmen unterscheiden sich darin, wie sie diese Relevanz berechnen.
+Sie werden im Folgenden näher erläutert.
+
+\subsection{Suchalgorithmen}
+TODO: Ergänzen
+
+\section{Volltext-Indizierung}
+\label{chap:volltext-indizierung}
+Eine Möglichkeit zur Umsetzung einer Volltext-Indizierung ist der invertierte Index.
+Die Dokumente werden in einer Datenbank abgelegt.
+Anschließend wird der Index aufgebaut, indem alle Wörter extrahiert werden, welche in den Dokmenten vorkommen.
+Nun werden diese Wörter in eine Liste geschrieben, und jedem Wort wird zugeordnet, in welchem Dokument sich dieses Wort wiederfinden lässt.
+Diese Liste wird invertierter Index genannt, weil nicht die Wörter den Dokumenten zugeordnet sind, sondern die Dokumente den Wörtern.
+Es wird ebenfalls gespeichert, an welchen Stelle des Dokuments das Wort vorkommt, und auch in wie vielen Dokumenten ein Wort vorkommt.\\
+
+Bei der Indizierung der Wörter besteht nun die Problematik, dass gleiche Wörter in unterschiedlichen Formen existieren können.
+So stammen \textit{Heizung} und \textit{heizen} beide von dem gleichen Wortstamm \textit{heiz} ab.
+Um bei der Indizierung Speicherplatz zu sparen, können Wörter auf diesen Wortstamm reduziert werden, damit sie als ein einziges Wort betrachtet werden können.
+Die Bildung des Wortstamms wird als Stemming bezeichnet.
+Beim Stemming kann es jedoch zu Overstemming und Understemming kommen.
+Overstemming bedeutet, dass zwei Wörter, die eigentlich nichts miteinander zu tun haben, also nicht semantisch gleich sind, den gleichen Wortstamm besitzen und als ein Wort betrachtet werden.
+Ein Beispiel hierfür sind die Wörter \textit{Wand} und \textit{wandere}, wie in \textit{ich wandere}.
+Beide besitzen den Wortstamm \textit{wand} und werden entsprechend als ein Wort betrachtet.
+Understemming bedeutet, dass zwei Wörter, die eigentlich etwas miteinander zu tun haben, also semantisch gleich sind, nicht den gleichen Wortstamm besitzen und dadurch als zwei verschiedene Wörter betrachtet werden.
+Ein Beispiel hierfür sind die Wörter \textit{absorbieren} und \textit{Absorption}, welche die Wortstämme \textit{absorb} und \textit{absorp} besitzen.
+Es gibt Techniken zur Vermeidung solcher Probleme, wie der Einsatz vollständiger morphologischer Analysekomponenten.
+Hierauf soll aber nicht weiter eingegangen werden.\\
+
+\section{Die gängigen Suchalgorithmen}
+In dem Kapitel \textit{Evaluationsmethoden und -Kriterien} wurde bereits beschrieben, dass eine Suche das Qualitätskriterium der Konformität erfüllen sollte.
+Das bedeutet, dass eine Suchfunktion die gängigen Arten von Suchanfragen unterstützen muss.
+Dieses Kapitel soll die Arten von Suchanfragen vorstellen.
+Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Implementierung erfüllen zu können.
+Es gibt die gängigen Suchalgorithmen Keyword Search, Phrase Search, Boolean Search, Field Search.\\
+
+Eine Keyword Search durchsucht Dokumente nach der Sucheingabe des Nutzers.
+Die Eingabe wird dabei nicht als Ganzes betrachtet, sondern jedes Wort einzeln.
+Für jedes Keyword werden Dokumente als Ergebnis angezeigt, wenn dieses in dem Dokument vorhanden ist.
+Wenn ein Dokument mehrere der Keywords beinhaltet, wird dessen Relevanz höher eingeschätzt als für Dokumente, welche weniger Keywords enthalten.
+Dokumente mit höherer Relevanz werden weiter oben in der Ergebnisliste angezeigt.\\
+
+Eine Phrase Search ist die Suche nach Textausschnitten in Dokumenten.
+Hier werden nicht mehrere Keywords einzeln betrachtet, sondern die gesamte Eingabe in das Suchfeld als eine Einheit.
+Es reicht also nicht mehr aus, dass ein Dokument eines der Wörter enthält.
+Es muss die gesamte Sucheingabe als ein String enthalten sein.\\
+
+Die Boolean Search bietet die Möglichkeit einen boolschen Ausdruck als Sucheingabe zu machen.
+Ein Beispiel dafür ist die Sucheingabe \textit{Dokumentation AND Angular}.
+Die Sucheingabe bedeutet, dass die Suchfunktion nur Dokumente als Ergebnis darstellen soll, welche beide Keywords Dokumentation und Angular enthalten.
+Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten: \textit{"Dokumentation von Software" AND Angular}.
+In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
+Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.\\
+
+Eine Field Search sucht Dokumente anhand von Attributen.
+Der Nutzer kann diese Attribute auswählen.
+Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.
+Es können beliebig viele Attribute verwendet werden, um die Suche einzugrenzen.
+Neben der Verwendung der Attribute für die Suche selbst, können die Attribute komplementär zu einer anderen Art von Suche verwendet werden.
+So kann eine Suchfunktion Buttons bereitstellen, über welche Filter festgelegt werden.
+Nun kann eine Keyword Search durchgeführt werden, aber die gefundenen Dokumente werden mithilfe der Filter weiter eingeschränkt.
+Neben diesen gängigen Suchalgorithmen gibt es weitere Suchalgorithmen, wie die strukturierte Suche und die semantische Suche.
+
+\section{TF-IDF}
+Apache Lucene verwendet für das Scoring von Dokumenten die TF-IDF Metrik.
+Die TF-IDF Metrik kann für Bag-of-Words Modelle verwendet werden.
+TF-IDF untersucht, wie häufig Terme in einem Dokument vorkommen und wie charakteristisch diese Terme für dieses Dokument sind.
+Kommt ein gesuchter Term häufig in einem Dokument vor, dann erhöht dies den Score für dieses Dokument.
+Kommt dieser Term selten in anderen Dokumente vor, dann erhöht dies den Score ebenfalls.
+Umgekehrt ist der Score für ein Dokument niedriger, je seltener der gesuchte Term in dem Dokument vorkommt oder je häufiger der Term in allen anderen Dokumenten vorkommt.
+TF-IDF ist folgendermaßen definiert:
+
+\(tf-idf(t,D)=tf(t,D)*idf(t)\)
+
+\(tf(t,D)=\frac {\#(t,D)}{\max _{t'\in D}\#(t',D)}\)
+
+\(idf(t)=\log {\frac {N}{\sum_{D:t\in D}1}}\)\\
+
+TODO: Quelle
+
+Der tf-Teil steht für \textit{term frequency} und wird berechnet, indem für das jeweilige Dokument bestimmt wird, wie häufig das Wort in dem Dokument vorkommt.
+Damit die Metrik nicht abhängig von der Länge des Dokumentes ist, wird dieser Wert durch die insgesamte Anzahl der Vorkommnisse des Wortes dividiert.
+Damit ist diese Metrik relativ zur insgesamten Anzahl der Vorkommnisse des Wortes, und nicht absolut.
+Der idf-Teil steht für \textit{inverse document frequency}.
+Er wird berechnet indem die insgesamte Anzahl der Dokumente durch die Anzahl der Dokumente dividiert wird, welche das Wort enthalten.
+Das Ergebnis des dividierens wird an die Logarithmus-Funktion übergeben, sodass am Ende der idf-Wert berechnet wurde.
+Die beiden Werte werden miteinander multipliziert.
+Das Ergebnis ist die tf-idf-Metrik.\\
+
+Aufbauend auf der TF-IDF Metrik wurde die BM25 Metrik entwickelt.
+
+TODO: BM25
