@@ -21,7 +21,7 @@ Zuletzt wird zusammenfassend erklärt, welche Suchmethoden mit den Technologien 
 Dieses Kapitel gibt einen Überblick über die wichtigstes Komponenten einer Suchfunktion.
 Eine einfache Implementierung einer Suchfunktion kann aus drei Komponenten bestehen.
 Aus dem Crawling, dem Index und dem Scoring-Algorithmus.
-Das Crawling ist zuständig für das Finden von Dokumenten\cite{Castillo_2005}.
+Das Crawling ist zuständig für das Finden von Dokumenten (\cite{Castillo_2005}).
 Der Index speichert Informationen der Dokumente, und die Suche ist zuständig für das Verstehen der Nutzeranfrage und die Abfrage der relevantesten Informationen aus dem Index, sowie dessen Verarbeitung und Darstellung.
 Der Begriff Dokument wird hier verwendet, um die Dateien zu beschreiben, welche durch einen Crawler gesucht und durch den Index verarbeitet werden.
 Unter Dokumenten können auch eine Website verstanden werden, welche durch einen Webcrawler durchsucht werden.
@@ -30,7 +30,7 @@ Der Scoring-Algorithmus bestimmt, welche Dokumente am besten auf eine Sucheingab
 
 Für die Implementierung einer Suchfunktion wird zunächst ein Datensatz von Dokumenten benötigt, welche über die Suchfunktion gefunden werden können.
 Dieser wird mithilfe eines Crawlers aufgebaut.
-Ein Crawler ist ein Algorithmus, welcher Techniken aus dem Natural Language Processing nutzt, um Informationen aus einem Dokument zu extrahieren.\cite{Khder_2021}
+Ein Crawler ist ein Algorithmus, welcher Techniken aus dem Natural Language Processing nutzt, um Informationen aus einem Dokument zu extrahieren (\cite{Khder_2021}).
 Implementierungen können reguläre Ausdrücke verwenden, um die Informationen zu extrahieren, oder auch fortgeschrittenere Verfahren, wie Abstract Syntrax Trees.
 Im Falle von Websites kann der Crawler Hyperlinks zu weiteren Websites extrahieren.
 Damit kann der Algorithmus sukzessive den Datensatz von Dokumenten befüllen.
@@ -39,7 +39,7 @@ Dieses Verfahren kann beliebig lange und beliebig rekursiv durchlaufen werden, u
 Idealerweise, ohne Seiten dabei mehrfach zu durchlaufen.
 Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumenten übergeben werden, welche dem Index hinzugefügt werden sollen.\\
 
-TODO: Überarbeiten
+% TODO: Überarbeiten
 Die Indizierung von Dokumenten kann sowohl mit einer Volltext-Indizierung oder auch einer Vektor-Indizierung umgesetzt werden.
 Ein Volltextindex bestimmt den Score anhand von Ausschnitten aus dem Volltext.
 Wenn diese bestimmte Kriterien erfüllen, dann wird das Dokument bei der Suche gefunden, andernfalls nicht.
@@ -47,7 +47,7 @@ Ein Vektorindex berechnet Vektoren anhand des Ursprungstextes.
 Ein Vektorindex wird auch als Vector Space Model (VSM) bezeichnet.
 Die Berechnung der Vektoren kann mithilfe von tf-idf, BM25, word2vec, Latent Semantic Embeddings oder auch mit Transformers erfolgen.
 
-TODO: Scoring-Algorithmen
+% TODO: Scoring-Algorithmen
 
 \section{Volltext-Indizierung}
 \label{chap:volltext-indizierung}
@@ -60,7 +60,7 @@ Nun werden diese Wörter in eine Liste geschrieben, und jedem Wort wird zugeordn
 Diese Liste wird invertierter Index genannt, weil nicht die Wörter den Dokumenten zugeordnet sind, sondern die Dokumente den Wörtern.
 Es wird ebenfalls gespeichert, an welchen Stelle des Dokuments das Wort vorkommt, und auch in wie vielen Dokumenten ein Wort vorkommt.\\
 
-TODO: Boolean Model / Vector Model / Probablistic Model
+% TODO: Boolean Model / Vector Model / Probablistic Model
 
 Bei der Indizierung der Wörter besteht nun die Problematik, dass gleiche Wörter in unterschiedlichen Formen existieren können.
 So stammen \textit{Heizung} und \textit{heizen} beide von dem gleichen Wortstamm \textit{heiz} ab.
@@ -78,19 +78,17 @@ Hierauf soll aber nicht weiter eingegangen werden.\\
 \section{TF-IDF}
 Da nun die Dokumente indiziert sind, kann ein Scoring-Algorithmus bestimmen, welche Dokumente die passendsten für eine gegebene Sucheingabe sind.
 Apache Lucene verwendet für das Scoring von Dokumenten die TF-IDF Metrik.
-TF-IDF untersucht, wie häufig Terme in einem Dokument vorkommen und wie charakteristisch diese Terme für dieses Dokument sind.
+TF-IDF untersucht, wie häufig Terme in einem Dokument vorkommen und wie charakteristisch diese Terme für dieses Dokument sind (\cite{Manning_Raghavan_Schuetze_2019}).
 Kommt ein gesuchter Term häufig in einem Dokument vor, dann erhöht dies den Score für dieses Dokument.
 Kommt dieser Term selten in anderen Dokumente vor, dann erhöht dies den Score ebenfalls.
 Umgekehrt ist der Score für ein Dokument niedriger, je seltener der gesuchte Term in dem Dokument vorkommt oder je häufiger der Term in allen anderen Dokumenten vorkommt.
-TF-IDF ist folgendermaßen definiert:
+TF-IDF ist folgendermaßen definiert:\\
 
-\(tf-idf(t,D)=tf(t,D)*idf(t)\)
+\(\text{tf-idf}_{t,d}=\text{tf}_{t,d} \times \text{idf}_t\)\\
 
-\(tf(t,D)=\frac {\#(t,D)}{\max _{t'\in D}\#(t',D)}\)
+\(tf(t,D)=\frac {\#(t,D)}{\max _{t'\in D}\#(t',D)}\)\\
 
-\(idf(t)=\log {\frac {N}{\sum_{D:t\in D}1}}\)\\
-
-TODO: Quelle
+\(\text{idf}_t=\log {\frac {N}{\text{df}_t}}\)\\
 
 Der tf-Teil steht für \textit{term frequency} und wird berechnet, indem für das jeweilige Dokument bestimmt wird, wie häufig das Wort in dem Dokument vorkommt.
 Damit die Metrik nicht abhängig von der Länge des Dokumentes ist, wird dieser Wert durch die insgesamte Anzahl der Vorkommnisse des Wortes dividiert.
@@ -102,10 +100,11 @@ Die beiden Werte werden miteinander multipliziert.
 Das Ergebnis ist die tf-idf-Metrik.\\
 
 Aufbauend auf der TF-IDF Metrik wurde die BM25 Metrik entwickelt, welche Apache Lucene ebenfalls bereitstellt.
-TODO: BM25
+% TODO: BM25
 
 
 \section{Die Suchmethoden von Confluence}
+\label{chap:suchmethoden-von-confluence}
 Dieses Kapitel stellt die Arten von Suchanfragen vor, welche durch Apache Lucene ermöglicht werden.
 Es ist wichtig diese zu kennen, um das Qualitätskriterium später bei der Implementierung erfüllen zu können.
 Es gibt die gängigen Suchalgorithmen Keyword Search, Phrase Search, Boolean Search, Field Search.\\
@@ -128,7 +127,7 @@ Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten:
 In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
 Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.\\
 
-TODO: Möglich durch Apache Lucene?
+% TODO: Möglich durch Apache Lucene?
 Eine Field Search sucht Dokumente anhand von Attributen.
 Der Nutzer kann diese Attribute auswählen.
 Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.

@@ -6,7 +6,7 @@ Das Filtern nach bestimmten Properties ermöglicht die Vektordatenbank ebenfalls
 Es wird die Vektordatenbank Weaviate verwendet.
 Der Vergleich zeigt, ob eine semantische Suchfunktion \textit{besser} ist als die Confluence-Suche.
 
-TODO: Weaviate Benchmarks darstellen und damit begründen, dass die semantische Suche besser sein sollte
+% TODO: Weaviate Benchmarks darstellen und damit begründen, dass die semantische Suche besser sein sollte
 
 \section{Aufsetzen der Vektordatenbank Weaviate}
 Für das Aufsetzen von Weaviate werden zwei Komponenten benötigt.
@@ -40,7 +40,7 @@ Die HTML-Dateien werden preprocessed, um dem zuvor definierten Schema zu entspre
 Es werden zuerst mithilfe von regulären Ausdrücken alle Inhalte von h1-, h2- und p-Tags herausgefiltert.
 Anschließend werden Punctuations und Stopwords entfernt und die Inhalte druchlaufen einen Tokenizer und einen Stemmer.
 Punctuations sind Zeichen, wie die folgenden: \textit{.,;:}.
-Stopwords sind Wörter, welche für einen Leser notwendig sind, aber für die Verarbeitung durch einen Algorithmus als unwichtig erachtet werden\cite{Sarica_Luo_2021}.
+Stopwords sind Wörter, welche für einen Leser notwendig sind, aber für die Verarbeitung durch einen Algorithmus als unwichtig erachtet werden (\cite{Sarica_Luo_2021}).
 Beispiele für Stopwords sind \textit{aber, denn, der}.
 Ein Tokenizer trennt einen Text in einzelne Wörter auf.
 Aus einem Text, wie \textit{das deployment erfolgt durch ein bash-skript} wird also ein Array, welches folgendermaßen aussieht:\\

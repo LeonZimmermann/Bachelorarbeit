@@ -21,11 +21,11 @@
 \contentsline {subsection}{\numberline {4.1.4}Scoring Algorithmen}{17}{subsection.4.1.4}%
 \contentsline {section}{\numberline {4.2}Cosine Similarity}{17}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Hierarchical Navigable Small Worlds (HNSW)}{17}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Suchalgorithmen}{18}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Suchalgorithmen}{17}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Die semantische Suche}{18}{subsection.4.4.1}%
-\contentsline {section}{\numberline {4.5}Wahl der Suchfunktion}{20}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Weitere Ansätze}{22}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Retrieval Augmented Generation}{22}{subsection.4.6.1}%
+\contentsline {section}{\numberline {4.5}Wahl der Suchfunktion}{19}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Weitere Ansätze}{21}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Retrieval Augmented Generation}{21}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Document Classification und Filter verwenden}{22}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}{22}{subsection.4.6.3}%
 \contentsline {subsection}{\numberline {4.6.4}Inhaltsverzeichnisbezogen durchsuchen}{22}{subsection.4.6.4}%
@@ -37,11 +37,11 @@
 \contentsline {chapter}{\numberline {6}Evaluationsmethoden und -Kriterien}{26}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Precision, Recall und F-Maß}{26}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Versuchsaufbau}{27}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Psychometrische Vorgehensweisen}{27}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}ISO/IEC 9126}{27}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.3}Psychometrische Vorgehensweisen}{28}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}ISO/IEC 9126}{28}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Benutzbarkeit}{28}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Funktionalität}{28}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Einfaktorielle Varianzanalyse}{28}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.3}Funktionalität}{29}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Einfaktorielle Varianzanalyse}{29}{subsection.6.3.4}%
 \contentsline {section}{\numberline {6.4}Wahl der Evaluationsmethoden}{29}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Vergleich der Suchfunktionen}{30}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Aufbau der Studie}{30}{section.7.1}%

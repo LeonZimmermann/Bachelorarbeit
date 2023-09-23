@@ -1,5 +1,5 @@
 \chapter{Konzeption der Suchfunktion}
-TODO: Ergänzen
+% TODO: Ergänzen
 
 \subsection{Vektor-Indizierung}
 Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
@@ -21,8 +21,8 @@ Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semanti
 Das funktioniert auf die gleiche Weise, wie bereits in dem Kapitel \textit{Semantic Search} beschrieben.
 
 \section{Sentence Embeddings}
-TODO: Sentence Transformer, wie Bert
-\cite{Reimers_Gurevych_2019}
+% TODO: Sentence Transformer, wie Bert
+ (\cite{Reimers_Gurevych_2019})
 
 \subsection{Word Embeddings}
 Word Embeddings sind eine Vektorrepräsentation von Wörtern.
@@ -76,7 +76,7 @@ Das hat zur Folge, dass die Ähnlichkeit von Sätzen genauso wie die Ähnlichkei
 \subsection{Scoring Algorithmen}
 
 \section{Cosine Similarity}
-TODO: 
+% TODO: 
 
 \section{Hierarchical Navigable Small Worlds (HNSW)}
 HNSW ist ein Nearest Neighbor Suchalgorithmus.
@@ -94,9 +94,9 @@ Wenn das nächste Element n+1 größer ist als das gesuchte Element, dann wird d
 Da dieses Element noch nicht dem gesuchten Element entspricht, wird nun im tieferen Layer weitergesucht, in welchem mehr Elemente vorhanden sind.
 Denn das gesuchte Element liegt zwischen dem gefundenen Element n und dem untersuchten Element n+1.
 Der gleiche Algorithmus wird rekursiv für jedes Layer durchgeführt, bis das unterste Layer erreicht wurde.
-Wurde am Ende des untersten Layers kein Element gefunden, dann konnte das Element in der Skip List nicht gefunden werden.\cite{10.5555/93711}
+Wurde am Ende des untersten Layers kein Element gefunden, dann konnte das Element in der Skip List nicht gefunden werden (\cite{10.5555/93711}).
 
-TODO: Navigable Small Worlds\cite{Malkov_Yashunin_2020}\\ 
+% TODO: Navigable Small Worlds (\cite{Malkov_Yashunin_2020})\\ 
 
 \section{Suchalgorithmen}
 Im Folgenden werden zuerst gängige Suchalgorithmen erklärt, welche in nahezu jeder Suchfunktion zu finden sind.
@@ -104,7 +104,7 @@ Danach wird im speziellen auf die strukturierte Suche und die semantische Suche 
 Die semantische Suche wird später bei der Implementierung einer Suchfunktion verwendet werden.
 
 \subsection{Die semantische Suche}
-Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen.\cite{Dengel_2012}
+Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen (\cite{Dengel_2012}).
 Eine semantische Suche hat den Zweck, die Ähnlichkeit und Beziehungen zwischen Wörtern zu verstehen.
 Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.  
 So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} und \textit{deployment} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.\\
@@ -112,9 +112,9 @@ So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollo
 Die technische Umsetzung einer semantischen Suche kann auf verschiedene Arten erfolgen.
 Zum einen besteht die Möglichkeit ein explizites semantisches Netz heranzuziehen, und so die Zusammenhänge von Wörtern abzubilden.
 Ein semantisches Netz ist eine Menge aus Aussagen in der Form \textit{Subjekt Prädikat Objekt}.
-Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt.\cite{Lehmann}\\
+Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt (\cite{Lehmann}).\\
 
-TODO: Erläuterende Grafik + Beispiel.\\
+% TODO: Erläuterende Grafik + Beispiel.\\
 
 Das hat den Vorteil, dass ein solches explizites semantisches Netz von Menschen erstellt wurde, und damit eine hohe Qualität der Daten einhergeht.
 Denn an der Erstellung von semantischen Netzen sind mehrere Menschen beteiligt, welche zuerst einen Konsens über die Eigenschaften und Zusammenhänge von Wörtern schaffen müssen.
@@ -173,13 +173,13 @@ Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorit
 Im Information Retrieval sind Boolean Models jene Scoring Algorithmen, welche auf boolscher Algebra basieren.
 Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit tf-idf berechnet werden.
 
-In einem Paper von Choudhary et. al. wird ein Document Retrieval System entwickelt.\cite{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}
+In einem Paper von Choudhary et. al. wird ein Document Retrieval System entwickelt (\cite{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}).
 Das Document Retrieval System verwendet Bert zur Generierung von Embeddings.
 Der Scoring Algorithmus des Systems kombiniert Bert und tf-idf, um den Score zu berechnen.
 Laut dem Paper bietet eine Kombination aus tf-idf und Bert zur Implementierung eines Document Retrieval Systems signifikante Performance Verbesserungen gegenüber einem Document Retrieval System, welches lediglich tf-idf verwendet.
 Die Performance Verbesserung wird in dem Paper an dem MS Marco Datensatz gemessen.\footnote{\url{https://microsoft.github.io/msmarco/}}\\
 
-In einem Paper von Karpukhin et. al. wird Open-Domain Question Answering untersucht.\cite{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}
+In einem Paper von Karpukhin et. al. wird Open-Domain Question Answering untersucht (\cite{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}).
 Dazu wird ein Dense Passage Retriever entwickelt.
 Ein Dense Passage Retriever bestimmt den Textabschnitt eines gegebenen Textes, welcher mit größter Wahrscheinlichkeit eine Antwort auf eine gestellte Frage beinhaltet.
 Der Input für einen Dense Passage Retriever sind Dokumente, welche zuvor mithilfe eines Scoring Algorithmus aus einem Index extrahiert wurden.
@@ -192,12 +192,12 @@ Bei einem Volltext-Index müssen die übergebenen Keywords mit jedem Datensatz a
 Bei einem Vector Space Model sind zwar mit steigender Zahl von Datensätzen mehr Punkte im Raum vorhanden, aber es müssen nicht für jeden Punkt Strings verglichen werden.
 Der Algorithmus, welcher für die Ermittlung der passendsten Datenpunkte im Vector Space Model verwendet wird, lautet Approximate Nearest Neighbor (ANN).
 Dieser basiert auf linearer Algebra.
-TODO: Erklären, warum ANN schneller sein soll
+% TODO: Erklären, warum ANN schneller sein soll
 
-TODO: Was gäbe es noch für Ansätze?
+% TODO: Was gäbe es noch für Ansätze?
 
 Bei der Implementierung sollen dabei keine semantischen Netze verwendet werden, sondern ein Vector Space Model.
-TODO: Warum?
+% TODO: Warum?
 
 Neben den direkten Vorteilen einer semantischen Suche gegenüber Suchfunktionen, wie eine Keyword Search, gibt es weitere indirekte Vorteile eine semantischen Suche auf Grundlage von Vector Space Models.
 Vector Space Models sind Multimodal.
@@ -206,17 +206,17 @@ Und anders als bei einer gewöhnlichen Datenbank, in welcher mehrere verschieden
 
 Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
 Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
-Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden.\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}
+Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden (\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}).
 Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
 Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
-Dazu werden LSI und Vector Space Models verwendet.\cite{Antoniol_Canfora_Casazza_DeLucia_2000}
+Dazu werden LSI und Vector Space Models verwendet.\citetitle{Antoniol_Canfora_Casazza_DeLucia_2000}
 
 Indem die Codebase, welche zu der Wissensdatenbank in Verbindung steht, ebenfalls indiziert wird, kann eine Traceability zwischen Code und Wissensdatenbank hergestellt werden.
 Damit können Feature Location und Bug Localization umgesetzt werden.
 So kann die Suchfunktion nicht nur zum Durchsuchen der Wissensdatenbank verwendet werden, sondern auch zum Durchsuchen der Codebase.
 Und wenn in der Suchfunktion nach einem Feature gesucht wird, dann kann neben der Spezifikation in der Wissensdatenbank auch gleich der Einstiegspunkt im Code gefunden werden.
 Damit verbessert sich wiederum die Wartbarkeit der Software, da das Ändern von Features oder korrigieren von Bugs erleichtert wird.\\
-TODO: Quellen
+% TODO: Quellen
 
 \section{Weitere Ansätze}
 
@@ -229,7 +229,7 @@ Diese Suche liefert relevante Dokumente zum Beantworten der Frage.
 Nun werden die, für die Frage relevantesten, Stellen der Dokumente mithilfe eines Large Language Models extrahiert und umformuliert.
 Das Ergebnis ist eine Antwort auf die Frage des Nutzers. 
 
-TODO: Generative Search
+% TODO: Generative Search
 
 \subsection{Document Classification und Filter verwenden}
 TODO:

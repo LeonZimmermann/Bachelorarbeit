@@ -115,17 +115,19 @@ Dieses Mal wurden lediglich die Title-Tags indiziert.
 Das Title-Tag ist für jedes Dokument nur einmal vorhanden.
 Außerdem sind die Titelsätze der Dokumente wesentlich kürzer als ganze Paragraphen.
 Mit dieser Konfiguration sollte der Größenunterschied des Sucheingabe-Strings und der Titel-Strings kein entscheidender Faktor mehr sein.
-Das Ergebnis dieser Konfiguration war folgendes:
+Das Ergebnis dieser Konfiguration war folgendes:\ref{precision-tabelle}
 
 \begin{table}[!ht]
     \centering
+    \label{precision-tabelle}
     \begin{tabular}{|l|l|l|l|}
-    \hline
+        \hline
         Precision & Hit in Five & Hit in Three & Hit in One \\ \hline
         BM25 & 0,54 & 0,5 & 0,39 \\ \hline
         Hybrid & 0,54 & 0,48 & 0,35 \\ \hline
         Semantic & 0,28 & 0,22 & 0,11 \\ \hline
     \end{tabular}
+    \caption[Precision]{Precision aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}
 \end{table}
 
 In dieser Konfiguration hat die semantische Suche eine bessere Precision.
@@ -141,12 +143,12 @@ Lediglich die semantische Suche hat sich bei der zweiten Konfiguration verbesser
 Das bedeutet, dass sich der gezeigte Effekt der Verbesserung der Suchfunktion tatsächlich mit der Hypothese begründen lässt, dass die Länge der Strings ein zu berücksichtigender Faktor ist.
 Da die semantische Suche weiterhin schlechter ist als die BM25-Suche, scheint es aber weitere Faktoren zu geben, welche zu berücksichtigen sind.\\
 
-TODO: Weaviate Benchmarks diskutieren
+% TODO: Weaviate Benchmarks diskutieren
 
 Eine mögliche Erklärung für die weiterhin schlechten Ergebnisse der semantischen Suche ist die Tatsache, dass es sich bei dem verwendeten Datensatz um eine Closed-Domain handelt.
 Das bedeutet, dass der Textcorpus Fachbegriffe beinhaltet, welche der Transformer mit hoher Wahrscheinlichkeit nicht kennt.
 Dementsprechend schwer fällt es dem Transformer folglich, passende Vektoren zu generieren, welche die Semantik von den domänenspezifischen Fachbegriffen abbilden.
-Die Paper \textit{GPL: Generative Pseudo Labeling for Unsupervised Domain Adaptation of Dense Retrieval}\cite{Wang_Thakur_Reimers_Gurevych_2022} von Wang et. al. und \textit{TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning}\cite{Wang_Reimers_Gurevych_2021} von Wang et. al. untersuchen Möglichkeiten, um Sentence Transformer an eine Domäne anzupassen.
+Die Paper \textit{GPL: Generative Pseudo Labeling for Unsupervised Domain Adaptation of Dense Retrieval} (\cite{Wang_Thakur_Reimers_Gurevych_2022} von Wang et. al. und \textit{TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning}\cite{Wang_Reimers_Gurevych_2021}) von Wang et. al. untersuchen Möglichkeiten, um Sentence Transformer an eine Domäne anzupassen.
 Dieser Vorgang wird als Domain Adaption bezeichnet.
 
 
@@ -165,11 +167,11 @@ Solange die relevanten Dokumente in der Liste weiter oben dargestellt werden, is
 
 Die Studie hat die Precision für das erste, die ersten drei und alle fünf Dokumente gemessen.
 Die Studie hat allerdings keinen Recall gemessen, obwohl es sinnvoll ist den Recall als den wichtigeren Score einer Suchfunktion zu erachten.
-TODO: Warum ist der Recall wichtiger?
+% TODO: Warum ist der Recall wichtiger?
 Grund dafür ist die Tatsache, dass um den Recall messen zu können, alle relevanten Dokumente für eine Sucheingabe bekannt sein müssen.
 Um für eine Studie a priori Sucheingaben zu bestimmen, und alle Dokumente, welche für diese Sucheingabe relevant sind, müsste der gesamte Datensatz bekannt sein.
 Da der Datensatz mehrere hundert Dokumente beinhaltet ist dies nicht möglich.
 Und auch wenn der gesamte Datensatz bekannt wäre, dann müsste trotzdem eine Entscheidung darüber getroffen werden, welche Dokumente relevant sind und welche nicht.
 Das wäre wiederum eine subjektive Entscheidung, sodass die Validität des Ergebnisses anzweifelbar wäre.
 
-TODO: Question Answering (Frage: was sind die dateiformate für den auftragseingang?/was für dateien gebe ich in den auftragseingang?, Antwort: excel - dateien oder csv - dateien)
+% TODO: Question Answering (Frage: was sind die dateiformate für den auftragseingang?/was für dateien gebe ich in den auftragseingang?, Antwort: excel - dateien oder csv - dateien)

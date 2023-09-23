@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  19 SEP 2023 11:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  23 SEP 2023 09:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -726,7 +726,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex citestyle data model...
-Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: ... file 'authoryear-comp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count383
@@ -834,31 +834,36 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip21
 \c@smartand=\count459
 )
-Package biblatex Info: Trying to load bibliography style 'numeric'...
-Package biblatex Info: ... file 'numeric.bbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'authoryear-comp'...
+Package biblatex Info: ... file 'authoryear-comp.bbx' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/authoryear-comp.bbx
+File: authoryear-comp.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count460
 \c@bbx:relatedtotal=\count461
-))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
- (c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+)))
+Package biblatex Info: Trying to load citation style 'authoryear-comp'...
+Package biblatex Info: ... file 'authoryear-comp.cbx' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/authoryear-comp.cbx
+File: authoryear-comp.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
 Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetexts'.
 Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
@@ -1138,30 +1143,30 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 211.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 212.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./00-thesis-base.aux)
 \openout1 = `00-thesis-base.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 211.
-LaTeX Font Info:    ... okay on input line 211.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1259,9 +1264,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '00-thesis-base.bbl' found.
  (./00-thesis-base.bbl)
-Package biblatex Info: Reference section=0 on input line 211.
-Package biblatex Info: Reference segment=0 on input line 211.
-Package hyperref Info: Link coloring ON on input line 211.
+Package biblatex Info: Reference section=0 on input line 212.
+Package biblatex Info: Reference segment=0 on input line 212.
+Package hyperref Info: Link coloring ON on input line 212.
  (./00-thesis-base.out) (./00-thesis-base.out)
 \@outlinefile=\write4
 \openout4 = `00-thesis-base.out'.
@@ -1273,7 +1278,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 211.
+(scrreprt)           before \begin{document} on input line 212.
  (c:/texlive/2023/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (c:/texlive/2023/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -1333,7 +1338,7 @@ Overfull \hbox (23.99998pt too wide) in alignment at lines 46--53
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./img/logo_unidue_paluno_deutsch.pdf>])
 
 Package scrlayer-scrpage Warning: replacing deprecated \clearscrheadfoot by
-(scrlayer-scrpage)                \clearpairofpagestyles on input line 225.
+(scrlayer-scrpage)                \clearpairofpagestyles on input line 226.
 
 1: chapter
 (./08-abstract.tex
@@ -1348,7 +1353,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--43
 
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 243.
+(Font)              <10.95> on input line 244.
  [1
 
 ] (./00-thesis-base.toc [2
@@ -1399,10 +1404,10 @@ LaTeX Warning: Hyper reference `acro:VSM' on page vi undefined on input line 7.
 ]
 
 Package scrlayer-scrpage Warning: replacing deprecated \clearscrheadfoot by
-(scrlayer-scrpage)                \clearpairofpagestyles on input line 255.
+(scrlayer-scrpage)                \clearpairofpagestyles on input line 256.
 
 1: chapter
-Package scrbase Info: activating ngerman \partname on input line 271.
+Package scrbase Info: activating ngerman \partname on input line 272.
 (./10-intro.tex
 chapter 1.
 
@@ -1440,32 +1445,32 @@ l.28    \item
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 61--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
 
  []
 
 [2{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 66--78
+Underfull \hbox (badness 10000) in paragraph at lines 70--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--88
+Underfull \hbox (badness 10000) in paragraph at lines 83--92
 
  []
 
 
-Overfull \hbox (49.72697pt too wide) in paragraph at lines 89--99
+Overfull \hbox (49.72697pt too wide) in paragraph at lines 93--103
 \T1/lmr/m/n/12 satz, wie Ye et. al. Auch hier wer-den Word Em-bed-dings ver-wen-det um Softwareentwicklungs-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--99
+Underfull \hbox (badness 10000) in paragraph at lines 93--103
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 108--117
+Underfull \hbox (badness 10000) in paragraph at lines 113--122
 
  []
 
@@ -1530,8 +1535,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--62
 
  []
 
-[11]
+
 Underfull \hbox (badness 10000) in paragraph at lines 65--77
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 79--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
@@ -1541,32 +1561,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--103
+Underfull \hbox (badness 10000) in paragraph at lines 93--101
 
  []
 
-[12{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 109--112
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--118
+[12{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--123
+Underfull \hbox (badness 10000) in paragraph at lines 112--117
 
  []
 
 
-Overfull \hbox (0.91904pt too wide) in paragraph at lines 124--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
+
+ []
+
+
+Overfull \hbox (0.91904pt too wide) in paragraph at lines 123--129
 []\T1/lmr/m/n/12 Die Boo-lean Search bie-tet die Mög-lich-keit einen bool-schen Aus-druck als Suchein-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--130
+Underfull \hbox (badness 10000) in paragraph at lines 123--129
 
  []
 
@@ -1585,22 +1605,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--44
 [15
 
 ] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
-[17]
 Underfull \hbox (badness 10000) in paragraph at lines 107--111
 
  []
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 112--116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
@@ -1624,12 +1634,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--150
 
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 167--170
 
  []
 
-
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 171--171
   [][][][][]$\T1/lmtt/m/n/10 https : / / confluence . atlassian . com / doc / ranking-[]of-[]search-[]results-[]1188406620 .
  []
@@ -1639,8 +1649,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--181
 
  []
 
-[20]
+
 Underfull \hbox (badness 10000) in paragraph at lines 202--206
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 214--220
 
  []
 
@@ -1747,12 +1762,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
-
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 99--102
 
  []
 
-[28]) (./70-vergleich-der-suchfunktionen.tex [29]
+) (./70-vergleich-der-suchfunktionen.tex [29]
 chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--25
@@ -1792,12 +1807,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--111
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--143
+Package caption Warning: \label without proper reference on input line 122.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `precision-tabelle' on page 32 undefined on input line 118.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--145
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 154--165
+Underfull \hbox (badness 10000) in paragraph at lines 156--167
 
  []
 
@@ -1810,8 +1832,8 @@ chapter 9.
 [36
 
 ]
-Underfull \hbox (badness 3579) in paragraph at lines 288--288
-[]\T1/lmr/m/n/12 Kexin Wang, Nils Rei-mers und Iry-na Gu-re-vych. ^^R  TS-DAE: Using
+Underfull \hbox (badness 1337) in paragraph at lines 289--289
+[][]\T1/lmr/m/n/12 Wang, Ke-xin, Nils Rei-mers und Iry-na Gu-re-vych (2021). ^^R  TS-DAE: Using
  []
 
 [37] [38
@@ -1840,18 +1862,18 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33337 strings out of 476001
- 628631 string characters out of 5793198
+ 33423 strings out of 476001
+ 630229 string characters out of 5793198
  1872068 words of memory out of 5000000
- 53072 multiletter control sequences out of 15000+600000
- 595934 words of font info for 91 fonts, out of 8000000 for 9000
+ 53154 multiletter control sequences out of 15000+600000
+ 604685 words of font info for 94 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on 00-thesis-base.pdf (48 pages, 660642 bytes).
+ 108i,20n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on 00-thesis-base.pdf (48 pages, 635659 bytes).
 PDF statistics:
- 744 PDF objects out of 1000 (max. 8388607)
- 633 compressed objects within 7 object streams
+ 736 PDF objects out of 1000 (max. 8388607)
+ 629 compressed objects within 7 object streams
  151 named destinations out of 1000 (max. 500000)
  446 words of extra memory for PDF output out of 10000 (max. 10000000)
 
