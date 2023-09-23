@@ -1,4 +1,5 @@
 \chapter{Implementierung der neuen Suchfunktion}
+\label{chap:implementierung}
 In diesem Kapitel wird die Implementierung einer alternativen Suchfunktion zu der Suchfunktion von Confluence dargestellt.
 Diese Implementierung wird anschließend mithilfe des erläuterten Versuchsaufbaus mit der bestehenden Suche von Confluence verglichen.
 Die Implementierung verwendet eine Vektordatenbank, welche eine semantische Suche ermöglicht.
@@ -32,6 +33,7 @@ Es werden in dieser Klasse also die URL des Dokuments, sowie die Inhalte aller h
 Außerdem wird als Vectorizer \textit{text2vec-transformers} konfiguriert.\\
 
 \section{Einspielen der Daten in Weaviate}
+\label{chap:einspielen-der-daten-in-weaviate}
 Um nun die Daten aus Confluence in Weaviate einzuspielen, werden zuerst die Daten aus Confluence exportiert.
 Beim Export von Confluence Seiten werden HTML-Dateien generiert.
 Es werden keine CSS-, JavaScript- oder Bilddateien generiert.
@@ -53,7 +55,7 @@ Aus dem Wort \textit{deployment} wird dadurch beispielsweise \textit{deploy}.
 Duplikate von Wörtern werden anschließend verworfen.
 Nachdem die Inhalte dieses Preprocessing durchlaufen haben, werden sie in die Datenbank eingespielt.\\
 
-Im Kapitel \textit{Vektorindizes} wurde bereits von Performancegründen gesprochen, aus denen das Preprocessing durchgeführt wird.
+In \myRef{Kapitel}{chap:vektorindizes} wurde bereits von Performancegründen gesprochen, aus denen das Preprocessing durchgeführt wird.
 Da nun die einzelnen Schritte des Preprocessings erklärt wurde, kann auch erklärt werden, warum das Preprocessing die Performance beim indizieren erhöht.
 Zuallererst werden viele Wörter gänzlich verworfen, weil sie Stopwords sind.
 Durch den Stemmer werden anschließend ähnliche Wörter zusammengruppiert.

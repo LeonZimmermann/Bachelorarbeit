@@ -32,7 +32,7 @@ Für die Studie wurde ein Datensatz generiert, welcher Dokumente beinhaltet, wel
 Der Datensatz wurde aus einem realen Softwareentwicklungs-Projekt generiert, indem ein Teil der tatsächlichen Confluence-Seiten exportiert wurde.
 Für jedes Dokument sind eine oder mehrere Sucheingaben definiert, mit dessen Eingabe das Dokument gefunden werden soll.
 Darüber hinaus ist für jedes Dokument festgehalten, zu welchem Anwendungsfall sich dieses zuordnen lässt.
-Die folgende Tabelle zeigt einen Ausschnitt aus den Daten, welche durch die Studie generiert wurde.
+\myRef{Tabelle}{ausschnitt-studie-ergebnisse} zeigt einen Ausschnitt aus den Daten, welche durch die Studie generiert wurde.
 Der Name des Projektes, aus welchem die Daten entnommen wurden, wurde unkenntlich gemacht.\\
 
 \begin{table}[!ht]
@@ -46,11 +46,13 @@ Der Name des Projektes, aus welchem die Daten entnommen wurden, wurde unkenntlic
 
 \begin{table}[!ht]
     \centering
+    \label{ausschnitt-studie-ergebnisse}
     \resizebox{\columnwidth}{!}{\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
     \hline
         Gefundene Dokumente & Hit & Hit in Five & Hit in Three &  Hit in One \\ \hline
         getting started (legacy)..., onboarding usecase x..., onboarding re..., ui-debian-build-base..., ep... & true & true & true & true
     \end{tabular}}
+    \caption[Ausschnitt der Ergebnisse]{Ausschnitt aus den Ergebnissen der Studie}
 \end{table}
 
 Die Suchfunktion gibt für jeden Algorithmus fünf Dokumente als Antwort auf eine Sucheingabe zurück.
@@ -76,10 +78,11 @@ Es ist möglich, dass eine Suchfunktion für eine Sucheingabe durchaus ein sinnv
 \section{Auswertung der Ergebnisse}
 Die Studie wurde mehrfach durchgeführt.
 Die Precision-Scores werden auf zwei Nachkommastellen gerundet.
-Die Precision-Scores werden in der nachfolgenden Tabelle zusammengefasst.
+Die Precision-Scores werden in der \myRef{Tabelle}{precision-tabelle} zusammengefasst.
 
 \begin{table}[!ht]
     \centering
+    \label{precision-tabelle}
     \begin{tabular}{|l|l|l|l|}
     \hline
         Precision & Hit in Five & Hit in Three & Hit in One \\ \hline
@@ -87,6 +90,7 @@ Die Precision-Scores werden in der nachfolgenden Tabelle zusammengefasst.
         Hybrid & 0,56 & 0,52 & 0,35 \\ \hline
         Semantic & 0,15 & 0,13 & 0,07 \\ \hline
     \end{tabular}
+    \caption[Precision]{Precision der Suchfunktionen}
 \end{table}
 
 Es ist auffällig, dass der Precision-Score der semantischen Suche wesentlich schlechter ist als der Precision-Score der BM25 Suche.
@@ -115,11 +119,11 @@ Dieses Mal wurden lediglich die Title-Tags indiziert.
 Das Title-Tag ist für jedes Dokument nur einmal vorhanden.
 Außerdem sind die Titelsätze der Dokumente wesentlich kürzer als ganze Paragraphen.
 Mit dieser Konfiguration sollte der Größenunterschied des Sucheingabe-Strings und der Titel-Strings kein entscheidender Faktor mehr sein.
-Das Ergebnis dieser Konfiguration war folgendes:\ref{precision-tabelle}
+Das Ergebnis dieser Konfiguration ist in \myRef{Tabelle}{precision-tabelle-2} dargestellt.\\
 
 \begin{table}[!ht]
     \centering
-    \label{precision-tabelle}
+    \label{precision-tabelle-2}
     \begin{tabular}{|l|l|l|l|}
         \hline
         Precision & Hit in Five & Hit in Three & Hit in One \\ \hline
@@ -127,7 +131,7 @@ Das Ergebnis dieser Konfiguration war folgendes:\ref{precision-tabelle}
         Hybrid & 0,54 & 0,48 & 0,35 \\ \hline
         Semantic & 0,28 & 0,22 & 0,11 \\ \hline
     \end{tabular}
-    \caption[Precision]{Precision aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}
+    \caption[Precision (2. Durchführung)]{Precision der Suchfunktionen (2. Durchführung der Studie)}
 \end{table}
 
 In dieser Konfiguration hat die semantische Suche eine bessere Precision.
@@ -150,7 +154,6 @@ Das bedeutet, dass der Textcorpus Fachbegriffe beinhaltet, welche der Transforme
 Dementsprechend schwer fällt es dem Transformer folglich, passende Vektoren zu generieren, welche die Semantik von den domänenspezifischen Fachbegriffen abbilden.
 Die Paper \textit{GPL: Generative Pseudo Labeling for Unsupervised Domain Adaptation of Dense Retrieval} (\cite{Wang_Thakur_Reimers_Gurevych_2022} von Wang et. al. und \textit{TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning}\cite{Wang_Reimers_Gurevych_2021}) von Wang et. al. untersuchen Möglichkeiten, um Sentence Transformer an eine Domäne anzupassen.
 Dieser Vorgang wird als Domain Adaption bezeichnet.
-
 
 \section{Diskussion des Studienaufbaus}
 Wie bereits beschrieben gibt der Recall an, wie viele der relevanten Dokumente gefunden wurden.

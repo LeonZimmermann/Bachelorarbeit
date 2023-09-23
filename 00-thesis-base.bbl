@@ -88,6 +88,43 @@
       \verb 10.1002/asi.10047
       \endverb
     \endentry
+    \entry{Beaulieu_Track_Sparck_Karen_Willett_Peter}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3ec161e93899e1f05df8a72b895e8eaa}{%
+           family={Beaulieu},
+           familyi={B\bibinitperiod},
+           given={Track},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14e4d70f7864e1a4e7f386b3dbf31d4c}{%
+           family={Sparck},
+           familyi={S\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b0f0719d807c51ad2ffbc51858faebe}{%
+           family={Willett},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dc51cbcf481b46b0f98a0f707d668af5}
+      \strng{fullhash}{776a35e7227095f8bf954c5416b5a24f}
+      \strng{bibnamehash}{776a35e7227095f8bf954c5416b5a24f}
+      \strng{authorbibnamehash}{776a35e7227095f8bf954c5416b5a24f}
+      \strng{authornamehash}{dc51cbcf481b46b0f98a0f707d668af5}
+      \strng{authorfullhash}{776a35e7227095f8bf954c5416b5a24f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{Okapi at TREC-7: automatic ad hoc, filtering, VLC and interactive track}
+      \field{year}{2000}
+    \endentry
     \entry{Castillo_2005}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9945b3859caed4e19a23f700fa1b79db}{%

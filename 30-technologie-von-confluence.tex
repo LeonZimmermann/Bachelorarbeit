@@ -49,6 +49,8 @@ Die Berechnung der Vektoren kann mithilfe von tf-idf, BM25, word2vec, Latent Sem
 
 % TODO: Scoring-Algorithmen
 
+% TODO: Boolean Model / Vector Model / Probablistic Model
+
 \section{Volltext-Indizierung}
 \label{chap:volltext-indizierung}
 Nachdem ein Überblick über die Komponenten einer Suchfunktion gegeben wurde, werden nun die Technologien erläutert, welche Apache Lucene bereitstellt.
@@ -59,8 +61,6 @@ Ein invertierter Index wird generiert, indem alle Wörter extrahiert werden, wel
 Nun werden diese Wörter in eine Liste geschrieben, und jedem Wort wird zugeordnet, in welchem Dokument sich dieses Wort wiederfinden lässt.
 Diese Liste wird invertierter Index genannt, weil nicht die Wörter den Dokumenten zugeordnet sind, sondern die Dokumente den Wörtern.
 Es wird ebenfalls gespeichert, an welchen Stelle des Dokuments das Wort vorkommt, und auch in wie vielen Dokumenten ein Wort vorkommt.\\
-
-% TODO: Boolean Model / Vector Model / Probablistic Model
 
 Bei der Indizierung der Wörter besteht nun die Problematik, dass gleiche Wörter in unterschiedlichen Formen existieren können.
 So stammen \textit{Heizung} und \textit{heizen} beide von dem gleichen Wortstamm \textit{heiz} ab.
@@ -75,7 +75,7 @@ Ein Beispiel hierfür sind die Wörter \textit{absorbieren} und \textit{Absorpti
 Es gibt Techniken zur Vermeidung solcher Probleme, wie der Einsatz vollständiger morphologischer Analysekomponenten.
 Hierauf soll aber nicht weiter eingegangen werden.\\
 
-\section{TF-IDF}
+\section{Probablistische Metriken des Document Retrieval}
 Da nun die Dokumente indiziert sind, kann ein Scoring-Algorithmus bestimmen, welche Dokumente die passendsten für eine gegebene Sucheingabe sind.
 Apache Lucene verwendet für das Scoring von Dokumenten die TF-IDF Metrik.
 TF-IDF untersucht, wie häufig Terme in einem Dokument vorkommen und wie charakteristisch diese Terme für dieses Dokument sind (\cite{Manning_Raghavan_Schuetze_2019}).
@@ -86,6 +86,7 @@ TF-IDF ist folgendermaßen definiert:\\
 
 \(\text{tf-idf}_{t,d}=\text{tf}_{t,d} \times \text{idf}_t\)\\
 
+% TODO: Diese Formel ist nicht einheitlich mit den anderen
 \(tf(t,D)=\frac {\#(t,D)}{\max _{t'\in D}\#(t',D)}\)\\
 
 \(\text{idf}_t=\log {\frac {N}{\text{df}_t}}\)\\
@@ -97,11 +98,26 @@ Der idf-Teil steht für \textit{inverse document frequency}.
 Er wird berechnet indem die insgesamte Anzahl der Dokumente durch die Anzahl der Dokumente dividiert wird, welche das Wort enthalten.
 Das Ergebnis des dividierens wird an die Logarithmus-Funktion übergeben, sodass am Ende der idf-Wert berechnet wurde.
 Die beiden Werte werden miteinander multipliziert.
-Das Ergebnis ist die tf-idf-Metrik.\\
+Das Ergebnis ist die TF-IDF-Metrik.\\
 
-Aufbauend auf der TF-IDF Metrik wurde die BM25 Metrik entwickelt, welche Apache Lucene ebenfalls bereitstellt.
-% TODO: BM25
+Neben TF-IDF-Metrik wurde die BM25-Metrik entwickelt, welche Apache Lucene ebenfalls bereitstellt.
+Sie verwendet ebenfalls die inverse Dokumentenfrequenz zur Ermittlung des Scores von Dokumenten.
+Eine einfache Form von BM25 ist definiert wie folgt (\cite{Beaulieu_Track_Sparck_Karen_Willett_Peter}):\\
 
+\(\sum_{T \in Q}w^{(1)} \frac{(k_1 + 1)\text{tf}}{K + \text{tf}} \frac{(k_3 + 1)\text{qtf}}{k_3 + \text{qtf}}\)\\
+
+\(K=k_1((1 - b) + b.\text{dl} / \text{avdl})\)\\
+
+So wie bei der TF-IDF-Metrik stellt tf hier die Termfrequenz dar.
+Die Variablen \(k_1\), \(k_3\) und b stellen Hyperparameter dar, welche entsprechend der Datenbank und der Sucheingaben angepasst werden können.
+Die Variable dl ist die Länge des Dokumentes und die Variable avdl die durchschnittliche Länge der Dokumente.
+Q ist die Sucheingabe, welche die Terme T enthält.
+Die Variable qtf wird definiert als die Termfrequenz innerhalb einer Domäne, aus welcher sich die Sucheingabe ableitet.\\
+% TODO: Unklarheiten bei qtf
+
+Die beiden Metriken gehören zu den probablistischen Modellen des Document Retrievals.
+Sie geben an mit welcher Wahrscheinlichkeit ein Dokument für die Sucheingabe relevant ist.
+In die Berechnung dieser Wahrscheinlichkeit beziehen beide Metriken die Termfrequenz ein.
 
 \section{Die Suchmethoden von Confluence}
 \label{chap:suchmethoden-von-confluence}
@@ -127,7 +143,7 @@ Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten:
 In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
 Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.\\
 
-% TODO: Möglich durch Apache Lucene?
+% TODO: Möglich durch Apache Lucene? Ja, mit dem Boolean Model
 Eine Field Search sucht Dokumente anhand von Attributen.
 Der Nutzer kann diese Attribute auswählen.
 Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.

@@ -2,11 +2,12 @@
 % TODO: Ergänzen
 
 \subsection{Vektor-Indizierung}
+\label{chap:vektorindizes}
 Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
 Dazu werden Dokumente zunächst, wie auch bei der Volltext-Indizierung gecrawlt.
 Anschließend durchlaufen die Inhalte der Dokumente ein Preprocessing.
 Dieses kann je nach Implementierung variieren.
-Das Kapitel \textit{Einspielen der Daten in Weaviate} beschreibt, wie in der hier aufgeführten Implementierung das Preprocessing durchgeführt wird.
+\myRef{Kapitel}{chap:einspielen-der-daten-in-weaviate} beschreibt, wie in der hier aufgeführten Implementierung das Preprocessing durchgeführt wird.
 Das Preprocessing hat den Zweck die Daten an das Schema der Datenbank anzupassen und die Qualität der Daten zu erhöhen.
 Außerdem sorgt es für eine kürzere Indizierungszeit.\\
 
@@ -18,7 +19,6 @@ Eine Vektordatenbank speichert Daten, wie eine dokumentenbasierte Datenbank.
 Dort werden nun sowohl die rohen Daten als auch die Vektoren gespeichert, welche von dem Transformer berechnet wurden.
 Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear gespeichert sind.
 Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
-Das funktioniert auf die gleiche Weise, wie bereits in dem Kapitel \textit{Semantic Search} beschrieben.
 
 \section{Sentence Embeddings}
 % TODO: Sentence Transformer, wie Bert
@@ -94,7 +94,7 @@ Wenn das nächste Element n+1 größer ist als das gesuchte Element, dann wird d
 Da dieses Element noch nicht dem gesuchten Element entspricht, wird nun im tieferen Layer weitergesucht, in welchem mehr Elemente vorhanden sind.
 Denn das gesuchte Element liegt zwischen dem gefundenen Element n und dem untersuchten Element n+1.
 Der gleiche Algorithmus wird rekursiv für jedes Layer durchgeführt, bis das unterste Layer erreicht wurde.
-Wurde am Ende des untersten Layers kein Element gefunden, dann konnte das Element in der Skip List nicht gefunden werden (\cite{10.5555/93711}).
+Wurde am Ende des untersten Layers kein Element gefunden, dann konnte das Element in der Skip List nicht gefunden werden (\cite{10.5555/93711}).\\
 
 % TODO: Navigable Small Worlds (\cite{Malkov_Yashunin_2020})\\ 
 
@@ -110,21 +110,7 @@ Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.
 So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} und \textit{deployment} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.\\
 
 Die technische Umsetzung einer semantischen Suche kann auf verschiedene Arten erfolgen.
-Zum einen besteht die Möglichkeit ein explizites semantisches Netz heranzuziehen, und so die Zusammenhänge von Wörtern abzubilden.
-Ein semantisches Netz ist eine Menge aus Aussagen in der Form \textit{Subjekt Prädikat Objekt}.
-Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt (\cite{Lehmann}).\\
-
-% TODO: Erläuterende Grafik + Beispiel.\\
-
-Das hat den Vorteil, dass ein solches explizites semantisches Netz von Menschen erstellt wurde, und damit eine hohe Qualität der Daten einhergeht.
-Denn an der Erstellung von semantischen Netzen sind mehrere Menschen beteiligt, welche zuerst einen Konsens über die Eigenschaften und Zusammenhänge von Wörtern schaffen müssen.
-Der Nachteil dieser Methode ist der große Arbeitsaufwand, welcher mit der Erstellung eines solchen semantischen Netzes einhergeht.
-Ein weiterer Nachteil ist die mögliche Unvollständigkeit, welche ein solches semantisches Netz besitzen könnte.
-Eine Wissensdatenbank, welche für ein Projekt erstellt wurde, kann Definitionen von Begriffen beinhalten, welche in allgemeinen semantischen Netzen nicht vorhanden sind.
-Bei der Umsetzung einer semantischen Suche mithilfe eines semantischen Netzes müsste also zuerst ein allgemeines semantisches Netz herangezogen werden, beispielsweise von DBPedia.
-Anschließend müsste dieses semantische Netz um die neuen Definitionen, welche nur im Kontext des Projektes gelten, erweitert werden.\\
-
-Eine weitere Möglichkeit zur Umsetzung einer semantischen Suche ist die Verwendung von Transformers und Vektordatenbanken.
+Eine Möglichkeit zur Umsetzung einer semantischen Suche ist die Verwendung von Transformers und Vektordatenbanken.
 Um zu verstehen, welche Wörter kontextuell zusammengehören, werden hier die Wörter in einem n-dimensionalen Raum positioniert.
 Wörter, die sich sehr ähnlich sind, also im gleichen Kontext verwendet werden, haben in diesem n-dimensionalen Raum eine geringe Distanz zueinander.
 Wörter, die sich eher unähnlich sind, wie \textit{"rollout" und "API"}, haben eine größere Distanz.
@@ -186,37 +172,10 @@ Der Input für einen Dense Passage Retriever sind Dokumente, welche zuvor mithil
 Das Paper zeigt, dass das entwickelte Passage Retrieval System besser darin ist relevante Textabschnitte zu finden als der BM25 Algorithmus. 
 Das Paper nennt die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber BM25 und auch TF-IDF.
 
-Die semantische Suche ist bei dem Einspielen der Daten in die Datenbank langsamer, weil zunächst die Vektoren für die Daten generiert werden müssen.
-Die Zeit für die Abfrage von Daten aus einem Vector Space Model wächst mit wachsender Anzahl von Datenpunkten nicht so schnell an, wie bei einem Volltext-Index.
-Bei einem Volltext-Index müssen die übergebenen Keywords mit jedem Datensatz abgeglichen werden.
-Bei einem Vector Space Model sind zwar mit steigender Zahl von Datensätzen mehr Punkte im Raum vorhanden, aber es müssen nicht für jeden Punkt Strings verglichen werden.
-Der Algorithmus, welcher für die Ermittlung der passendsten Datenpunkte im Vector Space Model verwendet wird, lautet Approximate Nearest Neighbor (ANN).
-Dieser basiert auf linearer Algebra.
-% TODO: Erklären, warum ANN schneller sein soll
-
-% TODO: Was gäbe es noch für Ansätze?
-
-Bei der Implementierung sollen dabei keine semantischen Netze verwendet werden, sondern ein Vector Space Model.
-% TODO: Warum?
-
 Neben den direkten Vorteilen einer semantischen Suche gegenüber Suchfunktionen, wie eine Keyword Search, gibt es weitere indirekte Vorteile eine semantischen Suche auf Grundlage von Vector Space Models.
 Vector Space Models sind Multimodal.
 Es können also in einem Vector Space Model nicht nur Informationen über ein Medium, wie Fließtext, gespeichert werden, sondern neben Fließtext können gleichzeitig auch andere Medien, wie Code, Bilder, Audiodateien etc. gespeichert werden.
 Und anders als bei einer gewöhnlichen Datenbank, in welcher mehrere verschiedene Medien gespeichert werden können, beispielsweise eine relationale Datenbank, können Vector Space Models diese verschiedenen Medien miteinander semantisch verknüpfen.\\
-
-Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
-Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
-Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden (\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}).
-Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
-Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
-Dazu werden LSI und Vector Space Models verwendet.\citetitle{Antoniol_Canfora_Casazza_DeLucia_2000}
-
-Indem die Codebase, welche zu der Wissensdatenbank in Verbindung steht, ebenfalls indiziert wird, kann eine Traceability zwischen Code und Wissensdatenbank hergestellt werden.
-Damit können Feature Location und Bug Localization umgesetzt werden.
-So kann die Suchfunktion nicht nur zum Durchsuchen der Wissensdatenbank verwendet werden, sondern auch zum Durchsuchen der Codebase.
-Und wenn in der Suchfunktion nach einem Feature gesucht wird, dann kann neben der Spezifikation in der Wissensdatenbank auch gleich der Einstiegspunkt im Code gefunden werden.
-Damit verbessert sich wiederum die Wartbarkeit der Software, da das Ändern von Features oder korrigieren von Bugs erleichtert wird.\\
-% TODO: Quellen
 
 \section{Weitere Ansätze}
 
@@ -231,11 +190,39 @@ Das Ergebnis ist eine Antwort auf die Frage des Nutzers.
 
 % TODO: Generative Search
 
+\subsection{Semantische Netze}
+Es besteht die Möglichkeit ein explizites semantisches Netz heranzuziehen, und so die Zusammenhänge von Wörtern abzubilden.
+Ein semantisches Netz ist eine Menge aus Aussagen in der Form \textit{Subjekt Prädikat Objekt}.
+Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt (\cite{Lehmann}).\\
+
+% TODO: Erläuterende Grafik + Beispiel.\\
+
+Das hat den Vorteil, dass ein solches explizites semantisches Netz von Menschen erstellt wurde, und damit eine hohe Qualität der Daten einhergeht.
+Denn an der Erstellung von semantischen Netzen sind mehrere Menschen beteiligt, welche zuerst einen Konsens über die Eigenschaften und Zusammenhänge von Wörtern schaffen müssen.
+Der Nachteil dieser Methode ist der große Arbeitsaufwand, welcher mit der Erstellung eines solchen semantischen Netzes einhergeht.
+Ein weiterer Nachteil ist die mögliche Unvollständigkeit, welche ein solches semantisches Netz besitzen könnte.
+Eine Wissensdatenbank, welche für ein Projekt erstellt wurde, kann Definitionen von Begriffen beinhalten, welche in allgemeinen semantischen Netzen nicht vorhanden sind.
+Bei der Umsetzung einer semantischen Suche mithilfe eines semantischen Netzes müsste also zuerst ein allgemeines semantisches Netz herangezogen werden, beispielsweise von DBPedia.
+Anschließend müsste dieses semantische Netz um die neuen Definitionen, welche nur im Kontext des Projektes gelten, erweitert werden.\\
+
+
 \subsection{Document Classification und Filter verwenden}
-TODO:
+% TODO:
 
 \subsection{Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}
-TODO:
+Indem die Codebase, welche zu der Wissensdatenbank in Verbindung steht, ebenfalls indiziert wird, kann eine Traceability zwischen Code und Wissensdatenbank hergestellt werden.
+Damit können Feature Location und Bug Localization umgesetzt werden.
+So kann die Suchfunktion nicht nur zum Durchsuchen der Wissensdatenbank verwendet werden, sondern auch zum Durchsuchen der Codebase.
+Und wenn in der Suchfunktion nach einem Feature gesucht wird, dann kann neben der Spezifikation in der Wissensdatenbank auch gleich der Einstiegspunkt im Code gefunden werden.
+Damit verbessert sich wiederum die Wartbarkeit der Software, da das Ändern von Features oder korrigieren von Bugs erleichtert wird.\\
+% TODO: Quellen
+
+Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
+Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
+Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden (\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}).
+Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
+Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
+Dazu werden LSI und Vector Space Models verwendet.\citetitle{Antoniol_Canfora_Casazza_DeLucia_2000}
 
 \subsection{Inhaltsverzeichnisbezogen durchsuchen}
-TODO:
+% TODO:
