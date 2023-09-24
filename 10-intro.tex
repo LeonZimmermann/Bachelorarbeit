@@ -80,6 +80,7 @@ Wenn der Softwareentwickler zu Beginn eine sehr lange Suchanfrage eingegeben hat
 Hat der Softwareentwickler dagegen lediglich einen Suchbegriff angegeben, so kann das System eine Erweiterung der Suchbegriffe vorschlagen.
 Dazu greift das System auf Synonyme des eingegebenen Suchbegriffes zurück (\cite{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}).\\
 
+% Document Similarities
 In dem Paper \textit{From Word Embeddings To Document Similarities for Improved Information Retrieval in Software Engineering} von Ye et. al. wird beschrieben, wie Word Embeddings dazu verwendet werden können, um Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten herzustellen.
 Word Embeddings sind eine Datenstruktur, welche einem Wort einen Vektor in einem n-dimensionalen Raum zuweist.
 Anhand dieses Vektors kann die Ähnlichkeit zwischen Wörtern beschrieben werden.
@@ -90,6 +91,7 @@ Dieser besagt, dass Wörter, welche im gleichen Kontext verwendet werden, eine �
 Hermit wird also die Ähnlichkeit der Wörter bestimmt.
 Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte (\cite{Ye_Shen_Ma_Bunescu_Liu_2016}).\\
 
+% Traeability
 In dem Paper \textit{Information Retrieval Models for Recovering Traceability Links between Code and Documentation} verwenden Antoniol et. al. einen ähnlichen Ansatz, wie Ye et. al.
 Auch hier werden Word Embeddings verwendet um Softwareentwicklungs-Artefakte gegen den Code zu matchen.
 Hier durchlaufen die Artefakte und der Code zwei verschiedene Pipelines.
@@ -101,6 +103,7 @@ Identifier, welche mehrere Wörter unter Verwendung von CamelCase oder snake\_ca
 Anschließend werden die Identifier auf die gleiche Art und Weise normalisiert, wie die Wörter der Softwareentwicklungs-Artefakte.
 Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings (\cite{Antoniol_Canfora_Casazza_DeLucia_2000}).\\
 
+% Task Based: Classification
 In dem Paper \textit{TaskNav: Task-based Navigation of Software Documentation} von Treude et. al. geht es um die Entwicklung einer Oberfläche, welche die Suche von \textit{Tasks} ermöglicht.
 Dabei ist unter Task eine Operation im Code zu verstehen.
 Das Paper beschreibt einen Task als Verben, welche mit einem direkten Objekt oder einer Präposition in Verbindung stehen.
@@ -109,17 +112,7 @@ Die Software analysiert nun die gesamte Dokumentation und extrahiert Tasks.
 Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach ihnen suchen kann. 
 So wie die vorherigen Paper soll auch dieses Paper eine Brücke zwischen Dokumentation und Code schaffen (\cite{Treude_Sicard_Klocke_Robillard_2015}).
 
-% TODO: Das Paper ... tut dies und jenes -> Autoren tun dies und jenes / Zitat im Text
-Das Paper \textit{Estimating the recall performance of Web search engines} von Clarke und Willet misst die Qualität von Suchfunktionen des World Wide Webs anhand dessen Recalls.
-Um dies zu ermöglichen wird ein Datensatz generiert, welcher Sucheingaben beinhaltet, sowie alle relevanten Dokumente für eine Sucheingabe (\cite{Clarke_Willett_1997}).
-Die gleichen Metriken werden auch in \textit{Methods for measuring search engine performance over time} von Bar-Ilan verwendet (\cite{Bar-Ilan_2002}).
-Hier wird ebenfalls auf die Problematik der Messung des Recalls eingegangen.
-Es wird erläutert, dass zur Messung des Recalls a-priori bestimmt werden muss, welche Dokumente als relevant für eine gegebene Sucheingabe erachtet werden sollten.
-In dem Paper wird eine Referenz genannt, welche behauptet, dass die Bestimmung der Relevanz lediglich dem Nutzer mit dem Bedürfnis nach der Information überlassen ist.
-Es wird eine weitere Referenz genannt, welche behauptet, dass die Bestimmung der Relevanz durch ein Experten-Panel durchgeführt werden sollte.
-\textit{On Search Engine Evaluation Metrics} von Sirotkin betrachtet verschiedene Ansätze zur Messung der Performance von Suchfunktionen.
-Neben den bereits genannten Metriken von Precision und Recall werden andere Metriken, wie Mean Reciprocal Rank und Maximal Marginal Relevance.\\
-
+% Question Answering
 Suchfunktionen sind Document Retrieval Systeme.
 Sie liefern Dokumente, welche zu der Sucheingabe des Nutzers passen.
 Document Retrieval Systeme sind eine Unterkategorie von Information Retrieval Systemen.
@@ -131,10 +124,29 @@ Ganz im Gegensatz zu Question Answering Systemen.
 \textit{A survey for Efficient Open Domain Question Answering} von Zhang et. al. untersucht verschiedene Herangehensweisen zur Implementierung von Open-Domain Question Answering Systemen (\cite{Zhang_Chen_Xu_Cao_Chen_Cohn_Fang_2023}).
 Darüber hinaus schließt das Paper auf essenzielle Techniken für Open-Domain Question Answering.
 Open-Domain Question Answering Systeme beantworten allgemeine Fragen eines Nutzers, z.B. basierend auf Informationen von Wikipedia.
-Closed-Domain Question Answering Systeme beantworten dagegen Fragen im Kontext einer spezifischen Domäne, z.B. basierend auf unternehmensinternen Informationen.
+Closed-Domain Question Answering Systeme beantworten dagegen Fragen im Kontext einer spezifischen Domäne, z.B. basierend auf unternehmensinternen Informationen.\\
 
 % TODO: Informationen lassen sich auch anreichern: NER etc. (NLP Techniken)
 
 % TODO: Informationen lassen sich aufbereiten: RAG
 
 % TODO: closed-domain sentence transformer transformer zu verwandten arbeiten hinzufügen (fine-tuned transformers)
+
+% TODO: Das Paper ... tut dies und jenes -> Autoren tun dies und jenes / Zitat im Text
+% Messung von Performance
+% TODO: Trec und Benchmarks hinzufügen
+Für die Messung der Performance einer Suchfunktion gibt es verschiedene Metriken.
+Metriken können systemspezifisch sein, nutzerspezifisch.
+Systemspezifische Metriken messen die Performance anhand objektiver Kriterien, welche an dem System gemessen werden können.
+nutzerspezifische Metriken messen die Performance dagegen anhand subjektiver Kriterien.
+Die Messung erfordert Probanden, welche die Suchfunktion verwenden.
+Die Probanden legen die Performance der Suchfunktion anhand der zu betrachtenen subjektiven Kriterien fest.
+Clarke und Willet messen die Qualität von Suchfunktionen des World Wide Webs anhand des Recalls (\cite{Clarke_Willett_1997}).
+Um dies zu ermöglichen wird ein Datensatz generiert, welcher Sucheingaben beinhaltet, sowie alle relevanten Dokumente für eine Sucheingabe.
+Bar-Ilan verwendet die gleichen Metriken (\cite{Bar-Ilan_2002}).
+Hier wird darüber hinaus auf die Problematik der Messung des Recalls eingegangen.
+Es wird erläutert, dass zur Messung des Recalls a-priori bestimmt werden muss, welche Dokumente als relevant für eine gegebene Sucheingabe erachtet werden sollten.
+Gordon und Pathak behaupten, dass die Bestimmung der Relevanz lediglich dem Nutzer mit dem Bedürfnis nach der Information zu überlassen ist (\cite{Gordon_Pathak_1999}).
+Voorhees und Harman behaupten, dass die Bestimmung der Relevanz durch ein Experten-Panel durchgeführt werden sollte (\cite{Voorhees_Harman_2001}).
+Sirotkin betrachtet verschiedene Ansätze zur Messung der Performance von Suchfunktionen (\cite{Sirotkin_2012}).
+Neben den bereits genannten Metriken von Precision und Recall werden andere Metriken zur Messung der Performance einer Suchfunktion genannt, wie Mean Reciprocal Rank und Maximal Marginal Relevance.\\

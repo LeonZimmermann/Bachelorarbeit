@@ -1,12 +1,8 @@
 \chapter{Implementierung der neuen Suchfunktion}
 \label{chap:implementierung}
-In diesem Kapitel wird die Implementierung einer alternativen Suchfunktion zu der Suchfunktion von Confluence dargestellt.
-Diese Implementierung wird anschließend mithilfe des erläuterten Versuchsaufbaus mit der bestehenden Suche von Confluence verglichen.
+In diesem Kapitel wird die Implementierung der neuen Suchfunktion dargestellt.
 Die Implementierung verwendet eine Vektordatenbank, welche eine semantische Suche ermöglicht.
-Das Filtern nach bestimmten Properties ermöglicht die Vektordatenbank ebenfalls.
 Es wird die Vektordatenbank Weaviate verwendet.
-Der Vergleich zeigt, ob eine semantische Suchfunktion \textit{besser} ist als die Confluence-Suche.
-
 % TODO: Weaviate Benchmarks darstellen und damit begründen, dass die semantische Suche besser sein sollte
 
 \section{Aufsetzen der Vektordatenbank Weaviate}
@@ -14,7 +10,7 @@ Für das Aufsetzen von Weaviate werden zwei Komponenten benötigt.
 Zum einen die Vektordatenbank selbst.
 Zum anderen ein Transformer, welcher Text entgegennimmt, und diese in Vektoren umwandelt, sodass diese in der Datenbank gespeichert werden können.
 Um die beiden Komponenten aufzusetzen wird Docker verwendet.
-Das entsprechende docker-compose-yml File ist im Anhang zu finden.
+Das entsprechende docker-compose.yml File ist im Anhang zu finden.
 Hier werden die beiden Komponenten definiert.
 Unter \textit{t2v-transformers} wird der Transformer konfiguriert.
 Es wird das Image eines bereits vortrainierten Transformers verwendet.
@@ -22,6 +18,8 @@ Unter \textit{weaviate} wird die Datenbank konfiguriert.
 Hier wird mithilfe von den Environment-Variablen \textit{$DEFAULT\_VECTORIZER\_MODULE$}, \textit{$ENABLE\_MODULES$} und \textit{$TRANSFORMERS\_INFERENCE\_API$} konfiguriert, welcher Transformer verwendet werden soll.
 So wird konfiguriert, dass der Transformer der anderen Komponente verwendet werden soll.\\
 
+Neben den beiden Docker-Containern für die semantische Suche wird eine Spring Boot Anwendung in einem Docker Container mitdeployt.
+Die Spring Boot Anwendung verwendet Kotlin und Gradle.
 Mithilfe der Dependency \textit{io.weaviate:client:4.0.1} wird die Client API von Weaviate verwendet.
 So wird nun eine Verbindung zu der Vektordatenbank aufgebaut.
 Diese beinhaltet zu diesem Zeitpunkt noch keine Daten.
@@ -35,11 +33,10 @@ Außerdem wird als Vectorizer \textit{text2vec-transformers} konfiguriert.\\
 \section{Einspielen der Daten in Weaviate}
 \label{chap:einspielen-der-daten-in-weaviate}
 Um nun die Daten aus Confluence in Weaviate einzuspielen, werden zuerst die Daten aus Confluence exportiert.
-Beim Export von Confluence Seiten werden HTML-Dateien generiert.
+Beim Export von Confluence-Seiten werden HTML-Dateien generiert.
 Es werden keine CSS-, JavaScript- oder Bilddateien generiert.
-Hierdurch entstehen bei der Durchführung der Studie Probleme, auf welche später eingegangen wird.
 Die HTML-Dateien werden preprocessed, um dem zuvor definierten Schema zu entsprechen.
-Es werden zuerst mithilfe von regulären Ausdrücken alle Inhalte von h1-, h2- und p-Tags herausgefiltert.
+Es werden zuerst mithilfe eines Abstract Syntax Trees alle Inhalte von h1-, h2- und p-Tags herausgefiltert.
 Anschließend werden Punctuations und Stopwords entfernt und die Inhalte druchlaufen einen Tokenizer und einen Stemmer.
 Punctuations sind Zeichen, wie die folgenden: \textit{.,;:}.
 Stopwords sind Wörter, welche für einen Leser notwendig sind, aber für die Verarbeitung durch einen Algorithmus als unwichtig erachtet werden (\cite{Sarica_Luo_2021}).
@@ -50,25 +47,18 @@ Aus einem Text, wie \textit{das deployment erfolgt durch ein bash-skript} wird a
 \(["das", "deployment", "erfolgt", "durch", "ein", "bash", "skript"]\).\\
 
 Ein Stemmer bestimmt den Wortstamm für die einzelnen Wörter auf Basis von Grammatikregeln.
-Konkret verwendet die Software den Porter-Stemmer-Algorithmus.
+Die Software verwendet den Porter-Stemmer-Algorithmus.
 Aus dem Wort \textit{deployment} wird dadurch beispielsweise \textit{deploy}.
 Duplikate von Wörtern werden anschließend verworfen.
-Nachdem die Inhalte dieses Preprocessing durchlaufen haben, werden sie in die Datenbank eingespielt.\\
+Alle Inhalte, welche in h1-Tags stehen, werden konkateniert und einem Datenfeld der Vektordatenbank gespeichert.
+Das gleiche gilt für die übrigen Tags.
+Nachdem die Inhalte das Preprocessing durchlaufen haben, werden sie in die Datenbank eingespielt.\\
 
 In \myRef{Kapitel}{chap:vektorindizes} wurde bereits von Performancegründen gesprochen, aus denen das Preprocessing durchgeführt wird.
-Da nun die einzelnen Schritte des Preprocessings erklärt wurde, kann auch erklärt werden, warum das Preprocessing die Performance beim indizieren erhöht.
+Da nun die einzelnen Schritte des Preprocessings erklärt wurden, kann auch erklärt werden, warum das Preprocessing die Performance beim indizieren erhöht.
 Zuallererst werden viele Wörter gänzlich verworfen, weil sie Stopwords sind.
 Durch den Stemmer werden anschließend ähnliche Wörter zusammengruppiert.
 Die Wörter \textit{Heizung} und \textit{heizen} stammen beide vom gleichen Wortstamm \textit{heiz}.
 Das bedeutet, dass aus zwei verschiedenen Wörtern, welche beide indiziert werden müssen, ein einziges Wort gemacht wird.
 Denn am Ende werden Duplikate, wie bereits erwähnt, verworfen.
 Die Anzahl der Wörter, welche indiziert werden müssen, wird dadurch reduziert, und damit auch die Last auf dem Transformer, welche die Vektoren für die Wörter berechnen muss.
-
-\section{Verwendung der Suchfunktion von Weaviate}
-Weaviate verwendet eine API, welche GraphQL queries entgegennimmt.
-Um eine Suche durchzuführen muss ein GET-Request durchgeführt werden.
-Nun muss angegeben werden, welche Klasse aus der Datenbank abgefragt werden soll.
-In diesem Fall \textit{Document}.
-
-\subsection{Verwendung der Semantische Suche}
-Um die semantische Suche zu verwenden, muss die NearText Funktion verwendet werden.

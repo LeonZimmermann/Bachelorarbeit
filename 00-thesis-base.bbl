@@ -318,6 +318,44 @@
       \verb 10.1002/smr.567
       \endverb
     \endentry
+    \entry{Gordon_Pathak_1999}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=144fe329655f103a2d477045bca6cf7a}{%
+           family={Gordon},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44149e6502f96255b14d8b6039b92d1e}{%
+           family={Pathak},
+           familyi={P\bibinitperiod},
+           given={Praveen},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e1ff936310df245d0615977978e69ef5}
+      \strng{fullhash}{e1ff936310df245d0615977978e69ef5}
+      \strng{bibnamehash}{e1ff936310df245d0615977978e69ef5}
+      \strng{authorbibnamehash}{e1ff936310df245d0615977978e69ef5}
+      \strng{authornamehash}{e1ff936310df245d0615977978e69ef5}
+      \strng{authorfullhash}{e1ff936310df245d0615977978e69ef5}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Processing \& Management}
+      \field{number}{2}
+      \field{title}{Finding information on the World Wide Web: The Retrieval Effectiveness of search engines}
+      \field{volume}{35}
+      \field{year}{1999}
+      \field{pages}{141\bibrangedash 180}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1016/s0306-4573(98)00041-7
+      \endverb
+    \endentry
     \entry{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=bf2b8c2f3ce5fd87221ecdc94305c848}{%
@@ -771,6 +809,44 @@
       \field{year}{2015}
       \verb{doi}
       \verb 10.1109/icse.2015.214
+      \endverb
+    \endentry
+    \entry{Voorhees_Harman_2001}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7becd895fd53f7a6c788aa2e0fcf6528}{%
+           family={Voorhees},
+           familyi={V\bibinitperiod},
+           given={E\bibnamedelima M},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52d60237ee86d898efb424e047dccf0a}{%
+           family={Harman},
+           familyi={H\bibinitperiod},
+           given={D\bibnamedelima K},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2367963b4b51b31306d39a4f3ff7cb83}
+      \strng{fullhash}{2367963b4b51b31306d39a4f3ff7cb83}
+      \strng{bibnamehash}{2367963b4b51b31306d39a4f3ff7cb83}
+      \strng{authorbibnamehash}{2367963b4b51b31306d39a4f3ff7cb83}
+      \strng{authornamehash}{2367963b4b51b31306d39a4f3ff7cb83}
+      \strng{authorfullhash}{2367963b4b51b31306d39a4f3ff7cb83}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{The Ninth text retrieval conference (TREC-9)}
+      \field{year}{2001}
+      \verb{doi}
+      \verb 10.6028/nist.sp.500-249
+      \endverb
+      \verb{urlraw}
+      \verb http://trec.nist.gov/pubs/trec9/papers/overview_9.pdf
+      \endverb
+      \verb{url}
+      \verb http://trec.nist.gov/pubs/trec9/papers/overview_9.pdf
       \endverb
     \endentry
     \entry{Wang_Reimers_Gurevych_2021}{article}{}
