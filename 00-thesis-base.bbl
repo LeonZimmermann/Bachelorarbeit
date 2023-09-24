@@ -414,6 +414,38 @@
       \verb 10.1109/icse.2013.6606630
       \endverb
     \endentry
+    \entry{Harris_1954}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c93d2fea5cc5e59f6d92c0cfb5ba20a8}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Zellig\bibnamedelima S.},
+           giveni={Z\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c93d2fea5cc5e59f6d92c0cfb5ba20a8}
+      \strng{fullhash}{c93d2fea5cc5e59f6d92c0cfb5ba20a8}
+      \strng{bibnamehash}{c93d2fea5cc5e59f6d92c0cfb5ba20a8}
+      \strng{authorbibnamehash}{c93d2fea5cc5e59f6d92c0cfb5ba20a8}
+      \strng{authornamehash}{c93d2fea5cc5e59f6d92c0cfb5ba20a8}
+      \strng{authorfullhash}{c93d2fea5cc5e59f6d92c0cfb5ba20a8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WORD}
+      \field{number}{2–3}
+      \field{title}{Distributional structure}
+      \field{volume}{10}
+      \field{year}{1954}
+      \field{pages}{146\bibrangedash 162}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1080/00437956.1954.11659520
+      \endverb
+    \endentry
     \entry{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}{article}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=b24392ebfb2c0a35979fc689c389c649}{%

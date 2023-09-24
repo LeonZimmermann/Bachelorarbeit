@@ -58,41 +58,37 @@ Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdate
 \end{itemize}
 
 \section{Verwandte Arbeiten}
-% TODO: Themenzentrierter Aufbau
-
 Es gibt einige Arbeiten, welche die gleichen oder sehr ähnliche Probleme adressieren.
 Zum einen sind dies Arbeiten, welche verschiedene Arten von Suchfunktionen untersuchen.
 Andere Arbeiten untersuchen, wie sich die Qualität einer Suchfunktion messen lässt.
 Nochmals andere Arbeiten untersuchen \textit{Downstream-Tasks} von Suchfunktionen, also Algorithmen, welche das Ergebnis einer Suche verarbeiten, um die gleiche oder eine andere Anforderung an ein System umzusetzen.\\
 
-% Welche Arten gibt es? NLP-Techniken, RAG, Finetuned Transformers, Traceability, Task-zentriert
-
-So wird in \textit{Automatic Query Reformulations for Text Retrieval in Software Engineering} von Haiduc et. al. ein System zur Verbesserung von Suchanfragen vorgeschlagen.
-Ausgangspunkt für das Paper ist das Problem der Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten.
+% Traceability
 Traceability bedeutet, dass sich von einer Stelle im Code, auf die entsprechenden Stellen in anderen Artefakten zurückschließen lässt.
 Ein Anwendungsfall für eine solche Traceability-Funktionalität ist \textit{Feature Location}, also das Finden der Spezifikation eines Features, wenn nur der Code vorhanden ist.
-Das System, welches von Haiduc et. al. vorgeschlagen wird, verwendet Query Reformulations, um die Traceability herzustellen.
+Analog dazu ist \textit{Bug Localization} ein Anwendungsfall zum Auffinden von Stellen im Code, welche mit einem Bug zusammenhängen.
+Zur Herstellung von Traceability zwischen Code und Dokumentation gibt es verschiedene Ansätze.
+Haiduc et. al. schlagen ein System zur Verbesserung von Suchanfragen vorgeschlagen (\cite{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}).
+Das System verwendet Query Reformulations, um die Traceability herzustellen.
 Query Reformulation bedeutet, dass das System den Softwareentwickler bei der Eingabe einer Suchanfrage zur Suche nach den passenden Artefakten unterstützt.
 Dazu gibt der Softwareentwickler zunächst eine Suchanfrage ein, und markiert diejenigen Ergebnisse, welche am relevantesten für ihn sind.
 Auf Grundlage der gewählten Ergebnisse und mithilfe eines Machine Learning Algorithmus werden nun Vorschläge für eine verbesserte Suchanfrage gemacht.
 Dabei gibt es verschiedene Strategien.
 Wenn der Softwareentwickler zu Beginn eine sehr lange Suchanfrage eingegeben hat, dann kann das System eine Reduktion der Suchanfrage vorschlagen.
 Hat der Softwareentwickler dagegen lediglich einen Suchbegriff angegeben, so kann das System eine Erweiterung der Suchbegriffe vorschlagen.
-Dazu greift das System auf Synonyme des eingegebenen Suchbegriffes zurück (\cite{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}).\\
+Dazu greift das System auf Synonyme des eingegebenen Suchbegriffes zurück.\\
 
-% Document Similarities
-In dem Paper \textit{From Word Embeddings To Document Similarities for Improved Information Retrieval in Software Engineering} von Ye et. al. wird beschrieben, wie Word Embeddings dazu verwendet werden können, um Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten herzustellen.
+Ye et. al. beschreiben, wie Word Embeddings dazu verwendet werden können, um Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten herzustellen.
 Word Embeddings sind eine Datenstruktur, welche einem Wort einen Vektor in einem n-dimensionalen Raum zuweist.
 Anhand dieses Vektors kann die Ähnlichkeit zwischen Wörtern beschrieben werden.
 Ähnliche Wörter haben eine geringe Distanz im n-dimensionalen Raum.
 Unähnliche Wörter haben eine hohe Distanz.
-Der Algorithmus, welcher die Ähnlichkeit der Wörter bestimmt, macht Gebrauch von der Distributional Hypothesis. % TODO: Primärquelle fehlt
+Der Algorithmus, welcher die Ähnlichkeit der Wörter bestimmt, macht Gebrauch von der Distributional Hypothesis (\cite{Harris_1954}).
 Dieser besagt, dass Wörter, welche im gleichen Kontext verwendet werden, eine ähnliche Semantik besitzen.
 Hermit wird also die Ähnlichkeit der Wörter bestimmt.
 Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte (\cite{Ye_Shen_Ma_Bunescu_Liu_2016}).\\
 
-% Traeability
-In dem Paper \textit{Information Retrieval Models for Recovering Traceability Links between Code and Documentation} verwenden Antoniol et. al. einen ähnlichen Ansatz, wie Ye et. al.
+Antoniol et. al. verwenden einen ähnlichen Ansatz, wie Ye et. al.
 Auch hier werden Word Embeddings verwendet um Softwareentwicklungs-Artefakte gegen den Code zu matchen.
 Hier durchlaufen die Artefakte und der Code zwei verschiedene Pipelines.
 Die Wörter der Artefakte in natürlicher Sprache werden in lowercase umgewandelt.
@@ -101,18 +97,17 @@ Zuletzt werden Flexionen entfernt.
 Aus dem Code werden zunächst Identifier extrahiert.
 Identifier, welche mehrere Wörter unter Verwendung von CamelCase oder snake\_case beinhalten, werden in die einzelnen Wörter aufgeteilt.
 Anschließend werden die Identifier auf die gleiche Art und Weise normalisiert, wie die Wörter der Softwareentwicklungs-Artefakte.
-Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings (\cite{Antoniol_Canfora_Casazza_DeLucia_2000}).\\
-
-% Task Based: Classification
-In dem Paper \textit{TaskNav: Task-based Navigation of Software Documentation} von Treude et. al. geht es um die Entwicklung einer Oberfläche, welche die Suche von \textit{Tasks} ermöglicht.
+Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings (\cite{Antoniol_Canfora_Casazza_DeLucia_2000}).
+Treude et. al. entwickeln eine Oberfläche, welche die Suche von \textit{Tasks} ermöglicht.
+Damit soll ebenfalls Traceability zwischen Code und Dokumentation hergestellt werden.
 Dabei ist unter Task eine Operation im Code zu verstehen.
-Das Paper beschreibt einen Task als Verben, welche mit einem direkten Objekt oder einer Präposition in Verbindung stehen.
+Sie beschreiben einen Task als Verben, welche mit einem direkten Objekt oder einer Präposition in Verbindung stehen.
 Die Autoren nennen die Phrasen \textit{get iterator} und \textit{get iterator for collection} als Beispiele.
 Die Software analysiert nun die gesamte Dokumentation und extrahiert Tasks.
-Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach ihnen suchen kann. 
-So wie die vorherigen Paper soll auch dieses Paper eine Brücke zwischen Dokumentation und Code schaffen (\cite{Treude_Sicard_Klocke_Robillard_2015}).
+Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach ihnen suchen kann (\cite{Treude_Sicard_Klocke_Robillard_2015}).\\
 
 % Question Answering
+Neben der Traceability zwischen Code und Dokumentation ist das Question Answering ein Ansatz zur Verbesserung von Suchfunktionen.
 Suchfunktionen sind Document Retrieval Systeme.
 Sie liefern Dokumente, welche zu der Sucheingabe des Nutzers passen.
 Document Retrieval Systeme sind eine Unterkategorie von Information Retrieval Systemen.
@@ -121,18 +116,14 @@ Im Fall einer Suchfunktion werden Dokumente geliefert, welche diese Information 
 Mithilfe der Dokumente ist der Ort, an dem sich die, vom Nutzer gewünschte, Information befindet eingegrenzt.
 Nichtsdestotrotz muss der Nutzer aus dieser Eingrenzung die gewünschte Information manuell extrahieren.
 Ganz im Gegensatz zu Question Answering Systemen.
-\textit{A survey for Efficient Open Domain Question Answering} von Zhang et. al. untersucht verschiedene Herangehensweisen zur Implementierung von Open-Domain Question Answering Systemen (\cite{Zhang_Chen_Xu_Cao_Chen_Cohn_Fang_2023}).
-Darüber hinaus schließt das Paper auf essenzielle Techniken für Open-Domain Question Answering.
+Zhang et. al. untersuchen verschiedene Herangehensweisen zur Implementierung von Open-Domain Question Answering Systemen (\cite{Zhang_Chen_Xu_Cao_Chen_Cohn_Fang_2023}).
 Open-Domain Question Answering Systeme beantworten allgemeine Fragen eines Nutzers, z.B. basierend auf Informationen von Wikipedia.
 Closed-Domain Question Answering Systeme beantworten dagegen Fragen im Kontext einer spezifischen Domäne, z.B. basierend auf unternehmensinternen Informationen.\\
-
-% TODO: Informationen lassen sich auch anreichern: NER etc. (NLP Techniken)
-
-% TODO: Informationen lassen sich aufbereiten: RAG
-
 % TODO: closed-domain sentence transformer transformer zu verwandten arbeiten hinzufügen (fine-tuned transformers)
 
-% TODO: Das Paper ... tut dies und jenes -> Autoren tun dies und jenes / Zitat im Text
+% TODO: Informationen lassen sich auch anreichern: NER etc. (NLP Techniken)
+% TODO: Informationen lassen sich aufbereiten: RAG
+
 % Messung von Performance
 % TODO: Trec und Benchmarks hinzufügen
 Für die Messung der Performance einer Suchfunktion gibt es verschiedene Metriken.
