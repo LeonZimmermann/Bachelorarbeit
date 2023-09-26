@@ -1,4 +1,5 @@
 \chapter{Die Technologie von Confluence}
+\label{chap:technologie-von-confluence}
 Die Confluence Suche verwendet laut Dokumentation Apache Lucene.\footnote{\url{https://confluence.atlassian.com/doc/ranking-of-search-results-1188406620.html}}
 Apache Lucene ist eine Bibliothek, welche Indizierungs- und Suchfeatures umfasst.
 Dabei verwendet Apache einen Volltext-Index und bietet Vector Space Models und BM25 an, um nach passenden Dokumenten zu suchen.
@@ -143,7 +144,6 @@ Die Boolean Search kann auch eine Phrase, wie bei der Phrase Search, beinhalten:
 In diesem Beispiel werden nur Dokumente als Ergebnis nur angezeigt, wenn sie den gesamten String \textit{Dokumentation von Software} enthalten, sowie das Keyword \textit{Angular}.
 Bei einer Boolean Search können die boolschen Operatoren \textit{AND}, \textit{OR}, \textit{NOT} beliebig kombiniert werden.\\
 
-% TODO: Möglich durch Apache Lucene? Ja, mit dem Boolean Model
 Eine Field Search sucht Dokumente anhand von Attributen.
 Der Nutzer kann diese Attribute auswählen.
 Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.

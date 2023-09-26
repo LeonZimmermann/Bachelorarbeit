@@ -356,6 +356,70 @@
       \verb 10.1016/s0306-4573(98)00041-7
       \endverb
     \endentry
+    \entry{Gururangan_Marasović_Swayamdipta_Lo_Beltagy_Downey_Smith_2020}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=d1d3c4c5376249f5a5ed8c43c6585e47}{%
+           family={Gururangan},
+           familyi={G\bibinitperiod},
+           given={Suchin},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4af36fd5ea1c6068988c8ff0efce7a84}{%
+           family={Marasović},
+           familyi={M\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17a53fd167ccca7245cb9e8082ccb3a7}{%
+           family={Swayamdipta},
+           familyi={S\bibinitperiod},
+           given={Swabha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=647a3130d4b4f62c11d9a9f9a15d1af1}{%
+           family={Lo},
+           familyi={L\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad932527c4d078ff96e5f0b189c66c61}{%
+           family={Beltagy},
+           familyi={B\bibinitperiod},
+           given={Iz},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa7715d3fe113b4856fbe5933ea9c7aa}{%
+           family={Downey},
+           familyi={D\bibinitperiod},
+           given={Doug},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76caee508bed7d0995f7c21cc5e6208c}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Noah\bibnamedelima A.},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{381ebaef6893d7af0b30916478dbbf80}
+      \strng{fullhash}{bf75487d1965aa9381775eb548534a95}
+      \strng{bibnamehash}{bf75487d1965aa9381775eb548534a95}
+      \strng{authorbibnamehash}{bf75487d1965aa9381775eb548534a95}
+      \strng{authornamehash}{381ebaef6893d7af0b30916478dbbf80}
+      \strng{authorfullhash}{bf75487d1965aa9381775eb548534a95}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics}
+      \field{title}{Don’t stop pretraining: Adapt language models to domains and tasks}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.18653/v1/2020.acl-main.740
+      \endverb
+    \endentry
     \entry{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=bf2b8c2f3ce5fd87221ecdc94305c848}{%
@@ -965,6 +1029,36 @@
       \field{year}{2022}
       \verb{doi}
       \verb 10.18653/v1/2022.naacl-main.168
+      \endverb
+    \endentry
+    \entry{Weaviate_Benchmark}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2a1e8d184d8101d9d99e3d491cd7be71}{%
+           family={Weaviate},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a1e8d184d8101d9d99e3d491cd7be71}
+      \strng{fullhash}{2a1e8d184d8101d9d99e3d491cd7be71}
+      \strng{bibnamehash}{2a1e8d184d8101d9d99e3d491cd7be71}
+      \strng{authorbibnamehash}{2a1e8d184d8101d9d99e3d491cd7be71}
+      \strng{authornamehash}{2a1e8d184d8101d9d99e3d491cd7be71}
+      \strng{authorfullhash}{2a1e8d184d8101d9d99e3d491cd7be71}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Weaviate vector database RSS}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://weaviate.io/developers/weaviate/benchmarks/ann
+      \endverb
+      \verb{url}
+      \verb https://weaviate.io/developers/weaviate/benchmarks/ann
       \endverb
     \endentry
     \entry{Ye_Shen_Ma_Bunescu_Liu_2016}{article}{}

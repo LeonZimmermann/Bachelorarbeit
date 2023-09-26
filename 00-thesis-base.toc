@@ -26,13 +26,14 @@
 \contentsline {section}{\numberline {4.5}Wahl der Suchfunktion}{19}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Weitere Ansätze}{20}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Retrieval Augmented Generation}{20}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Semantische Netze}{20}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.2}Semantische Netze}{21}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Document Classification und Filter verwenden}{21}{subsection.4.6.3}%
 \contentsline {subsection}{\numberline {4.6.4}Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}{21}{subsection.4.6.4}%
 \contentsline {subsection}{\numberline {4.6.5}Inhaltsverzeichnisbezogen durchsuchen}{22}{subsection.4.6.5}%
 \contentsline {chapter}{\numberline {5}Implementierung der neuen Suchfunktion}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Aufsetzen der Vektordatenbank Weaviate}{23}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Einspielen der Daten in Weaviate}{23}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Die Konfiguration der Suchfunktionen}{24}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Evaluationsmethoden und -Kriterien}{25}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Precision, Recall und F-Maß}{25}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Versuchsaufbau}{26}{section.6.2}%
@@ -48,9 +49,9 @@
 \contentsline {section}{\numberline {7.3}Diskussion des Studienaufbaus}{33}{section.7.3}%
 \contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{34}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Zusammenfassung}{34}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{34}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Literaturverzeichnis}{35}{chapter.9}%
-\contentsline {chapter}{\numberline {A}Anhang}{38}{chapter.10}%
-\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{38}{section.10.1}%
-\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{39}{section.10.2}%
+\contentsline {section}{\numberline {8.2}Ausblick}{35}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Literaturverzeichnis}{36}{chapter.9}%
+\contentsline {chapter}{\numberline {A}Anhang}{39}{chapter.10}%
+\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{39}{section.10.1}%
+\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{40}{section.10.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

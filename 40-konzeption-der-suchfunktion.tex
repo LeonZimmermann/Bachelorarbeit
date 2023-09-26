@@ -1,4 +1,5 @@
 \chapter{Konzeption der Suchfunktion}
+\label{chap:konzeption-der-suchfunktion}
 % TODO: Ergänzen
 
 \subsection{Vektor-Indizierung}
@@ -150,9 +151,10 @@ Die Distanz zwischen zwei Einträgen in diesem Raum beschreibt dessen Ähnlichke
 Genau diese Informationen nutzen semantische Suchen.
 
 \section{Wahl der Suchfunktion}
+% TODO: Roter Faden fehlt in diesem Kapitel. Kurze Einleitung zur Darstellung der Argumentation und Fazit hinzufügen
+
 Die vergangenen Kapitel haben verschiedene Indizierungs- und Suchalgorithmen dargestellt.
-Jeder dieser Algorithmen hat Vor- und Nachteile.
-Diese werden in diesem Kapitel betrachtet, um die Entscheidung für die verwendeten Technologien der neuen Suchfunktion nachvollziehbar zu machen.\\
+Diese werden nun betrachtet, um darzustellen, warum semantische Suche auf Basis von Sentence Transformern eine sinnvolle alternative zu der bestehenden Confluence Suche ist.\\
 
 Die Confluence Suche verwendet laut Dokumentation Apache Lucene.\footnote{\url{https://confluence.atlassian.com/doc/ranking-of-search-results-1188406620.html}}
 Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert.\footnote{\url{https://lucene.apache.org/core/2_9_4/scoring.html}}
@@ -170,7 +172,13 @@ Dazu wird ein Dense Passage Retriever entwickelt.
 Ein Dense Passage Retriever bestimmt den Textabschnitt eines gegebenen Textes, welcher mit größter Wahrscheinlichkeit eine Antwort auf eine gestellte Frage beinhaltet.
 Der Input für einen Dense Passage Retriever sind Dokumente, welche zuvor mithilfe eines Scoring Algorithmus aus einem Index extrahiert wurden.
 Das Paper zeigt, dass das entwickelte Passage Retrieval System besser darin ist relevante Textabschnitte zu finden als der BM25 Algorithmus. 
-Das Paper nennt die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber BM25 und auch TF-IDF.
+Das Paper nennt die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber BM25 und auch TF-IDF.\\
+
+Weaviate ist eine Vektordatenbank, welche Sentence Transformer nutzt, um Dokumente zu indizieren, und HNSW als Scoring-Algorithmus zur Ermittlung des passendsten Dokumentes.
+Die Performance des Scoring Algorithmus wurde durch Weaviate anhand von Benchmarks überprüft.
+Dabei wird der Recall für das erste Element, die ersten zehn Elemente und die ersten 100 Elemente gemessen.
+Zusätzlich ist angegeben, wie Weaviate konfiguriert ist und welcher Datensatz verwendet wird.
+Die Benchmark zeigt, dass HNSW für den Datensatz SIFT1M einen Recall-Wert von 90.91\% besitzt (\cite{Weaviate_Benchmark}).
 
 Neben den direkten Vorteilen einer semantischen Suche gegenüber Suchfunktionen, wie eine Keyword Search, gibt es weitere indirekte Vorteile eine semantischen Suche auf Grundlage von Vector Space Models.
 Vector Space Models sind Multimodal.

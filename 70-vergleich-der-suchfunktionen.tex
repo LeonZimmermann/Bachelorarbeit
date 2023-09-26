@@ -30,6 +30,11 @@ Es wird ebenfalls sichergestellt, dass die Datensätze der Suchfunktionen identi
 
 Für die Studie wurde ein Datensatz generiert, welcher Dokumente beinhaltet, welche durch die Suchfunktion gefunden werden sollen.
 Der Datensatz wurde aus einem realen Softwareentwicklungs-Projekt generiert, indem ein Teil der tatsächlichen Confluence-Seiten exportiert wurde.
+Die Software soll im Gesundheitswesen eingesetzt werden.
+Das bedeutet, dass die Wissensdatenbank Fachbegriffe aus dem Gesundheitswesen beinhaltet.
+Darüber hinaus beinhaltet die Wissensdatenbank Definitionen, welche sich spezifisch auf das Softwareprojekt beziehen.
+Daher handelt es sich bei dem Datensatz um eine Closed-Domain, also ein Datensatz, welcher spezifisch aus einer bestimmten Domäne generiert wurde.
+Das steht im Gegensatz zu einem Open-Domain Datensatz, welcher Daten beinhaltet, welche allgemein gültig sind, und nicht nur in einer bestimmte Domäne.
 Für jedes Dokument sind eine oder mehrere Sucheingaben definiert, mit dessen Eingabe das Dokument gefunden werden soll.
 Darüber hinaus ist für jedes Dokument festgehalten, zu welchem Anwendungsfall sich dieses zuordnen lässt.
 \myRef{Tabelle}{ausschnitt-studie-ergebnisse} zeigt einen Ausschnitt aus den Daten, welche durch die Studie generiert wurde.
@@ -147,13 +152,10 @@ Lediglich die semantische Suche hat sich bei der zweiten Konfiguration verbesser
 Das bedeutet, dass sich der gezeigte Effekt der Verbesserung der Suchfunktion tatsächlich mit der Hypothese begründen lässt, dass die Länge der Strings ein zu berücksichtigender Faktor ist.
 Da die semantische Suche weiterhin schlechter ist als die BM25-Suche, scheint es aber weitere Faktoren zu geben, welche zu berücksichtigen sind.\\
 
-% TODO: Weaviate Benchmarks diskutieren
-
 Eine mögliche Erklärung für die weiterhin schlechten Ergebnisse der semantischen Suche ist die Tatsache, dass es sich bei dem verwendeten Datensatz um eine Closed-Domain handelt.
 Das bedeutet, dass der Textcorpus Fachbegriffe beinhaltet, welche der Transformer mit hoher Wahrscheinlichkeit nicht kennt.
 Dementsprechend schwer fällt es dem Transformer folglich, passende Vektoren zu generieren, welche die Semantik von den domänenspezifischen Fachbegriffen abbilden.
-Die Paper \textit{GPL: Generative Pseudo Labeling for Unsupervised Domain Adaptation of Dense Retrieval} (\cite{Wang_Thakur_Reimers_Gurevych_2022} von Wang et. al. und \textit{TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning}\cite{Wang_Reimers_Gurevych_2021}) von Wang et. al. untersuchen Möglichkeiten, um Sentence Transformer an eine Domäne anzupassen.
-Dieser Vorgang wird als Domain Adaption bezeichnet.
+In \myRef{Kapitel}{chap:ausblick} wird auf Ansätze in der Literatur eingegangen, welche dieses Problem versuchen zu lösen.
 
 \section{Diskussion des Studienaufbaus}
 Wie bereits beschrieben gibt der Recall an, wie viele der relevanten Dokumente gefunden wurden.
@@ -176,5 +178,3 @@ Um für eine Studie a priori Sucheingaben zu bestimmen, und alle Dokumente, welc
 Da der Datensatz mehrere hundert Dokumente beinhaltet ist dies nicht möglich.
 Und auch wenn der gesamte Datensatz bekannt wäre, dann müsste trotzdem eine Entscheidung darüber getroffen werden, welche Dokumente relevant sind und welche nicht.
 Das wäre wiederum eine subjektive Entscheidung, sodass die Validität des Ergebnisses anzweifelbar wäre.
-
-% TODO: Question Answering (Frage: was sind die dateiformate für den auftragseingang?/was für dateien gebe ich in den auftragseingang?, Antwort: excel - dateien oder csv - dateien)

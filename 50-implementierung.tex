@@ -3,7 +3,6 @@
 In diesem Kapitel wird die Implementierung der neuen Suchfunktion dargestellt.
 Die Implementierung verwendet eine Vektordatenbank, welche eine semantische Suche ermöglicht.
 Es wird die Vektordatenbank Weaviate verwendet.
-% TODO: Weaviate Benchmarks darstellen und damit begründen, dass die semantische Suche besser sein sollte
 
 \section{Aufsetzen der Vektordatenbank Weaviate}
 Für das Aufsetzen von Weaviate werden zwei Komponenten benötigt.
@@ -62,3 +61,6 @@ Die Wörter \textit{Heizung} und \textit{heizen} stammen beide vom gleichen Wort
 Das bedeutet, dass aus zwei verschiedenen Wörtern, welche beide indiziert werden müssen, ein einziges Wort gemacht wird.
 Denn am Ende werden Duplikate, wie bereits erwähnt, verworfen.
 Die Anzahl der Wörter, welche indiziert werden müssen, wird dadurch reduziert, und damit auch die Last auf dem Transformer, welche die Vektoren für die Wörter berechnen muss.
+
+\section{Die Konfiguration der Suchfunktionen}
+% TODO: Auf Benchmark beziehen und erläutern, wie Weaviate konfiguriert war

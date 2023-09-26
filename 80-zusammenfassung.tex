@@ -1,10 +1,54 @@
 \chapter{Zusammenfassung und Ausblick}
-% TODO: Ergänzen
+In dem letzten Kapitel wurde der Vergleich zwischen der Confluence-Suche und der neuen Suchfunktion durchgeführt.
+Die Ergebnisse sind ebenfalls diskutiert worden.
+Dieses Kapitel die fasst die Arbeit zusammen und stellt einen Ausblick dar.
 
 \section{Zusammenfassung}
-% TODO: Ergänzen
+Zweck der Arbeit war die Konzeption einer neuen Suchfunktion, welche nach festgelegten Kriterien besser ist als die Confluence-Suchfunktionen.
+Dazu wurden in \myRef{Kapitel}{chap:anwendungsfaelle} Anwendungsfälle definiert, anhand dessen die Nutzung der Suchfunktionen konkretisiert wurde.
+Dies hat den Rahmen geschaffen, um später einen Vergleich der beiden Suchfunktionen durchführen zu können.
+Nach der Definition der Anwendungsfälle, wurde die Technologie der Suchfunktion von Confluence in \myRef{Kapitel}{chap:technologie-von-confluence} erläutert.
+Damit wurde ein besseres Verständnis für die Suchfunktion von Confluence geschaffen.
+Dieses bessere Verständnis war die Grundlage für die Konzeption einer neuen Suchfunktion in \myRef{Kapitel}{chap:konzeption-der-suchfunktion}.
+Denn das Verständnis war notwendig, um Schwachstellen in der Confluence-Suche zu identifizieren und Verbesserungspotenziale zu verstehen.
+In \myRef{Kapitel}{chap:konzeption-der-suchfunktion} wurde zuerst die Technologie der neuen Suchfunktion erläutert.
+Während Confluence einen Volltext-Index verwendet, verwendet die neue Suchfunktion Sentence Transformer für die Indizierung.
+Dazu wird eine Vektordatenbank benötigt, sowie der Scoring Algorithmus HNSW.
+Auf Grundlage der Verbesserungspotenziale der Confluence-Suche und der dargestellten alternativen Technologien, wurde die neue Suchfunktion abgeleitet.
+Dazu wurde argumentiert, warum sich die dargestellten Technologien als eine Alternative zu der bestehenden Confluence-Suche eignen sollen.
+% TODO: Welche Quellen sind das:
+Es wurde anhand verschiedener Quellen belegt, dass eine semantische Suche auf Basis von Sentence Transformers gute Ergebnisse für Open-Domain Datensätze erzielen. 
+Dann wurde die Implementierung der neuen Suchfunktion in \myRef{Kapitel}{chap:implementierung} erklärt.\\
+
+Nachdem die neue Suchfunktion implementiert wurde, wurden die Precision-Werte für einen angefertigten Datensatz zwischen den beiden Suchfunktionen verglichen.
+Das nötige Wissen für diesen Vergleich wurde in \myRef{Kapitel}{chap:evaluationsmethoden} erläutert.
+Es wurde ebenfalls auf alternative Möglichkeiten zur Messung der Performance von Suchfunktionen eingegangen.
+Der angefertigte Datensatz leitete sich dabei aus den dargestellten Anwendungsfällen aus \myRef{Kapitel}{chap:anwendungsfaelle} ab.
+Der Datensatz entstammte aus einer Wissensdatenbank eines Softwareprojektes.
+Die Software soll im Gesundheitswesen eingesetzt werden und umfasste entsprechend Fachbegriffe aus dem Gesundheitswesen.
+Darüber hinaus beinhaltet die Wissensdatenbank Definitionen, welche sich spezifisch auf das Softwareprojekt beziehen.\\
+
+Die Durchführung der Studie wurde in \myRef{Kapitel}{chap:vergleich-der-suchfunktionen} erklärt.
+Die Studie kam zu dem Ergebnis, dass die neue Suchfunktion eine wesentlich schlechtere Performance besitzt als die Confluence-Suche.
+Begründet wurde dieses Ergebnis mit der Tatsache, dass es sich bei dem Datensatz, welcher in der Studie verwendet wurde, um eine Closed-Domain handelt.
+Da der Sentence Transformer nicht fine-tuned wurde, kennt der Sentence Transformer die domänenspezifischen Fachbegriffe nicht und kann daher keine passenden Vektoren generieren, welche dessen Semantik wiederspiegeln.
+Im Ausblick wird erläutert, welche Ansätze es in der Literatur gibt, um dieses Problem zu lösen.
 
 \section{Ausblick}
+\label{chap:ausblick}
+Die Studie hat ergeben, dass die semantische Suche, so wie sie implementiert war, nicht besser ist als eine Suche auf Basis von BM25.
+Der Kontext, in welchem die Suchen verwendet werden, ist eine Closed-Domain und beinhaltet domänenspezifische Fachbegriffe.
+Probablistische Modelle unterscheiden sich in der Performance nicht zwischen Closed-Domain und Open-Domain.
+Grund dafür ist, dass probablistische Modelle die Dokumente ohne ein vorheriges Training indizieren, anders als dies bei Sentence Transformern der Fall ist. 
+So könnte der Schluss gezogen werden, dass sich probablistische Modelle besser für Closed-Domain Datensätze eignen.
+Dennoch gibt es in der Literatur Ansätze, um die Probleme von Sentence Transformers mit Closed-Domain Datensätzen zu beheben.\\
+
+Gururangan et. al. zeigen, dass eine weitere Phase des pre-trainings zur Adaption an eine Domäne Performance Verbesserungen mit sich bringt (\cite{Gururangan_Marasović_Swayamdipta_Lo_Beltagy_Downey_Smith_2020}).
+
+Wang et. al. untersuchen TODO: (\cite{Wang_Thakur_Reimers_Gurevych_2022}.
+Außerdem untersuchen Wang et. al. \textit{TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning}\cite{Wang_Reimers_Gurevych_2021}) von Wang et. al. untersuchen Möglichkeiten, um Sentence Transformer an eine Domäne anzupassen.
+Dieser Vorgang wird als Domain Adaption bezeichnet.
+
 % TODO: Ergänzen
 % TODO: Zum einen Verbesserung durch Fine-Tuning möglich. Transformer auf Closed-Domain Daten trainieren?
 % TODO: Sparse Vector Modelle ggf. besser für Closed-Domain? 
