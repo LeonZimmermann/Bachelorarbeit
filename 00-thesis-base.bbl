@@ -56,6 +56,36 @@
       \verb 10.1109/icsm.2000.883003
       \endverb
     \endentry
+    \entry{Confluence_Ranking}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a8fd8cd0b6d2cfda939a8ef257e60192}{%
+           family={Atlassian},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{fullhash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{bibnamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authorbibnamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authornamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authorfullhash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ranking of Search Results}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://confluence.atlassian.com/doc/ranking-of-search-results-1188406620.html
+      \endverb
+      \verb{url}
+      \verb https://confluence.atlassian.com/doc/ranking-of-search-results-1188406620.html
+      \endverb
+    \endentry
     \entry{Bar-Ilan_2002}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c577d1f9e02bf2d5f09da73d64800c22}{%
@@ -316,6 +346,39 @@
       \range{pages}{43}
       \verb{doi}
       \verb 10.1002/smr.567
+      \endverb
+    \endentry
+    \entry{Lucene_Scoring}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eb1472a1dd93ea5972fb047e03c718e0}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={The\bibnamedelimb Apache\bibnamedelima Software},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eb1472a1dd93ea5972fb047e03c718e0}
+      \strng{fullhash}{eb1472a1dd93ea5972fb047e03c718e0}
+      \strng{bibnamehash}{eb1472a1dd93ea5972fb047e03c718e0}
+      \strng{authorbibnamehash}{eb1472a1dd93ea5972fb047e03c718e0}
+      \strng{authornamehash}{eb1472a1dd93ea5972fb047e03c718e0}
+      \strng{authorfullhash}{eb1472a1dd93ea5972fb047e03c718e0}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Apache Lucene - Scoring}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucene.apache.org/core/2_9_4/scoring.html
+      \endverb
+      \verb{url}
+      \verb https://lucene.apache.org/core/2_9_4/scoring.html
       \endverb
     \endentry
     \entry{Gordon_Pathak_1999}{article}{}
@@ -945,48 +1008,8 @@
       \verb http://trec.nist.gov/pubs/trec9/papers/overview_9.pdf
       \endverb
     \endentry
-    \entry{Wang_Reimers_Gurevych_2021}{article}{}
-      \name{author}{3}{ul=2}{%
-        {{un=0,uniquepart=base,hash=a0d4c60d10c4c2f1106d1e371e6eef87}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Kexin},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=da9947b27b0d1c4c912e2b391426d443}{%
-           family={Reimers},
-           familyi={R\bibinitperiod},
-           given={Nils},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ea70b44be1920f6e8c379706bc7d047a}{%
-           family={Gurevych},
-           familyi={G\bibinitperiod},
-           given={Iryna},
-           giveni={I\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{9d8c4e461f3fe172e5eb481dca1e2a18}
-      \strng{fullhash}{4248c74863ddb11523fd6a4ac4496f41}
-      \strng{bibnamehash}{4248c74863ddb11523fd6a4ac4496f41}
-      \strng{authorbibnamehash}{4248c74863ddb11523fd6a4ac4496f41}
-      \strng{authornamehash}{9d8c4e461f3fe172e5eb481dca1e2a18}
-      \strng{authorfullhash}{4248c74863ddb11523fd6a4ac4496f41}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Findings of the Association for Computational Linguistics: EMNLP 2021}
-      \field{title}{TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning}
-      \field{year}{2021}
-      \verb{doi}
-      \verb 10.18653/v1/2021.findings-emnlp.59
-      \endverb
-    \endentry
     \entry{Wang_Thakur_Reimers_Gurevych_2022}{article}{}
-      \name{author}{4}{ul=2}{%
+      \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=a0d4c60d10c4c2f1106d1e371e6eef87}{%
            family={Wang},
            familyi={W\bibinitperiod},
@@ -1012,11 +1035,11 @@
            giveni={I\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{abdcfb607ac7a02848124fc4356a87cf}
+      \strng{namehash}{89c02dd7e09af3a3118f1ad6bde16b78}
       \strng{fullhash}{ccb2ed9f50e03e22370933ea7235afe6}
       \strng{bibnamehash}{ccb2ed9f50e03e22370933ea7235afe6}
       \strng{authorbibnamehash}{ccb2ed9f50e03e22370933ea7235afe6}
-      \strng{authornamehash}{abdcfb607ac7a02848124fc4356a87cf}
+      \strng{authornamehash}{89c02dd7e09af3a3118f1ad6bde16b78}
       \strng{authorfullhash}{ccb2ed9f50e03e22370933ea7235afe6}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}

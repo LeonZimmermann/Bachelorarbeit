@@ -41,14 +41,22 @@ Der Kontext, in welchem die Suchen verwendet werden, ist eine Closed-Domain und 
 Probablistische Modelle unterscheiden sich in der Performance nicht zwischen Closed-Domain und Open-Domain.
 Grund dafür ist, dass probablistische Modelle die Dokumente ohne ein vorheriges Training indizieren, anders als dies bei Sentence Transformern der Fall ist. 
 So könnte der Schluss gezogen werden, dass sich probablistische Modelle besser für Closed-Domain Datensätze eignen.
-Dennoch gibt es in der Literatur Ansätze, um die Probleme von Sentence Transformers mit Closed-Domain Datensätzen zu beheben.\\
+Dennoch gibt es in der Literatur Ansätze, um die Probleme von Sentence Transformern mit Closed-Domain Datensätzen zu beheben.
+In der Literatur wird dabei von Domain Adaption oder von Fine-Tuning gesprochen.
+Gururangan et. al. zeigen beispielsweise, dass eine weitere Phase des pre-trainings zur Adaption an eine Domäne Performance Verbesserungen mit sich bringt (\cite{Gururangan_Marasović_Swayamdipta_Lo_Beltagy_Downey_Smith_2020}).
+Dazu führen sie das pre-training fort, auf einem unlabeled Datensatz von domänenspezifischen Texten.\\
 
-Gururangan et. al. zeigen, dass eine weitere Phase des pre-trainings zur Adaption an eine Domäne Performance Verbesserungen mit sich bringt (\cite{Gururangan_Marasović_Swayamdipta_Lo_Beltagy_Downey_Smith_2020}).
+Wang et. al. entwickelten das sogenannte Generative Pseudo Labeling, um Sentence Transformer an eine Domäne anzupassen (\cite{Wang_Thakur_Reimers_Gurevych_2022}.
+Zuerst extrahieren sie Paragraphen aus der Domäne, an welche der Sentence Transformer angepasst werden soll.
+Anschließend generieren sie automatisch drei Sucheingaben für jeden Paragraphen.
+Diese Sucheingaben werden an einen bestehenden Dense Retriever gesendet.
+Ein Dense Retriever ist dabei eine Vektordatenbank mit einem entsprechenden Sentence Transformer zum Indizieren der Daten und einem Scoring Algorithmus, wie HNSW. 
+Nun werden die Ähnlichkeiten der Sucheingaben mit den Paragraphen mithilfe eines Cross-Encoders bestimmt.
+Ein Cross-Encoder ist ein Sentence Transformer, welcher zwei Sätze entgegennimmt und die Ähnlichkeit der beiden Sätze bestimmt.
+Er funktioniert anders als der Bi-Encoder, welcher für die Implementierung der neuen Suchfunktion verwendet wurde.
+Denn dieser generiert für jeden Satz zuerst Embeddings, welche anschließend mithilfe des Scoring-Algorithmus verglichen werden.
+Nun werden die berechneten Ähnlichkeiten zusammen mit den Sucheingaben und Paragraphen als pseudo-gelabelte Trainingsdaten verwendet.
+Der Sentence Transformer, welcher an eine Domäne angepasst werden soll, wird mithilfe der MarginMSE-Loss Funktion auf die generierten Trainingsdaten trainiert.\\  
 
-Wang et. al. untersuchen TODO: (\cite{Wang_Thakur_Reimers_Gurevych_2022}.
-Außerdem untersuchen Wang et. al. \textit{TSDAE: Using Transformer-based Sequential Denoising Auto-Encoderfor Unsupervised Sentence Embedding Learning}\cite{Wang_Reimers_Gurevych_2021}) von Wang et. al. untersuchen Möglichkeiten, um Sentence Transformer an eine Domäne anzupassen.
-Dieser Vorgang wird als Domain Adaption bezeichnet.
-
-% TODO: Ergänzen
-% TODO: Zum einen Verbesserung durch Fine-Tuning möglich. Transformer auf Closed-Domain Daten trainieren?
-% TODO: Sparse Vector Modelle ggf. besser für Closed-Domain? 
+% TODO: TSDAE
+% Außerdem untersuchen Wang et. al. (\cite{Wang_Reimers_Gurevych_2021}).

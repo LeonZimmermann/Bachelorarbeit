@@ -1,4 +1,4 @@
-\chapter{Konzeption der Suchfunktion}
+\chapter{Konzeption der neuen Suchfunktion}
 \label{chap:konzeption-der-suchfunktion}
 % TODO: Ergänzen
 
@@ -156,8 +156,8 @@ Genau diese Informationen nutzen semantische Suchen.
 Die vergangenen Kapitel haben verschiedene Indizierungs- und Suchalgorithmen dargestellt.
 Diese werden nun betrachtet, um darzustellen, warum semantische Suche auf Basis von Sentence Transformern eine sinnvolle alternative zu der bestehenden Confluence Suche ist.\\
 
-Die Confluence Suche verwendet laut Dokumentation Apache Lucene.\footnote{\url{https://confluence.atlassian.com/doc/ranking-of-search-results-1188406620.html}}
-Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert.\footnote{\url{https://lucene.apache.org/core/2_9_4/scoring.html}}
+Die Confluence Suche verwendet laut Dokumentation Apache Lucene (\cite{Confluence_Ranking}).
+Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert (\cite{Lucene_Scoring}).
 Im Information Retrieval sind Boolean Models jene Scoring Algorithmen, welche auf boolscher Algebra basieren.
 Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit tf-idf berechnet werden.
 
@@ -174,6 +174,9 @@ Der Input für einen Dense Passage Retriever sind Dokumente, welche zuvor mithil
 Das Paper zeigt, dass das entwickelte Passage Retrieval System besser darin ist relevante Textabschnitte zu finden als der BM25 Algorithmus. 
 Das Paper nennt die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber BM25 und auch TF-IDF.\\
 
+% TODO: Lexical Gap thematisieren
+% (\cite{Berger_Caruana_Cohn_Freitag_Mittal_2000})
+
 Weaviate ist eine Vektordatenbank, welche Sentence Transformer nutzt, um Dokumente zu indizieren, und HNSW als Scoring-Algorithmus zur Ermittlung des passendsten Dokumentes.
 Die Performance des Scoring Algorithmus wurde durch Weaviate anhand von Benchmarks überprüft.
 Dabei wird der Recall für das erste Element, die ersten zehn Elemente und die ersten 100 Elemente gemessen.
@@ -186,6 +189,7 @@ Es können also in einem Vector Space Model nicht nur Informationen über ein Me
 Und anders als bei einer gewöhnlichen Datenbank, in welcher mehrere verschiedene Medien gespeichert werden können, beispielsweise eine relationale Datenbank, können Vector Space Models diese verschiedenen Medien miteinander semantisch verknüpfen.\\
 
 \section{Weitere Ansätze}
+% TODO: 
 
 \subsection{Retrieval Augmented Generation}
 Neben einer Suchfunktion können System entwickelt werden, welche eine Question-Answering Funktionalität bieten.
@@ -214,7 +218,7 @@ Bei der Umsetzung einer semantischen Suche mithilfe eines semantischen Netzes m�
 Anschließend müsste dieses semantische Netz um die neuen Definitionen, welche nur im Kontext des Projektes gelten, erweitert werden.\\
 
 
-\subsection{Document Classification und Filter verwenden}
+% \subsection{Document Classification und Filter verwenden}
 % TODO:
 
 \subsection{Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}
@@ -232,5 +236,5 @@ Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Q
 Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
 Dazu werden LSI und Vector Space Models verwendet.\citetitle{Antoniol_Canfora_Casazza_DeLucia_2000}
 
-\subsection{Inhaltsverzeichnisbezogen durchsuchen}
+% \subsection{Inhaltsverzeichnisbezogen durchsuchen}
 % TODO:
