@@ -9,43 +9,37 @@
 \contentsline {chapter}{\numberline {3}Die Technologie von Confluence}{10}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Die Architektur einer Suchfunktion}{10}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Volltext-Indizierung}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Probablistische Metriken des Document Retrieval}{12}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Sparse Vector Modelle}{12}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Die Suchmethoden von Confluence}{13}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Konzeption der neuen Suchfunktion}{15}{chapter.4}%
-\contentsline {subsection}{\numberline {4.0.1}Vektor-Indizierung}{15}{subsection.4.0.1}%
-\contentsline {section}{\numberline {4.1}Sentence Embeddings}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Word Embeddings}{15}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}word2vec}{15}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}seq2seq}{16}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Scoring Algorithmen}{17}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Cosine Similarity}{17}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Hierarchical Navigable Small Worlds (HNSW)}{17}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Suchalgorithmen}{17}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Die semantische Suche}{18}{subsection.4.4.1}%
-\contentsline {section}{\numberline {4.5}Wahl der Suchfunktion}{19}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Weitere Ansätze}{20}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Retrieval Augmented Generation}{20}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Semantische Netze}{21}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}{21}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.1}Die semantische Suche}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Vektor-Indizierung}{16}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Sentence Embeddings}{17}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Word Embeddings}{17}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}word2vec}{17}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}seq2seq}{18}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Hierarchical Navigable Small Worlds (HNSW)}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Wahl der Suchfunktion}{19}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Weitere Ansätze}{21}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Retrieval Augmented Generation}{21}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Semantische Netze}{21}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}{22}{subsection.4.5.3}%
 \contentsline {chapter}{\numberline {5}Implementierung der neuen Suchfunktion}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Aufsetzen der Vektordatenbank Weaviate}{23}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Einspielen der Daten in Weaviate}{23}{section.5.2}%
 \contentsline {chapter}{\numberline {6}Evaluationsmethoden und -Kriterien}{25}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Precision, Recall und F-Maß}{25}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Versuchsaufbau}{26}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Psychometrische Vorgehensweisen}{27}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}ISO/IEC 9126}{27}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Benutzbarkeit}{27}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Einfaktorielle Varianzanalyse}{28}{subsection.6.3.3}%
-\contentsline {chapter}{\numberline {7}Vergleich der Suchfunktionen}{29}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Aufbau der Studie}{29}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Auswertung der Ergebnisse}{31}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Diskussion des Studienaufbaus}{33}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{34}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Zusammenfassung}{34}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{35}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Literaturverzeichnis}{37}{chapter.9}%
-\contentsline {chapter}{\numberline {A}Anhang}{40}{chapter.10}%
-\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{40}{section.10.1}%
-\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{41}{section.10.2}%
+\contentsline {section}{\numberline {6.2}ISO/IEC 9126}{26}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Benutzbarkeit}{26}{subsection.6.2.1}%
+\contentsline {chapter}{\numberline {7}Vergleich der Suchfunktionen}{28}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Aufbau der Studie}{28}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Auswertung der Ergebnisse}{30}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Diskussion des Studienaufbaus}{32}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{33}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Zusammenfassung}{33}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{34}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Literaturverzeichnis}{36}{chapter.9}%
+\contentsline {chapter}{\numberline {A}Anhang}{39}{chapter.10}%
+\contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{39}{section.10.1}%
+\contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{40}{section.10.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

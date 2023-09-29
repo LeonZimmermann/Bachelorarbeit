@@ -1,4 +1,7 @@
 \chapter{Vergleich der Suchfunktionen}
+%TODO: Kapitel erweitern
+%TODO: Testdaten äquivalente Beispiele darstellen
+
 \label{chap:vergleich-der-suchfunktionen}
 Zum Vergleich der beiden Suchfunktionen wird im Folgenden ein fiktionales Szenario dargestellt.
 Das Szenario beschreibt den Ablauf des Onboardings eines neuen Mitarbeiters.
@@ -14,7 +17,8 @@ Zuletzt wird auf die Validität der Daten eingegangen und es wird der Versuchsau
 \section{Aufbau der Studie}
 Im Rahmen der Bachelorarbeit wird eine Studie durchgeführt, welche die neue Suchfunktion mit der bestehenden Confluence-Suche vergleicht.
 Da der Zeitrahmen begrenzt ist, in welchem die neue Suchfunktion entwickelt wird, wird nicht die tatsächliche Suchfunktion von Confluence entwickelt.
-Es wurde bereits erwähnt, dass die Suche von Confluence auf Apache Lucene basiert, und dass dieses ein VSM auf Basis von BM25 verwendet.
+Es wurde bereits erwähnt, dass die Suche von Confluence auf Apache Lucene basiert, und dass dieses ein VSM auf Basis von TF-IDF verwendet.
+% TODO: Vergleichbarkeit BM25 und TF-IDF (\cite{Sparck_Jones_Walker_Robertson_2000})
 Daher wird die neu entwickelte Suchfunktion in mehreren Konfigurationen verglichen.
 So wird die neue Suchfunktion so konfiguriert, dass diese eine reine BM25 Suche durchführt.
 Diese Konfiguration soll als Benchmark dienen und die tatsächliche Confluence-Suche repräsentieren.
@@ -177,3 +181,5 @@ Um für eine Studie a priori Sucheingaben zu bestimmen, und alle Dokumente, welc
 Da der Datensatz mehrere hundert Dokumente beinhaltet ist dies nicht möglich.
 Und auch wenn der gesamte Datensatz bekannt wäre, dann müsste trotzdem eine Entscheidung darüber getroffen werden, welche Dokumente relevant sind und welche nicht.
 Das wäre wiederum eine subjektive Entscheidung, sodass die Validität des Ergebnisses anzweifelbar wäre.
+
+% TODO: Welche Auswirkungen hatte die Technologie auf die Performance

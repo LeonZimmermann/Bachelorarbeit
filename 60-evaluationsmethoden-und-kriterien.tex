@@ -1,5 +1,7 @@
 \chapter{Evaluationsmethoden und -Kriterien}
 \label{chap:evaluationsmethoden}
+% TODO: In Vergleich verschieben
+
 Um zu verifizieren, dass die Implementierung ihre gewünschte Wirkung erzielt, müssen zuerst Methoden und Kriterien zur Messung herangezogen werden.
 Karl Popper gilt als Begründer des kritischen Rationalismus.
 Es war der Anfang von wissenschaftlich durchgeführten Experimenten.
@@ -42,23 +44,7 @@ Denn, wenn ein Dokument gesucht wird, aber überhaupt nicht gefunden werden kann
 Wenn die Suchfunktion irrelevante Dokumente darstellt, kann sie trotzdem ihren Zweck erfüllen, solange die relevantesten Dokumente zuerst in der Liste der Ergebnisse dargestellt wird.
 Dieser Faktor gilt auch bei der Implementierung zu berücksichtigen.
 
-\section{Versuchsaufbau}
-Für den Versuchsaufbau werden Dokumente benötigt, welche durchsucht werden können.
-Dazu sollen Daten aus einem echten Projekt verwendet werden.
-Da die Informationen zu dem Projekt nicht veröffentlicht werden dürfen, müssen die Sucheingaben und Ergebnisse so eingeschränkt werden, dass keine projektspezifischen Informationen preisgegeben werden.
-Die Daten sind bereits in einem Confluence Space vorhanden, dessen Suche als Benchmark für die neu implementierte Suchfunktion verwendet wird.
-Die Implementierung der neuen Suchfunktion und die Befüllung dessen Datenbank mit den gleichen Daten, wie die Confluence Suche, wird in \myRef{Kapitel}{chap:implementierung} näher erklärt.\\
-
-Wie zuvor erwähnt, müssen nun Sucheingaben erstellt werden, welche in beiden Suchen eingegeben werden können.
-Zum Vergleich der beiden Suchfunktionen werden für jede Sucheingabe die obersten fünf Ergebnisse betrachtet.
-Für jedes Dokument in diesen Ergebnissen, welches laut Experimentaufbau als Ergebnis erwartet wird, erhält die Suchfunktionen einen Hit.
-Die Hits werden für beide Suchfunktionen zusammengezählt und verglichen.
-Anschließend wird eine einfaktorielle Varianzanalyse mithilfe von SPSS\footnote{https://www.ibm.com/de-de/spss} durchgeführt.
-Die Analyse wird zeigen, ob die neu implementierte Suchfunktion signifikant mehr Hits generiert als die bestehende Confluence Suche.
-
-\section{Psychometrische Vorgehensweisen}
-
-\subsection{ISO/IEC 9126}
+\section{ISO/IEC 9126}
 Die ISO/IEC 9126 legen Qualitätskriterien für die Entwicklung von Software fest.
 Es gibt sechs verschiedene Qualitätskriterien, welche sich wiederum in verschiedene Facetten einteilen lassen.
 Doch nicht alle der sechs Qualitätskriterien sind in dieser Arbeit von Relevanz.
@@ -95,17 +81,17 @@ Sie sorgt also für eine bessere Bedienbarkeit.\\
 
 % TODO: Weiter ausführen
 
-\subsection{Einfaktorielle Varianzanalyse}
-Die Varianzanalyse überprüft, ob ein signifikant unterschiedlicher Wert zwischen den beiden Suchfunktionen besteht.
-Wenn die neu implementierte Suchfunktion signifikant mehr Dokumente findet als die Confluence-Suche, dann bestätigt dies die Hypothese.
-Die Hypothese ist dabei, dass die neu implementierte Suchfunktion eine Verbesserung zur bestehenden Confluence-Suche darstellt.\\
+% \subsection{Einfaktorielle Varianzanalyse}
+% Die Varianzanalyse überprüft, ob ein signifikant unterschiedlicher Wert zwischen den beiden Suchfunktionen besteht.
+% Wenn die neu implementierte Suchfunktion signifikant mehr Dokumente findet als die Confluence-Suche, dann bestätigt dies die Hypothese.
+% Die Hypothese ist dabei, dass die neu implementierte Suchfunktion eine Verbesserung zur bestehenden Confluence-Suche darstellt.\\
 
-Zur Durchführung der einfaktoriellen Varianzanalyse muss die abhängige Variable und die unabhängige Variable definiert werden.
-Die unabhängige Variable ist die verwendete Suchfunktion.
-Diese muss numerisch repräsentiert werden.
-So steht die Zahl 0 für die Confluence-Suche, und die Zahl 1 für die neu implementierte Suchfunktion.
-Die abhängige Variable ist die Anzahl der gefundenen erwarteten Ergebnisse.
-Sie ist die abhängige Variable, weil die Anzahl von der verwendeten Suchfunktion abhängt.
+% Zur Durchführung der einfaktoriellen Varianzanalyse muss die abhängige Variable und die unabhängige Variable definiert werden.
+% Die unabhängige Variable ist die verwendete Suchfunktion.
+% Diese muss numerisch repräsentiert werden.
+% So steht die Zahl 0 für die Confluence-Suche, und die Zahl 1 für die neu implementierte Suchfunktion.
+% Die abhängige Variable ist die Anzahl der gefundenen erwarteten Ergebnisse.
+% Sie ist die abhängige Variable, weil die Anzahl von der verwendeten Suchfunktion abhängt.
 
 
 %\section{Wahl der Evaluationsmethoden}

@@ -30,8 +30,8 @@ Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdate
          Damit wird das Problem der Qualität einer Suchfunktion heruntergebrochen in Teilprobleme.
          Die Anwendungsfälle beschreiben die konkreten Situationen, in welchen ein Softwareentwickler eine Suche nutzen könnte.
          Das hilft später dabei mehrere Suchfunktionen miteinander vergleichen zu können.
-         Denn anhand der Anwendungsfälle können realistische Suchanfragen definiert werden.
-         Diese Suchanfragen können an zwei verschiedene Suchfunktionen übergeben werden.
+         Denn anhand der Anwendungsfälle können realistische Sucheingaben definiert werden.
+         Diese Sucheingaben können an zwei verschiedene Suchfunktionen übergeben werden.
          Anschließend können die gefundenen Ergebnisse verglichen werden.
          Die genaue Vorgehensweise für diesen Vergleich wird in \myRef{Kapitel}{chap:evaluationsmethoden} und \myRef{Kapitel}{chap:vergleich-der-suchfunktionen} erklärt.
          Außerdem bietet die Aufteilung in Anwendungsfälle bereits Aufschluss über die möglichen Verbesserungen, welche gemacht werden können.
@@ -59,16 +59,17 @@ Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdate
 
 \section{Verwandte Arbeiten}
 Es gibt einige Arbeiten, welche die gleichen oder sehr ähnliche Probleme adressieren.
-Zum einen sind dies Arbeiten, welche verschiedene Arten von Suchfunktionen untersuchen.
-Andere Arbeiten untersuchen, wie sich die Qualität einer Suchfunktion messen lässt.
-Nochmals andere Arbeiten untersuchen \textit{Downstream-Tasks} von Suchfunktionen, also Algorithmen, welche das Ergebnis einer Suche verarbeiten, um die gleiche oder eine andere Anforderung an ein System umzusetzen.\\
+Die verschiedenen Herangehensweisen werden in diesem Kapitel erläutert.
+Zuerst wird der Begriff Traceability behandelt, und wie diese genutzt wird, um Suchfunktionen zu verbessern.
+Es folgt eine Übersicht über Arbeiten, welche sich mit Question Answering beschäftigen.
+Dann folgt eine Übersicht über Arbeiten, welche sich mit der Evaluierung von Suchfunktionen auseinandersetzen.
 
 % Traceability
 Traceability bedeutet, dass sich von einer Stelle im Code, auf die entsprechenden Stellen in anderen Artefakten zurückschließen lässt.
 Ein Anwendungsfall für eine solche Traceability-Funktionalität ist \textit{Feature Location}, also das Finden der Spezifikation eines Features, wenn nur der Code vorhanden ist.
 Analog dazu ist \textit{Bug Localization} ein Anwendungsfall zum Auffinden von Stellen im Code, welche mit einem Bug zusammenhängen.
 Zur Herstellung von Traceability zwischen Code und Dokumentation gibt es verschiedene Ansätze.
-Haiduc et. al. schlagen ein System zur Verbesserung von Suchanfragen vorgeschlagen (\cite{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}).
+Haiduc et. al. schlagen ein System zur Verbesserung von Sucheingaben vorgeschlagen (\cite{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}).
 Das System verwendet Query Reformulations, um die Traceability herzustellen.
 Query Reformulation bedeutet, dass das System den Softwareentwickler bei der Eingabe einer Suchanfrage zur Suche nach den passenden Artefakten unterstützt.
 Dazu gibt der Softwareentwickler zunächst eine Suchanfrage ein, und markiert diejenigen Ergebnisse, welche am relevantesten für ihn sind.

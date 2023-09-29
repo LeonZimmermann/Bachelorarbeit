@@ -1,6 +1,58 @@
 \chapter{Konzeption der neuen Suchfunktion}
 \label{chap:konzeption-der-suchfunktion}
-% TODO: Ergänzen
+Dieses Kapitel dient der Konzeption einer neuen Suchfunktion.
+Die neue Suchfunktion verwendet eine andere Technologie als die Suchfunktion von Confluence.
+Während die Confluence-Suche ein Boolean Model und TF-IDF verwendet, ist die neue Suchfunktion eine semantische Suche.
+Im Folgenden wird zuerst erläutert, was eine semantische Suche ist.
+Anschließend werden die Technologien erläutert, welche benötigt werden, um die konzipierte semantische Suche zu implementieren.
+Dann wird erklärt, warum die neue Suchfunktion eine bessere Performance erzielen soll als die bestehende Confluence-Suche.
+Zuletzt werden alternative Ansätze erläutert, um eine Suchfunktion mit einer guten Performance zu entwickeln.  
+
+\section{Die semantische Suche}
+Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen (\cite{Dengel_2012}).
+Eine semantische Suche hat den Zweck, die Ähnlichkeit und Beziehungen zwischen Wörtern zu verstehen.
+Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.  
+So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} und \textit{deployment} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.\\
+
+Die technische Umsetzung einer semantischen Suche kann auf verschiedene Arten erfolgen.
+Eine Möglichkeit zur Umsetzung einer semantischen Suche ist die Verwendung von Transformers und Vektordatenbanken.
+Um zu verstehen, welche Wörter kontextuell zusammengehören, werden hier die Wörter in einem n-dimensionalen Raum positioniert.
+Wörter, die sich sehr ähnlich sind, also im gleichen Kontext verwendet werden, haben in diesem n-dimensionalen Raum eine geringe Distanz zueinander.
+Wörter, die sich eher unähnlich sind, wie \textit{"rollout" und "API"}, haben eine größere Distanz.
+Der Vorteil einer semantischen Suche ist, dass der genaue Begriff, welcher gesucht wird nicht bekannt ist.
+Wenn sich der Nutzer also über ein Thema informieren möchte, mit welchem er nicht gut vertraut ist, dann kann die semantische Suche hilfreich sein.
+Denn der Nutzer kann nun einen Begriff eingeben, der zu dem Thema passt, und den er kennt.
+Er findet anschließend Dokumente, welche vielleicht nicht genau diesen Begriff beinhalten, aber welche thematisch dennoch ähnlich sind.
+Genau dieser Vorteil soll bei der Implementierung später genutzt werden.\\
+
+Um eine semantische Suche zu implementieren, werden die Technologien von Transformern und Vektordatenbanken verwendet.
+Ein Transformer erhält als Input eine große Menge an Text und mappt die einzelnen Wörter auf einen Vektor einer beliebigen Länge.
+Der Vektor, der am Ende herauskommt, beschreibt die Position des Wortes in dem n-dimensionalen Raum.
+Der Vektor beschreibt gewissermaßen, wie stark ein Wort in eine abstrakte Kategorie einzuordnen ist.
+Jeder Wert im Vektor entspricht einer Kategorie.
+Mithilfe der Vektoren können verschiedene Wörter hinsichtlich ihrer Ähnlichkeit analysiert werden.
+Ähnliche Wörter habe eine große räumliche Nähe, während zwei Wörter, die in vollkommen unterschiedlichen Kontexten verwende werden eine sehr große Distanz im Raum besitzen.
+Nehmen wir für ein Beispiel einen dreidimensionalen Raum an.
+Die X-Achse ist beschriftet mit dem Wort „Tier“, die Y-Achse ist beschriftet mit dem Wort „Computer“ und die Z-Achse ist beschriftet mit dem Wort „Mensch“.
+Nun geben wir einem Transformer das Wort „Katze“, und der Transformer berechnet einen dreidimensionalen Vektor, welcher das Wort „Katze“ im Raum positioniert.
+Weil eine Katze ein Tier ist, ist der X-Wert des Vektors eins.
+Der Wert eins bedeutet, dass das Wort vollständig zu dieser Kategorie gehört.
+Da eine Katze überhaupt nichts mit einem Computer zu tun hat, ist der Y-Wert des Vektors 0.\\
+
+Nun ist eine Katze kein Mensch, aber eine Katze ist ein Haustier von Menschen.
+Es ist denkbar, dass die Wörter Katze und Mensch oft im gleichen Kontext verwendet werden, sodass der Wert bei 0,3 liegen könnte.
+Damit der Transformer einen Vektor berechnen kann, braucht er eine Menge Daten.
+Diese Daten erhält er aus vielen Texten.
+Werden zwei Wörter oft im gleichen Text genannt oder kommen zwei Wörter in vielen Texten sehr nahe beieinander vor, dann geht der Transformer davon aus, dass die beiden Wörter ähnlich sind, und berechnet ähnliche Vektoren.
+Zuvor müssen die Texte allerdings bereitgestellt werden.
+Dazu kann beispielsweise das Internet gecrawlt werden.
+Die Ergebnisse des Transformers werden in einer Vektordatenbank gespeichert.
+Eine Vektordatenbank ist eine Datenbank, welche Vector Embeddings, also ein Objekt als Key und dessen Vektor als Value speichert.
+Bei dem Objekt kann es sich um Wörter handeln, dann wird auch von Word Embeddings gesprochen.
+Es können aber auch Daten andere Daten, wie Bilder, Videos oder Audio gespeichert werden.
+Der Zweck von Vektordatenbanken ist es, Daten nicht einfach linear zu speichern, sondern in einem Raum.
+Die Distanz zwischen zwei Einträgen in diesem Raum beschreibt dessen Ähnlichkeit.
+Genau diese Informationen nutzen semantische Suchen.
 
 \subsection{Vektor-Indizierung}
 \label{chap:vektorindizes}
@@ -22,6 +74,7 @@ Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear ges
 Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
 
 \section{Sentence Embeddings}
+\label{chap:sentence-embeddings}
 % TODO: Sentence Transformer, wie Bert
  (\cite{Reimers_Gurevych_2019})
 
@@ -74,11 +127,6 @@ Der Output des Decoders sind die Wahrscheinlichkeiten, mit welchen die mögliche
 Der Context Vector kann in einer Vektordatenbank gespeichert werden, so wie Word Embeddings in einer Vektordatenbank gespeichert werden können.
 Das hat zur Folge, dass die Ähnlichkeit von Sätzen genauso wie die Ähnlichkeit von Wörtern ermittelt werden kann.
 
-\subsection{Scoring Algorithmen}
-
-\section{Cosine Similarity}
-% TODO: 
-
 \section{Hierarchical Navigable Small Worlds (HNSW)}
 HNSW ist ein Nearest Neighbor Suchalgorithmus.
 Der Algorithmus findet die ähnlichsten Nachbar-Vektoren zu einem gegebenen Input-Vektor.
@@ -97,58 +145,24 @@ Denn das gesuchte Element liegt zwischen dem gefundenen Element n und dem unters
 Der gleiche Algorithmus wird rekursiv für jedes Layer durchgeführt, bis das unterste Layer erreicht wurde.
 Wurde am Ende des untersten Layers kein Element gefunden, dann konnte das Element in der Skip List nicht gefunden werden (\cite{10.5555/93711}).\\
 
-% TODO: Navigable Small Worlds (\cite{Malkov_Yashunin_2020})\\ 
+Navigable Small Worlds basieren auf dem Small World Phänomen aus der Sozialpsychologie, welches von Stanley Milgram formuliert wurde.
+Dieses besagt, dass Menschen untereinander so stark vernetzt sind, dass jeder Mensch über nur wenige andere Menschen mit jedem anderen Menschen vernetzt sind (\cite{Milgram_1967}).
+Das Konzept lässt sich auf Graphen in der Informatik übertragen.
+Das bedeutet, dass in einem stark vernetzten Graphen jeder Datenpunkt mit jedem anderen Datenpunkt über nur wenige Kanten erreichbar ist.
+Greedy Routing Algorithmen können von dem Konzept Gebrauch machen, um den Datenpunkt zu finden, dessen Distanz zu einem bestimmten Datenpunkt am geringsten ist (\cite{Malkov_Yashunin_2020}).
+Die Konzepte der Skip List und der Navigable Small World können nun kombiniert werden.
+Dazu werden anstelle von LinkedLists Graphen in mehreren Layers gespeichert.
+Wie bei Skip Lists, beinhaltet der Graph des untersten Layers alle Datenpunkte.
+Jedes Layer darüber beinhaltet nur ein Subset des Layers darunter.
+Anstatt die Liste des obersten Layers zu durchlaufen, wird der Graph des obersten Layers durchlaufen.
+Es wird der Punkt gefunden, welcher am nähesten am gesuchten Punkt ist.
+Der gesuchte Punkt ist dabei das Embedding der Sucheingabe.
+Dann wird solange das nächstuntere Layer betrachtet, bis der Punkt gefunden wurde, welcher der Sucheingabe am nähesten ist.\\
 
-\section{Suchalgorithmen}
-Im Folgenden werden zuerst gängige Suchalgorithmen erklärt, welche in nahezu jeder Suchfunktion zu finden sind.
-Danach wird im speziellen auf die strukturierte Suche und die semantische Suche eingegangen.
-Die semantische Suche wird später bei der Implementierung einer Suchfunktion verwendet werden.
-
-\subsection{Die semantische Suche}
-Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen (\cite{Dengel_2012}).
-Eine semantische Suche hat den Zweck, die Ähnlichkeit und Beziehungen zwischen Wörtern zu verstehen.
-Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.  
-So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} und \textit{deployment} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.\\
-
-Die technische Umsetzung einer semantischen Suche kann auf verschiedene Arten erfolgen.
-Eine Möglichkeit zur Umsetzung einer semantischen Suche ist die Verwendung von Transformers und Vektordatenbanken.
-Um zu verstehen, welche Wörter kontextuell zusammengehören, werden hier die Wörter in einem n-dimensionalen Raum positioniert.
-Wörter, die sich sehr ähnlich sind, also im gleichen Kontext verwendet werden, haben in diesem n-dimensionalen Raum eine geringe Distanz zueinander.
-Wörter, die sich eher unähnlich sind, wie \textit{"rollout" und "API"}, haben eine größere Distanz.
-Der Vorteil einer semantischen Suche ist, dass der genaue Begriff, welcher gesucht wird nicht bekannt ist.
-Wenn sich der Nutzer also über ein Thema informieren möchte, mit welchem er nicht gut vertraut ist, dann kann die semantische Suche hilfreich sein.
-Denn der Nutzer kann nun einen Begriff eingeben, der zu dem Thema passt, und den er kennt.
-Er findet anschließend Dokumente, welche vielleicht nicht genau diesen Begriff beinhalten, aber welche thematisch dennoch ähnlich sind.
-Genau dieser Vorteil soll bei der Implementierung später genutzt werden.\\
-
-Um eine semantische Suche zu implementieren, werden die Technologien von Transformern und Vektordatenbanken verwendet.
-Ein Transformer erhält als Input eine große Menge an Text und mappt die einzelnen Wörter auf einen Vektor einer beliebigen Länge.
-Der Vektor, der am Ende herauskommt, beschreibt die Position des Wortes in dem n-dimensionalen Raum.
-Der Vektor beschreibt gewissermaßen, wie stark ein Wort in eine abstrakte Kategorie einzuordnen ist.
-Jeder Wert im Vektor entspricht einer Kategorie.
-Mithilfe der Vektoren können verschiedene Wörter hinsichtlich ihrer Ähnlichkeit analysiert werden.
-Ähnliche Wörter habe eine große räumliche Nähe, während zwei Wörter, die in vollkommen unterschiedlichen Kontexten verwende werden eine sehr große Distanz im Raum besitzen.
-Nehmen wir für ein Beispiel einen dreidimensionalen Raum an.
-Die X-Achse ist beschriftet mit dem Wort „Tier“, die Y-Achse ist beschriftet mit dem Wort „Computer“ und die Z-Achse ist beschriftet mit dem Wort „Mensch“.
-Nun geben wir einem Transformer das Wort „Katze“, und der Transformer berechnet einen dreidimensionalen Vektor, welcher das Wort „Katze“ im Raum positioniert.
-Weil eine Katze ein Tier ist, ist der X-Wert des Vektors eins.
-Der Wert eins bedeutet, dass das Wort vollständig zu dieser Kategorie gehört.
-Da eine Katze überhaupt nichts mit einem Computer zu tun hat, ist der Y-Wert des Vektors 0.\\
-
-Nun ist eine Katze kein Mensch, aber eine Katze ist ein Haustier von Menschen.
-Es ist denkbar, dass die Wörter Katze und Mensch oft im gleichen Kontext verwendet werden, sodass der Wert bei 0,3 liegen könnte.
-Damit der Transformer einen Vektor berechnen kann, braucht er eine Menge Daten.
-Diese Daten erhält er aus vielen Texten.
-Werden zwei Wörter oft im gleichen Text genannt oder kommen zwei Wörter in vielen Texten sehr nahe beieinander vor, dann geht der Transformer davon aus, dass die beiden Wörter ähnlich sind, und berechnet ähnliche Vektoren.
-Zuvor müssen die Texte allerdings bereitgestellt werden.
-Dazu kann beispielsweise das Internet gecrawlt werden.
-Die Ergebnisse des Transformers werden in einer Vektordatenbank gespeichert.
-Eine Vektordatenbank ist eine Datenbank, welche Vector Embeddings, also ein Objekt als Key und dessen Vektor als Value speichert.
-Bei dem Objekt kann es sich um Wörter handeln, dann wird auch von Word Embeddings gesprochen.
-Es können aber auch Daten andere Daten, wie Bilder, Videos oder Audio gespeichert werden.
-Der Zweck von Vektordatenbanken ist es, Daten nicht einfach linear zu speichern, sondern in einem Raum.
-Die Distanz zwischen zwei Einträgen in diesem Raum beschreibt dessen Ähnlichkeit.
-Genau diese Informationen nutzen semantische Suchen.
+Um nun die Distanz zwischen zwei Punkten zu bestimmen wird eine Distanzmetrik benötigt.
+Eine mögliche Distanzmetrik für Vektorräume ist die Cosine Similarity.
+Eine andere ist L2-squared.
+% TODO: Ergänzen
 
 \section{Wahl der Suchfunktion}
 % TODO: Roter Faden fehlt in diesem Kapitel. Kurze Einleitung zur Darstellung der Argumentation und Fazit hinzufügen

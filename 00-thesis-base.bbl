@@ -756,6 +756,44 @@
       \verb 10.1109/TKDE.2006.130
       \endverb
     \endentry
+    \entry{Malkov_Yashunin_2020}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1761d9a54a91e198bbbb1ab8c90b87cf}{%
+           family={Malkov},
+           familyi={M\bibinitperiod},
+           given={Yu\bibnamedelima A.},
+           giveni={Y\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ab161f0ecfa8c1f0510bd561839d6ac}{%
+           family={Yashunin},
+           familyi={Y\bibinitperiod},
+           given={D.\bibnamedelimi A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{fullhash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{bibnamehash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{authorbibnamehash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{authornamehash}{41f677ba5b31db2db6a749a416e76e0e}
+      \strng{authorfullhash}{41f677ba5b31db2db6a749a416e76e0e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{number}{4}
+      \field{title}{Efficient and robust approximate nearest neighbor search using hierarchical navigable small world graphs}
+      \field{volume}{42}
+      \field{year}{2020}
+      \field{pages}{824\bibrangedash 836}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/tpami.2018.2889473
+      \endverb
+    \endentry
     \entry{Manning_Raghavan_Schuetze_2019}{inbook}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=2214edb8305f7ccd7cdc310b3a8ae1b4}{%
@@ -797,6 +835,34 @@
       \field{year}{2019}
       \field{pages}{117\bibrangedash 120}
       \range{pages}{4}
+    \endentry
+    \entry{Milgram_1967}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=647e77469dede3f1d7ed99198d6e59e9}{%
+           family={Milgram},
+           familyi={M\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{647e77469dede3f1d7ed99198d6e59e9}
+      \strng{fullhash}{647e77469dede3f1d7ed99198d6e59e9}
+      \strng{bibnamehash}{647e77469dede3f1d7ed99198d6e59e9}
+      \strng{authorbibnamehash}{647e77469dede3f1d7ed99198d6e59e9}
+      \strng{authornamehash}{647e77469dede3f1d7ed99198d6e59e9}
+      \strng{authorfullhash}{647e77469dede3f1d7ed99198d6e59e9}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PsycEXTRA Dataset}
+      \field{title}{The small-world problem}
+      \field{year}{1967}
+      \verb{doi}
+      \verb 10.1037/e400002009-005
+      \endverb
     \endentry
     \entry{10.5555/93711}{report}{}
       \name{author}{1}{}{%
