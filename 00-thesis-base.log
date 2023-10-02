@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  2 OCT 2023 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  2 OCT 2023 15:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1506,53 +1506,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--11
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--31
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
 
  []
 
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 32--42
+Underfull \hbox (badness 10000) in paragraph at lines 32--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--64
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 65--77
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 122--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--131
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
-
- []
-
-[13{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-Overfull \hbox (0.91904pt too wide) in paragraph at lines 137--143
+Overfull \hbox (0.91904pt too wide) in paragraph at lines 37--43
 []\T1/lmr/m/n/12 Die Boo-lean Search bie-tet die Mög-lich-keit einen bool-schen Aus-druck als Suchein-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--143
+Underfull \hbox (badness 10000) in paragraph at lines 37--43
 
  []
 
-) (./40-konzeption-der-suchfunktion.tex [14]
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--63
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 64--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--95
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 96--108
+
+ []
+
+[13]) (./40-konzeption-der-suchfunktion.tex [14{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--23
@@ -1591,63 +1591,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--99
 
  []
 
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 148--155
-
+[17]
+Overfull \hbox (104.48706pt too wide) in paragraph at lines 128--133
+\T1/lmr/m/n/12 Der Satz []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--182
+Underfull \hbox (badness 10000) in paragraph at lines 128--133
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 164--171
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 183--196
+Underfull \hbox (badness 10000) in paragraph at lines 182--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--207
+Underfull \hbox (badness 10000) in paragraph at lines 199--212
 
  []
 
 [20]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 217.
- (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+Underfull \hbox (badness 10000) in paragraph at lines 219--223
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 227.
+(c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 213--218
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--225
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--239
+Underfull \hbox (badness 10000) in paragraph at lines 224--233
 
  []
 
 [21]
-Overfull \hbox (1.60483pt too wide) in paragraph at lines 247--258
+Underfull \hbox (badness 10000) in paragraph at lines 234--242
+
+ []
+
+
+Overfull \hbox (1.60483pt too wide) in paragraph at lines 259--270
 \OML/lmm/m/it/12 ENABLE[]MODULES$ \T1/lmr/m/n/12 und $\OML/lmm/m/it/12 TRANSFORMERS[]INFERENCE[]API$ \T1/lmr/m/n/12 kon-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--258
-
- []
-
-
-Overfull \hbox (0.37016pt too wide) in paragraph at lines 259--270
-[]\T1/lmr/m/n/12 Neben den bei-den Docker-Containern für die se-man-ti-sche Su-che wird ei-ne Spring
- []
-
-
-Overfull \hbox (8.36366pt too wide) in paragraph at lines 259--270
-\T1/lmr/m/n/12 dung ver-wen-det Kot-lin und Grad-le. Mit-hil-fe der De-pen-den-cy \T1/lmr/m/it/12 io.weaviate:client:4.0.1
  []
 
 
@@ -1655,36 +1644,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--270
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--284
-
- []
-
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Overfull \hbox (0.37016pt too wide) in paragraph at lines 271--282
+[]\T1/lmr/m/n/12 Neben den bei-den Docker-Containern für die se-man-ti-sche Su-che wird ei-ne Spring
+ []
+
+
+Overfull \hbox (8.36366pt too wide) in paragraph at lines 271--282
+\T1/lmr/m/n/12 dung ver-wen-det Kot-lin und Grad-le. Mit-hil-fe der De-pen-den-cy \T1/lmr/m/it/12 io.weaviate:client:4.0.1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--294
+Underfull \hbox (badness 10000) in paragraph at lines 285--296
 
  []
 
-) (./50-vergleich-der-suchfunktionen.tex [23]
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--306
+
+ []
+
+[23]) (./50-vergleich-der-suchfunktionen.tex [24]
 chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--30
+Underfull \hbox (badness 10000) in paragraph at lines 14--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--42
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
 
  []
 
-[24
+[25
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
@@ -1699,90 +1713,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--72
-
- []
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 73--77
-
- []
-
-
-Package caption Warning: \label without proper reference on input line 101.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `ausschnitt-studie-ergebnisse' on page 26 undefined on input line 87.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--120
-
- []
-
 [26]
+Underfull \hbox (badness 10000) in paragraph at lines 69--76
 
-Package caption Warning: \label without proper reference on input line 137.
+ []
+
+
+Package caption Warning: \label without proper reference on input line 100.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `precision-tabelle' on page 27 undefined on input line 133.
+LaTeX Warning: Reference `ausschnitt-studie-ergebnisse' on page 27 undefined on input line 86.
 
 
-Overfull \hbox (1.11917pt too wide) in paragraph at lines 148--157
-\T1/lmr/m/n/12 Header und Pa-ra-gra-phen ei-nes Do-ku-ments zu-sam-men-ge-fasst in je-weils einen String
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--157
+Underfull \hbox (badness 10000) in paragraph at lines 77--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--167
+Underfull \hbox (badness 10000) in paragraph at lines 109--119
 
  []
 
 [27]
 
-Package caption Warning: \label without proper reference on input line 178.
+Package caption Warning: \label without proper reference on input line 136.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `precision-tabelle-2' on page 28 undefined on input line 174.
+LaTeX Warning: Reference `precision-tabelle' on page 28 undefined on input line 132.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--175
-
+Overfull \hbox (1.11917pt too wide) in paragraph at lines 147--156
+\T1/lmr/m/n/12 Header und Pa-ra-gra-phen ei-nes Do-ku-ments zu-sam-men-ge-fasst in je-weils einen String
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--201
+Underfull \hbox (badness 10000) in paragraph at lines 147--156
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 208--219
+Underfull \hbox (badness 10000) in paragraph at lines 157--166
 
  []
 
-) (./60-zusammenfassung.tex [29]
+
+Package caption Warning: \label without proper reference on input line 177.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `precision-tabelle-2' on page 29 undefined on input line 173.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--200
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 207--218
+
+ []
+
+[30]) (./60-zusammenfassung.tex [31]
 chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--22
@@ -1794,7 +1792,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--30
 
  []
 
-[30
+[32
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 39--48
@@ -1806,11 +1804,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--60
 
  []
 
-[31]) [32]
+[33]) [34]
 chapter 7.
-[33
+[35
 
-] [34] [35
+] [36] [37
 
 ]
 \c@chapterAppendix=\count502
@@ -1821,9 +1819,9 @@ Overfull \hbox (226.78984pt too wide) in paragraph at lines 33--33
 []      \T1/lmtt/m/n/12 image: semitechnologies/transformers-inference:sentence-transformers-msmarco-distilroberta-base-v2[] 
  []
 
-[36
+[38
 
-]) (./02-declaration.tex [37]) [38
+]) (./02-declaration.tex [39]) [40
 
 ] (./00-thesis-base.aux)
 
@@ -1836,18 +1834,18 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33433 strings out of 476001
- 631426 string characters out of 5793198
+ 33441 strings out of 476001
+ 631697 string characters out of 5793198
  1871068 words of memory out of 5000000
- 53186 multiletter control sequences out of 15000+600000
+ 53191 multiletter control sequences out of 15000+600000
  607480 words of font info for 95 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on 00-thesis-base.pdf (45 pages, 652994 bytes).
+Output written on 00-thesis-base.pdf (47 pages, 655735 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
- 565 compressed objects within 6 object streams
- 133 named destinations out of 1000 (max. 500000)
+ 683 PDF objects out of 1000 (max. 8388607)
+ 574 compressed objects within 6 object streams
+ 136 named destinations out of 1000 (max. 500000)
  310 words of extra memory for PDF output out of 10000 (max. 10000000)
 

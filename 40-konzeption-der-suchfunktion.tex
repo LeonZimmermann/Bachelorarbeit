@@ -13,7 +13,7 @@ Dazu werden Hierarchical Navigable Small Worlds (HNSW) verwendet.
 Dann wird erklärt, warum die neue Suchfunktion eine bessere Performance erzielen soll als die bestehende Confluence-Suche.
 Zuletzt werden alternative Ansätze erläutert, um eine Suchfunktion mit einer guten Performance zu entwickeln.  
 
-\section{Die semantische Suche}
+\section{Semantische Suche}
 Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist.
 Stattdessen verwenden semantische Suchen Techniken, um die Bedeutung der Sucheingabe nachzuvollziehen (\cite{Dengel_2012}).
 Eine semantische Suche hat den Zweck, die Ähnlichkeit und die Beziehungen zwischen Wörtern zu verstehen.
@@ -125,7 +125,23 @@ Und mit steigender Dimension wird die Frequenz der Sinus- bzw. Kosinusfunktion v
 Der Unterschied in der Frequenz hat zur Folge, dass jeder Vektor zur Bestimmung der Position eines Wortes eindeutig ist.
 
 \subsection{Self-Attention}
-% TODO: Ergänzen
+Der Satz \text{Software-Entwickler verwenden die Spezifikation, damit sie Features korrekt implementieren} besitzt beispielsweise eine Cross-Referenz.
+Das Wort \textit{sie} bezieht sich in dem Beispielsatz auf Software-Entwickler, aber es könnte sich auch auf die Spezifikation beziehen.
+Im Allgemeinen können Menschen solche Cross-Referenzen intuitiv verstehen.
+Mit der bisher erläuterten Architektur von Sentence Transformers, können diese allerdings keine Cross-Referenzen verstehen.
+Self-Attention ist eine Technologie, welche es Transformern erlaubt die Cross-Referenz zwischen Wörtern zu verstehen.\\
+
+Um dies zu ermöglichen wird die Ähnlichkeit zwischen Wörtern in einem Satz berechnet.
+Für jedes Wort wird also die Ähnlichkeit zu allen anderen Wörtern berechnet, sowie die Ähnlichkeit zu sich selbst.
+Um die Ähnlichkeiten zu berechnen, werden auf Basis der Positional Encodings neue Self-Attention Vektoren generiert.
+Auf Basis der Positional Encodings werden für jedes Wort in einem Satz eine Query, ein Key und ein Value berechnet.
+Die Begriffe Query, Key und Value entstammen hierbei wiederum aus dem Information Retrieval.
+Im Information Retrieval ist die Query die gemachte Sucheingabe, der Key eine Kategorie von Dokumenten und der Value ist ein tatsächliches Dokument.
+In diesem Kontext wird das Punktprodukt aus der Query und dem Key berechnet und es wird die SoftMax Funktion auf das Ergebnis angewendet.
+Das Ergebnis repräsentiert für das aktuelle Wort, für welches der Self-Attention Wert berechnet werden soll, wie stark eine Suche nach diesem Wort, mit einer bestimmten Kategorie von Wörtern (mit einem Konzept) übereinstimmt.
+Dann wird wiederum das Punktprodukt auf dieses Ergebnis und den Value jedes Wortes angewendet.
+Diese Ergebnisse bedeuten wiederum, wie repräsentativ die einzelnen Wörter für das gegebene Konzept sind.
+Die Ergebnisse dieser Operationen sind die Self-Attention Werte der Wörter in einem Satz.
 
 \subsection{seq2seq}
 Ein seq2seq-Modell soll eine Sequenz auf eine andere Sequenz anhand von erlernten Regeln mappen.
@@ -143,7 +159,7 @@ Der Output des Decoders sind die Wahrscheinlichkeiten, mit welchen die mögliche
 Der Context Vector kann in einer Vektordatenbank gespeichert werden, so wie Word Embeddings in einer Vektordatenbank gespeichert werden können.
 Das hat zur Folge, dass die Ähnlichkeit von Sätzen genauso wie die Ähnlichkeit von Wörtern ermittelt werden kann.
 
-\subsection{Vektor-Indizierung}
+\section{Vektor-Indizierung}
 \label{chap:vektorindizes}
 Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
 Dazu werden Dokumente zunächst, wie auch bei der Volltext-Indizierung gecrawlt.
@@ -199,29 +215,30 @@ Eine mögliche Distanzmetrik für Vektorräume ist die Cosine Similarity.
 Eine andere ist L2-squared.
 % TODO: Ergänzen
 
-\section{Wahl der Suchfunktion}
-% TODO: Roter Faden fehlt in diesem Kapitel. Kurze Einleitung zur Darstellung der Argumentation und Fazit hinzufügen
+\section{Wahl der neuen Suchfunktion}
+Dieses Kapitel betrachtet verschiedene Quellen, um zu zeigen, welches Verbesserungspotenzial die Verwendung von Sentence Transformern im Document Retrieval bietet.
+Zuerst wird anhand der Arbeit von Choudhary et. al. gezeigt, wie das Scoring im Document Retrieval durch die Verwendung von Bert verbessert wird.
+Anschließend werden die Arbeiten von Karpukhin et. al. und Berger et. al. herangezogen, um zu verstehen, warum es zu einer Verbesserung im Document Retrieval kommt, wenn Sentence Transformer verbessert werden.
+Zuletzt werden die Argumente für die Verwendung von Sentence Transformern mithilfe von Benchmark-Werten gestützt.\\
 
-Die vergangenen Kapitel haben verschiedene Indizierungs- und Suchalgorithmen dargestellt.
-Diese werden nun betrachtet, um darzustellen, warum semantische Suche auf Basis von Sentence Transformern eine sinnvolle alternative zu der bestehenden Confluence Suche ist.\\
-
-Die Confluence Suche verwendet laut Dokumentation Apache Lucene (\cite{Confluence_Ranking}).
+Choudhary et. al. entwickelten ein Document Retrieval System, welches Bert zur Generierung von Embeddings verwendet (\cite{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}).
+Der Scoring Algorithmus des Systems kombiniert Bert und TF-IDF, um den Score zu berechnen.
+Laut dem Paper bietet eine Kombination aus TF-IDF und Bert zur Implementierung eines Document Retrieval Systems signifikante Performance Verbesserungen gegenüber einem Document Retrieval System, welches lediglich TF-IDF verwendet.
+Die Performance Verbesserung wird in dem Paper an dem MS Marco Datensatz gemessen.\footnote{\url{https://microsoft.github.io/msmarco/}}\\
+Die Arbeit von Choudhary et. al. bieten damit einen ersten Anhaltspunkt darauf, dass Document Retrieval Systeme auf Basis von TF-IDF mithilfe von Sentence Transformern verbessert werden können.
+Denn Confluence Suche verwendet laut Dokumentation Apache Lucene (\cite{Confluence_Ranking}).
 Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert (\cite{Lucene_Scoring}).
 Im Information Retrieval sind Boolean Models jene Scoring Algorithmen, welche auf boolscher Algebra basieren.
-Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit tf-idf berechnet werden.
+Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit TF-IDF berechnet werden.\\
 
-In einem Paper von Choudhary et. al. wird ein Document Retrieval System entwickelt (\cite{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}).
-Das Document Retrieval System verwendet Bert zur Generierung von Embeddings.
-Der Scoring Algorithmus des Systems kombiniert Bert und tf-idf, um den Score zu berechnen.
-Laut dem Paper bietet eine Kombination aus tf-idf und Bert zur Implementierung eines Document Retrieval Systems signifikante Performance Verbesserungen gegenüber einem Document Retrieval System, welches lediglich tf-idf verwendet.
-Die Performance Verbesserung wird in dem Paper an dem MS Marco Datensatz gemessen.\footnote{\url{https://microsoft.github.io/msmarco/}}\\
-
-In einem Paper von Karpukhin et. al. wird Open-Domain Question Answering untersucht (\cite{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}).
-Dazu wird ein Dense Passage Retriever entwickelt.
+Karpukhin et. al. entwickelten einen Dense Passage Retriever im Kontext des Open-Domain Question Answering (\cite{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}).
 Ein Dense Passage Retriever bestimmt den Textabschnitt eines gegebenen Textes, welcher mit größter Wahrscheinlichkeit eine Antwort auf eine gestellte Frage beinhaltet.
 Der Input für einen Dense Passage Retriever sind Dokumente, welche zuvor mithilfe eines Scoring Algorithmus aus einem Index extrahiert wurden.
-Das Paper zeigt, dass das entwickelte Passage Retrieval System besser darin ist relevante Textabschnitte zu finden als der BM25 Algorithmus. 
-Das Paper nennt die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber BM25 und auch TF-IDF.\\
+Karpukhin et. al. zeigen, dass das entwickelte Passage Retrieval System besser darin ist relevante Textabschnitte zu finden als der BM25 Algorithmus. 
+Sie nennen die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber BM25 und auch TF-IDF.
+Das Argument lässt sich auf das Thema dieser Arbeit übertragen.
+Das bedeutet, dass Sentence Transformer gegenüber TF-IDF und BM25 den Vorteil haben, dass sie Synonyme und Paraphrasierungen semantisch verknüpfen können.
+Damit lässt sich die bessere Performance von Sentence Transformern gegenüber TF-IDF und BM25 im Kontext des Document Retrieval begründen.\\
 
 % TODO: Lexical Gap thematisieren
 % (\cite{Berger_Caruana_Cohn_Freitag_Mittal_2000})
@@ -231,11 +248,6 @@ Die Performance des Scoring Algorithmus wurde durch Weaviate anhand von Benchmar
 Dabei wird der Recall für das erste Element, die ersten zehn Elemente und die ersten 100 Elemente gemessen.
 Zusätzlich ist angegeben, wie Weaviate konfiguriert ist und welcher Datensatz verwendet wird.
 Die Benchmark zeigt, dass HNSW für den Datensatz SIFT1M einen Recall-Wert von 90.91\% besitzt (\cite{Weaviate_Benchmark}).
-
-Neben den direkten Vorteilen einer semantischen Suche gegenüber Suchfunktionen, wie eine Keyword Search, gibt es weitere indirekte Vorteile eine semantischen Suche auf Grundlage von Vector Space Models.
-Vector Space Models sind Multimodal.
-Es können also in einem Vector Space Model nicht nur Informationen über ein Medium, wie Fließtext, gespeichert werden, sondern neben Fließtext können gleichzeitig auch andere Medien, wie Code, Bilder, Audiodateien etc. gespeichert werden.
-Und anders als bei einer gewöhnlichen Datenbank, in welcher mehrere verschiedene Medien gespeichert werden können, beispielsweise eine relationale Datenbank, können Vector Space Models diese verschiedenen Medien miteinander semantisch verknüpfen.\\
 
 \section{Implementierung der neuen Suchfunktion}
 \label{chap:implementierung}

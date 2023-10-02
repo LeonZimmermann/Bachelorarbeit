@@ -915,6 +915,50 @@
       \field{title}{On Search Engine Evaluation Metrics}
       \field{year}{2012}
     \endentry
+    \entry{Sparck_Jones_Walker_Robertson_2000}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=05811b3ed5c5892bafaf43ca4ba6f0c9}{%
+           family={Sparck\bibnamedelima Jones},
+           familyi={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=043994f2b6d048a5506663958d1a8cd8}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=80cf9a70dba13104aff4234054795823}{%
+           family={Robertson},
+           familyi={R\bibinitperiod},
+           given={S.E.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ee2d50a56532e9a077f31cb466d55548}
+      \strng{fullhash}{4e45d6a74b3bb2eee769092cb5d9cdef}
+      \strng{bibnamehash}{4e45d6a74b3bb2eee769092cb5d9cdef}
+      \strng{authorbibnamehash}{4e45d6a74b3bb2eee769092cb5d9cdef}
+      \strng{authornamehash}{ee2d50a56532e9a077f31cb466d55548}
+      \strng{authorfullhash}{4e45d6a74b3bb2eee769092cb5d9cdef}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Processing \& Management}
+      \field{number}{6}
+      \field{title}{A probabilistic model of information retrieval: Development and comparative experiments}
+      \field{volume}{36}
+      \field{year}{2000}
+      \field{pages}{779\bibrangedash 808}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1016/s0306-4573(00)00015-7
+      \endverb
+    \endentry
     \entry{Treude_Sicard_Klocke_Robillard_2015}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=fc21c10b2d386c8460fa30c762643c06}{%
