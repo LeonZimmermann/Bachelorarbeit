@@ -298,56 +298,6 @@
       \field{title}{Semantische Technologien Grundlagen - Konzepte - Anwendungen}
       \field{year}{2012}
     \endentry
-    \entry{Dit_Revelle_Gethers_Poshyvanyk_2011}{article}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=f49e2fee46b3c8b08f1a9e89abd3d4c5}{%
-           family={Dit},
-           familyi={D\bibinitperiod},
-           given={Bogdan},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7021b527950fc33a7177eef0aad33791}{%
-           family={Revelle},
-           familyi={R\bibinitperiod},
-           given={Meghan},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=95ed4db95b78c834d95fbfebc2586089}{%
-           family={Gethers},
-           familyi={G\bibinitperiod},
-           given={Malcom},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e49aa631edbf4e6bb1f966390ca96328}{%
-           family={Poshyvanyk},
-           familyi={P\bibinitperiod},
-           given={Denys},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{e722bbf7754dcebba4a58a2c163fed7b}
-      \strng{fullhash}{f00e6cbd3db9503dfdb431a8b2c2e4da}
-      \strng{bibnamehash}{f00e6cbd3db9503dfdb431a8b2c2e4da}
-      \strng{authorbibnamehash}{f00e6cbd3db9503dfdb431a8b2c2e4da}
-      \strng{authornamehash}{e722bbf7754dcebba4a58a2c163fed7b}
-      \strng{authorfullhash}{f00e6cbd3db9503dfdb431a8b2c2e4da}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Software: Evolution and Process}
-      \field{number}{1}
-      \field{title}{Feature location in source code: A taxonomy and survey}
-      \field{volume}{25}
-      \field{year}{2011}
-      \field{pages}{53\bibrangedash 95}
-      \range{pages}{43}
-      \verb{doi}
-      \verb 10.1002/smr.567
-      \endverb
-    \endentry
     \entry{Lucene_Scoring}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=eb1472a1dd93ea5972fb047e03c718e0}{%
@@ -674,31 +624,6 @@
       \verb{doi}
       \verb 10.15849/ijasca.211128.11
       \endverb
-    \endentry
-    \entry{Lehmann}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=9114421de390b227820ce87b15f3372b}{%
-           family={Lehmann},
-           familyi={L\bibinitperiod},
-           given={Fritz},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Pergamon Pr}%
-      }
-      \strng{namehash}{9114421de390b227820ce87b15f3372b}
-      \strng{fullhash}{9114421de390b227820ce87b15f3372b}
-      \strng{bibnamehash}{9114421de390b227820ce87b15f3372b}
-      \strng{authorbibnamehash}{9114421de390b227820ce87b15f3372b}
-      \strng{authornamehash}{9114421de390b227820ce87b15f3372b}
-      \strng{authorfullhash}{9114421de390b227820ce87b15f3372b}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labeldatesource}{nodate}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Semantic networks in Artificial Intelligence}
     \endentry
     \entry{1644735}{article}{}
       \name{author}{5}{}{%

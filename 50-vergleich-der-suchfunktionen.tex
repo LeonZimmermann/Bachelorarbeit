@@ -14,6 +14,50 @@ Nachdem der Aufbau der Studie erklärt wurde, werden die Daten der Studie ausgew
 Das Ergebnis wird diskutiert.
 Zuletzt wird auf die Validität der Daten eingegangen und es wird der Versuchsaufbau diskutiert.
 
+\section{Evaluationsmethoden und -Kriterien}
+\label{chap:evaluationsmethoden}
+Um zu verifizieren, dass die Implementierung ihre gewünschte Wirkung erzielt, müssen zuerst Methoden und Kriterien zur Messung herangezogen werden.
+Karl Popper gilt als Begründer des kritischen Rationalismus.
+Es war der Anfang von wissenschaftlich durchgeführten Experimenten.
+Bei einem Experiment wird zunächst eine Hypothese aufgestellt.
+Diese wird anschließend durch das Experiment untersucht.
+Ein solches Experiment soll später für die genannten Anwendungsfälle erstellt werden.
+Dazu sollen für die Anwendungsfälle Sucheingaben erstellt werden.
+Für jede Sucheingabe wird definiert, welche Dokumente als Ergebnis erwartet werden.
+Die Hypothese: Mit der implementierten Suchfunktion werden die erwarteten Dokumente \textit{besser} gefunden als mit der bisherigen Suchfunktion.
+Diese Hypothese muss nun quantifizierbar und messbar gemacht werden.
+Die subjektive Wahrnehmung reicht nicht für eine wissenschaftliche Arbeit aus.\\
+
+Die Formulierung der Hypothese ist für sich genommen zu unspezifisch.
+Es muss geklärt werden, wann eine Information \textit{besser} zu finden ist.
+Im Folgenden werden Precision, Recall und F-Maß, sowie Qualitätskriterien gemäß ISO/IEC 9126 herangezogen, um Suchfunktionen anhand dieser Eigenschaften vergleichbar zu machen.
+Anhand dessen wird hergeleitet, was in diesem Kontext \textit{besser} bedeutet.
+Im Anschluss werden diese Eigenschaften in einem Versuchsaufbau verwendet. 
+
+\subsection{Precision, Recall und F-Maß}
+Zur Evaluation der Suchfunktionen werden später die statistischen Messwerte Precision und Recall verwendet.
+Die Messwerte beschreiben, inwieweit eine Hypothese zutrifft.
+Wenn also die Hypothese ist, dass ein bestimmtes Dokument gefunden wird, dann ist der Precision-Wert das Verhältnis zwischen allen gefundenen Dokumenten und den gefundenen Dokumenten, die tatsächlich relevant sind.
+Der Wert lässt sich im Kontext der Suche nach Dokumenten wie folgt definieren (\cite{Sirotkin_2012}):\\
+
+\(Precision=P=\frac{gefundene relevante Dokumente}{gesamte Anzahl gefundener Dokumente} \)\\
+
+Der Recall-Wert gibt wiederum an, wie viele von den tatsächlich relevanten Dokumenten auch gefunden wurden.
+Er lässt sich in diesem Kontext wie folgt definieren (\cite{Sirotkin_2012}):\\
+
+\(Recall=R=\frac{gefundene relevante Dokumente}{gesamte Anzahl relevanter Dokumente}\)\\
+
+Es ist schwierig beide Werte zu optimieren, da der Precision-Wert versucht die Anzahl der gefundenen Dokumente einzugrenzen und der Recall-Wert versucht die Anzahl der gefundenen Dokumente zu erweitern.
+Das F1-Maß fasst beide Werte zu einem neuen Wert zusammen (\cite{Sirotkin_2012}):\\
+
+\(F_1=2\frac{PR}{P+R}\)\\
+
+Neben der Verwendung des F1-Maß ist es wichtig sich Gedanken darüber zu machen, welcher der beiden Messwerte wichtiger ist.
+In diesem Fall ist es sinnvoll eher die Precision zu optimieren.
+Denn, wenn ein Dokument gesucht wird, aber überhaupt nicht gefunden werden kann, dann erfüllt die Suchfunktion nicht ihren Zweck.
+Wenn die Suchfunktion irrelevante Dokumente darstellt, kann sie trotzdem ihren Zweck erfüllen, solange die relevantesten Dokumente zuerst in der Liste der Ergebnisse dargestellt wird.
+Dieser Faktor gilt auch bei der Implementierung zu berücksichtigen.
+
 \section{Aufbau der Studie}
 Im Rahmen der Bachelorarbeit wird eine Studie durchgeführt, welche die neue Suchfunktion mit der bestehenden Confluence-Suche vergleicht.
 Da der Zeitrahmen begrenzt ist, in welchem die neue Suchfunktion entwickelt wird, wird nicht die tatsächliche Suchfunktion von Confluence entwickelt.

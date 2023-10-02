@@ -5,28 +5,35 @@ Die neue Suchfunktion verwendet eine andere Technologie als die Suchfunktion von
 Während die Confluence-Suche ein Boolean Model und TF-IDF verwendet, ist die neue Suchfunktion eine semantische Suche.
 Im Folgenden wird zuerst erläutert, was eine semantische Suche ist.
 Anschließend werden die Technologien erläutert, welche benötigt werden, um die konzipierte semantische Suche zu implementieren.
+Dies umfasst Sentence Transformer.
+Sie indizieren Dokumente, indem sie die Sätze in Vektoren transformieren, welche die Semantik der Sätze abbilden.
+Außerdem umfasst dies Vektorindizes, welche die generierten Vektoren persistenz speichern.
+Zuletzt umfasst dies auch die Bestimmung der relevantesten Dokumente.
+Dazu werden Hierarchical Navigable Small Worlds (HNSW) verwendet.
 Dann wird erklärt, warum die neue Suchfunktion eine bessere Performance erzielen soll als die bestehende Confluence-Suche.
 Zuletzt werden alternative Ansätze erläutert, um eine Suchfunktion mit einer guten Performance zu entwickeln.  
 
 \section{Die semantische Suche}
-Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist, sondern auch Techniken, wie technische Analysen verwendet, um die Bedeutung der Sucheingabe nachzuvollziehen (\cite{Dengel_2012}).
-Eine semantische Suche hat den Zweck, die Ähnlichkeit und Beziehungen zwischen Wörtern zu verstehen.
-Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.  
+Unter einer semantischen Suche wird im Allgemeinen verstanden, dass die Suche nicht nur eine syntaktische Suche einer Zeichenkette ist.
+Stattdessen verwenden semantische Suchen Techniken, um die Bedeutung der Sucheingabe nachzuvollziehen (\cite{Dengel_2012}).
+Eine semantische Suche hat den Zweck, die Ähnlichkeit und die Beziehungen zwischen Wörtern zu verstehen.
+Sie kennt Homonyme, Synoyme und Antonyme von Wörtern.
+Anders als bei den bereits betrachteten Volltext-Indizes. 
 So wird durch sie beispielsweise die Ähnlichkeit von den Wörtern \textit{rollout} und \textit{deployment} abgebildet, und dass diese Wörter oft im gleichen Kontext verwendet werden.\\
 
-Die technische Umsetzung einer semantischen Suche kann auf verschiedene Arten erfolgen.
 Eine Möglichkeit zur Umsetzung einer semantischen Suche ist die Verwendung von Transformers und Vektordatenbanken.
 Um zu verstehen, welche Wörter kontextuell zusammengehören, werden hier die Wörter in einem n-dimensionalen Raum positioniert.
 Wörter, die sich sehr ähnlich sind, also im gleichen Kontext verwendet werden, haben in diesem n-dimensionalen Raum eine geringe Distanz zueinander.
 Wörter, die sich eher unähnlich sind, wie \textit{"rollout" und "API"}, haben eine größere Distanz.
-Der Vorteil einer semantischen Suche ist, dass der genaue Begriff, welcher gesucht wird nicht bekannt ist.
+Der Vorteil einer semantischen Suche ist, dass der genaue Begriff, welcher gesucht wird nicht bekannt sein muss.
+Auch ein Synonym des gesuchten Begriffes reicht aus, um das passende Dokument zu finden.
 Wenn sich der Nutzer also über ein Thema informieren möchte, mit welchem er nicht gut vertraut ist, dann kann die semantische Suche hilfreich sein.
 Denn der Nutzer kann nun einen Begriff eingeben, der zu dem Thema passt, und den er kennt.
 Er findet anschließend Dokumente, welche vielleicht nicht genau diesen Begriff beinhalten, aber welche thematisch dennoch ähnlich sind.
 Genau dieser Vorteil soll bei der Implementierung später genutzt werden.\\
 
-Um eine semantische Suche zu implementieren, werden die Technologien von Transformern und Vektordatenbanken verwendet.
-Ein Transformer erhält als Input eine große Menge an Text und mappt die einzelnen Wörter auf einen Vektor einer beliebigen Länge.
+Ein Sentence Transformer erhält als Input eine große Menge an Text und mappt die einzelnen Wörter auf einen Vektor einer bestimmten Länge.
+Die Länge wird durch das Modell des Transformers vorgegebenen.
 Der Vektor, der am Ende herauskommt, beschreibt die Position des Wortes in dem n-dimensionalen Raum.
 Der Vektor beschreibt gewissermaßen, wie stark ein Wort in eine abstrakte Kategorie einzuordnen ist.
 Jeder Wert im Vektor entspricht einer Kategorie.
@@ -54,38 +61,32 @@ Der Zweck von Vektordatenbanken ist es, Daten nicht einfach linear zu speichern,
 Die Distanz zwischen zwei Einträgen in diesem Raum beschreibt dessen Ähnlichkeit.
 Genau diese Informationen nutzen semantische Suchen.
 
-\subsection{Vektor-Indizierung}
-\label{chap:vektorindizes}
-Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
-Dazu werden Dokumente zunächst, wie auch bei der Volltext-Indizierung gecrawlt.
-Anschließend durchlaufen die Inhalte der Dokumente ein Preprocessing.
-Dieses kann je nach Implementierung variieren.
-\myRef{Kapitel}{chap:einspielen-der-daten-in-weaviate} beschreibt, wie in der hier aufgeführten Implementierung das Preprocessing durchgeführt wird.
-Das Preprocessing hat den Zweck die Daten an das Schema der Datenbank anzupassen und die Qualität der Daten zu erhöhen.
-Außerdem sorgt es für eine kürzere Indizierungszeit.\\
-
-Nach dem Preprocessing werden durch einen Transformer für die Inhalte der Dokumente Vektoren berechnet.
-Ein Transformer wird mithilfe von Trainingsdaten darauf trainiert, Vektoren für Wörter zu generieren.
-Das trainierte Modell wird nach dem Preprocessing durchlaufen.
-Zuletzt werden die Daten in einer Vektordatenbank gespeichert.
-Eine Vektordatenbank speichert Daten, wie eine dokumentenbasierte Datenbank.
-Dort werden nun sowohl die rohen Daten als auch die Vektoren gespeichert, welche von dem Transformer berechnet wurden.
-Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear gespeichert sind.
-Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
-
-\section{Sentence Embeddings}
-\label{chap:sentence-embeddings}
+\section{Sentence Transformer}
+\label{chap:sentence-transformer}
 % TODO: Sentence Transformer, wie Bert
  (\cite{Reimers_Gurevych_2019})
 
+ Ein Sentence Transformer transformiert eine Aneinanderreihung von Tokens beliebiger Länge in einen Vektor einer vorgegebenen Länge.
+ Der Aneinanderreihung der Tokens kann dabei ein Satz sein, ein Teil eines Satzes oder auch ein ganzer Paragraph.
+ Die Länge des Vektors wird durch die Architektur des Sentence Transformers vorgegeben.
+ Um eine Aneinanderreihung von Tokens in einen Vektor zu transformieren, braucht der Sentence Transformer für jedes Wort in dessen Wortschatz einen Input.
+ Da ein neuronales Netzwerk keine Wörter verarbeiten kann, sondern nur Zahlen, müssen die Wörter zuerst in Zahlen umgewandelt werden.
+ Dies erfolgt mithilfe von Word Embeddings und wird in \myRef{Kapitel}{chap:word-embeddings} erläutert.\\
+ 
+ Wenn nun die Semantik eines Satzes in einen Vektor transformiert werden soll, dann ist die Reihenfolge der Wörter in dem Satz wichtig zu beachten, um die Semantik des Satzes abzubilden.
+ Der Satz \text{Software-Entwickler verwenden die Spezifikation, um Features korrekt zu implementieren} besitzt die gleichen Wörter, wie der Satz \textit{Features verwenden die Spezifikation, um Software-Entwickler korrekt zu implementieren}.
+ Dennoch ist die Sematik zwischen den Sätzen nicht die gleiche.
+ Das bedeutet, dass ein Sentence Transformer die Positionen der einzelnen Wörter in dem Vektor kodieren muss, um die Sematik des Satzes korrekt abzubilden.
+ Die Kodierung der Positionen der Wörter in einem Satz wird als Positional Encoding bezeichnet und wird in \myRef{Kapitel}{chap:positional-encoding} erklärt.
+
 \subsection{Word Embeddings}
+\label{chap:word-embeddings}
 Word Embeddings sind eine Vektorrepräsentation von Wörtern.
 Zweck von Word Embeddings ist es, semantische Ähnlichkeiten zwischen Wörtern zu verstehen.
 Eine einfache Implementierung von Word Embeddings könnte sein, jedem Wort eine zufällige Zahl zuzuordnen.
 Wenn die Zahlen zufällig sind, werden damit allerdings keine semantischen Ähnlichkeiten kodiert.
-Um herauszufinden, welche Wörter eine semantische Ähnlichkeit besitzen.
+Um herauszufinden, welche Wörter eine semantische Ähnlichkeit besitzen wird word2vec verwendet, um Word Embeddings zu generieren.\\
 
-\subsection{word2vec}
 Word2vec ist ein zwei-Layer neuronales Netzwerk, welches die Semantik von Wörtern lernt.
 Für jedes Wort, für welches eine Vektorrepräsentation bestimmt werden soll, benötigt das neuronale Netzwerk einen Input.
 Das erste Layer des neuronalen Netzwerkes besteht aus Aktivierungsfunktionen.
@@ -111,6 +112,21 @@ Das Ergebnis ist, dass das trainierte neuronale Netzwerk für das Wört \textit{
 Die gelernten Weights bilden einen Vektor, welcher in einer Vektordatenbank gespeichert werden kann.
 Das Ergebnis ist eine Vektordatenbank, welche Informationen darüber enthält, welche Wörter semantisch ähnlich sind, und welche nicht.
 
+\subsection{Positional Encoding}
+\label{chap:positional-encoding}
+Positional Encoding wird verwendet, um die Position eines Wortes in einem Satz zu kodieren, wenn ein Satz in einen Vektor transformiert wird.
+Das Positional Encoding wird angewendet, nachdem die Wörter mithilfe von Word Embeddings in Vektoren transformiert wurden.
+Nun werden die generierten Vektoren mit einem Vektor addiert, welcher die Position des Wortes repräsentiert.
+Der Vektor, welcher auf die Word Embeddings addiert wird, wird mithilfe von Sinus- und Kosinusfunktionen berechnet.
+Sinus- und Kosinusfunktion sind surjektiv.
+Das bedeutet, dass es keine eindeutige Abbildung von einem Inputwert auf einen Outputwert gibt.
+Da nun die Position der Wörter in einem Satz eindeutig kodiert werden sollen, wird für jede Dimension in dem Vektor eine andere Sinus- bzw. Kosinusfunktion verwendet.
+Und mit steigender Dimension wird die Frequenz der Sinus- bzw. Kosinusfunktion verringert.
+Der Unterschied in der Frequenz hat zur Folge, dass jeder Vektor zur Bestimmung der Position eines Wortes eindeutig ist.
+
+\subsection{Self-Attention}
+% TODO: Ergänzen
+
 \subsection{seq2seq}
 Ein seq2seq-Modell soll eine Sequenz auf eine andere Sequenz anhand von erlernten Regeln mappen.
 Dazu wird die Input-Sequenz zunächst in eine modell-interne Sequenz encodiert, der Context Vector, und anschließend in die Output-Sequenz dekodiert.
@@ -126,6 +142,25 @@ Der Output des Decoders sind die Wahrscheinlichkeiten, mit welchen die mögliche
 
 Der Context Vector kann in einer Vektordatenbank gespeichert werden, so wie Word Embeddings in einer Vektordatenbank gespeichert werden können.
 Das hat zur Folge, dass die Ähnlichkeit von Sätzen genauso wie die Ähnlichkeit von Wörtern ermittelt werden kann.
+
+\subsection{Vektor-Indizierung}
+\label{chap:vektorindizes}
+Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
+Dazu werden Dokumente zunächst, wie auch bei der Volltext-Indizierung gecrawlt.
+Anschließend durchlaufen die Inhalte der Dokumente ein Preprocessing.
+Dieses kann je nach Implementierung variieren.
+\myRef{Kapitel}{chap:einspielen-der-daten-in-weaviate} beschreibt, wie in der hier aufgeführten Implementierung das Preprocessing durchgeführt wird.
+Das Preprocessing hat den Zweck die Daten an das Schema der Datenbank anzupassen und die Qualität der Daten zu erhöhen.
+Außerdem sorgt es für eine kürzere Indizierungszeit.\\
+
+Nach dem Preprocessing werden durch einen Transformer für die Inhalte der Dokumente Vektoren berechnet.
+Ein Transformer wird mithilfe von Trainingsdaten darauf trainiert, Vektoren für Wörter zu generieren.
+Das trainierte Modell wird nach dem Preprocessing durchlaufen.
+Zuletzt werden die Daten in einer Vektordatenbank gespeichert.
+Eine Vektordatenbank speichert Daten, wie eine dokumentenbasierte Datenbank.
+Dort werden nun sowohl die rohen Daten als auch die Vektoren gespeichert, welche von dem Transformer berechnet wurden.
+Die Vektoren haben den Vorteil, dass die Daten in der Datenbank nicht linear gespeichert sind.
+Sie sind in einem n-dimensionalen Raum gespeichert, mit dessen Hilfe die semantische Nähe zwischen Dokumenten ausgedrückt werden kann.
 
 \section{Hierarchical Navigable Small Worlds (HNSW)}
 HNSW ist ein Nearest Neighbor Suchalgorithmus.
@@ -202,53 +237,72 @@ Vector Space Models sind Multimodal.
 Es können also in einem Vector Space Model nicht nur Informationen über ein Medium, wie Fließtext, gespeichert werden, sondern neben Fließtext können gleichzeitig auch andere Medien, wie Code, Bilder, Audiodateien etc. gespeichert werden.
 Und anders als bei einer gewöhnlichen Datenbank, in welcher mehrere verschiedene Medien gespeichert werden können, beispielsweise eine relationale Datenbank, können Vector Space Models diese verschiedenen Medien miteinander semantisch verknüpfen.\\
 
-\section{Weitere Ansätze}
-% TODO: 
+\section{Implementierung der neuen Suchfunktion}
+\label{chap:implementierung}
+In diesem Kapitel wird die Implementierung der neuen Suchfunktion dargestellt.
+Die Implementierung verwendet eine Vektordatenbank, welche eine semantische Suche ermöglicht.
+Es wird die Vektordatenbank Weaviate verwendet.
 
-\subsection{Retrieval Augmented Generation}
-Neben einer Suchfunktion können System entwickelt werden, welche eine Question-Answering Funktionalität bieten.
-Eine Question-Answering Funktionalität nimmt eine Frage des Nutzers entgegen, und liefert eine Antwort.
-Solche Systeme basieren auf Retrieval Augmented Generation.
-Das bedeutet, dass auf Grundlage der Frage des Nutzers zuerst eine Suche durchgeführt wird.
-Diese Suche liefert relevante Dokumente zum Beantworten der Frage.
-Nun werden die, für die Frage relevantesten, Stellen der Dokumente mithilfe eines Large Language Models extrahiert und umformuliert.
-Das Ergebnis ist eine Antwort auf die Frage des Nutzers. 
+\subsection{Aufsetzen der Vektordatenbank Weaviate}
+Für das Aufsetzen von Weaviate werden zwei Komponenten benötigt.
+Zum einen die Vektordatenbank selbst.
+Zum anderen ein Transformer, welcher Text entgegennimmt, und diese in Vektoren umwandelt, sodass diese in der Datenbank gespeichert werden können.
+Um die beiden Komponenten aufzusetzen wird Docker verwendet.
+Das entsprechende docker-compose.yml File ist im Anhang zu finden.
+Hier werden die beiden Komponenten definiert.
+Unter \textit{t2v-transformers} wird der Transformer konfiguriert.
+Es wird das Image eines bereits vortrainierten Transformers verwendet.
+Unter \textit{weaviate} wird die Datenbank konfiguriert.
+Hier wird mithilfe von den Environment-Variablen \textit{$DEFAULT\_VECTORIZER\_MODULE$}, \textit{$ENABLE\_MODULES$} und \textit{$TRANSFORMERS\_INFERENCE\_API$} konfiguriert, welcher Transformer verwendet werden soll.
+So wird konfiguriert, dass der Transformer der anderen Komponente verwendet werden soll.\\
 
-% TODO: Generative Search
+Neben den beiden Docker-Containern für die semantische Suche wird eine Spring Boot Anwendung in einem Docker Container mitdeployt.
+Die Spring Boot Anwendung verwendet Kotlin und Gradle.
+Mithilfe der Dependency \textit{io.weaviate:client:4.0.1} wird die Client API von Weaviate verwendet.
+So wird nun eine Verbindung zu der Vektordatenbank aufgebaut.
+Diese beinhaltet zu diesem Zeitpunkt noch keine Daten.
+Bevor die Daten in die Datenbank eingespielt werden, muss das Schema der Daten angegeben werden.
+Der entsprechende Code ist ebenfalls im Anhang zu finden.
+Es wird eine Klasse \textit{Document} definiert.
+Diese Klasse beinhaltet die Properties \textit{documentUrl}, \textit{h1}, \textit{h2} und \textit{p}.
+Es werden in dieser Klasse also die URL des Dokuments, sowie die Inhalte aller h1-, h2 und p-Tags gespeichert.
+Außerdem wird als Vectorizer \textit{text2vec-transformers} konfiguriert.\\
 
-\subsection{Semantische Netze}
-Es besteht die Möglichkeit ein explizites semantisches Netz heranzuziehen, und so die Zusammenhänge von Wörtern abzubilden.
-Ein semantisches Netz ist eine Menge aus Aussagen in der Form \textit{Subjekt Prädikat Objekt}.
-Anhand dieser Aussagen wird ein Graph aus Beziehungen zwischen Wörtern hergestellt (\cite{Lehmann}).\\
+\subsection{Einspielen der Daten in Weaviate}
+\label{chap:einspielen-der-daten-in-weaviate}
+Um nun die Daten aus Confluence in Weaviate einzuspielen, werden zuerst die Daten aus Confluence exportiert.
+Beim Export von Confluence-Seiten werden HTML-Dateien generiert.
+Es werden keine CSS-, JavaScript- oder Bilddateien generiert.
+Die HTML-Dateien werden preprocessed, um dem zuvor definierten Schema zu entsprechen.
+Es werden zuerst mithilfe eines Abstract Syntax Trees alle Inhalte von h1-, h2- und p-Tags herausgefiltert.
+Anschließend werden Punctuations und Stopwords entfernt und die Inhalte druchlaufen einen Tokenizer und einen Stemmer.
+Punctuations sind Zeichen, wie die folgenden: \textit{.,;:}.
+Stopwords sind Wörter, welche für einen Leser notwendig sind, aber für die Verarbeitung durch einen Algorithmus als unwichtig erachtet werden (\cite{Sarica_Luo_2021}).
+Beispiele für Stopwords sind \textit{aber, denn, der}.
+Ein Tokenizer trennt einen Text in einzelne Wörter auf.
+Aus einem Text, wie \textit{das deployment erfolgt durch ein bash-skript} wird also ein Array, welches folgendermaßen aussieht:\\
 
-% TODO: Erläuterende Grafik + Beispiel.\\
+\(["das", "deployment", "erfolgt", "durch", "ein", "bash", "skript"]\).\\
 
-Das hat den Vorteil, dass ein solches explizites semantisches Netz von Menschen erstellt wurde, und damit eine hohe Qualität der Daten einhergeht.
-Denn an der Erstellung von semantischen Netzen sind mehrere Menschen beteiligt, welche zuerst einen Konsens über die Eigenschaften und Zusammenhänge von Wörtern schaffen müssen.
-Der Nachteil dieser Methode ist der große Arbeitsaufwand, welcher mit der Erstellung eines solchen semantischen Netzes einhergeht.
-Ein weiterer Nachteil ist die mögliche Unvollständigkeit, welche ein solches semantisches Netz besitzen könnte.
-Eine Wissensdatenbank, welche für ein Projekt erstellt wurde, kann Definitionen von Begriffen beinhalten, welche in allgemeinen semantischen Netzen nicht vorhanden sind.
-Bei der Umsetzung einer semantischen Suche mithilfe eines semantischen Netzes müsste also zuerst ein allgemeines semantisches Netz herangezogen werden, beispielsweise von DBPedia.
-Anschließend müsste dieses semantische Netz um die neuen Definitionen, welche nur im Kontext des Projektes gelten, erweitert werden.\\
+Ein Stemmer bestimmt den Wortstamm für die einzelnen Wörter auf Basis von Grammatikregeln.
+Die Software verwendet den Porter-Stemmer-Algorithmus.
+Aus dem Wort \textit{deployment} wird dadurch beispielsweise \textit{deploy}.
+Duplikate von Wörtern werden anschließend verworfen.
+Alle Inhalte, welche in h1-Tags stehen, werden konkateniert und einem Datenfeld der Vektordatenbank gespeichert.
+Das gleiche gilt für die übrigen Tags.
+Nachdem die Inhalte das Preprocessing durchlaufen haben, werden sie in die Datenbank eingespielt.\\
 
+In \myRef{Kapitel}{chap:vektorindizes} wurde bereits von Performancegründen gesprochen, aus denen das Preprocessing durchgeführt wird.
+Da nun die einzelnen Schritte des Preprocessings erklärt wurden, kann auch erklärt werden, warum das Preprocessing die Performance beim indizieren erhöht.
+Zuallererst werden viele Wörter gänzlich verworfen, weil sie Stopwords sind.
+Durch den Stemmer werden anschließend ähnliche Wörter zusammengruppiert.
+Die Wörter \textit{Heizung} und \textit{heizen} stammen beide vom gleichen Wortstamm \textit{heiz}.
+Das bedeutet, dass aus zwei verschiedenen Wörtern, welche beide indiziert werden müssen, ein einziges Wort gemacht wird.
+Denn am Ende werden Duplikate, wie bereits erwähnt, verworfen.
+Die Anzahl der Wörter, welche indiziert werden müssen, wird dadurch reduziert, und damit auch die Last auf dem Transformer, welche die Vektoren für die Wörter berechnen muss.
 
-% \subsection{Document Classification und Filter verwenden}
-% TODO:
+% \section{Hybride Suche}
+% TODO: Erklären
 
-\subsection{Verbesserung der Suchfunktion durch Traceability (insb. für Feature Location und Bug Localization)}
-Indem die Codebase, welche zu der Wissensdatenbank in Verbindung steht, ebenfalls indiziert wird, kann eine Traceability zwischen Code und Wissensdatenbank hergestellt werden.
-Damit können Feature Location und Bug Localization umgesetzt werden.
-So kann die Suchfunktion nicht nur zum Durchsuchen der Wissensdatenbank verwendet werden, sondern auch zum Durchsuchen der Codebase.
-Und wenn in der Suchfunktion nach einem Feature gesucht wird, dann kann neben der Spezifikation in der Wissensdatenbank auch gleich der Einstiegspunkt im Code gefunden werden.
-Damit verbessert sich wiederum die Wartbarkeit der Software, da das Ändern von Features oder korrigieren von Bugs erleichtert wird.\\
-% TODO: Quellen
-
-Wenn ein Softwareentwickler ein bestehendes Feature anpassen muss, dann muss er zunächst den Einstiegspunkt im Code kennen.
-Sind keine weiteren Informationen vorhanden, dann muss der Softwareentwickler dazu den Code manuell durchsuchen.
-Mithilfe von Techniken aus dem Natural Language Processsing, wie Latent Semantic Indexing (LSI), Latent Dirichlet Allocation (LDA) und Vector Space Models kann dieser Prozess automatisiert werden (\cite{Dit_Revelle_Gethers_Poshyvanyk_2011}).
-Mithilfe eines gemeinsamen Index von den Inhalten der Wissensdatenbank und dem Quellcode lässt sich ein Zusammenhang zwischen Feature-Spezifikation und Klassen im Quellcode herstellen.
-Die Herangehensweise erfordert eine Möglichkeit beide Datenquellen auf die gleiche Art und Weise zu indizieren.
-Dazu werden LSI und Vector Space Models verwendet.\citetitle{Antoniol_Canfora_Casazza_DeLucia_2000}
-
-% \subsection{Inhaltsverzeichnisbezogen durchsuchen}
-% TODO:
+% \section{Die Konfiguration der Suchfunktionen}
+% TODO: Auf Benchmark beziehen und erläutern, wie Weaviate konfiguriert war

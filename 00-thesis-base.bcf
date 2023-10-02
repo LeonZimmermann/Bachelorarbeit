@@ -2390,15 +2390,12 @@
     <bcf:citekey order="26" intorder="1">Choudhary_Guttikonda_Chowdhury_Learmonth_2020</bcf:citekey>
     <bcf:citekey order="27" intorder="1">Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020</bcf:citekey>
     <bcf:citekey order="28" intorder="1">Weaviate_Benchmark</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Lehmann</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">Dit_Revelle_Gethers_Poshyvanyk_2011</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">Antoniol_Canfora_Casazza_DeLucia_2000</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">Sarica_Luo_2021</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">Sirotkin_2012</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">Sirotkin_2012</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">Sirotkin_2012</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">Gururangan_Marasović_Swayamdipta_Lo_Beltagy_Downey_Smith_2020</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">Wang_Thakur_Reimers_Gurevych_2022</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Sarica_Luo_2021</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Sirotkin_2012</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Sirotkin_2012</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">Sirotkin_2012</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">Gururangan_Marasović_Swayamdipta_Lo_Beltagy_Downey_Smith_2020</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">Wang_Thakur_Reimers_Gurevych_2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
