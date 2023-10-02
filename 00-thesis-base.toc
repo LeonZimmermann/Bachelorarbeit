@@ -13,16 +13,16 @@
 \contentsline {section}{\numberline {3.4}Sparse Vector Modelle}{13}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Konzeption der neuen Suchfunktion}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Semantische Suche}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Sentence Transformer}{16}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Word Embeddings}{17}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Positional Encoding}{18}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Self-Attention}{18}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}seq2seq}{19}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Vektor-Indizierung}{19}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Hierarchical Navigable Small Worlds (HNSW)}{20}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Wahl der neuen Suchfunktion}{21}{section.4.5}%
+\contentsline {section}{\numberline {4.2}Wahl der neuen Suchfunktion}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Sentence Transformer}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Word Embeddings}{18}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Positional Encoding}{19}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Self-Attention}{20}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}seq2seq}{20}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Vektor-Indizierung}{21}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Hierarchical Navigable Small Worlds (HNSW)}{21}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Implementierung der neuen Suchfunktion}{22}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Aufsetzen der Vektordatenbank Weaviate}{22}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.1}Aufsetzen der Vektordatenbank Weaviate}{23}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Einspielen der Daten in Weaviate}{23}{subsection.4.6.2}%
 \contentsline {chapter}{\numberline {5}Vergleich der Suchfunktionen}{25}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Evaluationsmethoden und -Kriterien}{25}{section.5.1}%

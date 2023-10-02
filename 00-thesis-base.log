@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  2 OCT 2023 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  2 OCT 2023 15:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1572,109 +1572,110 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--48
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--75
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 
  []
 
 [16]
-Overfull \hbox (242.95pt too wide) in paragraph at lines 76--81
-\T1/lmr/m/n/12 man-tik des Sat-zes ab-zu-bil-den. Der Satz []
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 74.
+ (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 70--80
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--99
+Underfull \hbox (badness 10000) in paragraph at lines 81--89
 
  []
 
 [17]
-Overfull \hbox (104.48706pt too wide) in paragraph at lines 128--133
-\T1/lmr/m/n/12 Der Satz []
+Underfull \hbox (badness 10000) in paragraph at lines 104--110
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--133
+Overfull \hbox (242.95pt too wide) in paragraph at lines 111--116
+\T1/lmr/m/n/12 man-tik des Sat-zes ab-zu-bil-den. Der Satz []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--124
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 164--171
+Underfull \hbox (badness 10000) in paragraph at lines 125--134
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 182--198
-
+Overfull \hbox (104.48706pt too wide) in paragraph at lines 163--168
+\T1/lmr/m/n/12 Der Satz []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--212
+Underfull \hbox (badness 10000) in paragraph at lines 163--168
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 219--223
+Underfull \hbox (badness 10000) in paragraph at lines 199--206
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 227.
-(c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 224--233
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--233
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 234--242
+Underfull \hbox (badness 10000) in paragraph at lines 234--247
 
  []
 
 
-Overfull \hbox (1.60483pt too wide) in paragraph at lines 259--270
+Overfull \hbox (1.60483pt too wide) in paragraph at lines 260--271
 \OML/lmm/m/it/12 ENABLE[]MODULES$ \T1/lmr/m/n/12 und $\OML/lmm/m/it/12 TRANSFORMERS[]INFERENCE[]API$ \T1/lmr/m/n/12 kon-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--270
+Underfull \hbox (badness 10000) in paragraph at lines 260--271
 
  []
 
 [22]
-Overfull \hbox (0.37016pt too wide) in paragraph at lines 271--282
+Overfull \hbox (0.37016pt too wide) in paragraph at lines 272--283
 []\T1/lmr/m/n/12 Neben den bei-den Docker-Containern für die se-man-ti-sche Su-che wird ei-ne Spring
  []
 
 
-Overfull \hbox (8.36366pt too wide) in paragraph at lines 271--282
+Overfull \hbox (8.36366pt too wide) in paragraph at lines 272--283
 \T1/lmr/m/n/12 dung ver-wen-det Kot-lin und Grad-le. Mit-hil-fe der De-pen-den-cy \T1/lmr/m/it/12 io.weaviate:client:4.0.1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--282
+Underfull \hbox (badness 10000) in paragraph at lines 272--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--296
+Underfull \hbox (badness 10000) in paragraph at lines 286--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 299--306
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 300--307
 
  []
 
-[23]) (./50-vergleich-der-suchfunktionen.tex [24]
+) (./50-vergleich-der-suchfunktionen.tex [24]
 chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--26
@@ -1842,7 +1843,7 @@ Here is how much of TeX's memory you used:
  1143 hyphenation exceptions out of 8191
  108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on 00-thesis-base.pdf (47 pages, 655735 bytes).
+Output written on 00-thesis-base.pdf (47 pages, 655761 bytes).
 PDF statistics:
  683 PDF objects out of 1000 (max. 8388607)
  574 compressed objects within 6 object streams
