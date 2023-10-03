@@ -61,6 +61,7 @@ Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdate
 Es gibt einige Arbeiten, welche die gleichen oder sehr ähnliche Probleme adressieren.
 Die verschiedenen Herangehensweisen werden in diesem Kapitel erläutert.
 Zuerst wird der Begriff Traceability behandelt, und wie diese genutzt wird, um Suchfunktionen zu verbessern.
+Die Herangehensweisen zur Herstellung von Traceability umfassen die Verwendung von Word Embeddings oder auch ein Task-Based Ansatz.
 Es folgt eine Übersicht über Arbeiten, welche sich mit Question Answering beschäftigen.
 Dann folgt eine Übersicht über Arbeiten, welche sich mit der Evaluierung von Suchfunktionen auseinandersetzen.
 
@@ -98,7 +99,8 @@ Zuletzt werden Flexionen entfernt.
 Aus dem Code werden zunächst Identifier extrahiert.
 Identifier, welche mehrere Wörter unter Verwendung von CamelCase oder snake\_case beinhalten, werden in die einzelnen Wörter aufgeteilt.
 Anschließend werden die Identifier auf die gleiche Art und Weise normalisiert, wie die Wörter der Softwareentwicklungs-Artefakte.
-Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings (\cite{Antoniol_Canfora_Casazza_DeLucia_2000}).
+Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings (\cite{Antoniol_Canfora_Casazza_DeLucia_2000}).\\
+
 Treude et. al. entwickeln eine Oberfläche, welche die Suche von \textit{Tasks} ermöglicht.
 Damit soll ebenfalls Traceability zwischen Code und Dokumentation hergestellt werden.
 Dabei ist unter Task eine Operation im Code zu verstehen.

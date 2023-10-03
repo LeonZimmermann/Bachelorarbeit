@@ -1,18 +1,9 @@
 \chapter{Technologien von Confluence}
 \label{chap:technologie-von-confluence}
-Die Confluence Suche verwendet laut Dokumentation Apache Lucene (\cite{Confluence_Ranking}).
-Apache Lucene ist eine Bibliothek, welche Indizierungs- und Suchfeatures umfasst.
-Dabei verwendet Apache einen Volltext-Index und bietet Vector Space Models und BM25 an, um nach passenden Dokumenten zu suchen.
-Laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert (\cite{Lucene_Scoring}).
-Im Information Retrieval sind Boolean Models jene Scoring Algorithmen, welche auf boolscher Algebra basieren.
-Boolean Models werden benötigt, um eine Boolean Search zu realisieren.
-Auf die Boolean Search wird im späteren Verlauf des Kapitels eingegangen.
-Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit tf-idf berechnet werden.\\
-
 Dieses Kapitel hat den Zweck die Funktionsweise der Suchfunktion von Confluence zu erläutern.
 Dies ist notwendig, um später die Ergebnisse des Vergleichs der Suchfunktion von Confluence mit der neuen Suchfunktion zu verstehen.
 Um die Suchfunktion von Confluence zu verstehen wird zuerst erklärt, welche Suchmethoden mit den Technologien von Apache Lucene ermöglicht werden und in Confluence verwendet werden können.
-Dann wird die zugehörige Technologie erklärt. indem zuerst ein Überblick über die wichtigsten Komponenten einer Suchfunktion gegeben wird.
+Dann wird die zugehörige Technologie erklärt, indem zuerst ein Überblick über die wichtigsten Komponenten einer Suchfunktion gegeben wird.
 Als nächstes werden die spezifischen Technologien erläutert, welche Apache Lucene verwendet.
 Das bedeutet, dass zuerst erklärt wird, was ein Volltext-Index ist.
 Anschließend werden die Scoring Algorithmen TF-IDF und BM25 erörtert.
@@ -125,7 +116,7 @@ Das Ergebnis ist die TF-IDF-Metrik:
 
 \[\text{tf-idf}_{t,d}=\text{tf}_{t,d} \times \text{idf}_t\]
 
-\[\text{tf}_{t,D}=\frac {\#_{t,D}}{\max _{t'\in D}\#_{t',D}}\]
+\[\text{tf}_{t,D}=\frac {\#_{t,D}}{\max_{t'\in D}(\#_{t',D})}\]
 
 \[\text{idf}_t=\log {\frac {N}{\text{df}_t}}\]
 

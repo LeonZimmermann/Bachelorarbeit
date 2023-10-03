@@ -8,7 +8,7 @@ Dann wird erklärt, warum die neue Suchfunktion eine bessere Performance erziele
 Anschließend werden die Technologien erläutert, welche benötigt werden, um die konzipierte semantische Suche zu implementieren.
 Dies umfasst Sentence Transformer.
 Sie indizieren Dokumente, indem sie die Sätze in Vektoren transformieren, welche die Semantik der Sätze abbilden.
-Außerdem umfasst dies Vektorindizes, welche die generierten Vektoren persistenz speichern.
+Außerdem umfasst dies Vektorindizes, welche die generierten Vektoren persistent speichern.
 Zuletzt umfasst dies auch die Bestimmung der relevantesten Dokumente.
 Dazu werden Hierarchical Navigable Small Worlds (HNSW) verwendet.
 Nachdem die Technologien erörtert wurden, wird die Umsetzung der Technologien mithilfe von Weaviate erläutert.
@@ -196,6 +196,7 @@ Das hat zur Folge, dass die Ähnlichkeit von Sätzen genauso wie die Ähnlichkei
 
 \section{Vektor-Indizierung}
 \label{chap:vektorindizes}
+% TODO: Neu schreiben
 Neben einer Volltext-Indizierung können Dokumente in Form von Vektoren indiziert werden.
 Dazu werden Dokumente zunächst, wie auch bei der Volltext-Indizierung gecrawlt.
 Anschließend durchlaufen die Inhalte der Dokumente ein Preprocessing.
