@@ -1,29 +1,29 @@
 # Fdb version 4
-["biber 00-thesis-base"] 1696571217 "00-thesis-base.bcf" "00-thesis-base.bbl" "00-thesis-base" 1696571809 0
+["biber 00-thesis-base"] 1696571948 "00-thesis-base.bcf" "00-thesis-base.bbl" "00-thesis-base" 1696572898 0
   "./referenzen.bib" 1696002233 11409 2683f6ed152de2c306e3204234705cf6 ""
-  "00-thesis-base.bcf" 1696571808 110387 9bf35ad133caabd1e7a3cbb35d9408af "pdflatex"
+  "00-thesis-base.bcf" 1696572897 110324 b82a3b5dc69ea1c5aa4aaeecee58dcd3 "pdflatex"
   (generated)
   "00-thesis-base.bbl"
   "00-thesis-base.blg"
   (rewritten before read)
-["pdflatex"] 1696571804 "c:/Users/lezimmermann/OneDrive - Universitaet Duisburg-Essen/Bachelorarbeit/Dokumente/00-thesis-base.tex" "00-thesis-base.pdf" "00-thesis-base" 1696571809 0
-  "00-thesis-base.aux" 1696571808 29731 dcc9170bcd25f00aafba2cf9c861c015 "pdflatex"
-  "00-thesis-base.bbl" 1696571263 51689 b259c7a4d977b9806970c0d48f638620 "biber 00-thesis-base"
-  "00-thesis-base.lof" 1696571808 255 1ded9d2c504324beb211a5fb224965b2 "pdflatex"
-  "00-thesis-base.lot" 1696571808 555 105c9a7eb284b08126b059d22a3e5c85 "pdflatex"
-  "00-thesis-base.out" 1696571807 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "00-thesis-base.run.xml" 1696571808 2457 81267b6eb1960783e91624c39f2419a8 "pdflatex"
+["pdflatex"] 1696572891 "c:/Users/lezimmermann/OneDrive - Universitaet Duisburg-Essen/Bachelorarbeit/Dokumente/00-thesis-base.tex" "00-thesis-base.pdf" "00-thesis-base" 1696572898 0
+  "00-thesis-base.aux" 1696572896 30241 165acce5464786fea14aab3df8aa5238 "pdflatex"
+  "00-thesis-base.bbl" 1696571961 49466 772a3392362a85443ceefc2364d72fae "biber 00-thesis-base"
+  "00-thesis-base.lof" 1696572897 255 1ded9d2c504324beb211a5fb224965b2 "pdflatex"
+  "00-thesis-base.lot" 1696572897 555 105c9a7eb284b08126b059d22a3e5c85 "pdflatex"
+  "00-thesis-base.out" 1696572895 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "00-thesis-base.run.xml" 1696572897 2457 81267b6eb1960783e91624c39f2419a8 "pdflatex"
   "00-thesis-base.tex" 1696182365 16372 b75684fbc96cb8ffb68ca576ab4d6720 ""
-  "00-thesis-base.toc" 1696571808 3377 40b0f1306add2d5f173bc80c0ae842ba "pdflatex"
+  "00-thesis-base.toc" 1696572897 3482 70a16f36211ccf28cd599511a7e3cdab "pdflatex"
   "00-thesis-config.tex" 1430730748 2396 12e7629872bb020f686749e43d0c7d68 ""
   "01-frontpage.tex" 1689330297 1251 70ea98854aac885540adc12c6dc99dce ""
   "02-declaration.tex" 1430729874 547 42709ab4636b3a5440091ec8717ab5b5 ""
   "03-abbreviations.tex" 1695039198 241 2634a0c183f55bc19934caa83cd85494 ""
   "08-abstract.tex" 1695451808 3300 14acfbfd6990d09b84512f19f7b86bb9 ""
-  "10-intro.tex" 1696571799 15570 1f5b9f32c49f616f102436a5f7eab743 ""
+  "10-intro.tex" 1696571943 15320 84dceab0f26478aa4b5c15b7ad559a7a ""
   "20-definition-von-anwendungsfaellen.tex" 1696321030 8048 e634c10f33d6ada18bbd20f61e381094 ""
   "30-technologie-von-confluence.tex" 1696321139 12052 92d8e9018389400192fa7d0e8f15dad8 ""
-  "40-konzeption-der-suchfunktion.tex" 1696328682 28721 a59c796b8f7aabda80339536e1637470 ""
+  "40-konzeption-der-suchfunktion.tex" 1696572882 29913 1b2a7ec04b31f0e2f8b00f4eb66f56df ""
   "50-vergleich-der-suchfunktionen.tex" 1696324784 18459 c4cb85cdfce69535ff5545b5971ce00c ""
   "60-zusammenfassung.tex" 1696252660 6383 897a7ef870f791f72ecc9e17124c7c1f ""
   "70-appendix.tex" 1695035749 2057 8b2315179185144c6556a9dc163323e0 ""

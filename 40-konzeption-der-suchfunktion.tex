@@ -99,20 +99,31 @@ Die Benchmark zeigt, dass HNSW für den Datensatz SIFT1M einen Recall-Wert von 9
 \section{Sentence Transformer}
 \label{chap:sentence-transformer}
 % TODO: Sentence Transformer, wie Bert
- (\cite{Reimers_Gurevych_2019})
+(\cite{Reimers_Gurevych_2019})
 
- Ein Sentence Transformer transformiert eine Aneinanderreihung von Tokens beliebiger Länge in einen Vektor einer vorgegebenen Länge.
- Der Aneinanderreihung der Tokens kann dabei ein Satz sein, ein Teil eines Satzes oder auch ein ganzer Paragraph.
- Die Länge des Vektors wird durch die Architektur des Sentence Transformers vorgegeben.
- Um eine Aneinanderreihung von Tokens in einen Vektor zu transformieren, braucht der Sentence Transformer für jedes Wort in dessen Wortschatz einen Input.
- Da ein neuronales Netzwerk keine Wörter verarbeiten kann, sondern nur Zahlen, müssen die Wörter zuerst in Zahlen umgewandelt werden.
- Dies erfolgt mithilfe von Word Embeddings und wird in \myRef{Kapitel}{chap:word-embeddings} erläutert.\\
- 
- Wenn nun die Semantik eines Satzes in einen Vektor transformiert werden soll, dann ist die Reihenfolge der Wörter in dem Satz wichtig zu beachten, um die Semantik des Satzes abzubilden.
- Der Satz \text{Software-Entwickler verwenden die Spezifikation, um Features korrekt zu implementieren} besitzt die gleichen Wörter, wie der Satz \textit{Features verwenden die Spezifikation, um Software-Entwickler korrekt zu implementieren}.
- Dennoch ist die Sematik zwischen den Sätzen nicht die gleiche.
- Das bedeutet, dass ein Sentence Transformer die Positionen der einzelnen Wörter in dem Vektor kodieren muss, um die Sematik des Satzes korrekt abzubilden.
- Die Kodierung der Positionen der Wörter in einem Satz wird als Positional Encoding bezeichnet und wird in \myRef{Kapitel}{chap:positional-encoding} erklärt.
+Ein Sentence Transformer transformiert eine Aneinanderreihung von Tokens beliebiger Länge in einen Vektor einer vorgegebenen Länge.
+Der Aneinanderreihung der Tokens kann dabei ein Satz sein, ein Teil eines Satzes oder auch ein ganzer Paragraph.
+Die Länge des Vektors wird durch die Architektur des Sentence Transformers vorgegeben.
+Um eine Aneinanderreihung von Tokens in einen Vektor zu transformieren, braucht der Sentence Transformer für jedes Wort in dessen Wortschatz einen Input.
+Da ein neuronales Netzwerk keine Wörter verarbeiten kann, sondern nur Zahlen, müssen die Wörter zuerst in Zahlen umgewandelt werden.
+Dies erfolgt mithilfe von Word Embeddings und wird in \myRef{Kapitel}{chap:word-embeddings} erläutert.\\
+
+Wenn nun die Semantik eines Satzes in einen Vektor transformiert werden soll, dann ist die Reihenfolge der Wörter in dem Satz wichtig zu beachten, um die Semantik des Satzes abzubilden.
+Der Satz \text{Software-Entwickler verwenden die Spezifikation, um Features korrekt zu implementieren} besitzt die gleichen Wörter, wie der Satz \textit{Features verwenden die Spezifikation, um Software-Entwickler korrekt zu implementieren}.
+Dennoch ist die Sematik zwischen den Sätzen nicht die gleiche.
+Das bedeutet, dass ein Sentence Transformer die Positionen der einzelnen Wörter in dem Vektor kodieren muss, um die Sematik des Satzes korrekt abzubilden.
+Die Kodierung der Positionen der Wörter in einem Satz wird als Positional Encoding bezeichnet und wird in \myRef{Kapitel}{chap:positional-encoding} erklärt.
+Zuletzt wird Self-Attention auf die Kodierung der Wörter angewendet.
+Dieser Schritt wird in \myRef{Kapitel}{chap:self-attention} erklärt.
+Die beschriebenen Schritte bilden zusammengefasst den Encoder eines Transformers.
+% TODO: Sentence Transformer SBert
+Er generiert einen Vektor einer fixen Länge für eine beliebig lange Eingabe.
+Der generierte Vektor wird auch als Context Vector bezeichnet.
+Bert wurde entwickelt, um eine gute automatische Übersetzung zwischen Sprachen zu ermöglichen.
+Die Architektur von Bert umfasst neben dem Encoder, welcher einen Context Vector generiert, auch einen Decoder, welcher diesen Context Vector wieder in einen Satz einer anderen Sprache umwandelt.
+Im Rahmen dieser Arbeit ist nur die Betrachtung des Encoders relevant.
+Denn dieser generiert bereits die Context Vectors, und diese werden anschließend in einer Vektordatenbank gespeichert.
+Um zu verstehen, welchen Einfluss die Architektur von Sentence Transformer auf die Ergebnisse der Studie hat, wird zuletzt erläutert, wie ein solcher Sentence Transformer trainiert wird.
 
 \subsection{Word Embeddings}
 \label{chap:word-embeddings}
@@ -160,6 +171,7 @@ Und mit steigender Dimension wird die Frequenz der Sinus- bzw. Kosinusfunktion v
 Der Unterschied in der Frequenz hat zur Folge, dass jeder Vektor zur Bestimmung der Position eines Wortes eindeutig ist.
 
 \subsection{Self-Attention}
+\label{chap:self-attention}
 Der Satz \text{Software-Entwickler verwenden die Spezifikation, damit sie Features korrekt implementieren} besitzt beispielsweise eine Cross-Referenz.
 Das Wort \textit{sie} bezieht sich in dem Beispielsatz auf Software-Entwickler, aber es könnte sich auch auf die Spezifikation beziehen.
 Im Allgemeinen können Menschen solche Cross-Referenzen intuitiv verstehen.
@@ -177,6 +189,9 @@ Das Ergebnis repräsentiert für das aktuelle Wort, für welches der Self-Attent
 Dann wird wiederum das Punktprodukt auf dieses Ergebnis und den Value jedes Wortes angewendet.
 Diese Ergebnisse bedeuten wiederum, wie repräsentativ die einzelnen Wörter für das gegebene Konzept sind.
 Die Ergebnisse dieser Operationen sind die Self-Attention Werte der Wörter in einem Satz.
+
+\subsection{Training von Sentence Transformern}
+% TODO: Next Word Prediction / Masked Language Modelling
 
 \subsection{seq2seq}
 Ein seq2seq-Modell soll eine Sequenz auf eine andere Sequenz anhand von erlernten Regeln mappen.

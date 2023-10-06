@@ -15,13 +15,14 @@
 \contentsline {section}{\numberline {4.1}Semantische Suche}{14}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Wahl der neuen Suchfunktion}{16}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Sentence Transformer}{17}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Word Embeddings}{17}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Positional Encoding}{18}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.1}Word Embeddings}{18}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Positional Encoding}{19}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Self-Attention}{19}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}seq2seq}{19}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.4}Training von Sentence Transformern}{20}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}seq2seq}{20}{subsection.4.3.5}%
 \contentsline {section}{\numberline {4.4}Vektor-Indizierung}{20}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Hierarchical Navigable Small Worlds (HNSW)}{20}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Implementierung der neuen Suchfunktion}{21}{section.4.6}%
+\contentsline {section}{\numberline {4.5}Hierarchical Navigable Small Worlds (HNSW)}{21}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Implementierung der neuen Suchfunktion}{22}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Aufsetzen der Vektordatenbank Weaviate}{22}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Einspielen der Daten in Weaviate}{22}{subsection.4.6.2}%
 \contentsline {chapter}{\numberline {5}Vergleich der Suchfunktionen}{24}{chapter.5}%
