@@ -1,8 +1,8 @@
 \chapter{Konzeption der neuen Suchfunktion}
 \label{chap:konzeption-der-suchfunktion}
 Dieses Kapitel dient der Konzeption einer neuen Suchfunktion.
-Die neue Suchfunktion verwendet eine andere Technologie als die Suchfunktion von Confluence.
-Während die Confluence-Suche ein Boolean Model und TF-IDF verwendet, ist die neue Suchfunktion eine semantische Suche.
+Die neue Suchfunktion gebraucht eine andere Technologie als die Suchfunktion von Confluence.
+Während die Confluence-Suche ein Boolean Model und TF-IDF nutzt, ist die neue Suchfunktion eine semantische Suche.
 Im Folgenden wird zuerst erörtert, was eine semantische Suche ist.
 Dann wird erklärt, warum die neue Suchfunktion eine bessere Performance erzielen soll als die bestehende Confluence-Suche.
 Anschließend werden die Technologien erläutert, welche benötigt werden, um die konzipierte semantische Suche zu implementieren.
@@ -10,7 +10,7 @@ Dies umfasst Sentence Transformer.
 Sie indizieren Dokumente, indem sie die Sätze in Vektoren transformieren, welche die Semantik der Sätze abbilden.
 Außerdem umfasst dies Vektorindizes, welche die generierten Vektoren persistent speichern.
 Zuletzt umfasst dies auch die Bestimmung der relevantesten Dokumente.
-Dazu werden Hierarchical Navigable Small Worlds (HNSW) verwendet.
+Dazu werden Hierarchical Navigable Small Worlds (HNSW) benutzt.
 Nachdem die Technologien erörtert wurden, wird die Umsetzung der Technologien mithilfe von Weaviate erläutert.
 
 \section{Semantische Suche}
@@ -93,7 +93,7 @@ Damit lässt sich die bessere Performance von Sentence Transformern gegenüber T
 Weaviate ist eine Vektordatenbank, welche Sentence Transformer nutzt, um Dokumente zu indizieren, und HNSW als Scoring-Algorithmus zur Ermittlung des passendsten Dokumentes.
 Die Performance des Scoring Algorithmus wurde durch Weaviate anhand von Benchmarks überprüft.
 Dabei wird der Recall für das erste Element, die ersten zehn Elemente und die ersten 100 Elemente gemessen.
-Zusätzlich ist angegeben, wie Weaviate konfiguriert ist und welcher Datensatz verwendet wird.
+Zusätzlich ist angegeben, wie Weaviate konfiguriert ist und welcher Datensatz benutzt wird.
 Die Benchmark zeigt, dass HNSW für den Datensatz SIFT1M einen Recall-Wert von 90.91\% besitzt (\cite{Weaviate_Benchmark}).
 
 \section{Sentence Transformer}
@@ -120,7 +120,7 @@ Word Embeddings sind eine Vektorrepräsentation von Wörtern.
 Zweck von Word Embeddings ist es, semantische Ähnlichkeiten zwischen Wörtern zu verstehen.
 Eine einfache Implementierung von Word Embeddings könnte sein, jedem Wort eine zufällige Zahl zuzuordnen.
 Wenn die Zahlen zufällig sind, werden damit allerdings keine semantischen Ähnlichkeiten kodiert.
-Um herauszufinden, welche Wörter eine semantische Ähnlichkeit besitzen wird word2vec verwendet, um Word Embeddings zu generieren.\\
+Um herauszufinden, welche Wörter eine semantische Ähnlichkeit besitzen wird word2vec benutzt, um Word Embeddings zu generieren.\\
 
 Word2vec ist ein zwei-Layer neuronales Netzwerk, welches die Semantik von Wörtern lernt.
 Für jedes Wort, für welches eine Vektorrepräsentation bestimmt werden soll, benötigt das neuronale Netzwerk einen Input.
@@ -149,7 +149,7 @@ Das Ergebnis ist eine Vektordatenbank, welche Informationen darüber enthält, w
 
 \subsection{Positional Encoding}
 \label{chap:positional-encoding}
-Positional Encoding wird verwendet, um die Position eines Wortes in einem Satz zu kodieren, wenn ein Satz in einen Vektor transformiert wird.
+Positional Encoding wird eingesetzt, um die Position eines Wortes in einem Satz zu kodieren, wenn ein Satz in einen Vektor transformiert wird.
 Das Positional Encoding wird angewendet, nachdem die Wörter mithilfe von Word Embeddings in Vektoren transformiert wurden.
 Nun werden die generierten Vektoren mit einem Vektor addiert, welcher die Position des Wortes repräsentiert.
 Der Vektor, welcher auf die Word Embeddings addiert wird, wird mithilfe von Sinus- und Kosinusfunktionen berechnet.
@@ -253,26 +253,27 @@ Eine andere ist L2-squared.
 
 \section{Implementierung der neuen Suchfunktion}
 \label{chap:implementierung}
-In diesem Kapitel wird die Implementierung der neuen Suchfunktion dargestellt.
-Die Implementierung verwendet eine Vektordatenbank, welche eine semantische Suche ermöglicht.
-Es wird die Vektordatenbank Weaviate verwendet.
+Nachdem erörtert wurde, was eine semantische Suche ist und wie die zu Grunde liegende Technologie funktioniert, wird in diesem Kapitel die Implementierung der neuen Suchfunktion dargestellt.
+Die Implementierung setzt die Vektordatenbank Weaviate ein, welche eine semantische Suche ermöglicht.
+Es wird als nächstes erklärt, wie die Vektordatenbank aufgesetzt wird.
+Anschließend wird erläutert, wie die Daten in Weaviate eingespielt werden.
 
 \subsection{Aufsetzen der Vektordatenbank Weaviate}
 Für das Aufsetzen von Weaviate werden zwei Komponenten benötigt.
 Zum einen die Vektordatenbank selbst.
 Zum anderen ein Transformer, welcher Text entgegennimmt, und diese in Vektoren umwandelt, sodass diese in der Datenbank gespeichert werden können.
-Um die beiden Komponenten aufzusetzen wird Docker verwendet.
+Um die beiden Komponenten aufzusetzen wird Docker benutzt.
 Das entsprechende docker-compose.yml File ist im Anhang zu finden.
 Hier werden die beiden Komponenten definiert.
 Unter \textit{t2v-transformers} wird der Transformer konfiguriert.
 Es wird das Image eines bereits vortrainierten Transformers verwendet.
 Unter \textit{weaviate} wird die Datenbank konfiguriert.
 Hier wird mithilfe von den Environment-Variablen \textit{$DEFAULT\_VECTORIZER\_MODULE$}, \textit{$ENABLE\_MODULES$} und \textit{$TRANSFORMERS\_INFERENCE\_API$} konfiguriert, welcher Transformer verwendet werden soll.
-So wird konfiguriert, dass der Transformer der anderen Komponente verwendet werden soll.\\
+So wird konfiguriert, dass der Transformer der anderen Komponente benutzt werden soll.\\
 
 Neben den beiden Docker-Containern für die semantische Suche wird eine Spring Boot Anwendung in einem Docker Container mitdeployt.
 Die Spring Boot Anwendung verwendet Kotlin und Gradle.
-Mithilfe der Dependency \textit{io.weaviate:client:4.0.1} wird die Client API von Weaviate verwendet.
+Mithilfe der Dependency \textit{io.weaviate:client:4.0.1} wird die Client API von Weaviate eingesetzt.
 So wird nun eine Verbindung zu der Vektordatenbank aufgebaut.
 Diese beinhaltet zu diesem Zeitpunkt noch keine Daten.
 Bevor die Daten in die Datenbank eingespielt werden, muss das Schema der Daten angegeben werden.
@@ -299,7 +300,7 @@ Aus einem Text, wie \textit{das deployment erfolgt durch ein bash-skript} wird a
 \(["das", "deployment", "erfolgt", "durch", "ein", "bash", "skript"]\).\\
 
 Ein Stemmer bestimmt den Wortstamm für die einzelnen Wörter auf Basis von Grammatikregeln.
-Die Software verwendet den Porter-Stemmer-Algorithmus.
+Die Software nutzt den Porter-Stemmer-Algorithmus.
 Aus dem Wort \textit{deployment} wird dadurch beispielsweise \textit{deploy}.
 Duplikate von Wörtern werden anschließend verworfen.
 Alle Inhalte, welche in h1-Tags stehen, werden konkateniert und einem Datenfeld der Vektordatenbank gespeichert.

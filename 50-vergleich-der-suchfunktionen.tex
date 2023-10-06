@@ -30,7 +30,7 @@ Im Folgenden werden Precision, Recall und F-Maß herangezogen, um Suchfunktionen
 Mithilfe dieser Messwerte kann eine objektive Entscheidung darüber getroffen werden, welche Suchfunktion \textit{besser} funktioniert.
 
 \subsection{Precision, Recall und F-Maß}
-Zur Evaluation der Suchfunktionen werden später die statistischen Messwerte Precision und Recall verwendet.
+Zur Evaluation der Suchfunktionen können die statistischen Messwerte Precision und Recall verwendet werden.
 Die Messwerte beschreiben, inwieweit eine Hypothese zutrifft.
 Wenn also die Hypothese ist, dass ein bestimmtes Dokument gefunden wird, dann ist der Precision-Wert das Verhältnis zwischen allen gefundenen Dokumenten und den gefundenen Dokumenten, die tatsächlich relevant sind.
 Der Wert lässt sich im Kontext der Suche nach Dokumenten wie folgt definieren (\cite{Sirotkin_2012}):\\
@@ -47,7 +47,7 @@ Das F1-Maß fasst beide Werte zu einem neuen Wert zusammen (\cite{Sirotkin_2012}
 
 \(F_1=2\frac{PR}{P+R}\)\\
 
-Neben der Verwendung des F1-Maß ist es wichtig sich Gedanken darüber zu machen, welcher der beiden Messwerte wichtiger ist.
+Neben der Verwendung des F1-Maß müssen sich Gedanken darüber gemachen werden, welcher der beiden Messwerte wichtiger ist.
 In diesem Fall ist es sinnvoll eher die Precision zu optimieren.
 Denn, wenn ein Dokument gesucht wird, aber überhaupt nicht gefunden werden kann, dann erfüllt die Suchfunktion nicht ihren Zweck.
 Wenn die Suchfunktion irrelevante Dokumente darstellt, kann sie trotzdem ihren Zweck erfüllen, solange die relevantesten Dokumente zuerst in der Liste der Ergebnisse dargestellt wird.
@@ -65,7 +65,7 @@ Es wurde bereits erwähnt, dass die Suche von Confluence auf Apache Lucene basie
 Sparck et. al. beschreiben, dass eine große Ähnlichkeit bei der Performance zwischen TF-IDF und BM25 besteht (\cite{Sparck_Jones_Walker_Robertson_2000}).
 Auf diese Weise wird die Vergleichbarkeit zwischen den beiden Suchfunktionen also verbessert.
 Die BM25-Suche in Weaviate ist eine von drei Konfigurationen der neuen Suchfunktionen.
-Sie ist die Benchmark für die neue Suchfunktion und repräsentiert die Confluence-Suche.
+Sie ist die Benchmark für die neue Suchfunktion und repräsentiert die Confluence-Suche.\\
 
 Eine weitere Konfiguration verwendet eine Mischung aus einer BM25 Suche, und einer semantischen Suche.
 Die beiden Suchalgorithmen werden zu gleichen Teilen verwendet.

@@ -7,54 +7,62 @@ Eine solche Wissensdatenbank ist Confluence.
 Sie bietet eine Suchfunktion, welche es dem Softwareentwickler erleichtern soll, die gewünschten Informationen zu finden.
 Beispiele für Informationen sind die Spezifikationen oder Dokumentationen eines Teiles der Software, mit welcher der Softwareentwickler gerade arbeitet.
 Oder aber auch Best-Practices, Guides, oder Informationen darüber, wie die Software gestartet oder ausgeliefert wird.
-Auch Informationen über den Projektplan sind für einen Softwareentwickler von Bedeutung.
-Aber nicht immer finden Softwareentwickler die gewünschten Informationen mithilfe der Suchfunktion.
-Ziel dieser Arbeit soll es sein, mithilfe von Wissen über Suchalgorithmen und Algorithmen aus dem Natural Language Processing zu zeigen, wie sich bestehende Suchfunktionen verbessern lassen.\\
+Auch Informationen über den Projektplan sind für einen Softwareentwickler von Bedeutung.\\
 
+Aber nicht immer finden Softwareentwickler die gewünschten Informationen mithilfe der Suchfunktion.
+Ziel dieser Arbeit soll es sein, mithilfe von Wissen über Suchalgorithmen und Algorithmen aus dem Natural Language Processing zu zeigen, wie sich bestehende Suchfunktionen verbessern lassen.
 Software, wie chatGPT\footnote{https://openai.com/blog/chatgpt} zeigt, dass Large Language Models eine valide Möglichkeit zur Information Extraction sind.
 Es ist denkbar, dass Suchfunktionen für Softwareentwickler durch Large Language Models verbessert werden können.
-Auch die Verwendung von vorgefertigten semantischen Netzen, welche in Knowledge Bases, wie DBPedia\footnote{https://www.dbpedia.org/} zu finden sind, sind als Lösung für dieses Problem denkbar (\cite{1644735}).
-Sowohl die Verwendung von semantischen Netzen als auch die Verwendung von Vektordatenbanken kann als semantische Suche verstanden werden.
-Später soll noch einmal auf den genauen Unterschied zwischen den beiden Methoden eingegangen werden.
-In dieser Arbeit soll es lediglich um die Verwendung von Vektordatenbanken gehen.
+Diese Arbeit erörtert, wie die Technologien von Large Language Models verwendet werden können, um eine semantsiche Suche zu implementieren.
+Die implementierte semantische Suche wird mit der bestehenden Confluence-Suche verglichen, um herauszufinden, ob die semantische Suche eine Verbesserung zu der bestehenden Confluence-Suche darstellt.
 
 \section{Vorgehensweise}
 Die Gründe, warum eine gewünschte Information schwierig zu finden ist, sind vielzählig.
 Manchmal kennt der Softwareentwickler nicht das genaue Wording, um die gewünschten Informationen zu finden.
 Manchmal ist das Abstraktionslevel der gefundenen Informationen nicht das, welches sich der Softwareentwickler gewünscht hat.
 Beispielsweise, wenn eine allgemeine Definition von Domänenobjekten gesucht wird, aber eine Spezifikation eines Anwendungsfalls gefunden wird, in welchem das Domänenobjekt lediglich erwähnt wird.
-Es werden folgende Teilschritte durchlaufen, um die Suchfunktion von Wissensdatenbanken, wie Confluence, zu verbessern:
+Im Rahmen dieser Arbeit wird eine neue Suchfunktion entwickelt, welche eine Verbesserung zu bestehenden Suchfunktionen von Wissensdatenbanken, wie Confluence, darstellen soll.
+Nachdem die neue Suchfunktion entwickelt wurde, wird diese mit einer bestehenden Suchfunktion verglichen, um zu untersuchen, ob die neue Suchfunktion besser ist als eine bestehende Suchfunktion.
+Dazu werden objektive Metriken zur Messung von Suchfunktionen dargestellt.
+Die einzelnen Schritte für die Entwicklung und Evaluierung der neuen Suchfunktion werden im Folgenden dargestellt:
 \begin{itemize}
    \item \textbf{Definition von Anwendungsfällen:}
          Es werden zuerst Anwendungsfälle definiert.
-         Damit wird das Problem der Qualität einer Suchfunktion heruntergebrochen in Teilprobleme.
          Die Anwendungsfälle beschreiben die konkreten Situationen, in welchen ein Softwareentwickler eine Suche nutzen könnte.
-         Das hilft später dabei mehrere Suchfunktionen miteinander vergleichen zu können.
+         Das hilft später dabei Suchfunktionen miteinander zu vergleichen.
          Denn anhand der Anwendungsfälle können realistische Sucheingaben definiert werden.
          Diese Sucheingaben können an zwei verschiedene Suchfunktionen übergeben werden.
          Anschließend können die gefundenen Ergebnisse verglichen werden.
-         Die genaue Vorgehensweise für diesen Vergleich wird in \myRef{Kapitel}{chap:evaluationsmethoden} und \myRef{Kapitel}{chap:vergleich-der-suchfunktionen} erklärt.
-         Außerdem bietet die Aufteilung in Anwendungsfälle bereits Aufschluss über die möglichen Verbesserungen, welche gemacht werden können.
-         Hierauf wird in Kapitel "Erklärung des theoretischen Hintergrunds" und "Implementierung" weiter eingegangen.
-   \item \textbf{Erklärung des theoretischen Hintergrunds:}
-         Es wird die Theorie für die Implementierung einer Suchfunktion erläutert.
-         Hier wird erklärt, welche Suchfunktionen es gibt.
-         Außerdem werden Verfahren zur Indizierung von Dokumenten erklärt.
-         Darüber hinaus werden NLP-Techniken erläutert, mit welchen Informationen aus gefundenen Dokumenten extrahiert werden können.
-   \item \textbf{Implementierung:}
-         Es wird eine neue Suchfunktion anhand der Informationen des theoretischen Hintergrunds implementiert.
-         Es wird die Weaviate\footnote{https://weaviate.io/} Vektordatenbank verwendet, um Dokumente zu indizieren.
-   \item \textbf{Herausarbeitung von Evaluationsmethoden und -Kriterien:}
-         Es werden Methoden für die Bewertung herausgearbeitet.
+         Die genaue Vorgehensweise für diesen Vergleich wird in \myRef{Kapitel}{chap:vergleich-der-suchfunktionen} erklärt.
+   \item \textbf{Technologien von Confluence:}
+         Als nächstes wird die Technologie von Confluence dargestellt.
+         Das hilft dabei später die Konzeption einer neuen Suchfunktion zu entwickeln und zu begründen, warum die neue Technologie besser sein soll.
+         Im weiteren Verlauf der Arbeit wird erläutert, dass für den Vergleich der Suchfunktionen nicht die tatsächliche Confluence-Suchfunktion als Benchmark für die neue Suchfunktion herangezogen wird.
+         Stattdessen wird die neue Suchfunktion so entwickelt, dass sie so konfiguriert werden kann, dass sie eine gute Heuristik für die Confluence-Suchfunktion darstellt.
+         Dieses Kapitel erfüllt ebenfalls den Zweck eine vergleichbare Suchfunktion entwickeln zu können, welche anhand der objektiven Kriterien gemessen werden kann.
+         Auch bei der Auswertung der Ergebnisse der Suchfunktion sind die Inhalte aus diesem Kapitel relevant.
+   \item \textbf{Konzeption der neuen Suchfunktion:}
+         Nachdem die Technologien von Confluence erörtert wurden, wird in diesem Kapitel die Theorie für die Implementierung einer Suchfunktion erläutert.
+         Es wird zuerst erklärt, dass die neue Suchfunktion eine semantische Suchfunktion ist.
+         Dann wird erläutert, was eine semantische Suche ist, und warum eine semantische Suche eine Verbesserung gegenüber den Technologien von Confluence darstellen soll.
+         Anschließend wird erklärt, welche Technologien für die Implementierung einer semantischen Suche notwendig sind.
+         Zuletzt wird die Implementierung der semantischen Suche mithilfe von der Vektordatenbank Weaviate\footnote{https://weaviate.io/} erklärt.
+   \item \textbf{Vergleich der Suchfunktionen:}
+         In diesem Kapitel werden zuerst Methoden für die Evaluierung von Suchfunktionen herausgearbeitet.
          Damit wird die Frage beantwortet, wann eine Suchfunktion \textit{gut} ist.
          Das hier erläuterte Wissen wird für die Durchführung der Studie benötigt.
-   \item \textbf{Durchführung einer Studie:}
-         Um festzustellen, ob die Implementierung eine Verbesserung darstellt, muss eine Studie durchgeführt werden.
+         Denn um festzustellen, ob die Implementierung eine Verbesserung darstellt, muss eine Studie durchgeführt werden.
          Aufgrund des Scopes der Arbeit wird nur eine rudimentäre Studie durchgeführt.
+         Die Studie vergleicht die Precision-Werte der Confluence-Suchfunktion und der neuen Suchfunktion mithilfe eines generierten Datensatzes von Sucheingaben und erwarteten Ergebnissen.
+         Grundlage für die Generierung dieses Datensatzes sind die Anwendungsfälle, welche zuvor definiert wurden.
          Die Ergebnisse werden dargestellt und diskutiert.
-         Dabei wird auch darauf eingegangen, an welchen Stellen die Studie weiter ausgearbeitet werden muss, um präzise Ergebnisse liefern zu können.
-         Außerdem wird der Versuchsaufbau beschrieben und die gemessenen Daten.
-         Die Ergebnisse werden interpretiert und es wird ein Schluss gezogen.
+         Es wird gezeigt, dass eine semantische Suche für die generierten Daten und den spezifischen Kontext der Datengrundlage, einen schlechten Precision-Wert besitzt. 
+         Dann werden dieses Ergebnis interpretiert und es wird der Schluss gezogen, dass Sentence Transformer besser geeignet sind für Open-Domain Datensätze, im Gegensatz zu Closed-Domain Datensätzen.
+         Zuletzt wird der Studienaufbau diskutiert.
+    \item \textbf{Zusammenfassung und Ausblick}
+         In diesem Kapitel werden die einzelnen Kapitel der Arbeit nochmal zusammenfassend dargestellt.
+         Außerdem wird das Ergebnis der Arbeit zusammenfassend dargestellt.
+         In \myRef{Kapitel}{chap:ausblick} werden Ansätze erörtert, welche die Suchergebnisse von semantischen Suchen in spezifischen Domänen verbessern sollen.
 \end{itemize}
 
 \section{Verwandte Arbeiten}

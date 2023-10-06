@@ -625,62 +625,6 @@
       \verb 10.15849/ijasca.211128.11
       \endverb
     \endentry
-    \entry{1644735}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=66d548e0e670e107fc4a80dc0c3825b3}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Y.},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=bb1c2af2935310fe29e502bf27d93a5f}{%
-           family={McLean},
-           familyi={M\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f26fb651f6a9aedabf7d43ce6756008e}{%
-           family={Bandar},
-           familyi={B\bibinitperiod},
-           given={Z.A.},
-           giveni={Z\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d87a779b9bfbbb1a0f82e58a266865cd}{%
-           family={O'Shea},
-           familyi={O\bibinitperiod},
-           given={J.D.},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=68894171b0aa6b97fec2fd872f03b678}{%
-           family={Crockett},
-           familyi={C\bibinitperiod},
-           given={K.},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{2f060ecac11058276f5d0b5a813eee70}
-      \strng{fullhash}{f35c5dac0f01116e9e570dd22937ee79}
-      \strng{bibnamehash}{f35c5dac0f01116e9e570dd22937ee79}
-      \strng{authorbibnamehash}{f35c5dac0f01116e9e570dd22937ee79}
-      \strng{authornamehash}{2f060ecac11058276f5d0b5a813eee70}
-      \strng{authorfullhash}{f35c5dac0f01116e9e570dd22937ee79}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Knowledge and Data Engineering}
-      \field{number}{8}
-      \field{title}{Sentence similarity based on semantic nets and corpus statistics}
-      \field{volume}{18}
-      \field{year}{2006}
-      \field{pages}{1138\bibrangedash 1150}
-      \range{pages}{13}
-      \verb{doi}
-      \verb 10.1109/TKDE.2006.130
-      \endverb
-    \endentry
     \entry{Malkov_Yashunin_2020}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=1761d9a54a91e198bbbb1ab8c90b87cf}{%
