@@ -63,14 +63,14 @@ Genau diese Informationen nutzen semantische Suchen.
 
 \section{Wahl der neuen Suchfunktion}
 Dieses Kapitel betrachtet verschiedene Quellen, um zu zeigen, welches Verbesserungspotenzial die Verwendung von Sentence Transformern im Document Retrieval bietet.
-Zuerst wird anhand der Arbeit von Choudhary et. al. gezeigt, wie das Scoring im Document Retrieval durch die Verwendung von Bert verbessert wird.
-Anschließend werden die Arbeiten von Karpukhin et. al. und Berger et. al. herangezogen, um zu verstehen, warum es zu einer Verbesserung im Document Retrieval kommt, wenn Sentence Transformer verwendet werden.
+Zuerst wird anhand der Arbeit von Choudhary et al. (\citeyear{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}) gezeigt, wie das Scoring im Document Retrieval durch die Verwendung von Bert verbessert wird.
+Anschließend wird die Arbeit von Karpukhin et al. (\citeyear{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}) herangezogen, um zu verstehen, warum es zu einer Verbesserung im Document Retrieval kommt, wenn Sentence Transformer verwendet werden.
 Zuletzt werden die Argumente für die Verwendung von Sentence Transformern mithilfe von Benchmark-Werten gestützt.\\
 
-Choudhary et. al. entwickelten ein Document Retrieval System, welches Bert zur Generierung von Embeddings verwendet (\cite{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}).
+Choudhary et al. (\citeyear{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}) entwickelten ein Document Retrieval System, welches Bert zur Generierung von Embeddings verwendet.
 Der Scoring Algorithmus des Systems kombiniert Bert und TF-IDF, um den Score zu berechnen.
 Laut dem Paper bietet eine Kombination aus TF-IDF und Bert zur Implementierung eines Document Retrieval Systems signifikante Performance Verbesserungen gegenüber einem Document Retrieval System, welches lediglich TF-IDF verwendet.
-Die Arbeit von Choudhary et. al. bieten damit einen ersten Anhaltspunkt darauf, dass Document Retrieval Systeme auf Basis von TF-IDF mithilfe von Sentence Transformern verbessert werden können.
+Die Arbeit von Choudhary et al. bieten damit einen ersten Anhaltspunkt darauf, dass Document Retrieval Systeme auf Basis von TF-IDF mithilfe von Sentence Transformern verbessert werden können.
 Die Performance Verbesserung wird in dem Paper an dem MS Marco Datensatz gemessen.\footnote{\url{https://microsoft.github.io/msmarco/}}
 Die nachgewiesene Verbesserung ist Grund zur Annahme, dass auch die Confluence-Suche durch die Verwendung von Sentence Transformern verbessert werden kann.
 Denn die Confluence-Suche verwendet laut Dokumentation Apache Lucene (\cite{Confluence_Ranking}).
@@ -78,10 +78,10 @@ Und laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Alg
 Im Information Retrieval sind Boolean Models jene Scoring Algorithmen, welche auf boolscher Algebra basieren.
 Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit TF-IDF berechnet werden.\\
 
-Karpukhin et. al. entwickelten einen Dense Passage Retriever im Kontext des Open-Domain Question Answering (\cite{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}).
+Karpukhin et al. (\citeyear{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}) entwickelten einen Dense Passage Retriever im Kontext des Open-Domain Question Answering.
 Ein Dense Passage Retriever bestimmt den Textabschnitt eines gegebenen Textes, welcher mit größter Wahrscheinlichkeit eine Antwort auf eine gestellte Frage beinhaltet.
 Der Input für einen Dense Passage Retriever sind Dokumente, welche zuvor mithilfe eines Scoring Algorithmus aus einem Index extrahiert wurden.
-Karpukhin et. al. zeigen, dass das entwickelte Passage Retrieval System besser darin ist relevante Textabschnitte zu finden als der BM25 Algorithmus. 
+Karpukhin et al. (\citeyear{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}) zeigen, dass das entwickelte Passage Retrieval System besser darin ist relevante Textabschnitte zu finden als der BM25 Algorithmus. 
 Sie nennen die semantische Verknüpfung von Synonymen und Paraphrasierungen mit unterschiedlichen Tokens als Vorteil gegenüber BM25 und auch TF-IDF.
 Das Argument lässt sich auf das Thema dieser Arbeit übertragen.
 Das bedeutet, dass Sentence Transformer gegenüber TF-IDF und BM25 den Vorteil haben, dass sie Synonyme und Paraphrasierungen semantisch verknüpfen können.
@@ -99,7 +99,7 @@ Die Benchmark zeigt, dass HNSW für den Datensatz SIFT1M einen Recall-Wert von 9
 \section{Sentence Transformer}
 \label{chap:sentence-transformer}
 % TODO: Sentence Transformer, wie Bert
-(\cite{Reimers_Gurevych_2019})
+% (\cite{Reimers_Gurevych_2019})
 
 Ein Sentence Transformer transformiert eine Aneinanderreihung von Tokens beliebiger Länge in einen Vektor einer vorgegebenen Länge.
 Der Aneinanderreihung der Tokens kann dabei ein Satz sein, ein Teil eines Satzes oder auch ein ganzer Paragraph.
@@ -109,7 +109,7 @@ Da ein neuronales Netzwerk keine Wörter verarbeiten kann, sondern nur Zahlen, m
 Dies erfolgt mithilfe von Word Embeddings und wird in \myRef{Kapitel}{chap:word-embeddings} erläutert.\\
 
 Wenn nun die Semantik eines Satzes in einen Vektor transformiert werden soll, dann ist die Reihenfolge der Wörter in dem Satz wichtig zu beachten, um die Semantik des Satzes abzubilden.
-Der Satz \text{Software-Entwickler verwenden die Spezifikation, um Features korrekt zu implementieren} besitzt die gleichen Wörter, wie der Satz \textit{Features verwenden die Spezifikation, um Software-Entwickler korrekt zu implementieren}.
+Der Satz \textit{Software-Entwickler verwenden die Spezifikation, um Features korrekt zu implementieren} besitzt die gleichen Wörter, wie der Satz \textit{Features verwenden die Spezifikation, um Software-Entwickler korrekt zu implementieren}.
 Dennoch ist die Sematik zwischen den Sätzen nicht die gleiche.
 Das bedeutet, dass ein Sentence Transformer die Positionen der einzelnen Wörter in dem Vektor kodieren muss, um die Sematik des Satzes korrekt abzubilden.
 Die Kodierung der Positionen der Wörter in einem Satz wird als Positional Encoding bezeichnet und wird in \myRef{Kapitel}{chap:positional-encoding} erklärt.
@@ -172,7 +172,7 @@ Der Unterschied in der Frequenz hat zur Folge, dass jeder Vektor zur Bestimmung 
 
 \subsection{Self-Attention}
 \label{chap:self-attention}
-Der Satz \text{Software-Entwickler verwenden die Spezifikation, damit sie Features korrekt implementieren} besitzt beispielsweise eine Cross-Referenz.
+Der Satz \textit{Software-Entwickler verwenden die Spezifikation, damit sie Features korrekt implementieren} besitzt beispielsweise eine Cross-Referenz.
 Das Wort \textit{sie} bezieht sich in dem Beispielsatz auf Software-Entwickler, aber es könnte sich auch auf die Spezifikation beziehen.
 Im Allgemeinen können Menschen solche Cross-Referenzen intuitiv verstehen.
 Mit der bisher erörterten Architektur von Sentence Transformers, können diese allerdings keine Cross-Referenzen verstehen.
@@ -286,7 +286,7 @@ Unter \textit{weaviate} wird die Datenbank konfiguriert.
 Hier wird mithilfe von den Environment-Variablen \textit{$DEFAULT\_VECTORIZER\_MODULE$}, \textit{$ENABLE\_MODULES$} und \textit{$TRANSFORMERS\_INFERENCE\_API$} konfiguriert, welcher Transformer verwendet werden soll.
 So wird konfiguriert, dass der Transformer der anderen Komponente benutzt werden soll.\\
 
-Neben den beiden Docker-Containern für die semantische Suche wird eine Spring Boot Anwendung in einem Docker Container mitdeployt.
+Neben den beiden Docker-Containern für die semantische Suche wird ebenfalls eine Spring Boot Anwendung in einem Docker Container eingesetzt.
 Die Spring Boot Anwendung verwendet Kotlin und Gradle.
 Mithilfe der Dependency \textit{io.weaviate:client:4.0.1} wird die Client API von Weaviate eingesetzt.
 So wird nun eine Verbindung zu der Vektordatenbank aufgebaut.
@@ -303,7 +303,7 @@ Außerdem wird als Vectorizer \textit{text2vec-transformers} konfiguriert.\\
 Um nun die Daten aus Confluence in Weaviate einzuspielen, werden zuerst die Daten aus Confluence exportiert.
 Beim Export von Confluence-Seiten werden HTML-Dateien generiert.
 Es werden keine CSS-, JavaScript- oder Bilddateien generiert.
-Die HTML-Dateien werden preprocessed, um dem zuvor definierten Schema zu entsprechen.
+Die HTML-Dateien werden vorverarbeitet, um dem zuvor definierten Schema zu entsprechen.
 Es werden zuerst mithilfe eines Abstract Syntax Trees alle Inhalte von h1-, h2- und p-Tags herausgefiltert.
 Anschließend werden Punctuations und Stopwords entfernt und die Inhalte druchlaufen einen Tokenizer und einen Stemmer.
 Punctuations sind Zeichen, wie die folgenden: \textit{.,;:}.

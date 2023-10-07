@@ -19,11 +19,28 @@
 %
 %
 \section*{Abstract}
-% TODO: Zusammenfassung auf Englisch
+Software developers often need to gather Information to continue with their work.
+An example of this might be the implementation of a feature, where the software developer needs to understand the intent of the feature to be implemented.
+Such information could be found in a knowledge base.
+To find information in a knowledge base, search engines can be used.
+This is especially helpful, when the software developer does not know beforehand, where the needed information is to be found in the knowledge base.
+However, search engines don't always find the information that the software developer needs.\\
 
-%
-%
-%
+As part of this Bachelor's Thesis, a sematic search engine is developed.
+The development of a semantic search engine aims to be an improvement on existing search engines, which use TF-IDF or BM25 for the scoring of documents.
+An example of such search engines is the search engine of the knowledge base Confluence.
+To determine whether or not the newly developed search engine resembles an \textit{improvement} over the existing search engine of Confluence, this thesis discusses methods and metrics for the evaluation of search engines.
+The search engine of Confluence and the newly developed search engine are then compared on the basis of the previously discussed methods and metrics.
+For that, exemplary queries are formulated, as well as the expected documents to be returned by the search engines.
+The queries are based on Use Cases that have been previously formulated.
+These Use Cases describe situations, in which it is realistic for a software developer to be using the search engine of a knowledge base.\\
+
+The study showed, that for the generated dataset the sematic search has a lower precision value compared to a BM25 search.
+It is argued, that the results can be explained by the fact, that the dataset that was used, belongs to a specific domain and contains many technical terms from that specific domain.
+Now, a sentence transformer, which is used to index the documents for the semantic search, is trained on a general purpose dataset containing general purpose terms only.
+That said, the sentence transformer could not have learned the semantic of the technical terms from that specific domain.
+Finally the Bachelor's Thesis mentions approaches to adapt sentence transformers to a specific domain, increasing the precision of the semantic search.
+
 \section*{Zusammenfassung}
 Softwareentwickler müssen sich bei ihrer Arbeit Informationen zusammensuchen, welche sie für die weitere Arbeit benötigen.
 So muss ein Softwareentwickler bei der Implementierung eines Features die Intention des Features kennen.
@@ -33,12 +50,15 @@ Insbesondere, wenn dem Softwareentwickler im Vorfeld nicht klar ist, wo er die g
 Aber nicht immer liefert diese Suchfunktion die gewünschten Informationen.\\
 
 In dieser Arbeit wird eine semantische Suchfunktion entwickelt.
-Diese soll eine Verbesserung zu bestehenden Suchfunktionen bieten, wie beispielsweise die Suchfunktion von Confluence.
+Diese soll eine Verbesserung zu bestehenden Suchfunktionen bieten, welche TF-IDF oder BM25 für das Scoring von Ergebnissen verwenden, wie beispielsweise die Suchfunktion von Confluence.
 Um festzustellen, ob die neue Suchfunktion \textit{besser} ist als die bestehende, werden Methoden und Kriterien zur Evaluierung von Suchfunktionen erörtert.
 Anhand dieser Kriterien werden die neu implementierte Suchfunktion und die bestehende Suchfunktion von Confluence in einer Studie verglichen.
 In der Studie werden beispielhafte Sucheingaben definiert, sowie die erwarteten Ergebnisse.
 Die Definition der Sucheingaben erfolgt auf Basis von Anwendungsfällen.
-Die Anwendungsfälle beschreiben Situationen, in denen es realistisch ist, dass ein Softwareentwickler die Suchfunktion einer Wissensdatenbank verwendet.
-Anhand von Argumentationen werden entsprechend realistische Sucheingaben erstellt.\\
+Die Anwendungsfälle beschreiben Situationen, in denen es realistisch ist, dass ein Softwareentwickler die Suchfunktion einer Wissensdatenbank verwendet.\\
 
-% TODO: Ergebnis der Studie darstellen
+Die Studie hat gezeigt, dass für den generierten Datensatz eine semantische Suche eine geringere Precision besitzt, als eine BM25 Suche.
+Das Ergebnis wird damit begründet, dass es sich bei dem Datensatz um eine spezifische Domäne mit vielen Fachbegriffen handelt.
+Ein Sentence Transformer, welcher dazu verwendet wird die Daten für die semantische Suche zu indizieren, wurde nur auf allgemeinen Datensätzen mit allgemeinen Begriffen trainiert.
+Dadurch hat der Sentence Transformer noch nicht die Semantik der Domäne gelernt.
+Zuletzt nennt die Arbeit Ansätze, um Sentence Transformer an eine spezifische Domäne anzupassen, und die Precision der semantischen Suche damit zu erhöhen.

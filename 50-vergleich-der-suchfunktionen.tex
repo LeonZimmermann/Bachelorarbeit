@@ -12,8 +12,7 @@ Zuletzt wird auf die Validität der Daten eingegangen und es wird der Versuchsau
 \section{Evaluationsmethoden und -Kriterien}
 \label{chap:evaluationsmethoden}
 Um zu verifizieren, dass die Implementierung der neuen Suchfunktion ihre gewünschte Wirkung erzielt, müssen zuerst Methoden und Kriterien zur Messung herangezogen werden.
-Karl Popper gilt als Begründer des kritischen Rationalismus.
-Es war der Anfang von wissenschaftlich durchgeführten Experimenten.
+Dazu soll ein Experiment durchgeführt werden.
 Bei einem Experiment wird zunächst eine Hypothese aufgestellt.
 Diese wird anschließend durch das Experiment untersucht.
 Ein solches Experiment wird für die Evaluation der Suchfunktionen erstellt.
@@ -62,7 +61,7 @@ Die Produktreife von Confluence könnte die Performance dessen Suchfunktion posi
 Da die neue Suchfunktion in nur kurzer Zeit entwickelt wurde, kann der Unterschied Produktreife ein Störfaktor bei dem Vergleich der Suchfunktionen sein.
 Um dies zu vermeiden wird die Confluence-Suche repräsentiert durch eine BM25 Suche, welche ebenfalls mit Weaviate implementiert wurde. 
 Es wurde bereits erwähnt, dass die Suche von Confluence auf Apache Lucene basiert, und dass dieses ein VSM auf Basis von TF-IDF verwendet.
-Sparck et. al. beschreiben, dass eine große Ähnlichkeit bei der Performance zwischen TF-IDF und BM25 besteht (\cite{Sparck_Jones_Walker_Robertson_2000}).
+Sparck et al. (\citeyear{Sparck_Jones_Walker_Robertson_2000}) beschreiben, dass eine große Ähnlichkeit bei der Performance zwischen TF-IDF und BM25 besteht.
 Auf diese Weise wird die Vergleichbarkeit zwischen den beiden Suchfunktionen also verbessert.
 Die BM25-Suche in Weaviate ist eine von drei Konfigurationen der neuen Suchfunktionen.
 Sie ist die Benchmark für die neue Suchfunktion und repräsentiert die Confluence-Suche.\\

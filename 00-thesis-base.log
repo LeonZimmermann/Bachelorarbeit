@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  6 OCT 2023 08:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.1)  7 OCT 2023 11:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -528,7 +528,7 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \c@LT@chunks=\count316
 \LT@p@ftn=\toks42
 )
-Class scrreprt Info: longtable captions redefined on input line 113.
+Class scrreprt Info: longtable captions redefined on input line 114.
  (c:/texlive/2023/texmf-dist/tex/latex/tabu/tabu.sty
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
  (c:/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
@@ -1143,30 +1143,30 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 212.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 213.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./00-thesis-base.aux)
 \openout1 = `00-thesis-base.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 212.
-LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 213.
+LaTeX Font Info:    ... okay on input line 213.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1264,9 +1264,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '00-thesis-base.bbl' found.
  (./00-thesis-base.bbl)
-Package biblatex Info: Reference section=0 on input line 212.
-Package biblatex Info: Reference segment=0 on input line 212.
-Package hyperref Info: Link coloring ON on input line 212.
+Package biblatex Info: Reference section=0 on input line 213.
+Package biblatex Info: Reference segment=0 on input line 213.
+Package hyperref Info: Link coloring ON on input line 213.
  (./00-thesis-base.out) (./00-thesis-base.out)
 \@outlinefile=\write4
 \openout4 = `00-thesis-base.out'.
@@ -1278,7 +1278,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 212.
+(scrreprt)           before \begin{document} on input line 213.
  (c:/texlive/2023/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (c:/texlive/2023/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -1299,37 +1299,37 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 5.
 (c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 46.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 50.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 46.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 50.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 46.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 50.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 46.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 50.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 46.
+(Font)              <12> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 46.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 46.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+(Font)              <6> on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (23.99998pt too wide) in alignment at lines 46--53
+Overfull \hbox (23.99998pt too wide) in alignment at lines 50--56
 [][] 
  []
 
@@ -1338,76 +1338,85 @@ Overfull \hbox (23.99998pt too wide) in alignment at lines 46--53
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./img/logo_unidue_paluno_deutsch.pdf>])
 
 Package scrlayer-scrpage Warning: replacing deprecated \clearscrheadfoot by
-(scrlayer-scrpage)                \clearpairofpagestyles on input line 226.
+(scrlayer-scrpage)                \clearpairofpagestyles on input line 227.
 
 1: chapter
 (./08-abstract.tex
-Underfull \hbox (badness 10000) in paragraph at lines 28--34
+Underfull \hbox (badness 10000) in paragraph at lines 22--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--43
+Underfull \hbox (badness 10000) in paragraph at lines 29--37
 
  []
 
-)
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--51
+
+ []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 244.
- [1
+(Font)              <10.95> on input line 51.
+[1
 
-] (./00-thesis-base.toc [2
+]
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+) [2] (./00-thesis-base.toc [3
 
 ])
 \tf@toc=\write5
 \openout5 = `00-thesis-base.toc'.
 
- [3] (./00-thesis-base.lof)
+ [4] (./00-thesis-base.lof)
 \tf@lof=\write6
 \openout6 = `00-thesis-base.lof'.
 
- [4
+ [5
 
 ] (./00-thesis-base.lot)
 \tf@lot=\write7
 \openout7 = `00-thesis-base.lot'.
 
- (./03-abbreviations.tex [5
+ (./03-abbreviations.tex [6
 
 ]
 
-LaTeX Warning: Hyper reference `acro:ANN' on page vi undefined on input line 4.
+LaTeX Warning: Hyper reference `acro:ANN' on page vii undefined on input line 4.
 
 
-LaTeX Warning: Hyper reference `acro:ANN' on page vi undefined on input line 4.
+LaTeX Warning: Hyper reference `acro:ANN' on page vii undefined on input line 4.
 
 
-LaTeX Warning: Hyper reference `acro:HNSW' on page vi undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:HNSW' on page vii undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:HNSW' on page vi undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:HNSW' on page vii undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:NLP' on page vi undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:NLP' on page vii undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:NLP' on page vi undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:NLP' on page vii undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:VSM' on page vi undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:VSM' on page vii undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:VSM' on page vi undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:VSM' on page vii undefined on input line 7.
 
-) [6
+) [7
 
 ]
 
 Package scrlayer-scrpage Warning: replacing deprecated \clearscrheadfoot by
-(scrlayer-scrpage)                \clearpairofpagestyles on input line 256.
+(scrlayer-scrpage)                \clearpairofpagestyles on input line 257.
 
 1: chapter
-Package scrbase Info: activating ngerman \partname on input line 272.
+Package scrbase Info: activating ngerman \partname on input line 273.
 (./10-intro.tex
 chapter 1.
 
@@ -1445,11 +1454,21 @@ l.29    \item
 
 
 ] [2{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 69--75
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 77--90
 
  []
 
 [3]
+Overfull \hbox (1.51501pt too wide) in paragraph at lines 91--100
+\T1/lmr/m/n/12 nen, um Tra-cea-bi-li-ty zwi-schen Co-de und an-de-ren Softwareentwicklungs-Artefakten
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 91--100
 
  []
@@ -1595,11 +1614,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--110
 
  []
 
-
-Overfull \hbox (242.95pt too wide) in paragraph at lines 111--127
-\T1/lmr/m/n/12 man-tik des Sat-zes ab-zu-bil-den. Der Satz []
- []
-
 [17]
 Underfull \hbox (badness 10000) in paragraph at lines 130--135
 
@@ -1611,11 +1625,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--145
  []
 
 [18]
-Overfull \hbox (104.48706pt too wide) in paragraph at lines 175--180
-\T1/lmr/m/n/12 Der Satz []
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 175--180
 
  []
@@ -1646,16 +1655,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--288
  []
 
 
-Overfull \hbox (0.37016pt too wide) in paragraph at lines 289--300
-[]\T1/lmr/m/n/12 Neben den bei-den Docker-Containern für die se-man-ti-sche Su-che wird ei-ne Spring
- []
-
-
-Overfull \hbox (8.36366pt too wide) in paragraph at lines 289--300
-\T1/lmr/m/n/12 dung ver-wen-det Kot-lin und Grad-le. Mit-hil-fe der De-pen-den-cy \T1/lmr/m/it/12 io.weaviate:client:4.0.1
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 289--300
 
  []
@@ -1678,111 +1677,111 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--324
 ) (./50-vergleich-der-suchfunktionen.tex [23]
 chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--26
+Underfull \hbox (badness 10000) in paragraph at lines 14--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--37
+Underfull \hbox (badness 10000) in paragraph at lines 32--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 [24
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--47
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--69
+Underfull \hbox (badness 10000) in paragraph at lines 57--68
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 70--77
+Underfull \hbox (badness 10000) in paragraph at lines 69--76
 
  []
 
 
-Package caption Warning: \label without proper reference on input line 101.
+Package caption Warning: \label without proper reference on input line 100.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `ausschnitt-studie-ergebnisse' on page 26 undefined on input line 87.
+LaTeX Warning: Reference `ausschnitt-studie-ergebnisse' on page 26 undefined on input line 86.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--89
+Underfull \hbox (badness 10000) in paragraph at lines 77--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--120
+Underfull \hbox (badness 10000) in paragraph at lines 109--119
 
  []
 
 [26]
 
-Package caption Warning: \label without proper reference on input line 137.
+Package caption Warning: \label without proper reference on input line 136.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `precision-tabelle' on page 27 undefined on input line 133.
+LaTeX Warning: Reference `precision-tabelle' on page 27 undefined on input line 132.
 
 
-Overfull \hbox (1.11917pt too wide) in paragraph at lines 148--157
+Overfull \hbox (1.11917pt too wide) in paragraph at lines 147--156
 \T1/lmr/m/n/12 Header und Pa-ra-gra-phen ei-nes Do-ku-ments zu-sam-men-ge-fasst in je-weils einen String
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--157
+Underfull \hbox (badness 10000) in paragraph at lines 147--156
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 158--167
+Underfull \hbox (badness 10000) in paragraph at lines 157--166
 
  []
 
 
-Package caption Warning: \label without proper reference on input line 178.
+Package caption Warning: \label without proper reference on input line 177.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `precision-tabelle-2' on page 28 undefined on input line 174.
+LaTeX Warning: Reference `precision-tabelle-2' on page 28 undefined on input line 173.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--175
+Underfull \hbox (badness 10000) in paragraph at lines 167--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--201
+Underfull \hbox (badness 10000) in paragraph at lines 188--200
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 208--219
+Underfull \hbox (badness 10000) in paragraph at lines 207--218
 
  []
 
@@ -1820,11 +1819,6 @@ chapter 7.
 \c@chapterAppendix=\count502
  (./70-appendix.tex
 chapter A.
-
-Overfull \hbox (226.78984pt too wide) in paragraph at lines 33--33
-[]      \T1/lmtt/m/n/12 image: semitechnologies/transformers-inference:sentence-transformers-msmarco-distilroberta-base-v2[] 
- []
-
 [37
 
 ]) (./02-declaration.tex [38]) [39
@@ -1840,18 +1834,18 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33436 strings out of 476001
- 631611 string characters out of 5793198
+ 33417 strings out of 476001
+ 631274 string characters out of 5793198
  1871068 words of memory out of 5000000
- 53188 multiletter control sequences out of 15000+600000
+ 53169 multiletter control sequences out of 15000+600000
  607480 words of font info for 95 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,21n,106p,10997b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on 00-thesis-base.pdf (46 pages, 655502 bytes).
+Output written on 00-thesis-base.pdf (47 pages, 656681 bytes).
 PDF statistics:
- 681 PDF objects out of 1000 (max. 8388607)
- 573 compressed objects within 6 object streams
+ 668 PDF objects out of 1000 (max. 8388607)
+ 559 compressed objects within 6 object streams
  134 named destinations out of 1000 (max. 500000)
  318 words of extra memory for PDF output out of 10000 (max. 10000000)
 

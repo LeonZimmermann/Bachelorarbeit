@@ -30,7 +30,8 @@
       volumes:
         - /var/weaviate:/var/lib/weaviate
     t2v-transformers:
-      image: semitechnologies/transformers-inference:sentence-transformers-msmarco-distilroberta-base-v2
+      image: semitechnologies/transformers-inference:sentence-
+        transformers-msmarco-distilroberta-base-v2
       environment:
         ENABLE_CUDA: 0
     qna-transformers:

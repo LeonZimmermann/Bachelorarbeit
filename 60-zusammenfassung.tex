@@ -43,10 +43,10 @@ Grund dafür ist, dass probablistische Modelle die Dokumente ohne ein vorheriges
 So könnte der Schluss gezogen werden, dass sich probablistische Modelle besser für Closed-Domain Datensätze eignen.
 Dennoch gibt es in der Literatur Ansätze, um die Probleme von Sentence Transformern mit Closed-Domain Datensätzen zu beheben.
 In der Literatur wird dabei von Domain Adaption oder von Fine-Tuning gesprochen.
-Gururangan et. al. zeigen beispielsweise, dass eine weitere Phase des pre-trainings zur Adaption an eine Domäne Performance Verbesserungen mit sich bringt (\cite{Gururangan_Marasović_Swayamdipta_Lo_Beltagy_Downey_Smith_2020}).
+Gururangan et al. (\citeyear{Gururangan_Marasović_Swayamdipta_Lo_Beltagy_Downey_Smith_2020}) zeigen beispielsweise, dass eine weitere Phase des pre-trainings zur Adaption an eine Domäne Performance Verbesserungen mit sich bringt.
 Dazu führen sie das pre-training fort, auf einem unlabeled Datensatz von domänenspezifischen Texten.\\
 
-Wang et. al. entwickelten das sogenannte Generative Pseudo Labeling, um Sentence Transformer an eine Domäne anzupassen (\cite{Wang_Thakur_Reimers_Gurevych_2022}.
+Wang et al. (\citeyear{Wang_Thakur_Reimers_Gurevych_2022}) entwickelten das sogenannte Generative Pseudo Labeling, um Sentence Transformer an eine Domäne anzupassen.
 Zuerst extrahieren sie Paragraphen aus der Domäne, an welche der Sentence Transformer angepasst werden soll.
 Anschließend generieren sie automatisch drei Sucheingaben für jeden Paragraphen.
 Diese Sucheingaben werden an einen bestehenden Dense Retriever gesendet.
@@ -59,4 +59,4 @@ Nun werden die berechneten Ähnlichkeiten zusammen mit den Sucheingaben und Para
 Der Sentence Transformer, welcher an eine Domäne angepasst werden soll, wird mithilfe der MarginMSE-Loss Funktion auf die generierten Trainingsdaten trainiert.\\  
 
 % TODO: TSDAE
-% Außerdem untersuchen Wang et. al. (\cite{Wang_Reimers_Gurevych_2021}).
+% Außerdem untersuchen Wang et al. (\cite{Wang_Reimers_Gurevych_2021}).

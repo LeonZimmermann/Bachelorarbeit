@@ -71,14 +71,14 @@ Die verschiedenen Herangehensweisen werden in diesem Kapitel erläutert.
 Zuerst wird der Begriff Traceability behandelt, und wie diese genutzt wird, um Suchfunktionen zu verbessern.
 Die Herangehensweisen zur Herstellung von Traceability umfassen die Verwendung von Word Embeddings oder auch ein Task-Based Ansatz.
 Es folgt eine Übersicht über Arbeiten, welche sich mit Question Answering beschäftigen.
-Dann folgt eine Übersicht über Arbeiten, welche sich mit der Evaluierung von Suchfunktionen auseinandersetzen.
+Dann folgt eine Übersicht über Arbeiten, welche sich mit der Evaluierung von Suchfunktionen auseinandersetzen.\\
 
 % Traceability
 Traceability bedeutet, dass sich von einer Stelle im Code, auf die entsprechenden Stellen in anderen Artefakten zurückschließen lässt.
 Ein Anwendungsfall für eine solche Traceability-Funktionalität ist \textit{Feature Location}, also das Finden der Spezifikation eines Features, wenn nur der Code vorhanden ist.
 Analog dazu ist \textit{Bug Localization} ein Anwendungsfall zum Auffinden von Stellen im Code, welche mit einem Bug zusammenhängen.
 Zur Herstellung von Traceability zwischen Code und Dokumentation gibt es verschiedene Ansätze.
-Haiduc et. al. schlagen ein System zur Verbesserung von Sucheingaben vorgeschlagen (\cite{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}).
+Haiduc et al. (\citeyear{Haiduc_Bavota_Marcus_Oliveto_DeLucia_Menzies_2013}) schlagen ein System zur Verbesserung von Sucheingaben vor.
 Das System verwendet Query Reformulations, um die Traceability herzustellen.
 Query Reformulation bedeutet, dass das System den Softwareentwickler bei der Eingabe einer Suchanfrage zur Suche nach den passenden Artefakten unterstützt.
 Dazu gibt der Softwareentwickler zunächst eine Suchanfrage ein, und markiert diejenigen Ergebnisse, welche am relevantesten für ihn sind.
@@ -88,7 +88,7 @@ Wenn der Softwareentwickler zu Beginn eine sehr lange Suchanfrage eingegeben hat
 Hat der Softwareentwickler dagegen lediglich einen Suchbegriff angegeben, so kann das System eine Erweiterung der Suchbegriffe vorschlagen.
 Dazu greift das System auf Synonyme des eingegebenen Suchbegriffes zurück.\\
 
-Ye et. al. beschreiben, wie Word Embeddings dazu verwendet werden können, um Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten herzustellen.
+Ye et al. (\citeyear{Ye_Shen_Ma_Bunescu_Liu_2016}) beschreiben, wie Word Embeddings dazu verwendet werden können, um Traceability zwischen Code und anderen Softwareentwicklungs-Artefakten herzustellen.
 Word Embeddings sind eine Datenstruktur, welche einem Wort einen Vektor in einem n-dimensionalen Raum zuweist.
 Anhand dieses Vektors kann die Ähnlichkeit zwischen Wörtern beschrieben werden.
 Ähnliche Wörter haben eine geringe Distanz im n-dimensionalen Raum.
@@ -96,9 +96,9 @@ Unähnliche Wörter haben eine hohe Distanz.
 Der Algorithmus, welcher die Ähnlichkeit der Wörter bestimmt, macht Gebrauch von der Distributional Hypothesis (\cite{Harris_1954}).
 Dieser besagt, dass Wörter, welche im gleichen Kontext verwendet werden, eine ähnliche Semantik besitzen.
 Hermit wird also die Ähnlichkeit der Wörter bestimmt.
-Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte (\cite{Ye_Shen_Ma_Bunescu_Liu_2016}).\\
+Dieses Verfahren wird nun sowohl auf den Code angewendet als auch auf die Softwareentwicklungs-Artefakte.\\
 
-Antoniol et. al. verwenden einen ähnlichen Ansatz, wie Ye et. al.
+Antoniol et al. (\citeyear{Antoniol_Canfora_Casazza_DeLucia_2000}) verwenden einen ähnlichen Ansatz, wie Ye et al.
 Auch hier werden Word Embeddings verwendet um Softwareentwicklungs-Artefakte gegen den Code zu matchen.
 Hier durchlaufen die Artefakte und der Code zwei verschiedene Pipelines.
 Die Wörter der Artefakte in natürlicher Sprache werden in lowercase umgewandelt.
@@ -107,15 +107,15 @@ Zuletzt werden Flexionen entfernt.
 Aus dem Code werden zunächst Identifier extrahiert.
 Identifier, welche mehrere Wörter unter Verwendung von CamelCase oder snake\_case beinhalten, werden in die einzelnen Wörter aufgeteilt.
 Anschließend werden die Identifier auf die gleiche Art und Weise normalisiert, wie die Wörter der Softwareentwicklungs-Artefakte.
-Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings (\cite{Antoniol_Canfora_Casazza_DeLucia_2000}).\\
+Dann erfolgt sowohl für die Identifier als auch für die Wörter aus den Artefakten die Indizierung, also die Umwandlung in Word Embeddings.\\
 
-Treude et. al. entwickeln eine Oberfläche, welche die Suche von \textit{Tasks} ermöglicht.
+Treude et al. (\citeyear{Treude_Sicard_Klocke_Robillard_2015}) entwickeln eine Oberfläche, welche die Suche von \textit{Tasks} ermöglicht.
 Damit soll ebenfalls Traceability zwischen Code und Dokumentation hergestellt werden.
 Dabei ist unter Task eine Operation im Code zu verstehen.
 Sie beschreiben einen Task als Verben, welche mit einem direkten Objekt oder einer Präposition in Verbindung stehen.
 Die Autoren nennen die Phrasen \textit{get iterator} und \textit{get iterator for collection} als Beispiele.
 Die Software analysiert nun die gesamte Dokumentation und extrahiert Tasks.
-Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach ihnen suchen kann (\cite{Treude_Sicard_Klocke_Robillard_2015}).\\
+Die Tasks werden in einen Index geschrieben, sodass der Softwareentwickler nach ihnen suchen kann.\\
 
 % Question Answering
 Neben der Traceability zwischen Code und Dokumentation ist das Question Answering ein Ansatz zur Verbesserung von Suchfunktionen.
@@ -127,7 +127,7 @@ Im Fall einer Suchfunktion werden Dokumente geliefert, welche diese Information 
 Mithilfe der Dokumente ist der Ort, an dem sich die, vom Nutzer gewünschte, Information befindet eingegrenzt.
 Nichtsdestotrotz muss der Nutzer aus dieser Eingrenzung die gewünschte Information manuell extrahieren.
 Ganz im Gegensatz zu Question Answering Systemen.
-Zhang et. al. untersuchen verschiedene Herangehensweisen zur Implementierung von Open-Domain Question Answering Systemen (\cite{Zhang_Chen_Xu_Cao_Chen_Cohn_Fang_2023}).
+Zhang et al. (\citeyear{Zhang_Chen_Xu_Cao_Chen_Cohn_Fang_2023}) untersuchen verschiedene Herangehensweisen zur Implementierung von Open-Domain Question Answering Systemen.
 Open-Domain Question Answering Systeme beantworten allgemeine Fragen eines Nutzers, z.B. basierend auf Informationen von Wikipedia.
 Closed-Domain Question Answering Systeme beantworten dagegen Fragen im Kontext einer spezifischen Domäne, z.B. basierend auf unternehmensinternen Informationen.\\
 % TODO: closed-domain sentence transformer transformer zu verwandten arbeiten hinzufügen (fine-tuned transformers)
@@ -143,12 +143,12 @@ Systemspezifische Metriken messen die Performance anhand objektiver Kriterien, w
 nutzerspezifische Metriken messen die Performance dagegen anhand subjektiver Kriterien.
 Die Messung erfordert Probanden, welche die Suchfunktion verwenden.
 Die Probanden legen die Performance der Suchfunktion anhand der zu betrachtenen subjektiven Kriterien fest.
-Clarke und Willet messen die Qualität von Suchfunktionen des World Wide Webs anhand des Recalls (\cite{Clarke_Willett_1997}).
+Clarke und Willet (\citeyear{Clarke_Willett_1997}) messen die Qualität von Suchfunktionen des World Wide Webs anhand des Recalls.
 Um dies zu ermöglichen wird ein Datensatz generiert, welcher Sucheingaben beinhaltet, sowie alle relevanten Dokumente für eine Sucheingabe.
-Bar-Ilan verwendet die gleichen Metriken (\cite{Bar-Ilan_2002}).
+Bar-Ilan (\citeyear{Bar-Ilan_2002}) verwendet die gleichen Metriken.
 Hier wird darüber hinaus auf die Problematik der Messung des Recalls eingegangen.
 Es wird erläutert, dass zur Messung des Recalls a-priori bestimmt werden muss, welche Dokumente als relevant für eine gegebene Sucheingabe erachtet werden sollten.
-Gordon und Pathak behaupten, dass die Bestimmung der Relevanz lediglich dem Nutzer mit dem Bedürfnis nach der Information zu überlassen ist (\cite{Gordon_Pathak_1999}).
-Voorhees und Harman behaupten, dass die Bestimmung der Relevanz durch ein Experten-Panel durchgeführt werden sollte (\cite{Voorhees_Harman_2001}).
-Sirotkin betrachtet verschiedene Ansätze zur Messung der Performance von Suchfunktionen (\cite{Sirotkin_2012}).
+Gordon und Pathak (\citeyear{Gordon_Pathak_1999}) behaupten, dass die Bestimmung der Relevanz lediglich dem Nutzer mit dem Bedürfnis nach der Information zu überlassen ist.
+Voorhees und Harman (\citeyear{Voorhees_Harman_2001}) behaupten, dass die Bestimmung der Relevanz durch ein Experten-Panel durchgeführt werden sollte.
+Sirotkin (\citeyear{Sirotkin_2012}) betrachtet verschiedene Ansätze zur Messung der Performance von Suchfunktionen.
 Neben den bereits genannten Metriken von Precision und Recall werden andere Metriken zur Messung der Performance einer Suchfunktion genannt, wie Mean Reciprocal Rank und Maximal Marginal Relevance.\\
