@@ -7,14 +7,14 @@ Dieses Kapitel die fasst die Arbeit zusammen und stellt einen Ausblick dar.
 Zweck der Arbeit war die Konzeption einer neuen Suchfunktion, welche nach festgelegten Kriterien besser ist als die Confluence-Suchfunktionen.
 Dazu wurden in \myRef{Kapitel}{chap:anwendungsfaelle} Anwendungsfälle definiert, anhand dessen die Nutzung der Suchfunktionen konkretisiert wurde.
 Dies hat den Rahmen geschaffen, um später einen Vergleich der beiden Suchfunktionen durchführen zu können.
-Nach der Definition der Anwendungsfälle, wurde die Technologie der Suchfunktion von Confluence in \myRef{Kapitel}{chap:technologie-von-confluence} erläutert.
+Nach der Definition der Anwendungsfälle wurde die Technologie der Suchfunktion von Confluence in \myRef{Kapitel}{chap:technologie-von-confluence} erläutert.
 Damit wurde ein besseres Verständnis für die Suchfunktion von Confluence geschaffen.
 Dieses bessere Verständnis war die Grundlage für die Konzeption einer neuen Suchfunktion in \myRef{Kapitel}{chap:konzeption-der-suchfunktion}.
 Denn das Verständnis war notwendig, um Schwachstellen in der Confluence-Suche zu identifizieren und Verbesserungspotenziale zu verstehen.
 In \myRef{Kapitel}{chap:konzeption-der-suchfunktion} wurde zuerst die Technologie der neuen Suchfunktion erörtert.
 Während Confluence einen Volltext-Index verwendet, verwendet die neue Suchfunktion Sentence Transformer für die Indizierung.
-Dazu wird eine Vektordatenbank benötigt, sowie der Scoring Algorithmus HNSW.
-Auf Grundlage der Verbesserungspotenziale der Confluence-Suche und der dargestellten alternativen Technologien, wurde die neue Suchfunktion abgeleitet.
+Dazu wird eine Vektordatenbank benötigt, sowie der Scoring-Algorithmus HNSW.
+Auf Grundlage der Verbesserungspotenziale der Confluence-Suche und der dargestellten alternativen Technologien wurde die neue Suchfunktion abgeleitet.
 Dazu wurde argumentiert, warum sich die dargestellten Technologien als eine Alternative zu der bestehenden Confluence-Suche eignen sollen.
 % TODO: Welche Quellen sind das:
 Es wurde anhand verschiedener Quellen belegt, dass eine semantische Suche auf Basis von Sentence Transformers gute Ergebnisse für Open-Domain Datensätze erzielen. 
@@ -24,7 +24,7 @@ Nachdem die neue Suchfunktion implementiert wurde, wurden die Precision-Werte f�
 Das nötige Wissen für diesen Vergleich wurde in \myRef{Kapitel}{chap:evaluationsmethoden} erläutert.
 Es wurde ebenfalls auf alternative Möglichkeiten zur Messung der Performance von Suchfunktionen eingegangen.
 Der angefertigte Datensatz leitete sich dabei aus den dargestellten Anwendungsfällen aus \myRef{Kapitel}{chap:anwendungsfaelle} ab.
-Der Datensatz entstammte aus einer Wissensdatenbank eines Softwareprojektes.
+Der Datensatz entstammte einer Wissensdatenbank eines Softwareprojektes.
 Die Software soll im Gesundheitswesen eingesetzt werden und umfasste entsprechend Fachbegriffe aus dem Gesundheitswesen.
 Darüber hinaus beinhaltet die Wissensdatenbank Definitionen, welche sich spezifisch auf das Softwareprojekt beziehen.\\
 

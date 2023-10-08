@@ -56,7 +56,7 @@ Dieser Faktor gilt auch bei der Implementierung zu berücksichtigen.
 \label{chap:aufbau-der-studie}
 Im Rahmen der Bachelorarbeit wird eine Studie durchgeführt, welche die neue Suchfunktion mit der bestehenden Confluence-Suche vergleicht.
 Da der Zeitrahmen begrenzt ist, in welchem die neue Suchfunktion entwickelt wird, wird nicht die tatsächliche Suchfunktion von Confluence als Benchmark für die neue Suchfunktion herangezogen.
-Das ist notwendig um einen gute Vergleichbarkeit zwischen den Suchfunktionen zu gewährleisten.
+Das ist notwendig um eine gute Vergleichbarkeit zwischen den Suchfunktionen zu gewährleisten.
 Die Produktreife von Confluence könnte die Performance dessen Suchfunktion positiv beeinflussen.
 Da die neue Suchfunktion in nur kurzer Zeit entwickelt wurde, kann der Unterschied Produktreife ein Störfaktor bei dem Vergleich der Suchfunktionen sein.
 Um dies zu vermeiden wird die Confluence-Suche repräsentiert durch eine BM25 Suche, welche ebenfalls mit Weaviate implementiert wurde. 
@@ -109,7 +109,7 @@ Der Name des Projektes, aus welchem die Daten entnommen wurden, wurde unkenntlic
 Die Suchfunktion gibt für jeden Algorithmus fünf Dokumente als Antwort auf eine Sucheingabe zurück.
 Diese fünf Dokumente werden nach dessen Score sortiert.
 Das bedeutet, dass das erste Dokument der Liste jenes ist, welches von dem Algorithmus als das passendste erachtet wird.
-Die fünf Dokumente werden darauf untersucht, ob sich das gewünschte Dokument unter den Dokumente befindet.
+Die fünf Dokumente werden darauf untersucht, ob sich das gewünschte Dokument unter den Dokumenten befindet.
 Das Ergebnis ist ein Precision-Score für den Suchalgorithmus.
 Um eine detailliertere Analyse zu ermöglichen wird nicht nur die Precision in Bezug auf die ersten fünf Dokumente gemessen.
 Es wird die Precision für das erste Dokument (Hit in One), die ersten drei Dokumente (Hit in Three) und alle fünf Dokumente (Hit in Five / Hit) gemessen.
@@ -151,7 +151,7 @@ Der Algorithmus der Suchfunktion vergleicht nun den String der Sucheingabe mit d
 Also mit dem String des Titels, dem String der H1-Header, dem String der H2-Header und dem String der Paragraphen.
 Weil die einzelnen Inhalte der HTML-Tags zusammengefasst werden, können diese Strings größer werden als die Sucheingabe, welche in der Regel zwei bis drei Wörter umfasst.
 Dadurch, dass die Sätze einen großen Größenunterschied haben, fällt entsprechend auch der Score der Dokumente niedrig aus.
-Da nun alle Scores niedrig sind kann die Suchfunktion nicht so leicht das passendste Dokumente finden.
+Da nun alle Scores niedrig sind, kann die Suchfunktion nicht so leicht die passendsten Dokumente finden.
 Dadurch werden zum Teil weniger relevante Dokumente gefunden und der Precision-Score fällt besonders niedrig aus.\\
 
 Auch das Postprocessing könnte eine Auswirkung auf den Precision-Score der semantischen Suche haben.
@@ -186,7 +186,7 @@ Das Ergebnis dieser Konfiguration ist in \myRef{Tabelle}{precision-tabelle-2} da
 \end{table}
 
 In dieser Konfiguration hat die semantische Suche eine bessere Precision.
-Die Hit in Five Precision liegt bei 0,28 für die Konfiguration, welche nur den Titel der Dokumente indiziert, gegenüber 0,15 bei einer vollständigen Indizierung.
+Die Hit-in-Five Precision liegt bei 0,28 für die Konfiguration, welche nur den Titel der Dokumente indiziert, gegenüber 0,15 bei einer vollständigen Indizierung.
 Die Verbesserung der Precision kann mit drei Faktoren begründet werden.
 Zum einen die beiden Hypothesen, welche mit dieser Beobachtung untersucht werden sollten.
 Also zum einen der Größenunterschied von Sucheingabe-String und den Strings, welche indiziert werden.
@@ -200,7 +200,7 @@ Da die semantische Suche weiterhin schlechter ist als die BM25-Suche, scheint es
 
 Eine mögliche Erklärung für die weiterhin schlechten Ergebnisse der semantischen Suche ist die Tatsache, dass es sich bei dem verwendeten Datensatz um eine Closed-Domain handelt.
 Das bedeutet, dass der Textcorpus Fachbegriffe beinhaltet, welche der Transformer mit hoher Wahrscheinlichkeit nicht kennt.
-Dementsprechend schwer fällt es dem Transformer folglich, passende Vektoren zu generieren, welche die Semantik von den domänenspezifischen Fachbegriffen abbilden.
+Dementsprechend schwerfällt es dem Transformer folglich, passende Vektoren zu generieren, welche die Semantik von den domänenspezifischen Fachbegriffen abbilden.
 In \myRef{Kapitel}{chap:ausblick} wird auf Ansätze in der Literatur eingegangen, welche dieses Problem versuchen zu lösen.
 
 \section{Diskussion des Studienaufbaus}

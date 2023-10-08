@@ -4,9 +4,9 @@ Dieses Kapitel hat den Zweck die Funktionsweise der Suchfunktion von Confluence 
 Dies ist notwendig, um später die Ergebnisse des Vergleichs der Suchfunktion von Confluence mit der neuen Suchfunktion zu verstehen.
 Um die Suchfunktion von Confluence zu verstehen wird zuerst erklärt, welche Suchmethoden mit den Technologien von Apache Lucene ermöglicht werden und in Confluence verwendet werden können.
 Dann wird die zugehörige Technologie erklärt, indem zuerst ein Überblick über die wichtigsten Komponenten einer Suchfunktion gegeben wird.
-Als nächstes werden die spezifischen Technologien erläutert, welche Apache Lucene verwendet.
+Als Nächstes werden die spezifischen Technologien erläutert, welche Apache Lucene verwendet.
 Das bedeutet, dass zuerst erklärt wird, was ein Volltext-Index ist.
-Anschließend werden die Scoring Algorithmen TF-IDF und BM25 erörtert.
+Anschließend werden die Scoring-Algorithmen TF-IDF und BM25 erörtert.
 
 \section{Suchmethoden von Confluence}
 \label{chap:suchmethoden-von-confluence}
@@ -36,7 +36,7 @@ Eine Field Search sucht Dokumente anhand von Attributen.
 Der Nutzer kann diese Attribute auswählen.
 Wenn der Nutzer beispielsweise ein Dokument sucht, welches am 01.01.2005 erstellt wurde, dann kann die Eingabe der Suche so aussehen: \textit{erstelldatum: 01.01.2005}.
 Es können beliebig viele Attribute verwendet werden, um die Suche einzugrenzen.
-Neben der Verwendung der Attribute für die Suche selbst, können die Attribute komplementär zu einer anderen Art von Suche verwendet werden.
+Neben der Verwendung der Attribute für die Suche selbst können die Attribute komplementär zu einer anderen Art von Suche verwendet werden.
 So kann eine Suchfunktion Buttons bereitstellen, über welche Filter festgelegt werden.
 Nun kann eine Keyword Search durchgeführt werden, aber die gefundenen Dokumente werden mithilfe der Filter weiter eingeschränkt.
 Neben diesen gängigen Suchalgorithmen gibt es weitere Suchalgorithmen, wie die strukturierte Suche und die semantische Suche.
@@ -64,7 +64,7 @@ Idealerweise, ohne Seiten dabei mehrfach zu durchlaufen.
 Neben dem Crawling können Indizes befüllt werden, indem eine Liste von Dokumenten übergeben werden, welche dem Index hinzugefügt werden sollen.\\
 
 Die Indizierung von Dokumenten kann sowohl mit einer Volltext-Indizierung oder auch einer Vektor-Indizierung umgesetzt werden.
-Ein Volltextindex bestimmt den Score anhand von Ausschnitten aus dem Volltext.
+Ein Volltext-Index bestimmt den Score anhand von Ausschnitten aus dem Volltext.
 Zum einen gibt es Boolean Models im Document Retrieval, welche boolsche Algebra nutzen, um relevante Dokumente zu bestimmen.
 Das Ergebnis ist eine Boolean Search, wie in \myRef{Kapitel}{chap:suchmethoden-von-confluence} beschrieben.
 Zum anderen gibt es Probablistische Modelle im Document Retrieval.
