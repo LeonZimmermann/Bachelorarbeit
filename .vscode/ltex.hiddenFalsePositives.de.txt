@@ -1,0 +1,20 @@
+{"rule":"LEERZEICHEN_HINTER_DOPPELPUNKT","sentence":"^\\QDies erfolgt mithilfe von Word Embeddings und wird in Kapitel chap:word-embeddings erläutert.\\E$"}
+{"rule":"LEERZEICHEN_HINTER_DOPPELPUNKT","sentence":"^\\QDie Kodierung der Positionen der Wörter in einem Satz wird als Positional Encoding bezeichnet und wird in Kapitel chap:positional-encoding erklärt.\\E$"}
+{"rule":"LEERZEICHEN_HINTER_DOPPELPUNKT","sentence":"^\\QDieser Schritt wird in Kapitel chap:self-attention erklärt.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QJedes höhere Layer beinhaltet nur ein Subset der Nodes des darunterliegenden Layers.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QWenn nun eine Suche in der Skip List durchgeführt wird, dann wird das oberste Layer zuerst durchsucht.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QDer gleiche Algorithmus wird rekursiv für jedes Layer durchgeführt, bis das unterste Layer erreicht wurde.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QDas oberste Layer wird sequenziell durchlaufen.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QJedes Layer darüber beinhaltet nur ein Subset des Layers darunter.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QDazu werden anstelle von LinkedLists Graphen in mehreren Layers gespeichert.\\E$"}
+{"rule":"DOPPELTE_SATZZEICHEN","sentence":"^\\QPunctuations sind Zeichen, wie die folgenden: .,;:.\\E$"}
+{"rule":"LEERZEICHEN_HINTER_DOPPELPUNKT","sentence":"^\\QPunctuations sind Zeichen, wie die folgenden: .,;:.\\E$"}
+{"rule":"LEERZEICHEN_HINTER_DOPPELPUNKT","sentence":"^\\QKapitel chap:einspielen-der-daten-in-weaviate beschreibt, wie in der hier aufgeführten Implementierung das Preprocessing durchgeführt wird.\\E$"}
+{"rule":"LEERZEICHEN_HINTER_DOPPELPUNKT","sentence":"^\\QAus diesen Themen ließ sich der Anwendungsfall identifizieren, welcher in Kapitel chap:implementierung-nach-spezifikation erörtert wird.\\E$"}
+{"rule":"LEERZEICHEN_HINTER_DOPPELPUNKT","sentence":"^\\QDer genaue Aufbau der Studie wird in Kapitel chap:aufbau-der-studie erklärt.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QDiese fokussieren sich vorallem auf die Feature Location, Bug Localization und die Traceability zwischen Code und anderen Artefakten.\\E$"}
+{"rule":"KOMMA_INFINITIVGRUPPEN","sentence":"^\\QDer Satz Software-Entwickler verwenden die Spezifikation, um Features korrekt zu implementieren besitzt die gleichen Wörter, wie der Satz Features verwenden die Spezifikation, um Software-Entwickler korrekt zu implementieren.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QDas erste Layer des neuronalen Netzwerkes besteht aus Aktivierungsfunktionen.\\E$"}
+{"rule":"DE_AGREEMENT","sentence":"^\\QDas nächste Layer summiert wiederum die Werte aus dem Aktivierungslayer und wendet eine SoftMax Funktion an.\\E$"}
+{"rule":"GERMAN_WORD_REPEAT_RULE","sentence":"^\\QDas Ergebnis ist, dass das trainierte neuronale Netzwerk für das Wört NLP lernt, dass das nächste Wort mit der Wahrscheinlichkeit eins das Wort ist ist.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qseq2seq.\\E$"}

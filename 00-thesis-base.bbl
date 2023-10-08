@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.1 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -44,9 +44,9 @@
       \strng{authornamehash}{7a9dbafdae62131287520bc1c2fc6744}
       \strng{authorfullhash}{309139ad2c3d4e65be1854a52a100ff6}
       \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings International Conference on Software Maintenance ICSM-94}
@@ -69,7 +69,7 @@
       \strng{authornamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
       \strng{authorfullhash}{a8fd8cd0b6d2cfda939a8ef257e60192}
       \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
@@ -102,9 +102,9 @@
       \strng{authornamehash}{c577d1f9e02bf2d5f09da73d64800c22}
       \strng{authorfullhash}{c577d1f9e02bf2d5f09da73d64800c22}
       \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the American Society for Information Science and Technology}
@@ -146,9 +146,9 @@
       \strng{authornamehash}{dc51cbcf481b46b0f98a0f707d668af5}
       \strng{authorfullhash}{776a35e7227095f8bf954c5416b5a24f}
       \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{01}
@@ -171,9 +171,9 @@
       \strng{authornamehash}{9945b3859caed4e19a23f700fa1b79db}
       \strng{authorfullhash}{9945b3859caed4e19a23f700fa1b79db}
       \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM SIGIR Forum}
@@ -221,9 +221,9 @@
       \strng{authornamehash}{7058e074a8a364824cf55c1aeb497192}
       \strng{authorfullhash}{7350c7c64bcef92fae17b00d71e517ab}
       \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{2020 Systems and Information Engineering Design Symposium (SIEDS)}
@@ -255,9 +255,9 @@
       \strng{authornamehash}{446c3b0c98439b77d1e91345dce73d57}
       \strng{authorfullhash}{446c3b0c98439b77d1e91345dce73d57}
       \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Aslib Proceedings}
@@ -290,9 +290,9 @@
       \strng{authornamehash}{39509991baf1f5b54ef9eede853edd37}
       \strng{authorfullhash}{39509991baf1f5b54ef9eede853edd37}
       \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Semantische Technologien Grundlagen - Konzepte - Anwendungen}
@@ -314,7 +314,7 @@
       \strng{authornamehash}{eb1472a1dd93ea5972fb047e03c718e0}
       \strng{authorfullhash}{eb1472a1dd93ea5972fb047e03c718e0}
       \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
@@ -353,9 +353,9 @@
       \strng{authornamehash}{e1ff936310df245d0615977978e69ef5}
       \strng{authorfullhash}{e1ff936310df245d0615977978e69ef5}
       \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information Processing \& Management}
@@ -421,9 +421,9 @@
       \strng{authornamehash}{381ebaef6893d7af0b30916478dbbf80}
       \strng{authorfullhash}{bf75487d1965aa9381775eb548534a95}
       \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics}
@@ -479,9 +479,9 @@
       \strng{authornamehash}{525c819f9c243e714ab42e50aa9453cc}
       \strng{authorfullhash}{61808d09e8f117c3e20c562ee89cae86}
       \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{2013 35th International Conference on Software Engineering (ICSE)}
@@ -507,9 +507,9 @@
       \strng{authornamehash}{c93d2fea5cc5e59f6d92c0cfb5ba20a8}
       \strng{authorfullhash}{c93d2fea5cc5e59f6d92c0cfb5ba20a8}
       \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{WORD}
@@ -581,9 +581,9 @@
       \strng{authornamehash}{95ef335ab136ed8801520b97e3354110}
       \strng{authorfullhash}{e8e0e3674e964c98036eecbd11a7a03a}
       \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)}
@@ -609,9 +609,9 @@
       \strng{authornamehash}{805bf99d766874f99241d8b913e15a07}
       \strng{authorfullhash}{805bf99d766874f99241d8b913e15a07}
       \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal of Advances in Soft Computing and its Applications}
@@ -647,9 +647,9 @@
       \strng{authornamehash}{41f677ba5b31db2db6a749a416e76e0e}
       \strng{authorfullhash}{41f677ba5b31db2db6a749a416e76e0e}
       \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
@@ -694,9 +694,9 @@
       \strng{authornamehash}{74f8a4742e6176570536838efea19700}
       \strng{authorfullhash}{56b44e50eec2e98e36ad6aa3a5e7af9b}
       \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Introduction to information retrieval}
@@ -721,9 +721,9 @@
       \strng{authornamehash}{647e77469dede3f1d7ed99198d6e59e9}
       \strng{authorfullhash}{647e77469dede3f1d7ed99198d6e59e9}
       \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{PsycEXTRA Dataset}
@@ -755,9 +755,9 @@
       \strng{authornamehash}{d2e8bd4544451d3ad099f420ff11a3ed}
       \strng{authorfullhash}{d2e8bd4544451d3ad099f420ff11a3ed}
       \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Skip List Cookbook}
@@ -786,9 +786,9 @@
       \strng{authornamehash}{54c5e9e2936e14f33f7056ddbecd4a69}
       \strng{authorfullhash}{54c5e9e2936e14f33f7056ddbecd4a69}
       \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{PLOS ONE}
@@ -816,9 +816,9 @@
       \strng{authornamehash}{a694bd426ef3fc72cae828d26b4327d1}
       \strng{authorfullhash}{a694bd426ef3fc72cae828d26b4327d1}
       \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Philosophische Fakultät der Heinrich-Heine-Universität Düsseldorf}
@@ -853,9 +853,9 @@
       \strng{authornamehash}{ee2d50a56532e9a077f31cb466d55548}
       \strng{authorfullhash}{4e45d6a74b3bb2eee769092cb5d9cdef}
       \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Information Processing \& Management}
@@ -903,9 +903,9 @@
       \strng{authornamehash}{d4154740636d7a0b1128b78a31c3750d}
       \strng{authorfullhash}{172bea28c7be7e28535f6d63770cfa25}
       \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{2015 IEEE/ACM 37th IEEE International Conference on Software Engineering}
@@ -937,9 +937,9 @@
       \strng{authornamehash}{2367963b4b51b31306d39a4f3ff7cb83}
       \strng{authorfullhash}{2367963b4b51b31306d39a4f3ff7cb83}
       \field{sortinit}{V}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{journaltitle}{The Ninth text retrieval conference (TREC-9)}
       \field{year}{2001}
@@ -987,9 +987,9 @@
       \strng{authornamehash}{89c02dd7e09af3a3118f1ad6bde16b78}
       \strng{authorfullhash}{ccb2ed9f50e03e22370933ea7235afe6}
       \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}
@@ -1012,7 +1012,7 @@
       \strng{authornamehash}{2a1e8d184d8101d9d99e3d491cd7be71}
       \strng{authorfullhash}{2a1e8d184d8101d9d99e3d491cd7be71}
       \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labelnamesource}{author}
@@ -1069,9 +1069,9 @@
       \strng{authornamehash}{450d7c946c4d33c798e22c78787004f1}
       \strng{authorfullhash}{c22f0993e545c430d8f134013c679355}
       \field{sortinit}{Y}
-      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{sortinithash}{6ae2ff5458ff901249c2745238c951b7}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the 38th International Conference on Software Engineering}
@@ -1133,9 +1133,9 @@
       \strng{authornamehash}{7c158dc22a8aa500b05ae7d97c6f4a2f}
       \strng{authorfullhash}{f628cdf50f494d8fcfe3916165183c8b}
       \field{sortinit}{Z}
-      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}

@@ -1,41 +1,82 @@
-\babel@toc {ngerman}{}\relax 
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Vorgehensweise}{1}{section.1.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Verwandte Arbeiten}{3}{section.1.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Definition von Anwendungsfällen}{6}{chapter.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Onboarding im Projekt}{6}{section.2.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Implementierung nach Spezifikation}{7}{section.2.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Informationen über das Projektmanagement finden}{8}{section.2.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Technologien von Confluence}{9}{chapter.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Suchmethoden von Confluence}{9}{section.3.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Architektur einer Suchfunktion}{10}{section.3.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Volltext-Indizierung}{11}{section.3.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Sparse Vector Modelle}{12}{section.3.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Konzeption der neuen Suchfunktion}{14}{chapter.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Semantische Suche}{14}{section.4.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Wahl der neuen Suchfunktion}{16}{section.4.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Sentence Transformer}{17}{section.4.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.1}Word Embeddings}{18}{subsection.4.3.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.2}Positional Encoding}{19}{subsection.4.3.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.3}Self-Attention}{19}{subsection.4.3.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.4}Training von Sentence Transformern}{20}{subsection.4.3.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.5}seq2seq}{20}{subsection.4.3.5}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Vektor-Indizierung}{20}{section.4.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Hierarchical Navigable Small Worlds (HNSW)}{21}{section.4.5}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.6}Implementierung der neuen Suchfunktion}{22}{section.4.6}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.1}Aufsetzen der Vektordatenbank Weaviate}{22}{subsection.4.6.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.2}Einspielen der Daten in Weaviate}{22}{subsection.4.6.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Vergleich der Suchfunktionen}{24}{chapter.5}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Evaluationsmethoden und -Kriterien}{24}{section.5.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1.1}Precision, Recall und F-Maß}{24}{subsection.5.1.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Aufbau der Studie}{25}{section.5.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Auswertung der Ergebnisse}{27}{section.5.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Diskussion des Studienaufbaus}{29}{section.5.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{31}{chapter.6}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Zusammenfassung}{31}{section.6.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Ausblick}{32}{section.6.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Literaturverzeichnis}{34}{chapter.7}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Anhang}{37}{chapter.8}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.1}docker-compose.yml File für Weaviate}{37}{section.8.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.2}Initialisieren des Schemas in Weaviate}{38}{section.8.2}%
+\defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
