@@ -123,7 +123,6 @@ Bert wurde entwickelt, um eine gute automatische Übersetzung zwischen Sprachen 
 Die Architektur von Bert umfasst neben dem Encoder, welcher einen Context Vector generiert, auch einen Decoder, welcher diesen Context Vector wieder in einen Satz einer anderen Sprache umwandelt.
 Im Rahmen dieser Arbeit ist nur die Betrachtung des Encoders relevant.
 Denn dieser generiert bereits die Context Vectors, und diese werden anschließend in einer Vektordatenbank gespeichert.
-Um zu verstehen, welchen Einfluss die Architektur von Sentence Transformer auf die Ergebnisse der Studie hat, wird zuletzt erläutert, wie ein solcher Sentence Transformer trainiert wird.
 
 \subsection{Word Embeddings}
 \label{chap:word-embeddings}
@@ -189,9 +188,6 @@ Das Ergebnis repräsentiert für das aktuelle Wort, für welches der Self-Attent
 Dann wird wiederum das Punktprodukt auf dieses Ergebnis und den Value jedes Wortes angewendet.
 Diese Ergebnisse bedeuten wiederum, wie repräsentativ die einzelnen Wörter für das gegebene Konzept sind.
 Die Ergebnisse dieser Operationen sind die Self-Attention Werte der Wörter in einem Satz.
-
-\subsection{Training von Sentence Transformern}
-% TODO: Next Word Prediction / Masked Language Modelling
 
 \subsection{seq2seq}
 Ein seq2seq-Modell soll eine Sequenz auf eine andere Sequenz anhand von erlernten Regeln mappen.
