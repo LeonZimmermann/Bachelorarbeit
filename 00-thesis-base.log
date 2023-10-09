@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.19)  8 OCT 2023 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.19)  9 OCT 2023 11:20
 entering extended mode
 **"c:/Users/leonz/OneDrive - Universitaet Duisburg-Essen/Bachelorarbeit/Dokumente/00-thesis-base.tex"
 ("c:/Users/leonz/OneDrive - Universitaet Duisburg-Essen/Bachelorarbeit/Dokumente/00-thesis-base.tex"
@@ -1740,115 +1740,98 @@ Underfull \hbox (badness 10000) in paragraph at lines 313--320
 ) ("c:/Users\leonz\OneDrive - Universitaet Duisburg-Essen\Bachelorarbeit\Dokumente\50-vergleich-der-suchfunktionen.tex" [23]
 chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--25
+Underfull \hbox (badness 10000) in paragraph at lines 13--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--36
+Underfull \hbox (badness 10000) in paragraph at lines 31--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 [24
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--68
+Underfull \hbox (badness 10000) in paragraph at lines 56--67
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 68--75
 
  []
 
 
-Package caption Warning: \label without proper reference on input line 100.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `ausschnitt-studie-ergebnisse' on page 26 undefined on input line 86.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--88
+Underfull \hbox (badness 10000) in paragraph at lines 76--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--119
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
 [26]
+Underfull \hbox (badness 10000) in paragraph at lines 136--146
 
-Package caption Warning: \label without proper reference on input line 136.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `precision-tabelle' on page 27 undefined on input line 132.
+ []
 
 
-Overfull \hbox (1.11917pt too wide) in paragraph at lines 147--156
+Overfull \hbox (1.11917pt too wide) in paragraph at lines 174--183
 \T1/lmr/m/n/12 Header und Pa-ra-gra-phen ei-nes Do-ku-ments zu-sam-men-ge-fasst in je-weils einen String
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--156
+Underfull \hbox (badness 10000) in paragraph at lines 174--183
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 157--166
+Underfull \hbox (badness 10000) in paragraph at lines 184--193
 
  []
 
 
-Package caption Warning: \label without proper reference on input line 177.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `precision-tabelle-2' on page 28 undefined on input line 173.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--174
+Underfull \hbox (badness 10000) in paragraph at lines 194--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--200
+Underfull \hbox (badness 10000) in paragraph at lines 215--227
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 207--218
+Underfull \hbox (badness 10000) in paragraph at lines 234--245
 
  []
 
-) ("c:/Users\leonz\OneDrive - Universitaet Duisburg-Essen\Bachelorarbeit\Dokumente\60-zusammenfassung.tex" [29] [30]
+[29]) ("c:/Users\leonz\OneDrive - Universitaet Duisburg-Essen\Bachelorarbeit\Dokumente\60-zusammenfassung.tex" [30]
 chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--22
@@ -1898,17 +1881,17 @@ Package logreq Info: Writing requests to '00-thesis-base.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28409 strings out of 479799
- 525899 string characters out of 2879598
- 1481911 words of memory out of 3000000
- 44684 multiletter control sequences out of 15000+200000
+ 28411 strings out of 479799
+ 525946 string characters out of 2879598
+ 1484828 words of memory out of 3000000
+ 44685 multiletter control sequences out of 15000+200000
  630281 words of font info for 92 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  106i,21n,111p,10690b,2317s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "c:/Users\leonz\OneDrive - Universitaet Duisburg-Essen\Bachelorarbeit\Dokumente\00-thesis-base.pdf" (46 pages, 701735 bytes).
+Output written on "c:/Users\leonz\OneDrive - Universitaet Duisburg-Essen\Bachelorarbeit\Dokumente\00-thesis-base.pdf" (46 pages, 704892 bytes).
 PDF statistics:
- 629 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
+ 631 PDF objects out of 1000 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
  310 words of extra memory for PDF output out of 10000 (max. 10000000)
 

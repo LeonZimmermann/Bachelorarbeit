@@ -1,7 +1,6 @@
 \chapter{Vergleich der Suchfunktionen}
 \label{chap:vergleich-der-suchfunktionen}
 % TODO: Kapitel erweitern
-% TODO: Testdaten äquivalente Beispiele darstellen
 Zum Vergleich der beiden Suchfunktionen wird im Folgenden zuerst auf Evaluationsmethoden und -Kriterien eingegangen.
 Diese sind die Grundlage für den Vergleich von zwei Suchfunktionen.
 Anschließend wird der Aufbau der Studie dargestellt, sowie der zugrundeliegende Datensatz für die Durchführung der Studie.
@@ -81,10 +80,38 @@ Das bedeutet, dass die Wissensdatenbank Fachbegriffe aus dem Gesundheitswesen be
 Darüber hinaus beinhaltet die Wissensdatenbank Definitionen, welche sich spezifisch auf das Softwareprojekt beziehen.
 Daher handelt es sich bei dem Datensatz um eine Closed-Domain, also ein Datensatz, welcher spezifisch aus einer bestimmten Domäne generiert wurde.
 Das steht im Gegensatz zu einem Open-Domain Datensatz, welcher Daten beinhaltet, welche allgemein gültig sind, und nicht nur in einer bestimmte Domäne.
-Für jedes Dokument sind eine oder mehrere Sucheingaben definiert, mit dessen Eingabe das Dokument gefunden werden soll.
+Für jedes Dokument sind mehrere Sucheingaben definiert, mit dessen Eingabe das Dokument gefunden werden soll.
 Darüber hinaus ist für jedes Dokument festgehalten, zu welchem Anwendungsfall sich dieses zuordnen lässt.
-\myRef{Tabelle}{ausschnitt-studie-ergebnisse} zeigt einen Ausschnitt aus den Daten, welche durch die Studie generiert wurde.
-Der Name des Projektes, aus welchem die Daten entnommen wurden, wurde unkenntlich gemacht.\\
+Tabelle \ref{fig:studienaufbau} zeigt die Dokumente, welche gefunden werden sollen, sowie die Sucheingaben, mit welcher sie gefunden werden sollen.
+Die Einträge sind jeweils Anwendungsfällen zugeordnet, sowie einem Bereich in der Wissensdatenbank.
+Die Spalte für die Sucheingaben enthält mehrere Sucheingaben, welche durch ein Komma getrennt sind.\\
+
+\begin{table}[!ht]
+    \centering
+    \resizebox{\columnwidth}{!}{\begin{tabular}{|l|l|l|l|}
+    \hline
+        Anwendungsfall & Bereich & Interessante Seiten & Sucheingaben \\ \hline
+        Informationen über PM & Projekt Branchensoftware & Erstellung einer Lieferung & Lieferung erstellen,Software ausliefern, Software deployen, an Kunden liefern \\ \hline
+        Onboarding & Projekt Branchensoftware & On- und Offboarding - Willkommen im Projekt & Onboarding,Offboarding,Einleitung Projekt,Getting Started \\ \hline
+        Onboarding & Projekt Branchensoftware & EP - DoR \& DoD & Definition of Done,Definition of Ready, DoD, DoR, Akzeptanzkriterien \\ \hline
+        Onboarding & Entwicklung & Getting Started & Getting Started,Einleitung Entwicklung \\ \hline
+        Onboarding & Entwicklung & The Pragmatic Programmer & The Pragmatic Programmer, Pragmatischer Programmierer, Konventionen \\ \hline
+        Onboarding & Entwicklung & Guidelines & Guidelines, Richtlinien, Konventionen \\ \hline
+        Bug Localization & Entwicklung & FE - Debugging & Debugging, Frontend Debugging, FE Debugging, Debuggen im Frontend, Bugs im Frontend finden \\ \hline
+        Onboarding & Entwicklung & Dev-Stage in Docker-Compose & Dev-Stage lokal, Dev-Stage Docker-Compose, Lokal ausrollen, Lokal deployen, Docker Deploy \\ \hline
+        Onboarding & Entwicklung & Java-Testing - Tipps, Stolperfallen und Best-Practices & Java Testing, Backend Testing, Unit-Tests, Integration-Tests, Testing Best Practices \\ \hline
+        Implementierung nach Spec & Architektur nextGen & Bearbeiter Prinzip & Bearbeiterprinzip,Prinzip der Bearbeitung, Bearbeiter Prinzip, Auftrag bearbeiten, Recht zur Bearbeitung \\ \hline
+        Onboarding & Architektur nextGen & Clientinstallation und -update & Client installieren, Clientinstallation, Software installieren, Branchensoftware installieren \\ \hline
+        Implementierung nach Spec & Spezifikation nextGen - QP & V-AW-107 Prüfaufträge aus Excel-Datei importieren & V-AW-107, Prüfaufträge importieren, Excelimport \\ \hline
+        Implementierung nach Spec & Spezifikation nextGen - QP & V-I-R-1 Übermitteln von Prüfaufträgen & V-I-R-1, Übermitteln von Prüfaufträgen, <ausgeblendet>, Übermittlung von Prüfaufträgen \\ \hline
+        Implementierung nach Spec & Spezifikation nextGen - QP & V-D-10 Prüfauftrag & V-D-10,Prüfauftrag \\ \hline
+    \end{tabular}}
+    \caption[Studienaufbau]{Studienaufbau, mit den interessanten Seiten, welche mit den Sucheingaben gefunden werden sollen. Mehrere Sucheingaben für eine Seite sind durch Kommata getrennt. Die Seiten sind einem Anwendungsfall und einem Bereich in der Wissensdatenbank zugeordnet }
+    \label{fig:studienaufbau}
+\end{table}
+
+Tabelle \ref{fig:ausschnitt-studie-ergebnisse} zeigt einen Ausschnitt aus den Daten, welche durch die Studiedurchführung generiert wurde.
+Der Name des Projektes, aus welchem die Daten entnommen wurden, wurde in beiden Tabellen unkenntlich gemacht.\\
 
 \begin{table}[!ht]
     \centering
@@ -97,13 +124,13 @@ Der Name des Projektes, aus welchem die Daten entnommen wurden, wurde unkenntlic
 
 \begin{table}[!ht]
     \centering
-    \label{ausschnitt-studie-ergebnisse}
     \resizebox{\columnwidth}{!}{\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
     \hline
         Gefundene Dokumente & Hit & Hit in Five & Hit in Three &  Hit in One \\ \hline
         getting started (legacy)..., onboarding usecase x..., onboarding re..., ui-debian-build-base..., ep... & true & true & true & true
     \end{tabular}}
-    \caption[Ausschnitt der Ergebnisse]{Ausschnitt aus den Ergebnissen der Studie}
+    \caption[Ausschnitt der Ergebnisse]{Ausschnitt aus den Ergebnissen der Studie, mit den Dokumenten, welche für eine Sucheingabe gefunden wurden, sowie der Hit-in-One bis Hit-in-Five Wert}
+    \label{fig:ausschnitt-studie-ergebnisse}
 \end{table}
 
 Die Suchfunktion gibt für jeden Algorithmus fünf Dokumente als Antwort auf eine Sucheingabe zurück.
@@ -129,11 +156,10 @@ Es ist möglich, dass eine Suchfunktion für eine Sucheingabe durchaus ein sinnv
 \section{Auswertung der Ergebnisse}
 Die Studie wurde mehrfach durchgeführt.
 Die Precision-Scores werden auf zwei Nachkommastellen gerundet.
-Die Precision-Scores werden in der \myRef{Tabelle}{precision-tabelle} zusammengefasst.
+Die Precision-Scores werden in der Tabelle \ref{fig:precision-tabelle} zusammengefasst.
 
 \begin{table}[!ht]
     \centering
-    \label{precision-tabelle}
     \begin{tabular}{|l|l|l|l|}
     \hline
         Precision & Hit in Five & Hit in Three & Hit in One \\ \hline
@@ -142,6 +168,7 @@ Die Precision-Scores werden in der \myRef{Tabelle}{precision-tabelle} zusammenge
         Semantic & 0,15 & 0,13 & 0,07 \\ \hline
     \end{tabular}
     \caption[Precision]{Precision der Suchfunktionen}
+    \label{fig:precision-tabelle}
 \end{table}
 
 Es ist auffällig, dass der Precision-Score der semantischen Suche wesentlich schlechter ist als der Precision-Score der BM25 Suche.
@@ -170,11 +197,10 @@ Dieses Mal wurden lediglich die Title-Tags indiziert.
 Das Title-Tag ist für jedes Dokument nur einmal vorhanden.
 Außerdem sind die Titelsätze der Dokumente wesentlich kürzer als ganze Paragraphen.
 Mit dieser Konfiguration sollte der Größenunterschied des Sucheingabe-Strings und der Titel-Strings kein entscheidender Faktor mehr sein.
-Das Ergebnis dieser Konfiguration ist in \myRef{Tabelle}{precision-tabelle-2} dargestellt.\\
+Das Ergebnis dieser Konfiguration ist in Tabelle \ref{fig:precision-tabelle-2} dargestellt.\\
 
 \begin{table}[!ht]
     \centering
-    \label{precision-tabelle-2}
     \begin{tabular}{|l|l|l|l|}
         \hline
         Precision & Hit in Five & Hit in Three & Hit in One \\ \hline
@@ -183,6 +209,7 @@ Das Ergebnis dieser Konfiguration ist in \myRef{Tabelle}{precision-tabelle-2} da
         Semantic & 0,28 & 0,22 & 0,11 \\ \hline
     \end{tabular}
     \caption[Precision (2. Durchführung)]{Precision der Suchfunktionen (2. Durchführung der Studie)}
+    \label{fig:precision-tabelle-2}
 \end{table}
 
 In dieser Konfiguration hat die semantische Suche eine bessere Precision.
