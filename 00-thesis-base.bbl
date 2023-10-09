@@ -155,6 +155,58 @@
       \field{title}{Okapi at TREC-7: automatic ad hoc, filtering, VLC and interactive track}
       \field{year}{2000}
     \endentry
+    \entry{Berger_Caruana_Cohn_Freitag_Mittal_2000}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8df2877c815c4f82dd2b4a07fbfe4d31}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=599c5251d489b92dc7856277d56cb1a9}{%
+           family={Caruana},
+           familyi={C\bibinitperiod},
+           given={Rich},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2745583746f919bc8daaf5e067978d7e}{%
+           family={Cohn},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8528090c94c409636cf5b7aa10d2431}{%
+           family={Freitag},
+           familyi={F\bibinitperiod},
+           given={Dayne},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=914231833ba7e2eac8d6b530c3beee55}{%
+           family={Mittal},
+           familyi={M\bibinitperiod},
+           given={Vibhu},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{877e1f24a10e7eb93410d95d0224ffdc}
+      \strng{fullhash}{21eb7757cac9823291dbf762146eee14}
+      \strng{bibnamehash}{21eb7757cac9823291dbf762146eee14}
+      \strng{authorbibnamehash}{21eb7757cac9823291dbf762146eee14}
+      \strng{authornamehash}{877e1f24a10e7eb93410d95d0224ffdc}
+      \strng{authorfullhash}{21eb7757cac9823291dbf762146eee14}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 23rd annual international ACM SIGIR conference on Research and development in information retrieval}
+      \field{title}{Bridging the lexical chasm}
+      \field{year}{2000}
+      \verb{doi}
+      \verb 10.1145/345508.345576
+      \endverb
+    \endentry
     \entry{Castillo_2005}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9945b3859caed4e19a23f700fa1b79db}{%

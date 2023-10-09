@@ -65,7 +65,8 @@ Genau diese Informationen nutzen semantische Suchen.
 Dieses Kapitel betrachtet verschiedene Quellen, um zu zeigen, welches Verbesserungspotenzial die Verwendung von Sentence Transformern im Document Retrieval bietet.
 Zuerst wird anhand der Arbeit von Choudhary et al. (\citeyear{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}) gezeigt, wie das Scoring im Document Retrieval durch die Verwendung von Bert verbessert wird.
 Anschließend wird die Arbeit von Karpukhin et al. (\citeyear{Karpukhin_Oguz_Min_Lewis_Wu_Edunov_Chen_Yih_2020}) herangezogen, um zu verstehen, warum es zu einer Verbesserung im Document Retrieval kommt, wenn Sentence Transformer verwendet werden.
-Zuletzt werden die Argumente für die Verwendung von Sentence Transformern mithilfe von Benchmark-Werten gestützt.\\
+Die Argumente von Karpukhin et al. werden dann durch Berger et al. (\citeyear{Berger_Caruana_Cohn_Freitag_Mittal_2000}) unterstützt.
+Zuletzt werden die Argumente für die Verwendung von Sentence Transformern ebenfalls mithilfe von Benchmark-Werten gestützt.\\
 
 Choudhary et al. (\citeyear{Choudhary_Guttikonda_Chowdhury_Learmonth_2020}) entwickelten ein Document Retrieval System, welches Bert zur Generierung von Embeddings verwendet.
 Der Scoring-Algorithmus des Systems kombiniert Bert und TF-IDF, um den Score zu berechnen.
@@ -74,7 +75,7 @@ Die Arbeit von Choudhary et al. bieten damit einen ersten Anhaltspunkt darauf, d
 Die Performance Verbesserung wird in dem Paper an dem MS Marco Datensatz gemessen.\footnote{\url{https://microsoft.github.io/msmarco/}}
 Die nachgewiesene Verbesserung ist Grund zur Annahme, dass auch die Confluence-Suche durch die Verwendung von Sentence Transformern verbessert werden kann.
 Denn die Confluence-Suche verwendet laut Dokumentation Apache Lucene (\cite{Confluence_Ranking}).
-Und laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert (\cite{Lucene_Scoring}).
+Und laut der Dokumentation von Apache Lucene, verwendet dieses einen Scoring-Algorithmus, welcher sowohl auf VSM als auch auf Boolean Models basiert (\cite{Lucene_Scoring}).
 Im Information Retrieval sind Boolean Models jene Scoring-Algorithmen, welche auf boolscher Algebra basieren.
 Aus der Dokumentation von Apache Lucene und aus dem genannten Paper geht ebensfalls hervor, dass die Vektoren des VSM mit TF-IDF berechnet werden.\\
 
@@ -87,9 +88,15 @@ Das Argument lässt sich auf das Thema dieser Arbeit übertragen.
 Das bedeutet, dass Sentence Transformer gegenüber TF-IDF und BM25 den Vorteil haben, dass sie Synonyme und Paraphrasierungen semantisch verknüpfen können.
 Damit lässt sich die bessere Performance von Sentence Transformern gegenüber TF-IDF und BM25 im Kontext des Document Retrieval begründen.\\
 
-% TODO: Lexical Gap thematisieren
-% (\cite{Berger_Caruana_Cohn_Freitag_Mittal_2000})
+Berger et al. (\citeyear{Berger_Caruana_Cohn_Freitag_Mittal_2000}) bezeichnen die Problematik der Synonyme im Kontext von TF-IDF und BM25 als die Lexical Gap.
+Sie erklären, dass Scoring-Algorithmen, wie TF-IDF lediglich eine lexikalische Analyse der Dokumente und der Sucheingabe durchführen.
+Dies ermöglicht jedoch nicht die Abbildung von Synonymen.
+Wenn der Nutzer beispielsweise nach \textit{NLP} sucht, dann erwartet der Nutzer Dokumente über Natural Language Processing.
+Wenn nun der Begriff \textit{NLP} als solches aber nicht explizit in den Dokumenten genannt wird, sondern lediglich in der ausgeschriebenen Form \textit{Natural Langauge Processing}, dann können die Dokumente mithilfe des TF-IDF Scoring-Algorithmus nicht gefunden werden.\\
 
+Die genannten Quellen zeigen, dass semantische Suchen grundsätzlich den Vorteil gegenüber TF-IDF und BM25 besitzen, dass sie Synonyme verstehen können, und damit relevante Dokumente finden können, welche mit TF-IDF und BM25 nicht gefunden werden können.
+Nun muss untersucht werden, ob dieser Vorteil sich auch in besseren Messwerten im Document Retrieval wiederspiegelt.
+Dazu werden nun die Benchmark-Werte für die semantische Suche von Weaviate herangezogen. 
 Weaviate ist eine Vektordatenbank, welche Sentence Transformer nutzt, um Dokumente zu indizieren, und HNSW als Scoring-Algorithmus zur Ermittlung des passendsten Dokumentes.
 Die Performance des Scoring-Algorithmus wurde durch Weaviate anhand von Benchmarks überprüft.
 Dabei wird der Recall für das erste Element, die ersten zehn Elemente und die ersten 100 Elemente gemessen.
