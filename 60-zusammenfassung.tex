@@ -31,7 +31,7 @@ Darüber hinaus beinhaltet die Wissensdatenbank Definitionen, welche sich spezif
 Die Durchführung der Studie wurde in \myRef{Kapitel}{chap:vergleich-der-suchfunktionen} erklärt.
 Die Studie kam zu dem Ergebnis, dass die neue Suchfunktion eine wesentlich schlechtere Performance besitzt als die Confluence-Suche.
 Begründet wurde dieses Ergebnis mit der Tatsache, dass es sich bei dem Datensatz, welcher in der Studie verwendet wurde, um eine Closed-Domain handelt.
-Da der Sentence Transformer nicht fine-tuned wurde, kennt der Sentence Transformer die domänenspezifischen Fachbegriffe nicht und kann daher keine passenden Vektoren generieren, welche dessen Semantik wiederspiegeln.
+Da der Sentence Transformer nicht auf die Domäne angepasst wurde, kennt der Sentence Transformer die domänenspezifischen Fachbegriffe nicht und kann daher keine passenden Vektoren generieren, welche dessen Semantik wiederspiegeln.
 Im Ausblick wird erläutert, welche Ansätze es in der Literatur gibt, um dieses Problem zu lösen.
 
 \section{Ausblick}
@@ -60,3 +60,8 @@ Der Sentence Transformer, welcher an eine Domäne angepasst werden soll, wird mi
 
 % TODO: TSDAE
 % Außerdem untersuchen Wang et al. (\cite{Wang_Reimers_Gurevych_2021}).
+
+Die Quellen zeigen, dass es Möglichkeiten gibt, Sentence Transformer an eine Domäne anzupassen.
+Die Anpassung eines Sentence Transformer an eine Domäne setzt dabei einen Datensatz aus dieser Domäne voraus, auf welchem der Sentence Transformer trainiert werden kann.
+Ist ein solcher Datensatz nicht vorhanden, dann sind klassische Document-Retrieval Systeme auf Basis von TF-IDF oder BM25 vermutlich die bessere Wahl.
+Wenn ein solcher Datensatz aber vorhanden ist, dann kann es sich lohnen einen Sentence Transformer an die gewünschte Domäne zu adaptieren und eine semantische Suche zu implementieren.
